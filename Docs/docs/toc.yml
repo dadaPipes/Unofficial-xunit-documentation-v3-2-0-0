@@ -1,4 +1,9 @@
-- name: Introduction
-  href: introduction.md
+### YamlMime:ManagedReference
+
+- name: Start Page
+  href: ../index.md
+
 - name: Getting Started
   href: getting-started.md
+- name: Introduction
+  href: introduction.md

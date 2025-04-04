@@ -1,11 +1,17 @@
----
-_layout: landing
----
+# Start page
 
-# This is the **HOMEPAGE**.
+Bacon ipsum dolor amet culpa tenderloin shoulder excepteur ribeye.  
+In culpa consequat short ribs officia bresaola pork ground round salami.  
+Aliquip dolore dolor frankfurter reprehenderit elit.  
+Proident sirloin ut lorem. Cow laborum pancetta, andouille et salami rump pig tri-tip dolor pork chop kielbasa.  
+Brisket laborum incididunt, elit nostrud sint andouille rump esse ham hock culpa burgdoggen.
 
-Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.
+Hamburger laboris consequat irure excepteur pork loin cupidatat nulla burgdoggen tail flank dolore short ribs pork chop.  
+In do sausage, irure sed spare ribs id biltong nostrud.  
+Jerky burgdoggen aute ground round kielbasa. Brisket beef consectetur,  
+ut in ea tongue beef ribs pig frankfurter pancetta buffalo lorem.  
+Prosciutto laborum sirloin labore, aliqua fatback shankle nisi eiusmod reprehenderit landjaeger.  
+Capicola ad veniam ut qui pastrami commodo cillum filet mignon.  
+Et sunt fugiat incididunt culpa mollit, turducken shankle reprehenderit ipsum ribeye pancetta cow kielbasa venison.
 
-## Quick Start Notes:
-
-1. Add images to the *images* folder if the file is referencing an image.
+[baconipsum](https://baconipsum.com/)
