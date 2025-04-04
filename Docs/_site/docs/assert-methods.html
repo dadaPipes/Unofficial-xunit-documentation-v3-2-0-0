@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Assert methods | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Assert methods | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/assert-methods.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="assert-methods">Assert methods</h1>
+
+<h2 id="booleanasserts">BooleanAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_False_System_Boolean_">False(Bool)</a><br>
+Verifies that the condition is false.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_False_System_Boolean_System_String_">False(Bool, String?)</a><br>
+Verifies that the condition is false.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_False_System_Nullable_System_Boolean__">False(Bool?)</a><br>
+Verifies that the condition is false.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_False_System_Nullable_System_Boolean__System_String_">False(Bool?, String?)</a><br>
+Verifies that the condition is false.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_True_System_Boolean_">True(Bool)</a><br>
+Verifies that an expression is true.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_True_System_Boolean_System_String_">True(Bool, String?)</a><br>
+Verifies that an expression is true.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_True_System_Nullable_System_Boolean__">True(Bool?)</a><br>
+Verifies that an expression is true.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_True_System_Nullable_System_Boolean__System_String_">True(Bool?, String?)</a><br>
+Verifies that an expression is true.</p>
+</li>
+</ul>
+<h2 id="asynccollectionasserts">AsyncCollectionAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_All__1_System_Collections_Generic_IEnumerable___0__System_Action___0_System_Int32__">All&lt;T&gt;(IEnumerable&lt;T&gt;, Action\&lt;T&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_All__1_System_Collections_Generic_IEnumerable___0__System_Action___0_System_Int32__">All&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T, int&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.<br>
+The item index is provided to the action, in addition to the item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_AllAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__">AllAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_AllAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Int32_System_Threading_Tasks_Task__">AllAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, int, Task&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.<br>
+The item index is provided to the action, in addition to the item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Collection__1_System_Collections_Generic_IEnumerable___0__System_Action___0____">Collection&lt;T&gt;(IEnumerable&lt;T&gt;, params Action&lt;T&gt;[])</a><br>
+Verifies that a collection contains exactly a given number of elements,<br>
+which meet the criteria provided by the element inspectors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_CollectionAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task____">CollectionAsync&lt;T&gt;(IEnumerable&lt;T&gt;, params Func&lt;T, Task&gt;[])</a><br>
+Verifies that a collection contains exactly a given number of elements,<br>
+which meet the criteria provided by the element inspectors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_IEnumerable___0__">Contains&lt;T&gt;(T, IEnumerable&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Contains&lt;T&gt;(T, IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object, using an equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">Contains&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Distinct__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Distinct&lt;T&gt;(IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection contains each object only once.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_IEnumerable___0__">DoesNotContain&lt;T&gt;(T, IEnumerable&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">DoesNotContain&lt;T&gt;(T, IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object, using an equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">DoesNotContain&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Empty_System_Collections_IEnumerable_">Empty(IEnumerable)</a><br>
+Verifies that a collection is empty.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?)</a><br>
+Verifies that two sequences are equivalent, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two sequences are equivalent, using a custom equatable comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two collections are equal, using a comparer function against items in the two collections.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEmpty_System_Collections_IEnumerable_">NotEmpty(IEnumerable)</a><br>
+Verifies that a collection is not empty.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?)</a><br>
+Verifies that two sequences are not equivalent, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two sequences are not equivalent, using a custom equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two collections are not equal, using a comparer function against items in the two collections.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single_System_Collections_IEnumerable_">Single(IEnumerable)</a><br>
+Verifies that the given collection contains only a single element of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">Single&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</a><br>
+Verifies that the given collection contains only a single element of the given type which matches the given predicate.<br>
+The collection may or may not contain other values which do not match the given predicate.</p>
+</li>
+</ul>
+<h2 id="collectionasserts">CollectionAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_All__1_System_Collections_Generic_IEnumerable___0__System_Action___0__">All&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_All__1_System_Collections_Generic_IEnumerable___0__System_Action___0_System_Int32__">All&lt;T&gt;(IEnumerable&lt;T&gt;, Action&lt;T, int&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.<br>
+The item index is provided to the action, in addition to the item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_AllAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task__">AllAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, Task&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_AllAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Int32_System_Threading_Tasks_Task__">AllAsync&lt;T&gt;(IEnumerable&lt;T&gt;, Func&lt;T, int, Task&gt;)</a><br>
+Verifies that all items in the collection pass when executed against action.<br>
+The item index is provided to the action, in addition to the item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Collection__1_System_Collections_Generic_IEnumerable___0__System_Action___0____">Collection&lt;T&gt;(IEnumerable&lt;T&gt;, params Action&lt;T&gt;[])</a><br>
+Verifies that a collection contains exactly a given number of elements,<br>
+which meet the criteria provided by the element inspectors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_CollectionAsync__1_System_Collections_Generic_IEnumerable___0__System_Func___0_System_Threading_Tasks_Task____">CollectionAsync&lt;T&gt;(IEnumerable&lt;T&gt;, params Func&lt;T, Task&gt;[])</a><br>
+Verifies that a collection contains exactly a given number of elements,<br>
+which meetthe criteria provided by the element inspectors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_IEnumerable___0__">Contains&lt;T&gt;(T, IEnumerable&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Contains&lt;T&gt;(T, IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object, using an equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">Contains&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</a><br>
+Verifies that a collection contains a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Distinct__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Distinct&lt;T&gt;(IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection contains each object only once.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Distinct__1_System_Collections_Generic_IEnumerable___0__">Distinct&lt;T&gt;(IEnumerable&lt;T&gt;)</a><br>
+Verifies that a collection contains each object only once.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_IEnumerable___0__">DoesNotContain&lt;T&gt;(T, IEnumerable&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">DoesNotContain&lt;T&gt;(T, IEnumerable&lt;T&gt;, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object, using an equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">DoesNotContain&lt;T&gt;(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</a><br>
+Verifies that a collection does not contain a given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Empty_System_Collections_IEnumerable_">Empty(IEnumerable))</a><br>
+Verifies that a collection is empty.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?)</a><br>
+Verifies that two sequences are equivalent, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two sequences are equivalent, using a custom equatable comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">Equal&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two collections are equal, using a comparer function against items in the two collections.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEmpty_System_Collections_IEnumerable_">NotEmpty(IEnumerable)</a><br>
+Verifies that a collection is not empty.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?)</a><br>
+Verifies that two sequences are not equivalent, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEqualityComparer___0__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two sequences are not equivalent, using a custom equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1_System_Collections_Generic_IEnumerable___0__System_Collections_Generic_IEnumerable___0__System_Func___0___0_System_Boolean__">NotEqual&lt;T&gt;(IEnumerable&lt;T&gt;?, IEnumerable&lt;T&gt;?, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two collections are not equal, using a comparer function against items in the two collections.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single_System_Collections_IEnumerable_">Single(IEnumerable)</a><br>
+Verifies that the given collection contains only a single element of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single_System_Collections_IEnumerable_System_Object_">Single(IEnumerable, object?)</a><br>
+Verifies that the given collection contains only a single element of the given value.<br>
+The collection may or may not contain other values.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single__1_System_Collections_Generic_IEnumerable___0__">Single<t>(IEnumerable&lt;T&gt;)</t></a><br>
+Verifies that the given collection contains only a single element of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Single__1_System_Collections_Generic_IEnumerable___0__System_Predicate___0__">Single<t>(IEnumerable&lt;T&gt;, Predicate&lt;T&gt;)</t></a><br>
+Verifies that the given collection contains only a single element of the given type which matches the given predicate.<br>
+The collection may or may not contain other values which do not match the given predicate.</p>
+</li>
+</ul>
+<h2 id="dictionaryasserts">DictionaryAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_Concurrent_ConcurrentDictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, ConcurrentDictionary&lt;TKey, TValue&gt;))</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_Generic_Dictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, Dictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_Generic_IDictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, IDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_Generic_IReadOnlyDictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, IReadOnlyDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_Immutable_ImmutableDictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, ImmutableDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__2___0_System_Collections_ObjectModel_ReadOnlyDictionary___0___1__">Contains&lt;TKey, TValue&gt;(TKey, ReadOnlyDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary contains a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_Concurrent_ConcurrentDictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, ConcurrentDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_Generic_Dictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, Dictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_Generic_IDictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, IDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_Generic_IReadOnlyDictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, IReadOnlyDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_Immutable_ImmutableDictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, ImmutableDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__2___0_System_Collections_ObjectModel_ReadOnlyDictionary___0___1__">DoesNotContain&lt;TKey, TValue&gt;(TKey, ReadOnlyDictionary&lt;TKey, TValue&gt;)</a><br>
+Verifies that a dictionary does not contain a given key.</p>
+</li>
+</ul>
+<h2 id="equalityasserts">EqualityAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_DateTime_System_DateTime_">Equal(DateTime, DateTime)</a><br>
+Verifies that two DateTime values are equal.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_DateTime_System_DateTime_System_TimeSpan_">Equal(DateTime, DateTime, TimeSpan)</a><br>
+Verifies that two DateTime values are equal, within the precision given by precision.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_DateTimeOffset_System_DateTimeOffset_">Equal(DateTimeOffset, DateTimeOffset)</a><br>
+Verifies that two DateTimeOffset values are equal.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_DateTimeOffset_System_DateTimeOffset_System_TimeSpan_">Equal(DateTimeOffset, DateTimeOffset, TimeSpan)</a><br>
+Verifies that two DateTimeOffset values are equal, within the precision given by precision.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Decimal_System_Decimal_System_Int32_">Equal(Decimal, Decimal, Int32)</a><br>
+Verifies that two decimal values are equal, within the number of decimal places given by precision. The values are rounded before comparison.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Double_System_Double_System_Double_">Equal(Double, Double, Double)</a><br>
+Verifies that two double values are equal, within the tolerance given by tolerance (positive or negative).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Double_System_Double_System_Int32_">Equal(Double, Double, Int32)</a><br>
+Verifies that two double values are equal, within the number of decimal places given by precision. The values are rounded before comparison.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Double_System_Double_System_Int32_System_MidpointRounding_">Equal(Double, Double, Int32, MidpointRounding)</a><br>
+Verifies that two double values are not equal, within the number of decimal places given by precision.<br>
+The values are rounded before comparison.<br>
+The rounding method to use is given by rounding</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Single_System_Single_System_Int32_">Equal(Float, Float, Int32)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Single_System_Single_System_Int32_System_MidpointRounding_">Equal(Float, Float, Int32, MidpointRounding)</a><br>
+Verifies that two float values are equal, within the number of decimal places given by precision. The values are rounded before comparison. The rounding method to use is given by rounding</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Single_System_Single_System_Single_">Equal(Float, Float, Float)</a>
+Verifies that two float values are equal, within the tolerance given by tolerance (positive or negative).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1___0___0_">Equal&lt;T&gt;(T, T)</a><br>
+Verifies that two objects are equal, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1___0___0_System_Collections_Generic_IEqualityComparer___0__">Equal&lt;T&gt;(T, T, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two objects are equal, using a custom equatable comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1___0___0_System_Func___0___0_System_Boolean__">Equal&lt;T&gt;(T, T, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two objects are equal, using a custom comparer function.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1___0_____0___">Equal&lt;T&gt;(T[], T[])</a><br>
+Verifies that two arrays of un-managed type T are equal, using Span<t>.SequenceEqual. This can be significantly faster than generic enumerables, when the collections are actually equal, because the system can optimize packed-memory comparisons for value type arrays.</t></p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Decimal_System_Decimal_System_Int32_">NotEqual(Decimal, Decimal, Int32)</a><br>
+Verifies that two decimal values are not equal, within the number of decimal places given by <code>precision</code>.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Double_System_Double_System_Double_">NotEqual(Double, Double, Double)</a><br>
+Verifies that two double values are not equal, within the tolerance given by tolerance (positive or negative).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Double_System_Double_System_Int32_">NotEqual(Double, Double, Int32)</a><br>
+Verifies that two double values are not equal, within the number of decimal places given by <code>precision</code>.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Double_System_Double_System_Int32_System_MidpointRounding_">NotEqual(Double, Double, Int32, MidpointRounding)</a><br>
+Verifies that two double values are not equal, within the number of decimal places given by <code>precision</code>. The values are rounded before comparison. The rounding method to use is given by <code>rounding</code></p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Single_System_Single_System_Int32_">NotEqual(Float, Float, Int32)</a><br>
+Verifies that two float values are not equal, within the number of decimal places given by <code>precision</code>.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Single_System_Single_System_Int32_System_MidpointRounding_">NotEqual(Float, Float, Int32, MidpointRounding)</a><br>
+Verifies that two float values are not equal, within the number of decimal places given by <code>precision</code>. The values are rounded before comparison. The rounding method to use is given by <code>rounding</code></p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual_System_Single_System_Single_System_Single_">NotEqual(Float, Float, Float)</a><br>
+Verifies that two float values are not equal, within the <code>tolerance</code> given by tolerance (positive or negative).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1___0___0_">NotEqual&lt;T&gt;(T, T)</a><br>
+Verifies that two objects are not equal, using a default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1___0___0_System_Collections_Generic_IEqualityComparer___0__">NotEqual&lt;T&gt;(T, T, IEqualityComparer&lt;T&gt;)</a><br>
+Verifies that two objects are not equal, using a custom equality comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1___0___0_System_Func___0___0_System_Boolean__">NotEqual&lt;T&gt;(T, T, Func&lt;T, T, bool&gt;)</a><br>
+Verifies that two objects are not equal, using a custom equality comparer function.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotEqual__1___0_____0___">NotEqual&lt;T&gt;(T[], T[])</a><br>
+Verifies that two arrays of un-managed type T are not equal, using Span<t>.SequenceEqual.</t></p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotStrictEqual__1___0___0_">NotStrictEqual&lt;T&gt;(T, T)</a><br>
+Verifies that two objects are strictly not equal, using the type's default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StrictEqual__1___0___0_">StrictEqual&lt;T&gt;(T, T)</a><br>
+Verifies that two objects are strictly equal, using the type's default comparer.</p>
+</li>
+</ul>
+<h2 id="equivalenceasserts">EquivalenceAsserts</h2>
+<ul>
+<li><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Equivalent(object?, object?, bool)</a><br>
+Verifies that two objects are equivalent, using a default comparer.<br>
+This comparison is done without regard to type, and only inspects public property and field values for individual equality.<br>
+Deep equivalence tests (meaning, property or fields which are themselves complex types) are supported. With strict mode off, object comparison allows <code>actual</code> to have extra public members that aren't part of <code>expected</code>,<br>
+and collection comparison allows <code>actual</code> to have more data in it than is present in <code>expected</code>;<br>
+with strict mode on, those rules are tightened to require exact member list (for objects) or data (for collections).</li>
+</ul>
+<h2 id="eventasserts">EventAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Raises_System_Action_System_Action__System_Action_System_Action__System_Action_">Raises(Action&lt;Action&gt;, Action&lt;Action&gt;, Action)</a><br>
+Verifies that an event is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAny_System_Action_System_EventHandler__System_Action_System_EventHandler__System_Action_">RaisesAny(Action&lt;EventHandler&gt;, Action&lt;EventHandler&gt;, Action)</a><br>
+Verifies that an event is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAnyAsync_System_Action_System_EventHandler__System_Action_System_EventHandler__System_Func_System_Threading_Tasks_Task__">RaisesAnyAsync(Action&lt;EventHandler&gt;, Action&lt;EventHandler&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAnyAsync__1_System_Action_System_Action___0___System_Action_System_Action___0___System_Func_System_Threading_Tasks_Task__">RaisesAnyAsync&lt;T&gt;(Action&lt;Action&lt;T&gt;&gt;, Action&lt;Action&lt;T&gt;&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event with the exact or a derived event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAnyAsync__1_System_Action_System_EventHandler___0___System_Action_System_EventHandler___0___System_Func_System_Threading_Tasks_Task__">RaisesAnyAsync&lt;T&gt;(Action&lt;EventHandler&lt;T&gt;&gt;, Action&lt;EventHandler&lt;T&gt;&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event with the exact or a derived event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAny__1_System_Action_System_Action___0___System_Action_System_Action___0___System_Action_">RaisesAny&lt;T&gt;(Action&lt;Action&lt;T&gt;&gt;, Action&lt;Action&lt;T&gt;&gt;, Action)</a><br>
+Verifies that an event with the exact or a derived event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAny__1_System_Action_System_EventHandler___0___System_Action_System_EventHandler___0___System_Action_">RaisesAny&lt;T&gt;(Action&lt;EventHandler&lt;T&gt;&gt;, Action&lt;EventHandler&lt;T&gt;&gt;, Action)</a><br>
+Verifies that an event with the exact or a derived event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAsync_System_Action_System_Action__System_Action_System_Action__System_Func_System_Threading_Tasks_Task__">RaisesAsync(Action&lt;Action&gt;, Action&lt;Action&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAsync__1_System_Action_System_Action___0___System_Action_System_Action___0___System_Func_System_Threading_Tasks_Task__">RaisesAsync&lt;T&gt;(Action&lt;Action&lt;T&gt;&gt;, Action&lt;Action&lt;T&gt;&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event with the exact event args (and not a derived type) is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RaisesAsync__1_System_Action_System_EventHandler___0___System_Action_System_EventHandler___0___System_Func_System_Threading_Tasks_Task__">RaisesAsync&lt;T&gt;(Action&lt;EventHandler&lt;T&gt;&gt;, Action&lt;EventHandler&lt;T&gt;&gt;, Func&lt;Task&gt;)</a><br>
+Verifies that an event with the exact event args (and not a derived type) is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Raises__1_System_Action_System_Action___0___System_Action_System_Action___0___System_Action_">Raises&lt;T&gt;(Action&lt;Action&lt;T&gt;&gt;, Action&lt;Action&lt;T&gt;&gt;, Action)</a><br>
+Verifies that an event with the exact event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Raises__1_System_Action_System_EventHandler___0___System_Action_System_EventHandler___0___System_Action_">Raises&lt;T&gt;(Action&lt;EventHandler&lt;T&gt;&gt;, Action&lt;EventHandler&lt;T&gt;&gt;, Action)</a><br>
+Verifies that an event with the exact event args is raised.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Raises__1_System_Func_Xunit_Assert_RaisedEvent___0___System_Action_System_Action_System_Action_">Raises&lt;T&gt;(Func&lt;EventAsserts.RaisedEvent&lt;T&gt;&gt;, Action, Action, Action)</a><br>
+Verifies that an event with the exact event args is raised.</p>
+</li>
+</ul>
+<h2 id="exceptionasserts-nullable">ExceptionAsserts Nullable</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws_System_Type_System_Action_">Throws(Type, Action)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws_System_Type_System_Func_System_Object__">Throws(Type, Func&lt;object?&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type). Generally used to test property accessors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAnyAsync__1_System_Func_System_Threading_Tasks_Task__">ThrowsAnyAsync&lt;T&gt;(Func&lt;Task&gt;)</a><br>
+Verifies that the exact exception or a derived exception type is thrown.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAny__1_System_Action_">ThrowsAny&lt;T&gt;(Action)</a><br>
+Verifies that the exact exception or a derived exception type is thrown.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAny__1_System_Func_System_Object__">ThrowsAny&lt;T&gt;(Func&lt;object?&gt;)</a><br>
+Verifies that the exact exception or a derived exception type is thrown. Generally used to test property accessors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAsync_System_Type_System_Func_System_Threading_Tasks_Task__">ThrowsAsync(Type, Func&lt;Task&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAsync__1_System_Func_System_Threading_Tasks_Task__">ThrowsAsync&lt;T&gt;(Func&lt;Task&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ThrowsAsync__1_System_String_System_Func_System_Threading_Tasks_Task__">ThrowsAsync&lt;T&gt;(String?, Func&lt;Task&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type), where the exception derives from ArgumentException and has the given parameter name.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws__1_System_Action_">Throws&lt;T&gt;(Action)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws__1_System_Func_System_Object__">Throws&lt;T&gt;(Func&lt;object?&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type). Generally used to test property accessors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws__1_System_String_System_Action_">Throws&lt;T&gt;(String?, Action)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type), where the exception derives from ArgumentException and has the given parameter name.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Throws__1_System_String_System_Func_System_Object__">Throws&lt;T&gt;(String?, Func&lt;object?&gt;)</a><br>
+Verifies that the exact exception is thrown (and not a derived exception type), where the exception derives from ArgumentException and has the given parameter name.</p>
+</li>
+</ul>
+<h2 id="failasserts">FailAsserts</h2>
+<ul>
+<li><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Fail_System_String_">Fail(string?)</a><br>
+Indicates that the test should immediately fail.</li>
+</ul>
+<h2 id="identityasserts">IdentityAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotSame_System_Object_System_Object_">NotSame(object?, object?)</a><br>
+Verifies that two objects are not the same instance.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Same_System_Object_System_Object_">Same(object?, object?)</a><br>
+Verifies that two objects are the same instance.</p>
+</li>
+</ul>
+<h2 id="memoryasserts">MemoryAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Memory___0__System_Memory___0__">Contains&lt;T&gt;(Memory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that a Memory contains a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Memory___0__System_ReadOnlyMemory___0__">Contains&lt;T&gt;(Memory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that a Memory contains a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_ReadOnlyMemory___0__System_Memory___0__">Contains&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that a Memory contains a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_ReadOnlyMemory___0__System_ReadOnlyMemory___0__">Contains&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that a Memory contains a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Memory___0__System_Memory___0__">DoesNotContain&lt;T&gt;(Memory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that a Memory does not contain a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Memory___0__System_ReadOnlyMemory___0__">DoesNotContain&lt;T&gt;(Memory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that a Memory does not contain a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_ReadOnlyMemory___0__System_Memory___0__">DoesNotContain&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that a Memory does not contain a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_ReadOnlyMemory___0__System_ReadOnlyMemory___0__">DoesNotContain&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that a Memory does not contain a given sub-Memory</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Memory___0__System_Memory___0__">Equal&lt;T&gt;(Memory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that two Memory values are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Memory___0__System_ReadOnlyMemory___0__">Equal&lt;T&gt;(Memory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that two Memory values are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_ReadOnlyMemory___0__System_Memory___0__">Equal&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, Memory&lt;T&gt;)</a><br>
+Verifies that two Memory values are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_ReadOnlyMemory___0__System_ReadOnlyMemory___0__">Equal&lt;T&gt;(ReadOnlyMemory&lt;T&gt;, ReadOnlyMemory&lt;T&gt;)</a><br>
+Verifies that two Memory values are equivalent.</p>
+</li>
+</ul>
+<h2 id="multipleasserts">MultipleAsserts</h2>
+<ul>
+<li><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Multiple_System_Action___">Multiple(params Action[])</a><br>
+Runs multiple checks, collecting the exceptions from each one, and then bundles all failures up into a single assertion failure.</li>
+</ul>
+<h2 id="nullasserts">NullAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotNull_System_Object_">NotNull(object?)</a><br>
+Verifies that an object reference is not null.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotNull__1_System_Nullable___0__">NotNull&lt;T&gt;(T?)</a><br>
+Verifies that a nullable struct value is not null.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Null_System_Object_">Null(object?)</a><br>
+Verifies that an object reference is null.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Null__1_System_Nullable___0__">Null&lt;T&gt;(T?)</a><br>
+Verifies that a nullable struct value is null.</p>
+</li>
+</ul>
+<h2 id="propertyasserts">PropertyAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_PropertyChanged_System_ComponentModel_INotifyPropertyChanged_System_String_System_Action_">PropertyChanged(INotifyPropertyChanged, string, Action)</a><br>
+Verifies that the provided object raised PropertyChanged as a result of executing the given test code.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_PropertyChangedAsync_System_ComponentModel_INotifyPropertyChanged_System_String_System_Func_System_Threading_Tasks_Task__">PropertyChangedAsync(INotifyPropertyChanged, string, Func&lt;Task&gt;)</a><br>
+Verifies that the provided object raised PropertyChanged as a result of executing the given test code.</p>
+</li>
+</ul>
+<h2 id="rangeasserts">RangeAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_InRange__1___0___0___0_">InRange&lt;T&gt;(T, T, T)</a><br>
+Verifies that a value is within a given range.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_InRange__1___0___0___0_System_Collections_Generic_IComparer___0__">InRange&lt;T&gt;(T, T, T, IComparer&lt;T&gt;)</a><br>
+Verifies that a value is within a given range, using a comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotInRange__1___0___0___0_">NotInRange&lt;T&gt;(T, T, T)</a><br>
+Verifies that a value is not within a given range, using the default comparer.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_NotInRange__1___0___0___0_System_Collections_Generic_IComparer___0__">NotInRange&lt;T&gt;(T, T, T, IComparer&lt;T&gt;)</a><br>
+Verifies that a value is not within a given range, using a comparer.</p>
+</li>
+</ul>
+<h2 id="record">Record</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RecordException_System_Action_">RecordException(Action)</a><br>
+Records any exception which is thrown by the given code.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RecordException_System_Func_System_Object__System_String_">RecordException(Func&lt;object?&gt;, string)</a><br>
+Records any exception which is thrown by the given code that has a return value. Generally used for testing property accessors.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_RecordExceptionAsync_System_Func_System_Threading_Tasks_Task__">RecordExceptionAsync(Func&lt;Task&gt;)</a><br>
+Records any exception which is thrown by the given task.</p>
+</li>
+</ul>
+<h2 id="setasserts">SetAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_HashSet___0__">Contains&lt;T&gt;(T, HashSet&lt;T&gt;)</a><br>
+Verifies that the hashset contains the given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_ISet___0__">Contains&lt;T&gt;(T, ISet&lt;T&gt;)</a><br>
+Verifies that the set contains the given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Generic_SortedSet___0__">Contains&lt;T&gt;(T, SortedSet&lt;T&gt;)</a><br>
+Verifies that the sorted hashset contains the given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Immutable_ImmutableHashSet___0__">Contains&lt;T&gt;(T, ImmutableHashSet&lt;T&gt;)</a><br>
+Verifies that the immutable hashset contains the given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1___0_System_Collections_Immutable_ImmutableSortedSet___0__">Contains&lt;T&gt;(T, ImmutableSortedSet&lt;T&gt;)</a><br>
+Verifies that the immutable sorted hashset contains the given object.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_HashSet___0__">DoesNotContain&lt;T&gt;(T, HashSet&lt;T&gt;)</a><br>
+Verifies that the hashset does not contain the given item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_ISet___0__">DoesNotContain&lt;T&gt;(T, ISet&lt;T&gt;)</a><br>
+Verifies that the set does not contain the given item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Generic_SortedSet___0__">DoesNotContain&lt;T&gt;(T, SortedSet&lt;T&gt;)</a><br>
+Verifies that the sorted hashset does not contain the given item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Immutable_ImmutableHashSet___0__">DoesNotContain&lt;T&gt;(T, ImmutableHashSet&lt;T&gt;)</a><br>
+Verifies that the immutable hashset does not contain the given item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1___0_System_Collections_Immutable_ImmutableSortedSet___0__">DoesNotContain&lt;T&gt;(T, ImmutableSortedSet&lt;T&gt;)</a><br>
+Verifies that the immutable sorted hashset does not contain the given item.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ProperSubset__1_System_Collections_Generic_ISet___0__System_Collections_Generic_ISet___0__">ProperSubset&lt;T&gt;(ISet&lt;T&gt;, ISet&lt;T&gt;)</a><br>
+Verifies that a set is a proper subset of another set.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_ProperSuperset__1_System_Collections_Generic_ISet___0__System_Collections_Generic_ISet___0__">ProperSuperset&lt;T&gt;(ISet&lt;T&gt;, ISet&lt;T&gt;)</a><br>
+Verifies that a set is a proper superset of another set.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Subset__1_System_Collections_Generic_ISet___0__System_Collections_Generic_ISet___0__">Subset&lt;T&gt;(ISet&lt;T&gt;, ISet&lt;T&gt;)</a><br>
+Verifies that a set is a subset of another set.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Superset__1_System_Collections_Generic_ISet___0__System_Collections_Generic_ISet___0__">Superset&lt;T&gt;(ISet&lt;T&gt;, ISet&lt;T&gt;)</a><br>
+Verifies that a set is a superset of another set.</p>
+</li>
+</ul>
+<h2 id="skipasserts">SkipAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Skip_System_String_">Skip(string)</a><br>
+Skips the current test. Used when determining whether a test should be skipped happens at runtime rather than at discovery time.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_SkipUnless_System_Boolean_System_String_">SkipUnless(bool, string)</a><br>
+Will skip the current test unless <code>condition</code> evaluates to <code>true</code>.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_SkipWhen_System_Boolean_System_String_">SkipWhen(bool, string)</a><br>
+Will skip the current test when <code>condition</code> evaluates to <code>true</code>.</p>
+</li>
+</ul>
+<h2 id="spanasserts">SpanAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_ReadOnlySpan___0__System_ReadOnlySpan___0__">Contains&lt;T&gt;(ReadOnlySpan&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that a span contains a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_ReadOnlySpan___0__System_Span___0__">Contains&lt;T&gt;(ReadOnlySpan&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that a span contains a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Span___0__System_ReadOnlySpan___0__">Contains&lt;T&gt;(Span&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that a span contains a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains__1_System_Span___0__System_Span___0__">Contains&lt;T&gt;(Span&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that a span contains a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_ReadOnlySpan___0__System_ReadOnlySpan___0__">DoesNotContain&lt;T&gt;(ReadOnlySpan&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that a span does not contain a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_ReadOnlySpan___0__System_Span___0__">DoesNotContain&lt;T&gt;(ReadOnlySpan&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that a span does not contain a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Span___0__System_ReadOnlySpan___0__">DoesNotContain&lt;T&gt;(Span&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that a span does not contain a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain__1_System_Span___0__System_Span___0__">DoesNotContain&lt;T&gt;(Span&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that a span does not contain a given sub-span</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_ReadOnlySpan___0__System_ReadOnlySpan___0__">Equal&lt;T&gt;(ReadOnlySpan&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that two spans contain the same values in the same order.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_ReadOnlySpan___0__System_Span___0__">Equal&lt;T&gt;(ReadOnlySpan&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that two spans contain the same values in the same order.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_ReadOnlySpan___0____0___">Equal&lt;T&gt;(ReadOnlySpan&lt;T&gt;, T[])</a><br>
+Verifies that a span and an array contain the same values in the same order.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Span___0__System_ReadOnlySpan___0__">Equal&lt;T&gt;(Span&lt;T&gt;, ReadOnlySpan&lt;T&gt;)</a><br>
+Verifies that two spans contain the same values in the same order.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal__1_System_Span___0__System_Span___0__">Equal&lt;T&gt;(Span&lt;T&gt;, Span&lt;T&gt;)</a><br>
+Verifies that two spans contain the same values in the same order.</p>
+</li>
+</ul>
+<h2 id="stringasserts">StringAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_String_System_String_">Contains(string, string?)</a><br>
+Verifies that a string contains a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_String_System_String_System_StringComparison_">Contains(string, string?, StringComparison)</a><br>
+Verifies that a string contains a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Memory_System_Char__System_Memory_System_Char__">Contains(Memory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string contains a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__">Contains(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string contains a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__">Contains(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string contains a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__">Contains(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string contains a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Memory_System_Char__System_Memory_System_Char__System_StringComparison_">Contains(Memory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">Contains(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__System_StringComparison_">Contains(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">Contains(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Span_System_Char__System_Span_System_Char__System_StringComparison_">Contains(Span&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Span_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">Contains(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlySpan_System_Char__System_Span_System_Char__System_StringComparison_">Contains(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">Contains(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string contains a given string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Span_System_Char__System_Span_System_Char__">Contains(Span&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string contains a given string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_Span_System_Char__System_ReadOnlySpan_System_Char__">Contains(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string contains a given string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlySpan_System_Char__System_Span_System_Char__">Contains(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string contains a given string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Contains_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__">Contains(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string contains a given string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_String_System_String_">DoesNotContain(string, string?)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_String_System_String_System_StringComparison_">DoesNotContain(string, string?, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Memory_System_Char__System_Memory_System_Char__">DoesNotContain(Memory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__">DoesNotContain(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__">DoesNotContain(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__">DoesNotContain(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Memory_System_Char__System_Memory_System_Char__System_StringComparison_">DoesNotContain(Memory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">DoesNotContain(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__System_StringComparison_">DoesNotContain(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">DoesNotContain(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Span_System_Char__System_Span_System_Char__System_StringComparison_">DoesNotContain(Span&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Span_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">DoesNotContain(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlySpan_System_Char__System_Span_System_Char__System_StringComparison_">DoesNotContain(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">DoesNotContain(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string does not contain a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Span_System_Char__System_Span_System_Char__">DoesNotContain(Span&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_Span_System_Char__System_ReadOnlySpan_System_Char__">DoesNotContain(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlySpan_System_Char__System_Span_System_Char__">DoesNotContain(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotContain_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__">DoesNotContain(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string does not contain a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotMatch_System_String_System_String_">DoesNotMatch(string, string?)</a><br>
+Verifies that a string does not match a regular expression.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_DoesNotMatch_System_Text_RegularExpressions_Regex_System_String_">DoesNotMatch(Regex, string?)</a><br>
+Verifies that a string does not match a regular expression.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Empty_System_String_">Empty(string)</a><br>
+Verifies that a string is empty.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_String_System_String_">EndsWith(string?, string?)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_String_System_String_System_StringComparison_">EndsWith(string?, string?, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Memory_System_Char__System_Memory_System_Char__">EndsWith(Memory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__">EndsWith(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__">EndsWith(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__">EndsWith(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Memory_System_Char__System_Memory_System_Char__System_StringComparison_">EndsWith(Memory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">EndsWith(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__System_StringComparison_">EndsWith(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">EndsWith(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Span_System_Char__System_Span_System_Char__">EndsWith(Span&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Span_System_Char__System_ReadOnlySpan_System_Char__">EndsWith(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlySpan_System_Char__System_Span_System_Char__">EndsWith(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__">EndsWith(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string ends with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Span_System_Char__System_Span_System_Char__System_StringComparison_">EndsWith(Span&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_Span_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">EndsWith(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlySpan_System_Char__System_Span_System_Char__System_StringComparison_">EndsWith(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_EndsWith_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">EndsWith(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string ends with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_String_System_String_">Equal(string?, string?)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Memory_System_Char__System_Memory_System_Char__">Equal(Memory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__">Equal(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__">Equal(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__">Equal(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Memory_System_Char__System_Memory_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(Memory&lt;char&gt;, Memory&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Span_System_Char__System_Span_System_Char__">Equal(Span&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Span_System_Char__System_ReadOnlySpan_System_Char__">Equal(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlySpan_System_Char__System_Span_System_Char__">Equal(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__">Equal(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Span_System_Char__System_Span_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(Span&lt;char&gt;, Span&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_Span_System_Char__System_ReadOnlySpan_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_ReadOnlySpan_System_Char__System_Span_System_Char__System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Equal_System_String_System_String_System_Boolean_System_Boolean_System_Boolean_System_Boolean_">Equal(string?, string?, bool, bool, bool, bool)</a><br>
+Verifies that two strings are equivalent.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Matches_System_String_System_String_">Matches(string, string?)</a><br>
+Verifies that a string matches a regular expression.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_Matches_System_Text_RegularExpressions_Regex_System_String_">Matches(Regex, string?)</a><br>
+Verifies that a string matches a regular expression.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_String_System_String_">StartsWith(string?, string?)</a><br>
+Verifies that a string starts with a given string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_String_System_String_System_StringComparison_">StartsWith(string?, string?, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Memory_System_Char__System_Memory_System_Char__">StartsWith(Memory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__">StartsWith(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__">StartsWith(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__">StartsWith(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the default StringComparison.CurrentCulture comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Memory_System_Char__System_Memory_System_Char__System_StringComparison_">StartsWith(Memory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Memory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">StartsWith(Memory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlyMemory_System_Char__System_Memory_System_Char__System_StringComparison_">StartsWith(ReadOnlyMemory&lt;char&gt;, Memory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlyMemory_System_Char__System_ReadOnlyMemory_System_Char__System_StringComparison_">StartsWith(ReadOnlyMemory&lt;char&gt;, ReadOnlyMemory&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Span_System_Char__System_Span_System_Char__">StartsWith(Span&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Span_System_Char__System_ReadOnlySpan_System_Char__">StartsWith(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlySpan_System_Char__System_Span_System_Char__">StartsWith(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__">StartsWith(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;)</a><br>
+Verifies that a string starts with a given sub-string, using the current culture.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Span_System_Char__System_Span_System_Char__System_StringComparison_">StartsWith(Span&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_Span_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">StartsWith(Span&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlySpan_System_Char__System_Span_System_Char__System_StringComparison_">StartsWith(ReadOnlySpan&lt;char&gt;, Span&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_StartsWith_System_ReadOnlySpan_System_Char__System_ReadOnlySpan_System_Char__System_StringComparison_">StartsWith(ReadOnlySpan&lt;char&gt;, ReadOnlySpan&lt;char&gt;, StringComparison)</a><br>
+Verifies that a string starts with a given sub-string, using the given comparison type.</p>
+</li>
+</ul>
+<h2 id="typeasserts">TypeAsserts</h2>
+<ul>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsAssignableFrom_System_Type_System_Object_">IsAssignableFrom(Type, object?)</a><br>
+Verifies that an object is of the given type or a derived type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsAssignableFrom__1_System_Object_">IsAssignableFrom&lt;T&gt;(object?)</a><br>
+Verifies that an object is of the given type or a derived type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotAssignableFrom_System_Type_System_Object_">IsNotAssignableFrom(Type, object?</a><br>
+Verifies that an object is not of the given type or a derived type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotAssignableFrom__1_System_Object_">IsNotAssignableFrom&lt;T&gt;(object?)</a><br>
+Verifies that an object is not of the given type or a derived type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotType_System_Type_System_Object_">IsNotType(Type, object?)</a><br>
+Verifies that an object is not exactly the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotType_System_Type_System_Object_System_Boolean_">IsNotType(Type, object?, bool)</a><br>
+Verifies that an object is not of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotType__1_System_Object_">IsNotType&lt;T&gt;(object?)</a><br>
+Verifies that an object is not exactly the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsNotType__1_System_Object_System_Boolean_">IsNotType&lt;T&gt;(object?, bool)</a><br>
+Verifies that an object is not of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsType_System_Type_System_Object_">IsType(Type, object?)</a><br>
+Verifies that an object is exactly the given type (and not a derived type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsType_System_Type_System_Object_System_Boolean_">IsType(Type, object?, bool)</a><br>
+Verifies that an object is of the given type.</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsType__1_System_Object_">IsType&lt;T&gt;(object?)</a><br>
+Verifies that an object is exactly the given type (and not a derived type).</p>
+</li>
+<li><p><a class="xref" href="../api/Xunit.Assert.html#Xunit_Assert_IsType__1_System_Object_System_Boolean_">IsType&lt;T&gt;(object?, bool)</a><br>
+Verifies that an object of is the given type.</p>
+</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/assert-methods.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
