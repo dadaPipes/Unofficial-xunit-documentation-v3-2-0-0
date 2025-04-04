@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ExecutionEventSink | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ExecutionEventSink | Unofficial xunit docs ">
+      
+      <meta name="description" content="Class that maps test framework execution messages to events.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_Common_ExecutionEventSink.md&amp;value=---%0Auid%3A%20Xunit.Runner.Common.ExecutionEventSink%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common.ExecutionEventSink">
+
+
+
+  <h1 id="Xunit_Runner_Common_ExecutionEventSink" data-uid="Xunit.Runner.Common.ExecutionEventSink" class="text-break">
+Class ExecutionEventSink  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L12"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Class that maps test framework execution messages to events.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class ExecutionEventSink : IMessageSink</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ExecutionEventSink</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Runner_Common_ExecutionEventSink_OnMessage_" data-uid="Xunit.Runner.Common.ExecutionEventSink.OnMessage*"></a>
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_OnMessage_Xunit_Sdk_IMessageSinkMessage_" data-uid="Xunit.Runner.Common.ExecutionEventSink.OnMessage(Xunit.Sdk.IMessageSinkMessage)">
+  OnMessage(IMessageSinkMessage)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reports the presence of a message on the message bus. This method should
+never throw exceptions.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool OnMessage(IMessageSinkMessage message)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>message</code> <a class="xref" href="Xunit.Sdk.IMessageSinkMessage.html">IMessageSinkMessage</a></dt>
+    <dd><p>The message from the message bus</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Return <code>true</code> to continue running tests, or <code>false</code> to stop.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="events">Events
+</h2>
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_AfterTestFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.AfterTestFinishedEvent">
+  AfterTestFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.IAfterTestFinished.html">IAfterTestFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IAfterTestFinished&gt;? AfterTestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.IAfterTestFinished.html">IAfterTestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_AfterTestStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.AfterTestStartingEvent">
+  AfterTestStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.IAfterTestStarting.html">IAfterTestStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IAfterTestStarting&gt;? AfterTestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.IAfterTestStarting.html">IAfterTestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_BeforeTestFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.BeforeTestFinishedEvent">
+  BeforeTestFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.IBeforeTestFinished.html">IBeforeTestFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IBeforeTestFinished&gt;? BeforeTestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.IBeforeTestFinished.html">IBeforeTestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_BeforeTestStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.BeforeTestStartingEvent">
+  BeforeTestStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L32"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.IBeforeTestStarting.html">IBeforeTestStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;IBeforeTestStarting&gt;? BeforeTestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.IBeforeTestStarting.html">IBeforeTestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestAssemblyCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestAssemblyCleanupFailureEvent">
+  TestAssemblyCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyCleanupFailure&gt;? TestAssemblyCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestAssemblyFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestAssemblyFinishedEvent">
+  TestAssemblyFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyFinished&gt;? TestAssemblyFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestAssemblyStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestAssemblyStartingEvent">
+  TestAssemblyStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestAssemblyStarting&gt;? TestAssemblyStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCaseCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCaseCleanupFailureEvent">
+  TestCaseCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseCleanupFailure&gt;? TestCaseCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCaseFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCaseFinishedEvent">
+  TestCaseFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L57"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCaseFinished.html">ITestCaseFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseFinished&gt;? TestCaseFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseFinished.html">ITestCaseFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCaseStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCaseStartingEvent">
+  TestCaseStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L62"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCaseStarting.html">ITestCaseStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCaseStarting&gt;? TestCaseStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseStarting.html">ITestCaseStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassCleanupFailureEvent">
+  TestClassCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassCleanupFailure&gt;? TestClassCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassConstructionFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassConstructionFinishedEvent">
+  TestClassConstructionFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassConstructionFinished.html">ITestClassConstructionFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassConstructionFinished&gt;? TestClassConstructionFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassConstructionFinished.html">ITestClassConstructionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassConstructionStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassConstructionStartingEvent">
+  TestClassConstructionStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassConstructionStarting.html">ITestClassConstructionStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassConstructionStarting&gt;? TestClassConstructionStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassConstructionStarting.html">ITestClassConstructionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassDisposeFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassDisposeFinishedEvent">
+  TestClassDisposeFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L82"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassDisposeFinished.html">ITestClassDisposeFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassDisposeFinished&gt;? TestClassDisposeFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassDisposeFinished.html">ITestClassDisposeFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassDisposeStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassDisposeStartingEvent">
+  TestClassDisposeStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassDisposeStarting.html">ITestClassDisposeStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassDisposeStarting&gt;? TestClassDisposeStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassDisposeStarting.html">ITestClassDisposeStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassFinishedEvent">
+  TestClassFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassFinished.html">ITestClassFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassFinished&gt;? TestClassFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassFinished.html">ITestClassFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestClassStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestClassStartingEvent">
+  TestClassStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestClassStarting.html">ITestClassStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestClassStarting&gt;? TestClassStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassStarting.html">ITestClassStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCleanupFailureEvent">
+  TestCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCleanupFailure.html">ITestCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCleanupFailure&gt;? TestCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCleanupFailure.html">ITestCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCollectionCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCollectionCleanupFailureEvent">
+  TestCollectionCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionCleanupFailure&gt;? TestCollectionCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCollectionFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCollectionFinishedEvent">
+  TestCollectionFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCollectionFinished.html">ITestCollectionFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionFinished&gt;? TestCollectionFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionFinished.html">ITestCollectionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestCollectionStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestCollectionStartingEvent">
+  TestCollectionStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestCollectionStarting.html">ITestCollectionStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestCollectionStarting&gt;? TestCollectionStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionStarting.html">ITestCollectionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestFailedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestFailedEvent">
+  TestFailedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestFailed&gt;? TestFailedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestFinishedEvent">
+  TestFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestFinished.html">ITestFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestFinished&gt;? TestFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestFinished.html">ITestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestMethodCleanupFailureEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestMethodCleanupFailureEvent">
+  TestMethodCleanupFailureEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L132"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodCleanupFailure&gt;? TestMethodCleanupFailureEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestMethodFinishedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestMethodFinishedEvent">
+  TestMethodFinishedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L137"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestMethodFinished.html">ITestMethodFinished</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodFinished&gt;? TestMethodFinishedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodFinished.html">ITestMethodFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestMethodStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestMethodStartingEvent">
+  TestMethodStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestMethodStarting.html">ITestMethodStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestMethodStarting&gt;? TestMethodStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodStarting.html">ITestMethodStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestNotRunEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestNotRunEvent">
+  TestNotRunEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestNotRun.html">ITestNotRun</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestNotRun&gt;? TestNotRunEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestNotRun.html">ITestNotRun</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestOutputEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestOutputEvent">
+  TestOutputEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestOutput.html">ITestOutput</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestOutput&gt;? TestOutputEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestOutput.html">ITestOutput</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestPassedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestPassedEvent">
+  TestPassedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L157"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestPassed.html">ITestPassed</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestPassed&gt;? TestPassedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestPassed.html">ITestPassed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestSkippedEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestSkippedEvent">
+  TestSkippedEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestSkipped&gt;? TestSkippedEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h3 id="Xunit_Runner_Common_ExecutionEventSink_TestStartingEvent" data-uid="Xunit.Runner.Common.ExecutionEventSink.TestStartingEvent">
+  TestStartingEvent
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Occurs when a <a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a> message is received.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public event MessageHandler&lt;ITestStarting&gt;? TestStartingEvent</code></pre>
+  </div>
+
+
+
+
+
+
+  <h4 class="section">Event Type</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler</a>&lt;<a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Sinks/EventSinks/ExecutionEventSink.cs/#L12" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,901 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.v3.TestNotRun
+  commentId: T:Xunit.v3.TestNotRun
+  id: TestNotRun
+  parent: Xunit.v3
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: TestNotRun
+  nameWithType: TestNotRun
+  fullName: Xunit.v3.TestNotRun
+  type: Class
+  source:
+    remote:
+      path: src/common/MessagePartials/TestNotRun.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestNotRun
+    path: ../v3-2.0.0/src/common/MessagePartials/TestNotRun.cs
+    startLine: 11
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Default implementation of <xref href="Xunit.Sdk.ITestNotRun" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [JsonTypeID("test-not-run")]
+
+      public sealed class TestNotRun : TestResultMessage, ITestNotRun, ITestResultMessage, ITestMessage, ITestCaseMessage, ITestMethodMessage, ITestClassMessage, ITestCollectionMessage, ITestAssemblyMessage, IMessageSinkMessage, IJsonSerializable, IExecutionMetadata
+    content.vb: >-
+      <JsonTypeID("test-not-run")>
+
+      Public NotInheritable Class TestNotRun Inherits TestResultMessage Implements ITestNotRun, ITestResultMessage, ITestMessage, ITestCaseMessage, ITestMethodMessage, ITestClassMessage, ITestCollectionMessage, ITestAssemblyMessage, IMessageSinkMessage, IJsonSerializable, IExecutionMetadata
+  inheritance:
+  - System.Object
+  - Xunit.v3.MessageSinkMessage
+  - Xunit.v3.TestAssemblyMessage
+  - Xunit.v3.TestCollectionMessage
+  - Xunit.v3.TestClassMessage
+  - Xunit.v3.TestMethodMessage
+  - Xunit.v3.TestCaseMessage
+  - Xunit.v3.TestMessage
+  - Xunit.v3.TestResultMessage
+  implements:
+  - Xunit.Sdk.ITestNotRun
+  - Xunit.Sdk.ITestResultMessage
+  - Xunit.Sdk.ITestMessage
+  - Xunit.Sdk.ITestCaseMessage
+  - Xunit.Sdk.ITestMethodMessage
+  - Xunit.Sdk.ITestClassMessage
+  - Xunit.Sdk.ITestCollectionMessage
+  - Xunit.Sdk.ITestAssemblyMessage
+  - Xunit.Sdk.IMessageSinkMessage
+  - Xunit.Sdk.IJsonSerializable
+  - Xunit.Sdk.IExecutionMetadata
+  inheritedMembers:
+  - Xunit.v3.TestResultMessage.ExecutionTime
+  - Xunit.v3.TestResultMessage.FinishTime
+  - Xunit.v3.TestResultMessage.Output
+  - Xunit.v3.TestResultMessage.Warnings
+  - Xunit.v3.TestResultMessage.ToString
+  - Xunit.v3.TestMessage.TestUniqueID
+  - Xunit.v3.TestCaseMessage.TestCaseUniqueID
+  - Xunit.v3.TestMethodMessage.TestMethodUniqueID
+  - Xunit.v3.TestClassMessage.TestClassUniqueID
+  - Xunit.v3.TestCollectionMessage.TestCollectionUniqueID
+  - Xunit.v3.TestAssemblyMessage.AssemblyUniqueID
+  - Xunit.v3.MessageSinkMessage.ValidateObjectState
+  - Xunit.v3.MessageSinkMessage.ToJson
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+  attributes:
+  - type: Xunit.Sdk.JsonTypeIDAttribute
+    ctor: Xunit.Sdk.JsonTypeIDAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: test-not-run
+references:
+- uid: Xunit.Sdk.ITestNotRun
+  commentId: T:Xunit.Sdk.ITestNotRun
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestNotRun.html
+  name: ITestNotRun
+  nameWithType: ITestNotRun
+  fullName: Xunit.Sdk.ITestNotRun
+- uid: Xunit.v3
+  commentId: N:Xunit.v3
+  href: Xunit.html
+  name: Xunit.v3
+  nameWithType: Xunit.v3
+  fullName: Xunit.v3
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Xunit.v3.MessageSinkMessage
+  commentId: T:Xunit.v3.MessageSinkMessage
+  parent: Xunit.v3
+  href: Xunit.v3.MessageSinkMessage.html
+  name: MessageSinkMessage
+  nameWithType: MessageSinkMessage
+  fullName: Xunit.v3.MessageSinkMessage
+- uid: Xunit.v3.TestAssemblyMessage
+  commentId: T:Xunit.v3.TestAssemblyMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestAssemblyMessage.html
+  name: TestAssemblyMessage
+  nameWithType: TestAssemblyMessage
+  fullName: Xunit.v3.TestAssemblyMessage
+- uid: Xunit.v3.TestCollectionMessage
+  commentId: T:Xunit.v3.TestCollectionMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestCollectionMessage.html
+  name: TestCollectionMessage
+  nameWithType: TestCollectionMessage
+  fullName: Xunit.v3.TestCollectionMessage
+- uid: Xunit.v3.TestClassMessage
+  commentId: T:Xunit.v3.TestClassMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestClassMessage.html
+  name: TestClassMessage
+  nameWithType: TestClassMessage
+  fullName: Xunit.v3.TestClassMessage
+- uid: Xunit.v3.TestMethodMessage
+  commentId: T:Xunit.v3.TestMethodMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestMethodMessage.html
+  name: TestMethodMessage
+  nameWithType: TestMethodMessage
+  fullName: Xunit.v3.TestMethodMessage
+- uid: Xunit.v3.TestCaseMessage
+  commentId: T:Xunit.v3.TestCaseMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestCaseMessage.html
+  name: TestCaseMessage
+  nameWithType: TestCaseMessage
+  fullName: Xunit.v3.TestCaseMessage
+- uid: Xunit.v3.TestMessage
+  commentId: T:Xunit.v3.TestMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestMessage.html
+  name: TestMessage
+  nameWithType: TestMessage
+  fullName: Xunit.v3.TestMessage
+- uid: Xunit.v3.TestResultMessage
+  commentId: T:Xunit.v3.TestResultMessage
+  parent: Xunit.v3
+  href: Xunit.v3.TestResultMessage.html
+  name: TestResultMessage
+  nameWithType: TestResultMessage
+  fullName: Xunit.v3.TestResultMessage
+- uid: Xunit.Sdk.ITestResultMessage
+  commentId: T:Xunit.Sdk.ITestResultMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestResultMessage.html
+  name: ITestResultMessage
+  nameWithType: ITestResultMessage
+  fullName: Xunit.Sdk.ITestResultMessage
+- uid: Xunit.Sdk.ITestMessage
+  commentId: T:Xunit.Sdk.ITestMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestMessage.html
+  name: ITestMessage
+  nameWithType: ITestMessage
+  fullName: Xunit.Sdk.ITestMessage
+- uid: Xunit.Sdk.ITestCaseMessage
+  commentId: T:Xunit.Sdk.ITestCaseMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestCaseMessage.html
+  name: ITestCaseMessage
+  nameWithType: ITestCaseMessage
+  fullName: Xunit.Sdk.ITestCaseMessage
+- uid: Xunit.Sdk.ITestMethodMessage
+  commentId: T:Xunit.Sdk.ITestMethodMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestMethodMessage.html
+  name: ITestMethodMessage
+  nameWithType: ITestMethodMessage
+  fullName: Xunit.Sdk.ITestMethodMessage
+- uid: Xunit.Sdk.ITestClassMessage
+  commentId: T:Xunit.Sdk.ITestClassMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestClassMessage.html
+  name: ITestClassMessage
+  nameWithType: ITestClassMessage
+  fullName: Xunit.Sdk.ITestClassMessage
+- uid: Xunit.Sdk.ITestCollectionMessage
+  commentId: T:Xunit.Sdk.ITestCollectionMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestCollectionMessage.html
+  name: ITestCollectionMessage
+  nameWithType: ITestCollectionMessage
+  fullName: Xunit.Sdk.ITestCollectionMessage
+- uid: Xunit.Sdk.ITestAssemblyMessage
+  commentId: T:Xunit.Sdk.ITestAssemblyMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestAssemblyMessage.html
+  name: ITestAssemblyMessage
+  nameWithType: ITestAssemblyMessage
+  fullName: Xunit.Sdk.ITestAssemblyMessage
+- uid: Xunit.Sdk.IMessageSinkMessage
+  commentId: T:Xunit.Sdk.IMessageSinkMessage
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IMessageSinkMessage.html
+  name: IMessageSinkMessage
+  nameWithType: IMessageSinkMessage
+  fullName: Xunit.Sdk.IMessageSinkMessage
+- uid: Xunit.Sdk.IJsonSerializable
+  commentId: T:Xunit.Sdk.IJsonSerializable
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IJsonSerializable.html
+  name: IJsonSerializable
+  nameWithType: IJsonSerializable
+  fullName: Xunit.Sdk.IJsonSerializable
+- uid: Xunit.Sdk.IExecutionMetadata
+  commentId: T:Xunit.Sdk.IExecutionMetadata
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IExecutionMetadata.html
+  name: IExecutionMetadata
+  nameWithType: IExecutionMetadata
+  fullName: Xunit.Sdk.IExecutionMetadata
+- uid: Xunit.v3.TestResultMessage.ExecutionTime
+  commentId: P:Xunit.v3.TestResultMessage.ExecutionTime
+  parent: Xunit.v3.TestResultMessage
+  href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_ExecutionTime
+  name: ExecutionTime
+  nameWithType: TestResultMessage.ExecutionTime
+  fullName: Xunit.v3.TestResultMessage.ExecutionTime
+- uid: Xunit.v3.TestResultMessage.FinishTime
+  commentId: P:Xunit.v3.TestResultMessage.FinishTime
+  parent: Xunit.v3.TestResultMessage
+  href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_FinishTime
+  name: FinishTime
+  nameWithType: TestResultMessage.FinishTime
+  fullName: Xunit.v3.TestResultMessage.FinishTime
+- uid: Xunit.v3.TestResultMessage.Output
+  commentId: P:Xunit.v3.TestResultMessage.Output
+  parent: Xunit.v3.TestResultMessage
+  href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_Output
+  name: Output
+  nameWithType: TestResultMessage.Output
+  fullName: Xunit.v3.TestResultMessage.Output
+- uid: Xunit.v3.TestResultMessage.Warnings
+  commentId: P:Xunit.v3.TestResultMessage.Warnings
+  parent: Xunit.v3.TestResultMessage
+  href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_Warnings
+  name: Warnings
+  nameWithType: TestResultMessage.Warnings
+  fullName: Xunit.v3.TestResultMessage.Warnings
+- uid: Xunit.v3.TestResultMessage.ToString
+  commentId: M:Xunit.v3.TestResultMessage.ToString
+  parent: Xunit.v3.TestResultMessage
+  href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_ToString
+  name: ToString()
+  nameWithType: TestResultMessage.ToString()
+  fullName: Xunit.v3.TestResultMessage.ToString()
+  spec.csharp:
+  - uid: Xunit.v3.TestResultMessage.ToString
+    name: ToString
+    href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.TestResultMessage.ToString
+    name: ToString
+    href: Xunit.v3.TestResultMessage.html#Xunit_v3_TestResultMessage_ToString
+  - name: (
+  - name: )
+- uid: Xunit.v3.TestMessage.TestUniqueID
+  commentId: P:Xunit.v3.TestMessage.TestUniqueID
+  parent: Xunit.v3.TestMessage
+  href: Xunit.v3.TestMessage.html#Xunit_v3_TestMessage_TestUniqueID
+  name: TestUniqueID
+  nameWithType: TestMessage.TestUniqueID
+  fullName: Xunit.v3.TestMessage.TestUniqueID
+- uid: Xunit.v3.TestCaseMessage.TestCaseUniqueID
+  commentId: P:Xunit.v3.TestCaseMessage.TestCaseUniqueID
+  parent: Xunit.v3.TestCaseMessage
+  href: Xunit.v3.TestCaseMessage.html#Xunit_v3_TestCaseMessage_TestCaseUniqueID
+  name: TestCaseUniqueID
+  nameWithType: TestCaseMessage.TestCaseUniqueID
+  fullName: Xunit.v3.TestCaseMessage.TestCaseUniqueID
+- uid: Xunit.v3.TestMethodMessage.TestMethodUniqueID
+  commentId: P:Xunit.v3.TestMethodMessage.TestMethodUniqueID
+  parent: Xunit.v3.TestMethodMessage
+  href: Xunit.v3.TestMethodMessage.html#Xunit_v3_TestMethodMessage_TestMethodUniqueID
+  name: TestMethodUniqueID
+  nameWithType: TestMethodMessage.TestMethodUniqueID
+  fullName: Xunit.v3.TestMethodMessage.TestMethodUniqueID
+- uid: Xunit.v3.TestClassMessage.TestClassUniqueID
+  commentId: P:Xunit.v3.TestClassMessage.TestClassUniqueID
+  parent: Xunit.v3.TestClassMessage
+  href: Xunit.v3.TestClassMessage.html#Xunit_v3_TestClassMessage_TestClassUniqueID
+  name: TestClassUniqueID
+  nameWithType: TestClassMessage.TestClassUniqueID
+  fullName: Xunit.v3.TestClassMessage.TestClassUniqueID
+- uid: Xunit.v3.TestCollectionMessage.TestCollectionUniqueID
+  commentId: P:Xunit.v3.TestCollectionMessage.TestCollectionUniqueID
+  parent: Xunit.v3.TestCollectionMessage
+  href: Xunit.v3.TestCollectionMessage.html#Xunit_v3_TestCollectionMessage_TestCollectionUniqueID
+  name: TestCollectionUniqueID
+  nameWithType: TestCollectionMessage.TestCollectionUniqueID
+  fullName: Xunit.v3.TestCollectionMessage.TestCollectionUniqueID
+- uid: Xunit.v3.TestAssemblyMessage.AssemblyUniqueID
+  commentId: P:Xunit.v3.TestAssemblyMessage.AssemblyUniqueID
+  parent: Xunit.v3.TestAssemblyMessage
+  href: Xunit.v3.TestAssemblyMessage.html#Xunit_v3_TestAssemblyMessage_AssemblyUniqueID
+  name: AssemblyUniqueID
+  nameWithType: TestAssemblyMessage.AssemblyUniqueID
+  fullName: Xunit.v3.TestAssemblyMessage.AssemblyUniqueID
+- uid: Xunit.v3.MessageSinkMessage.ValidateObjectState
+  commentId: M:Xunit.v3.MessageSinkMessage.ValidateObjectState
+  parent: Xunit.v3.MessageSinkMessage
+  href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ValidateObjectState
+  name: ValidateObjectState()
+  nameWithType: MessageSinkMessage.ValidateObjectState()
+  fullName: Xunit.v3.MessageSinkMessage.ValidateObjectState()
+  spec.csharp:
+  - uid: Xunit.v3.MessageSinkMessage.ValidateObjectState
+    name: ValidateObjectState
+    href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ValidateObjectState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.MessageSinkMessage.ValidateObjectState
+    name: ValidateObjectState
+    href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ValidateObjectState
+  - name: (
+  - name: )
+- uid: Xunit.v3.MessageSinkMessage.ToJson
+  commentId: M:Xunit.v3.MessageSinkMessage.ToJson
+  parent: Xunit.v3.MessageSinkMessage
+  href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ToJson
+  name: ToJson()
+  nameWithType: MessageSinkMessage.ToJson()
+  fullName: Xunit.v3.MessageSinkMessage.ToJson()
+  spec.csharp:
+  - uid: Xunit.v3.MessageSinkMessage.ToJson
+    name: ToJson
+    href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ToJson
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.MessageSinkMessage.ToJson
+    name: ToJson
+    href: Xunit.v3.MessageSinkMessage.html#Xunit_v3_MessageSinkMessage_ToJson
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Sdk
+  commentId: N:Xunit.Sdk
+  href: Xunit.html
+  name: Xunit.Sdk
+  nameWithType: Xunit.Sdk
+  fullName: Xunit.Sdk
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions
+  commentId: T:Xunit.Internal.ObjectExtensions
+  parent: Xunit.Internal
+  href: Xunit.Internal.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: Xunit.Internal.ObjectExtensions
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html

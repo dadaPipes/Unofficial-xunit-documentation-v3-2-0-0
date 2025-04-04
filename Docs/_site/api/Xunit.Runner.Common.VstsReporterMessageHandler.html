@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VstsReporterMessageHandler | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VstsReporterMessageHandler | Unofficial xunit docs ">
+      
+      <meta name="description" content="An implementation of  that supports .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_Common_VstsReporterMessageHandler.md&amp;value=---%0Auid%3A%20Xunit.Runner.Common.VstsReporterMessageHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common.VstsReporterMessageHandler">
+
+
+
+  <h1 id="Xunit_Runner_Common_VstsReporterMessageHandler" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler" class="text-break">
+Class VstsReporterMessageHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.VstsReporter.html">VstsReporter</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VstsReporterMessageHandler : DefaultRunnerReporterMessageHandler, IRunnerReporterMessageHandler, IMessageSink, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html">AggregateMessageSink</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.TestMessageSink.html">TestMessageSink</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html">DefaultRunnerReporterMessageHandler</a></div>
+      <div><span class="xref">VstsReporterMessageHandler</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_EnvVar_HidePassingOutput">DefaultRunnerReporterMessageHandler.EnvVar_HidePassingOutput</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_Logger">DefaultRunnerReporterMessageHandler.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_MetadataCache">DefaultRunnerReporterMessageHandler.MetadataCache</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_Escape_System_String_">DefaultRunnerReporterMessageHandler.Escape(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_EscapeMultiLineIndent_System_String_System_String_">DefaultRunnerReporterMessageHandler.EscapeMultiLineIndent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_GetAssemblyDisplayName_Xunit_Runner_Common_XunitProjectAssembly_">DefaultRunnerReporterMessageHandler.GetAssemblyDisplayName(XunitProjectAssembly)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_GetExecutionOptions_System_String_">DefaultRunnerReporterMessageHandler.GetExecutionOptions(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogError_Xunit_Sdk_IErrorMetadata_System_String_">DefaultRunnerReporterMessageHandler.LogError(IErrorMetadata, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogError_Xunit_Sdk_IErrorMetadata_System_String_System_Object___">DefaultRunnerReporterMessageHandler.LogError(IErrorMetadata, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogStackTrace_Xunit_Runner_Common_StackFrameInfo_System_String_">DefaultRunnerReporterMessageHandler.LogStackTrace(StackFrameInfo, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogOutput_Xunit_Runner_Common_StackFrameInfo_System_String_">DefaultRunnerReporterMessageHandler.LogOutput(StackFrameInfo, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogWarnings_Xunit_Runner_Common_StackFrameInfo_System_String___">DefaultRunnerReporterMessageHandler.LogWarnings(StackFrameInfo, string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleErrorMessage_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_IErrorMessage__">DefaultRunnerReporterMessageHandler.HandleErrorMessage(MessageHandlerArgs&lt;IErrorMessage&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyDiscoveryFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyDiscoveryFinished__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyDiscoveryFinished(MessageHandlerArgs&lt;TestAssemblyDiscoveryFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyDiscoveryStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyDiscoveryStarting__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyDiscoveryStarting(MessageHandlerArgs&lt;TestAssemblyDiscoveryStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyExecutionFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyExecutionFinished__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyExecutionFinished(MessageHandlerArgs&lt;TestAssemblyExecutionFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyExecutionStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyExecutionStarting__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyExecutionStarting(MessageHandlerArgs&lt;TestAssemblyExecutionStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyCleanupFailure(MessageHandlerArgs&lt;ITestAssemblyCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCaseCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestCaseCleanupFailure(MessageHandlerArgs&lt;ITestCaseCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCaseFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseFinished__">DefaultRunnerReporterMessageHandler.HandleTestCaseFinished(MessageHandlerArgs&lt;ITestCaseFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCaseStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseStarting__">DefaultRunnerReporterMessageHandler.HandleTestCaseStarting(MessageHandlerArgs&lt;ITestCaseStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestClassCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestClassCleanupFailure(MessageHandlerArgs&lt;ITestClassCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestClassFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassFinished__">DefaultRunnerReporterMessageHandler.HandleTestClassFinished(MessageHandlerArgs&lt;ITestClassFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestClassStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassStarting__">DefaultRunnerReporterMessageHandler.HandleTestClassStarting(MessageHandlerArgs&lt;ITestClassStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestCleanupFailure(MessageHandlerArgs&lt;ITestCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCollectionCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestCollectionCleanupFailure(MessageHandlerArgs&lt;ITestCollectionCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCollectionFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionFinished__">DefaultRunnerReporterMessageHandler.HandleTestCollectionFinished(MessageHandlerArgs&lt;ITestCollectionFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestCollectionStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionStarting__">DefaultRunnerReporterMessageHandler.HandleTestCollectionStarting(MessageHandlerArgs&lt;ITestCollectionStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestExecutionSummaries_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestExecutionSummaries__">DefaultRunnerReporterMessageHandler.HandleTestExecutionSummaries(MessageHandlerArgs&lt;TestExecutionSummaries&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestFinished__">DefaultRunnerReporterMessageHandler.HandleTestFinished(MessageHandlerArgs&lt;ITestFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestMethodCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodCleanupFailure__">DefaultRunnerReporterMessageHandler.HandleTestMethodCleanupFailure(MessageHandlerArgs&lt;ITestMethodCleanupFailure&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestMethodFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodFinished__">DefaultRunnerReporterMessageHandler.HandleTestMethodFinished(MessageHandlerArgs&lt;ITestMethodFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestMethodStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodStarting__">DefaultRunnerReporterMessageHandler.HandleTestMethodStarting(MessageHandlerArgs&lt;ITestMethodStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestOutput_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestOutput__">DefaultRunnerReporterMessageHandler.HandleTestOutput(MessageHandlerArgs&lt;ITestOutput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_WriteDefaultSummary_Xunit_Runner_Common_IRunnerLogger_Xunit_Runner_Common_TestExecutionSummaries_">DefaultRunnerReporterMessageHandler.WriteDefaultSummary(IRunnerLogger, TestExecutionSummaries)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Diagnostics">TestMessageSink.Diagnostics</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Discovery">TestMessageSink.Discovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Execution">TestMessageSink.Execution</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Runner">TestMessageSink.Runner</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_AggregatedSinks">AggregateMessageSink.AggregatedSinks</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_GetOrCreateAggregatedSink__1___0__">AggregateMessageSink.GetOrCreateAggregatedSink&lt;TDispatcher&gt;(ref TDispatcher)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_OnMessage_Xunit_Sdk_IMessageSinkMessage_">AggregateMessageSink.OnMessage(IMessageSinkMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Xunit_Runner_Common_VstsReporterMessageHandler_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Initializes a new instance of the <a class="xref" href="Xunit.Runner.Common.VstsReporterMessageHandler.html">VstsReporterMessageHandler</a> class.</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler__ctor_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.#ctor*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler__ctor_Xunit_Runner_Common_IRunnerLogger_System_String_System_String_System_Int32_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.#ctor(Xunit.Runner.Common.IRunnerLogger,System.String,System.String,System.Int32)">
+  VstsReporterMessageHandler(IRunnerLogger, string, string, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.VstsReporter.html">VstsReporter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VstsReporterMessageHandler(IRunnerLogger logger, string baseUri, string accessToken, int buildId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Xunit.Runner.Common.IRunnerLogger.html">IRunnerLogger</a></dt>
+    <dd><p>The logger used to report messages</p>
+</dd>
+    <dt><code>baseUri</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The base URI for talking to Azure DevOps/VSTS</p>
+</dd>
+    <dt><code>accessToken</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The access token required to talk to Azure DevOps/VSTS</p>
+</dd>
+    <dt><code>buildId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The ID of build that's currently being run</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_Runner_Common_VstsReporterMessageHandler__ctor_Xunit_Runner_Common_IRunnerLogger_System_String_System_String_System_Int32__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Initializes a new instance of the <a class="xref" href="Xunit.Runner.Common.VstsReporterMessageHandler.html">VstsReporterMessageHandler</a> class.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_DisposeAsync_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.DisposeAsync*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_DisposeAsync" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.DisposeAsync">
+  DisposeAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or
+resetting unmanaged resources asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestAssemblyFinished_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestAssemblyFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestAssemblyFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyFinished__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestAssemblyFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestAssemblyFinished})">
+  HandleTestAssemblyFinished(MessageHandlerArgs&lt;ITestAssemblyFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestAssemblyFinished(MessageHandlerArgs&lt;ITestAssemblyFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestAssemblyStarting_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestAssemblyStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestAssemblyStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyStarting__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestAssemblyStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestAssemblyStarting})">
+  HandleTestAssemblyStarting(MessageHandlerArgs&lt;ITestAssemblyStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestAssemblyStarting(MessageHandlerArgs&lt;ITestAssemblyStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestFailed_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestFailed*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestFailed_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestFailed__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestFailed(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestFailed})">
+  HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestPassed_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestPassed*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestPassed_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestPassed__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestPassed(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestPassed})">
+  HandleTestPassed(MessageHandlerArgs&lt;ITestPassed&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L112"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestPassed.html">ITestPassed</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestPassed(MessageHandlerArgs&lt;ITestPassed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestPassed.html">ITestPassed</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestSkipped_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestSkipped*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestSkipped_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestSkipped__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestSkipped(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestSkipped})">
+  HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L124"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestStarting_" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_VstsReporterMessageHandler_HandleTestStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestStarting__" data-uid="Xunit.Runner.Common.VstsReporterMessageHandler.HandleTestStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestStarting})">
+  HandleTestStarting(MessageHandlerArgs&lt;ITestStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when <a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a> is raised.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestStarting(MessageHandlerArgs&lt;ITestStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a>&gt;</dt>
+    <dd><p>An object that contains the event data.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/VstsReporterMessageHandler.cs/#L20" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

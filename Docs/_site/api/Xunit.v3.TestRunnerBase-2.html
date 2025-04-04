@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TestRunnerBase&lt;TContext, TTest&gt; | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TestRunnerBase&lt;TContext, TTest&gt; | Unofficial xunit docs ">
+      
+      <meta name="description" content="A base class that provides default behavior when running a test. This includes support for skipping tests.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_v3_TestRunnerBase_2.md&amp;value=---%0Auid%3A%20Xunit.v3.TestRunnerBase%602%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.v3.TestRunnerBase`2">
+
+
+
+  <h1 id="Xunit_v3_TestRunnerBase_2" data-uid="Xunit.v3.TestRunnerBase`2" class="text-break">
+Class TestRunnerBase&lt;TContext, TTest&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.v3.html">v3</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A base class that provides default behavior when running a test. This includes support
+for skipping tests.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class TestRunnerBase&lt;TContext, TTest&gt; where TContext : TestRunnerBaseContext&lt;TTest&gt; where TTest : class, ITest</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TContext</code></dt>
+    <dd><p>The context type used by the runner</p>
+</dd>
+    <dt><code>TTest</code></dt>
+    <dd><p>The test type used by the test framework. Must derive from
+<a class="xref" href="Xunit.Sdk.ITest.html">ITest</a>.</p>
+</dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TestRunnerBase&lt;TContext, TTest&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.v3.TestRunner-2.html">TestRunner</a>&lt;TContext, TTest&gt;</div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Xunit_v3_TestRunnerBase_2_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>This class does not make any assumptions about what it means to run an individual test,
+just that at some point, the test will be run. The intention with this base class is that
+it can serve as a base for non-traditional tests (e.g., tests that are not derived from
+invoking CLR methods).</p>
+</div>
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_v3_TestRunnerBase_2__ctor_" data-uid="Xunit.v3.TestRunnerBase`2.#ctor*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2__ctor" data-uid="Xunit.v3.TestRunnerBase`2.#ctor">
+  TestRunnerBase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Xunit.v3.TestRunner-2.html">TestRunner&lt;TContext, TTest&gt;</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected TestRunnerBase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_GetAttachments_" data-uid="Xunit.v3.TestRunnerBase`2.GetAttachments*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_GetAttachments__0_" data-uid="Xunit.v3.TestRunnerBase`2.GetAttachments(`0)">
+  GetAttachments(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the attachments for the test. If the test framework did not collect attachments
+(or does not support attachments), then it should return <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;IReadOnlyDictionary&lt;string, TestAttachment&gt;?&gt; GetAttachments(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Xunit.Sdk.TestAttachment.html">TestAttachment</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_GetAttachments__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>By default, this method returns <a class="xref" href="Xunit.ITestContext.html#Xunit_ITestContext_Attachments">Attachments</a> from the current context.
+This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Running">Running</a> and any exceptions thrown will
+contribute to test failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_GetTestOutput_" data-uid="Xunit.v3.TestRunnerBase`2.GetTestOutput*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_GetTestOutput__0_" data-uid="Xunit.v3.TestRunnerBase`2.GetTestOutput(`0)">
+  GetTestOutput(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L55"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets any output collected from the test after execution is complete. If the test framework
+did not collect any output, or does not support collecting output, then it should
+return <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;string&gt; GetTestOutput(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_GetTestOutput__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Running">Running</a> and any exceptions thrown will
+contribute to test failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_GetWarnings_" data-uid="Xunit.v3.TestRunnerBase`2.GetWarnings*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_GetWarnings__0_" data-uid="Xunit.v3.TestRunnerBase`2.GetWarnings(`0)">
+  GetWarnings(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L67"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the warnings that will be reported during test results. By default, returns <code>null</code>,
+indicating that there were no warnings</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;string[]?&gt; GetWarnings(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_GetWarnings__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Running">Running</a> and any exceptions thrown will
+contribute to test failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestCleanupFailure_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestCleanupFailure*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestCleanupFailure__0_System_Exception_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestCleanupFailure(`0,System.Exception)">
+  OnTestCleanupFailure(TContext, Exception)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when an exception was thrown while cleaning up, after the test has run.
+By default, this sends (like <a class="xref" href="Xunit.v3.TestCleanupFailure.html">TestCleanupFailure</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;bool&gt; OnTestCleanupFailure(TContext ctxt, Exception exception)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception that caused the cleanup failure (may be an instance
+of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.aggregateexception">AggregateException</a> if more than one exception occurred).</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestCleanupFailure__0_System_Exception__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown are
+converted into fatal exception messages (via <a class="xref" href="Xunit.Sdk.IErrorMessage.html">IErrorMessage</a>) and sent to the message
+bus in <code class="paramref">ctxt</code>.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestFailed_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestFailed*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestFailed__0_System_Exception_System_Decimal_System_String_System_String___" data-uid="Xunit.v3.TestRunnerBase`2.OnTestFailed(`0,System.Exception,System.Decimal,System.String,System.String[])">
+  OnTestFailed(TContext, Exception, decimal, string, string[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when a test has failed. By default, this sends <a class="xref" href="Xunit.v3.TestFailed.html">TestFailed</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;(bool Continue, TestResultState ResultState)&gt; OnTestFailed(TContext ctxt, Exception exception, decimal executionTime, string output, string[]? warnings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The exception that caused the test failure</p>
+</dd>
+    <dt><code>executionTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>The time spent running the test</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The output from the test</p>
+</dd>
+    <dt><code>warnings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The warnings that were generated during the test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.continue">Continue</a>, <a class="xref" href="Xunit.TestResultState.html">TestResultState</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.resultstate">ResultState</a>)&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestFailed__0_System_Exception_System_Decimal_System_String_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestFinished_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestFinished*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__" data-uid="Xunit.v3.TestRunnerBase`2.OnTestFinished(`0,System.Decimal,System.String,System.String[],System.Collections.Generic.IReadOnlyDictionary{System.String,Xunit.Sdk.TestAttachment})">
+  OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L168"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called just after the test has finished running. By default, this sends
+<a class="xref" href="Xunit.v3.TestFinished.html">TestFinished</a>. Override this to enable any extensibility related to test
+finish.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;bool&gt; OnTestFinished(TContext ctxt, decimal executionTime, string output, string[]? warnings, IReadOnlyDictionary&lt;string, TestAttachment&gt;? attachments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>executionTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>The time spent running the test</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The output from the test</p>
+</dd>
+    <dt><code>warnings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The warnings that were generated during the test</p>
+</dd>
+    <dt><code>attachments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="Xunit.Sdk.TestAttachment.html">TestAttachment</a>&gt;</dt>
+    <dd><p>The attachments that were assocated with the test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment___remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestNotRun_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestNotRun*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestNotRun__0_System_String_System_String___" data-uid="Xunit.v3.TestRunnerBase`2.OnTestNotRun(`0,System.String,System.String[])">
+  OnTestNotRun(TContext, string, string[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L208"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when a test was not run. By default, this sends <a class="xref" href="Xunit.v3.TestNotRun.html">TestNotRun</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;(bool Continue, TestResultState ResultState)&gt; OnTestNotRun(TContext ctxt, string output, string[]? warnings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The output from the test</p>
+</dd>
+    <dt><code>warnings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The warnings that were generated during the test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.continue">Continue</a>, <a class="xref" href="Xunit.TestResultState.html">TestResultState</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.resultstate">ResultState</a>)&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestNotRun__0_System_String_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestPassed_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestPassed*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestPassed__0_System_Decimal_System_String_System_String___" data-uid="Xunit.v3.TestRunnerBase`2.OnTestPassed(`0,System.Decimal,System.String,System.String[])">
+  OnTestPassed(TContext, decimal, string, string[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L244"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when a test has passed. By default, this sends <a class="xref" href="Xunit.v3.TestPassed.html">TestPassed</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;(bool Continue, TestResultState ResultState)&gt; OnTestPassed(TContext ctxt, decimal executionTime, string output, string[]? warnings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>executionTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>The time spent running the test</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The output from the test</p>
+</dd>
+    <dt><code>warnings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The warnings that were generated during the test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.continue">Continue</a>, <a class="xref" href="Xunit.TestResultState.html">TestResultState</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.resultstate">ResultState</a>)&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestPassed__0_System_Decimal_System_String_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestSkipped_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestSkipped*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestSkipped__0_System_String_System_Decimal_System_String_System_String___" data-uid="Xunit.v3.TestRunnerBase`2.OnTestSkipped(`0,System.String,System.Decimal,System.String,System.String[])">
+  OnTestSkipped(TContext, string, decimal, string, string[]?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called when a test is skipped. By default, this sends <a class="xref" href="Xunit.v3.TestSkipped.html">TestSkipped</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;(bool Continue, TestResultState ResultState)&gt; OnTestSkipped(TContext ctxt, string skipReason, decimal executionTime, string output, string[]? warnings)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>skipReason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The reason given for skipping the test</p>
+</dd>
+    <dt><code>executionTime</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a></dt>
+    <dd><p>The time spent running the test</p>
+</dd>
+    <dt><code>output</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The output from the test</p>
+</dd>
+    <dt><code>warnings</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>The warnings that were generated during the test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;(<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.continue">Continue</a>, <a class="xref" href="Xunit.TestResultState.html">TestResultState</a> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.valuetuple-system.boolean,xunit.testresultstate-.resultstate">ResultState</a>)&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestSkipped__0_System_String_System_Decimal_System_String_System_String____remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestStarting_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestStarting*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestStarting__0_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestStarting(`0)">
+  OnTestStarting(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L321"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method is called just before the test is run. By default, this sends
+<a class="xref" href="Xunit.v3.TestStarting.html">TestStarting</a>. Override this to enable any extensibility related to test
+start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;bool&gt; OnTestStarting(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_OnTestStarting__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Initializing">Initializing</a> and any exceptions thrown will
+contribute to test failure (and will prevent the test from running).  Even if this method records
+exceptions, <a class="xref" href="Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a> will be called.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_OnTestStarting_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestStarting*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_OnTestStarting__0_System_Boolean_System_Int32_" data-uid="Xunit.v3.TestRunnerBase`2.OnTestStarting(`0,System.Boolean,System.Int32)">
+  OnTestStarting(TContext, bool, int)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L331"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This is a helper that allows passing explicit and timeout values, since those are not
+part of the core object model.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ValueTask&lt;bool&gt; OnTestStarting(TContext ctxt, bool @explicit, int timeout)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>explicit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A flag which indicates whether this is an explicit test</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The timeout for running this test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_Run_" data-uid="Xunit.v3.TestRunnerBase`2.Run*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_Run__0_" data-uid="Xunit.v3.TestRunnerBase`2.Run(`0)">
+  Run(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Runs the test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ValueTask&lt;RunSummary&gt; Run(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="Xunit.v3.RunSummary.html">RunSummary</a>&gt;</dt>
+    <dd><p>Returns summary information about the test that was run.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_Run__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This function is the primary orchestrator of test execution.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_RunTest_" data-uid="Xunit.v3.TestRunnerBase`2.RunTest*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_RunTest__0_" data-uid="Xunit.v3.TestRunnerBase`2.RunTest(`0)">
+  RunTest(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L461"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this method to run the test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract ValueTask&lt;TimeSpan&gt; RunTest(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.timespan">TimeSpan</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_SetTestContext_" data-uid="Xunit.v3.TestRunnerBase`2.SetTestContext*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_SetTestContext__0_Xunit_TestEngineStatus_Xunit_TestResultState_System_Object_" data-uid="Xunit.v3.TestRunnerBase`2.SetTestContext(`0,Xunit.TestEngineStatus,Xunit.TestResultState,System.Object)">
+  SetTestContext(TContext, TestEngineStatus, TestResultState?, object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L475"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the test context for the given test state and engine status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void SetTestContext(TContext ctxt, TestEngineStatus testStatus, TestResultState? testState = null, object? testClassInstance = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+    <dt><code>testStatus</code> <a class="xref" href="Xunit.TestEngineStatus.html">TestEngineStatus</a></dt>
+    <dd><p>The current engine status for the test</p>
+</dd>
+    <dt><code>testState</code> <a class="xref" href="Xunit.TestResultState.html">TestResultState</a></dt>
+    <dd><p>The current test state</p>
+</dd>
+    <dt><code>testClassInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The instance of the test class</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_SetTestContext__0_Xunit_TestEngineStatus_Xunit_TestResultState_System_Object__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method must never throw. Behavior is undefined if it does. Instead, exceptions that
+occur should be recorded in the aggregator in <code class="paramref">ctxt</code> and will be reflected
+in a way that's appropriate based on when this method is called.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_ShouldTestRun_" data-uid="Xunit.v3.TestRunnerBase`2.ShouldTestRun*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_ShouldTestRun__0_" data-uid="Xunit.v3.TestRunnerBase`2.ShouldTestRun(`0)">
+  ShouldTestRun(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Override this to determine whether a test should be run or not (meaning, if you return <code>false</code>,
+it will be reported with a status of <a class="xref" href="Xunit.TestResult.html#Xunit_TestResult_NotRun">NotRun</a>). By default, this method will
+return <code>true</code>. This is typically used to implement the ability to exclude specific tests
+unless they've been explicitly asked to be run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual bool ShouldTestRun(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_TestRunnerBase_2_ShouldTestRun__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Running">Running</a> and any exceptions thrown will
+contribute to test failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_TestRunnerBase_2_UpdateTestContext_" data-uid="Xunit.v3.TestRunnerBase`2.UpdateTestContext*"></a>
+
+  <h3 id="Xunit_v3_TestRunnerBase_2_UpdateTestContext_System_Object_Xunit_TestResultState_" data-uid="Xunit.v3.TestRunnerBase`2.UpdateTestContext(System.Object,Xunit.TestResultState)">
+  UpdateTestContext(object?, TestResultState?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Updates the test context values while the test is running, without swapping out the test context
+itself. This preserves the values in the existing context (notably, the cancellation token, which
+is wrapped and passed, and as such cannot be replaced).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void UpdateTestContext(object? testClassInstance, TestResultState? testState = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>testClassInstance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+    <dt><code>testState</code> <a class="xref" href="Xunit.TestResultState.html">TestResultState</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/TestRunnerBase.cs/#L22" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

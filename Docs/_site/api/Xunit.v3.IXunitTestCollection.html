@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IXunitTestCollection | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IXunitTestCollection | Unofficial xunit docs ">
+      
+      <meta name="description" content="Represents a test collection from xUnit.net v3 based on reflection.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_v3_IXunitTestCollection.md&amp;value=---%0Auid%3A%20Xunit.v3.IXunitTestCollection%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.v3.IXunitTestCollection">
+
+
+
+  <h1 id="Xunit_v3_IXunitTestCollection" data-uid="Xunit.v3.IXunitTestCollection" class="text-break">
+Interface IXunitTestCollection  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.v3.html">v3</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents a test collection from xUnit.net v3 based on reflection.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IXunitTestCollection : ITestCollection, ITestCollectionMetadata</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.Sdk.ITestCollectionMetadata.html#Xunit_Sdk_ITestCollectionMetadata_TestCollectionClassName">ITestCollectionMetadata.TestCollectionClassName</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.ITestCollectionMetadata.html#Xunit_Sdk_ITestCollectionMetadata_TestCollectionDisplayName">ITestCollectionMetadata.TestCollectionDisplayName</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.ITestCollectionMetadata.html#Xunit_Sdk_ITestCollectionMetadata_Traits">ITestCollectionMetadata.Traits</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Sdk.ITestCollectionMetadata.html#Xunit_Sdk_ITestCollectionMetadata_UniqueID">ITestCollectionMetadata.UniqueID</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+  <h2 id="Xunit_v3_IXunitTestCollection_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>Test collections form the basis of the parallelization in xUnit.net v3. Test cases
+which are in the same test collection will not be run in parallel against sibling
+tests, but will run in parallel against tests in other collections. They also provide
+a level of shared context via <a class="xref" href="Xunit.ICollectionFixture-1.html">ICollectionFixture&lt;TFixture&gt;</a>.</p>
+</div>
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_v3_IXunitTestCollection_BeforeAfterTestAttributes_" data-uid="Xunit.v3.IXunitTestCollection.BeforeAfterTestAttributes*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_BeforeAfterTestAttributes" data-uid="Xunit.v3.IXunitTestCollection.BeforeAfterTestAttributes">
+  BeforeAfterTestAttributes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Xunit.v3.IBeforeAfterTestAttribute.html">IBeforeAfterTestAttribute</a>s attached to the test collection (and
+the test assembly).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;IBeforeAfterTestAttribute&gt; BeforeAfterTestAttributes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Xunit.v3.IBeforeAfterTestAttribute.html">IBeforeAfterTestAttribute</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_ClassFixtureTypes_" data-uid="Xunit.v3.IXunitTestCollection.ClassFixtureTypes*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_ClassFixtureTypes" data-uid="Xunit.v3.IXunitTestCollection.ClassFixtureTypes">
+  ClassFixtureTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of collection fixture types associated with the test collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;Type&gt; ClassFixtureTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_CollectionDefinition_" data-uid="Xunit.v3.IXunitTestCollection.CollectionDefinition*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_CollectionDefinition" data-uid="Xunit.v3.IXunitTestCollection.CollectionDefinition">
+  CollectionDefinition
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the type that this collection definition derived from, if it derives from
+one. Untyped collections are possible when test classes are decorated
+using <a class="xref" href="Xunit.CollectionAttribute.html#Xunit_CollectionAttribute__ctor_System_String_">CollectionAttribute(string)</a> and there is no test collection
+class declared with the same name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Type? CollectionDefinition { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_IXunitTestCollection_CollectionDefinition_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This should only be used to execute a test collection. All reflection should be abstracted here
+instead for better testability.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_CollectionFixtureTypes_" data-uid="Xunit.v3.IXunitTestCollection.CollectionFixtureTypes*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_CollectionFixtureTypes" data-uid="Xunit.v3.IXunitTestCollection.CollectionFixtureTypes">
+  CollectionFixtureTypes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a list of collection fixture types associated with the test collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IReadOnlyCollection&lt;Type&gt; CollectionFixtureTypes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_DisableParallelization_" data-uid="Xunit.v3.IXunitTestCollection.DisableParallelization*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_DisableParallelization" data-uid="Xunit.v3.IXunitTestCollection.DisableParallelization">
+  DisableParallelization
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether tests in this collection runs in parallel with any other collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool DisableParallelization { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_TestAssembly_" data-uid="Xunit.v3.IXunitTestCollection.TestAssembly*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_TestAssembly" data-uid="Xunit.v3.IXunitTestCollection.TestAssembly">
+  TestAssembly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test assembly this test collection belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IXunitTestAssembly TestAssembly { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.v3.IXunitTestAssembly.html">IXunitTestAssembly</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_IXunitTestCollection_TestCaseOrderer_" data-uid="Xunit.v3.IXunitTestCollection.TestCaseOrderer*"></a>
+
+  <h3 id="Xunit_v3_IXunitTestCollection_TestCaseOrderer" data-uid="Xunit.v3.IXunitTestCollection.TestCaseOrderer">
+  TestCaseOrderer
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test case orderer for the test collection, if present.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">ITestCaseOrderer? TestCaseOrderer { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.v3.ITestCaseOrderer.html">ITestCaseOrderer</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestCollection.cs/#L16" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

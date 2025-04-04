@@ -1,0 +1,547 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.IAsyncLifetime
+  commentId: T:Xunit.IAsyncLifetime
+  id: IAsyncLifetime
+  parent: Xunit
+  children:
+  - Xunit.IAsyncLifetime.InitializeAsync
+  langs:
+  - csharp
+  - vb
+  name: IAsyncLifetime
+  nameWithType: IAsyncLifetime
+  fullName: Xunit.IAsyncLifetime
+  type: Interface
+  source:
+    remote:
+      path: src/xunit.v3.core/IAsyncLifetime.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: IAsyncLifetime
+    path: ../v3-2.0.0/src/xunit.v3.core/IAsyncLifetime.cs
+    startLine: 12
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: >-
+    Used to provide asynchronous lifetime functionality. Currently supported:<br />
+
+    - Test classes<br />
+
+    - Classes used in <xref href="Xunit.IClassFixture%601" data-throw-if-not-resolved="false"></xref><br />
+
+    - Classes used in <xref href="Xunit.ICollectionFixture%601" data-throw-if-not-resolved="false"></xref>.<br />
+
+    - Classes used in <code>[assembly: <xref href="Xunit.AssemblyFixtureAttribute" data-throw-if-not-resolved="false"></xref>()]</code>.
+  example: []
+  syntax:
+    content: 'public interface IAsyncLifetime : IAsyncDisposable'
+    content.vb: Public Interface IAsyncLifetime Inherits IAsyncDisposable
+  inheritedMembers:
+  - System.IAsyncDisposable.DisposeAsync
+  extensionMethods:
+  - System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+- uid: Xunit.IAsyncLifetime.InitializeAsync
+  commentId: M:Xunit.IAsyncLifetime.InitializeAsync
+  id: InitializeAsync
+  parent: Xunit.IAsyncLifetime
+  langs:
+  - csharp
+  - vb
+  name: InitializeAsync()
+  nameWithType: IAsyncLifetime.InitializeAsync()
+  fullName: Xunit.IAsyncLifetime.InitializeAsync()
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.core/IAsyncLifetime.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: InitializeAsync
+    path: ../v3-2.0.0/src/xunit.v3.core/IAsyncLifetime.cs
+    startLine: 17
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: Called immediately after the class has been created, before it is used.
+  example: []
+  syntax:
+    content: ValueTask InitializeAsync()
+    return:
+      type: System.Threading.Tasks.ValueTask
+    content.vb: Function InitializeAsync() As ValueTask
+  overload: Xunit.IAsyncLifetime.InitializeAsync*
+references:
+- uid: Xunit.IClassFixture`1
+  commentId: T:Xunit.IClassFixture`1
+  href: Xunit.IClassFixture-1.html
+  name: IClassFixture<TFixture>
+  nameWithType: IClassFixture<TFixture>
+  fullName: Xunit.IClassFixture<TFixture>
+  nameWithType.vb: IClassFixture(Of TFixture)
+  fullName.vb: Xunit.IClassFixture(Of TFixture)
+  name.vb: IClassFixture(Of TFixture)
+  spec.csharp:
+  - uid: Xunit.IClassFixture`1
+    name: IClassFixture
+    href: Xunit.IClassFixture-1.html
+  - name: <
+  - name: TFixture
+  - name: '>'
+  spec.vb:
+  - uid: Xunit.IClassFixture`1
+    name: IClassFixture
+    href: Xunit.IClassFixture-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFixture
+  - name: )
+- uid: Xunit.ICollectionFixture`1
+  commentId: T:Xunit.ICollectionFixture`1
+  href: Xunit.ICollectionFixture-1.html
+  name: ICollectionFixture<TFixture>
+  nameWithType: ICollectionFixture<TFixture>
+  fullName: Xunit.ICollectionFixture<TFixture>
+  nameWithType.vb: ICollectionFixture(Of TFixture)
+  fullName.vb: Xunit.ICollectionFixture(Of TFixture)
+  name.vb: ICollectionFixture(Of TFixture)
+  spec.csharp:
+  - uid: Xunit.ICollectionFixture`1
+    name: ICollectionFixture
+    href: Xunit.ICollectionFixture-1.html
+  - name: <
+  - name: TFixture
+  - name: '>'
+  spec.vb:
+  - uid: Xunit.ICollectionFixture`1
+    name: ICollectionFixture
+    href: Xunit.ICollectionFixture-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TFixture
+  - name: )
+- uid: Xunit.AssemblyFixtureAttribute
+  commentId: T:Xunit.AssemblyFixtureAttribute
+  href: Xunit.AssemblyFixtureAttribute.html
+  name: AssemblyFixtureAttribute
+  nameWithType: AssemblyFixtureAttribute
+  fullName: Xunit.AssemblyFixtureAttribute
+- uid: Xunit
+  commentId: N:Xunit
+  href: Xunit.html
+  name: Xunit
+  nameWithType: Xunit
+  fullName: Xunit
+- uid: System.IAsyncDisposable.DisposeAsync
+  commentId: M:System.IAsyncDisposable.DisposeAsync
+  parent: System.IAsyncDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  name: DisposeAsync()
+  nameWithType: IAsyncDisposable.DisposeAsync()
+  fullName: System.IAsyncDisposable.DisposeAsync()
+  spec.csharp:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IAsyncDisposable.DisposeAsync
+    name: DisposeAsync
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync
+  - name: (
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions
+  commentId: T:Xunit.Internal.ObjectExtensions
+  parent: Xunit.Internal
+  href: Xunit.Internal.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: Xunit.Internal.ObjectExtensions
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: Xunit.IAsyncLifetime.InitializeAsync*
+  commentId: Overload:Xunit.IAsyncLifetime.InitializeAsync
+  href: Xunit.IAsyncLifetime.html#Xunit_IAsyncLifetime_InitializeAsync
+  name: InitializeAsync
+  nameWithType: IAsyncLifetime.InitializeAsync
+  fullName: Xunit.IAsyncLifetime.InitializeAsync
+- uid: System.Threading.Tasks.ValueTask
+  commentId: T:System.Threading.Tasks.ValueTask
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: System.Threading.Tasks.ValueTask
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

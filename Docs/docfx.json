@@ -3,12 +3,11 @@
   "metadata": [
     {
       "src": [
-        {
-          "src": "../src",
-          "files": [
-            "**/*.csproj"
-          ]
-        }
+        { "src": "../v3-2.0.0/src/xunit.v3.assert", "files": [ "**/*.csproj" ] },
+        { "src": "../v3-2.0.0/src/xunit.v3.common", "files": [ "**/*.csproj" ] },
+        { "src": "../v3-2.0.0/src/xunit.v3.core", "files": [ "**/*.csproj" ] },
+        { "src": "../v3-2.0.0/src/xunit.v3.runner.common", "files": [ "**/*.csproj" ] },
+        { "src": "../v3-2.0.0/src/xunit.v3.runner.utility", "files": [ "**/*.csproj" ] }
       ],
       "dest": "api"
     }
@@ -16,19 +15,13 @@
   "build": {
     "content": [
       {
-        "files": [
-          "**/*.{md,yml}"
-        ],
-        "exclude": [
-          "_site/**"
-        ]
+        "files": [ "**/*.{md,yml}" ],
+        "exclude": [ "_site/**" ]
       }
     ],
     "resource": [
       {
-        "files": [
-          "images/**"
-        ]
+        "files": [ "images/**" ]
       }
     ],
     "output": "_site",

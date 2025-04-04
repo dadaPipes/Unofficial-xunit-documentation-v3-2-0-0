@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TestAssemblyConfiguration | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TestAssemblyConfiguration | Unofficial xunit docs ">
+      
+      <meta name="description" content="Represents the configuration items set in the configuration file of a test assembly. Should be read with the  class.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_Common_TestAssemblyConfiguration.md&amp;value=---%0Auid%3A%20Xunit.Runner.Common.TestAssemblyConfiguration%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common.TestAssemblyConfiguration">
+
+
+
+  <h1 id="Xunit_Runner_Common_TestAssemblyConfiguration" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration" class="text-break">
+Class TestAssemblyConfiguration  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents the configuration items set in the configuration file of a test assembly.
+Should be read with the <a class="xref" href="Xunit.Runner.Common.ConfigReader.html">ConfigReader</a> class.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TestAssemblyConfiguration</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TestAssemblyConfiguration</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_AppDomain_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AppDomain*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_AppDomain" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AppDomain">
+  AppDomain
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L16"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether an app domain should be used to discover and run tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppDomainSupport? AppDomain { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.AppDomainSupport.html">AppDomainSupport</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_AppDomainOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AppDomainOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_AppDomainOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AppDomainOrDefault">
+  AppDomainOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L22"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether an app domain should be used to discover and run tests.
+If the flag is not set, returns the default value (<a class="xref" href="Xunit.Runner.Common.AppDomainSupport.html#Xunit_Runner_Common_AppDomainSupport_IfAvailable">IfAvailable</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppDomainSupport AppDomainOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.AppDomainSupport.html">AppDomainSupport</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_AssertEquivalentMaxDepth_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AssertEquivalentMaxDepth*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_AssertEquivalentMaxDepth" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.AssertEquivalentMaxDepth">
+  AssertEquivalentMaxDepth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L27"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value which indicates the maximum object depth to compare when using <code>Assert.Equivalent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? AssertEquivalentMaxDepth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_Culture_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Culture*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_Culture" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Culture">
+  Culture
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the desired culture to run the tests under. Use <code>null</code> (default) to
+indicate that we should use the default OS culture; use an empty string to indicate that
+we should use the invariant culture; or use any culture value that is valid for
+calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.-ctor#system-globalization-cultureinfo-ctor(system-string)">CultureInfo(string)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Culture { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_DiagnosticMessages_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.DiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_DiagnosticMessages" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.DiagnosticMessages">
+  DiagnosticMessages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that the end user wants diagnostic messages
+from the test framework.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? DiagnosticMessages { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_DiagnosticMessagesOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.DiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_DiagnosticMessagesOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.DiagnosticMessagesOrDefault">
+  DiagnosticMessagesOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that the end user wants diagnostic messages
+from the test framework. If the flag is not set, returns the default
+value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DiagnosticMessagesOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ExplicitOption_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ExplicitOption*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ExplicitOption" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ExplicitOption">
+  ExplicitOption
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating how explicit tests should be handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExplicitOption? ExplicitOption { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ExplicitOption.html">ExplicitOption</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ExplicitOptionOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ExplicitOptionOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ExplicitOptionOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ExplicitOptionOrDefault">
+  ExplicitOptionOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating how explicit tests should be handled. If the flag
+isn't set, returns the default value (<a class="xref" href="Xunit.Sdk.ExplicitOption.html#Xunit_Sdk_ExplicitOption_Off">Off</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ExplicitOption ExplicitOptionOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ExplicitOption.html">ExplicitOption</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_FailSkips_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailSkips*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_FailSkips" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailSkips">
+  FailSkips
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L65"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that skipped tests should be converted into
+failed tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? FailSkips { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_FailSkipsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailSkipsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_FailSkipsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailSkipsOrDefault">
+  FailSkipsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that skipped tests should be converted into failed
+tests. If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FailSkipsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_FailTestsWithWarnings_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailTestsWithWarnings*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_FailTestsWithWarnings" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailTestsWithWarnings">
+  FailTestsWithWarnings
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that passing tests with warnings should be
+converted into failed tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? FailTestsWithWarnings { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_FailTestsWithWarningsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailTestsWithWarningsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_FailTestsWithWarningsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.FailTestsWithWarningsOrDefault">
+  FailTestsWithWarningsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L84"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that passing tests with warnings should be
+converted into failed tests. If the flag is not set, returns the default
+value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FailTestsWithWarningsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_Filters_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Filters*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_Filters" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Filters">
+  Filters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the list of filters used during test discovery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XunitFilters Filters { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.XunitFilters.html">XunitFilters</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_IncludeSourceInformation_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.IncludeSourceInformation*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_IncludeSourceInformation" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.IncludeSourceInformation">
+  IncludeSourceInformation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L95"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that discovery should include source information
+for the test cases.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? IncludeSourceInformation { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_IncludeSourceInformationOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.IncludeSourceInformationOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_IncludeSourceInformationOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.IncludeSourceInformationOrDefault">
+  IncludeSourceInformationOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that discovery should include source information for the
+test cases. If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IncludeSourceInformationOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_InternalDiagnosticMessages_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.InternalDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_InternalDiagnosticMessages" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.InternalDiagnosticMessages">
+  InternalDiagnosticMessages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that the end user wants internal diagnostic messages
+from the test framework.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? InternalDiagnosticMessages { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_InternalDiagnosticMessagesOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.InternalDiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_InternalDiagnosticMessagesOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.InternalDiagnosticMessagesOrDefault">
+  InternalDiagnosticMessagesOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that the end user wants internal diagnostic messages
+from the test framework. If the flag is not set, returns the default
+value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool InternalDiagnosticMessagesOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_LongRunningTestSeconds_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.LongRunningTestSeconds*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_LongRunningTestSeconds" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.LongRunningTestSeconds">
+  LongRunningTestSeconds
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of seconds that a test can run before being considered &quot;long running&quot;. Set to a positive
+value to enable the feature.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? LongRunningTestSeconds { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_LongRunningTestSecondsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.LongRunningTestSecondsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_LongRunningTestSecondsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.LongRunningTestSecondsOrDefault">
+  LongRunningTestSecondsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the number of seconds that a test can run before being considered &quot;long running&quot;. If the value is not
+set, returns the default value (-1).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int LongRunningTestSecondsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MaxParallelThreads_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MaxParallelThreads*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MaxParallelThreads" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MaxParallelThreads">
+  MaxParallelThreads
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the maximum number of thread to use when parallelizing this assembly. A value of <code>null</code>
+or 0 indicates that the default should be used (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.processorcount">ProcessorCount</a>); a value of
+-1 indicates that tests should run with an unlimited-sized thread pool.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MaxParallelThreads { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MaxParallelThreadsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MaxParallelThreadsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MaxParallelThreadsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MaxParallelThreadsOrDefault">
+  MaxParallelThreadsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L139"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of thread to use when parallelizing this assembly.
+If the value is not set, returns the default value (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.processorcount">ProcessorCount</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int MaxParallelThreadsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplay_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplay*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplay" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplay">
+  MethodDisplay
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L147"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the default display name for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TestMethodDisplay? MethodDisplay { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplay.html">TestMethodDisplay</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOptions_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOptions*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOptions" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOptions">
+  MethodDisplayOptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the default display options for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TestMethodDisplayOptions? MethodDisplayOptions { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html">TestMethodDisplayOptions</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOptionsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOptionsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOptionsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOptionsOrDefault">
+  MethodDisplayOptionsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L164"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default display options for test methods. If the value is not set, returns
+the default value (<a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html#Xunit_Sdk_TestMethodDisplayOptions_None">None</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TestMethodDisplayOptions MethodDisplayOptionsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html">TestMethodDisplayOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_MethodDisplayOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.MethodDisplayOrDefault">
+  MethodDisplayOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L153"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the default display name for test methods. If the value is not set, returns
+the default value (<a class="xref" href="Xunit.Sdk.TestMethodDisplay.html#Xunit_Sdk_TestMethodDisplay_ClassAndMethod">ClassAndMethod</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TestMethodDisplay MethodDisplayOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplay.html">TestMethodDisplay</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelAlgorithm_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelAlgorithm*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelAlgorithm" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelAlgorithm">
+  ParallelAlgorithm
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the algorithm to be used for parallelization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParallelAlgorithm? ParallelAlgorithm { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html">ParallelAlgorithm</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelAlgorithmOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelAlgorithmOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelAlgorithmOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelAlgorithmOrDefault">
+  ParallelAlgorithmOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the algorithm to be used for parallelization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ParallelAlgorithm ParallelAlgorithmOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html">ParallelAlgorithm</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeAssembly_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeAssembly*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeAssembly" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeAssembly">
+  ParallelizeAssembly
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that this assembly is safe to parallelize against
+other assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ParallelizeAssembly { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeAssemblyOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeAssemblyOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeAssemblyOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeAssemblyOrDefault">
+  ParallelizeAssemblyOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that this assembly is safe to parallelize against
+other assemblies. If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParallelizeAssemblyOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeTestCollections_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeTestCollections*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeTestCollections" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeTestCollections">
+  ParallelizeTestCollections
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L192"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that this test assembly wants to run test collections
+in parallel against one another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ParallelizeTestCollections { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeTestCollectionsOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeTestCollectionsOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ParallelizeTestCollectionsOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ParallelizeTestCollectionsOrDefault">
+  ParallelizeTestCollectionsOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L199"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that this test assembly wants to run test collections
+in parallel against one another. If the flag is not set, returns the default
+value (<code>true</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ParallelizeTestCollectionsOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_PreEnumerateTheories_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PreEnumerateTheories*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_PreEnumerateTheories" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PreEnumerateTheories">
+  PreEnumerateTheories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L205"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether theory data should be pre-enumerated during
+test discovery.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? PreEnumerateTheories { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxEnumerableLength_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxEnumerableLength*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxEnumerableLength" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxEnumerableLength">
+  PrintMaxEnumerableLength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating the maximum length for printing collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PrintMaxEnumerableLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxObjectDepth_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxObjectDepth*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxObjectDepth" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxObjectDepth">
+  PrintMaxObjectDepth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating the maximum recursive depth when printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PrintMaxObjectDepth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxObjectMemberCount_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxObjectMemberCount*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxObjectMemberCount" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxObjectMemberCount">
+  PrintMaxObjectMemberCount
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L220"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating the maximum members to show when printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PrintMaxObjectMemberCount { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxStringLength_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxStringLength*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_PrintMaxStringLength" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.PrintMaxStringLength">
+  PrintMaxStringLength
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L225"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value indicating the maximum length for printing string values.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? PrintMaxStringLength { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_Seed_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Seed*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_Seed" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.Seed">
+  Seed
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L230"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the seed value used for randomization. Only supported for v3 or later test assemblies.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? Seed { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopy_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopy*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopy" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopy">
+  ShadowCopy
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether shadow copies should be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ShadowCopy { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopyFolder_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopyFolder*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopyFolder" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopyFolder">
+  ShadowCopyFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets the folder to be used for shadow copy files. If the value is not set,
+the system defaults for shadow copying are used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ShadowCopyFolder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopyOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopyOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ShadowCopyOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShadowCopyOrDefault">
+  ShadowCopyOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L241"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating whether shadow copies should be used. If the flag is not set,
+returns the default value (<code>true</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShadowCopyOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ShowLiveOutput_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShowLiveOutput*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ShowLiveOutput" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShowLiveOutput">
+  ShowLiveOutput
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L253"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether output from <a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a> should be
+shown live as they're logged (in addition to being collected together after the test finishes).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? ShowLiveOutput { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_ShowLiveOutputOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShowLiveOutputOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_ShowLiveOutputOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.ShowLiveOutputOrDefault">
+  ShowLiveOutputOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L260"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating whether output from <a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a> should be
+shown live as they're logged (in addition to being collected together after the test finishes).
+If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ShowLiveOutputOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_StopOnFail_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.StopOnFail*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_StopOnFail" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.StopOnFail">
+  StopOnFail
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L265"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating whether testing should stop on a failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? StopOnFail { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_StopOnFailOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.StopOnFailOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_StopOnFailOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.StopOnFailOrDefault">
+  StopOnFailOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L271"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating whether testing should stop on a test failure. If the flag is not set,
+returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StopOnFailOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_SynchronousMessageReporting_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.SynchronousMessageReporting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_SynchronousMessageReporting" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.SynchronousMessageReporting">
+  SynchronousMessageReporting
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets or sets a flag indicating that synchronous message reporting is desired.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool? SynchronousMessageReporting { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestAssemblyConfiguration_SynchronousMessageReportingOrDefault_" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.SynchronousMessageReportingOrDefault*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestAssemblyConfiguration_SynchronousMessageReportingOrDefault" data-uid="Xunit.Runner.Common.TestAssemblyConfiguration.SynchronousMessageReportingOrDefault">
+  SynchronousMessageReportingOrDefault
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating that synchronous message reporting is desired. If the flag is not set,
+returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SynchronousMessageReportingOrDefault { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestAssemblyConfiguration.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

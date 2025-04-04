@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XunitTestClassRunnerBase&lt;TContext, TTestClass, TTestMethod, TTestCase&gt; | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XunitTestClassRunnerBase&lt;TContext, TTestClass, TTestMethod, TTestCase&gt; | Unofficial xunit docs ">
+      
+      <meta name="description" content="The test class runner for xUnit.net v3 tests (with overridable context).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_v3_XunitTestClassRunnerBase_4.md&amp;value=---%0Auid%3A%20Xunit.v3.XunitTestClassRunnerBase%604%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.v3.XunitTestClassRunnerBase`4">
+
+
+
+  <h1 id="Xunit_v3_XunitTestClassRunnerBase_4" data-uid="Xunit.v3.XunitTestClassRunnerBase`4" class="text-break">
+Class XunitTestClassRunnerBase&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.v3.html">v3</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The test class runner for xUnit.net v3 tests (with overridable context).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class XunitTestClassRunnerBase&lt;TContext, TTestClass, TTestMethod, TTestCase&gt; : TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt; where TContext : XunitTestClassRunnerBaseContext&lt;TTestClass, TTestCase&gt; where TTestClass : class, IXunitTestClass where TTestMethod : class, IXunitTestMethod where TTestCase : class, IXunitTestCase</code></pre>
+  </div>
+
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TContext</code></dt>
+    <dd></dd>
+    <dt><code>TTestClass</code></dt>
+    <dd></dd>
+    <dt><code>TTestMethod</code></dt>
+    <dd></dd>
+    <dt><code>TTestCase</code></dt>
+    <dd></dd>
+  </dl>
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Xunit.v3.TestClassRunner-4.html">TestClassRunner</a>&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;</div>
+      <div><span class="xref">XunitTestClassRunnerBase&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.v3.XunitTestClassRunner.html">XunitTestClassRunner</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_CreateTestClassConstructorArguments__0_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.CreateTestClassConstructorArguments(TContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_FailTestMethod__0__2_System_Collections_Generic_IReadOnlyCollection__3__System_Object___System_Exception_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.FailTestMethod(TContext, TTestMethod, IReadOnlyCollection&lt;TTestCase&gt;, object[], Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_OnTestClassCleanupFailure__0_System_Exception_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.OnTestClassCleanupFailure(TContext, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_OnTestClassFinished__0_Xunit_v3_RunSummary_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.OnTestClassFinished(TContext, RunSummary)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_OnTestClassStarting__0_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.OnTestClassStarting(TContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_OrderTestCases__0_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.OrderTestCases(TContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_Run__0_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.Run(TContext)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_RunTestMethods__0_System_Exception_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.RunTestMethods(TContext, Exception)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_RunTestMethod__0__2_System_Collections_Generic_IReadOnlyCollection__3__System_Object___">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.RunTestMethod(TContext, TTestMethod, IReadOnlyCollection&lt;TTestCase&gt;, object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_SetTestContext__0_Xunit_TestEngineStatus_">TestClassRunner&lt;TContext, TTestClass, TTestMethod, TTestCase&gt;.SetTestContext(TContext, TestEngineStatus)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_CreateTestClassConstructorArguments_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.CreateTestClassConstructorArguments*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_CreateTestClassConstructorArguments__0_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.CreateTestClassConstructorArguments(`0)">
+  CreateTestClassConstructorArguments(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the arguments for the test class constructor. By default just returns an empty
+set of arguments. Override to find the arguments for the constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ValueTask&lt;object?[]&gt; CreateTestClassConstructorArguments(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]&gt;</dt>
+    <dd><p>The test class constructor arguments.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestClassRunnerBase_4_CreateTestClassConstructorArguments__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Initializing">Initializing</a> and any exceptions thrown will
+contribute to test class failure (and will prevent the test class from running)</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_FormatConstructorArgsMissingMessage_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.FormatConstructorArgsMissingMessage*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_FormatConstructorArgsMissingMessage__0_System_Reflection_ConstructorInfo_System_Collections_Generic_IReadOnlyList_System_Tuple_System_Int32_System_Reflection_ParameterInfo___" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.FormatConstructorArgsMissingMessage(`0,System.Reflection.ConstructorInfo,System.Collections.Generic.IReadOnlyList{System.Tuple{System.Int32,System.Reflection.ParameterInfo}})">
+  FormatConstructorArgsMissingMessage(TContext, ConstructorInfo, IReadOnlyList&lt;Tuple&lt;int, ParameterInfo&gt;&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L69"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the message to be used when the constructor is missing arguments.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual string FormatConstructorArgsMissingMessage(TContext ctxt, ConstructorInfo constructor, IReadOnlyList&lt;Tuple&lt;int, ParameterInfo&gt;&gt; unusedArguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+    <dt><code>constructor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a></dt>
+    <dd><p>The constructor that was selected</p>
+</dd>
+    <dt><code>unusedArguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.tuple-2">Tuple</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a>&gt;&gt;</dt>
+    <dd><p>The arguments that had no matching parameter values</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_GetConstructorArgument_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.GetConstructorArgument*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_GetConstructorArgument__0_System_Reflection_ConstructorInfo_System_Int32_System_Reflection_ParameterInfo_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.GetConstructorArgument(`0,System.Reflection.ConstructorInfo,System.Int32,System.Reflection.ParameterInfo)">
+  GetConstructorArgument(TContext, ConstructorInfo, int, ParameterInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L88"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to supply a test class constructor argument.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ValueTask&lt;object?&gt; GetConstructorArgument(TContext ctxt, ConstructorInfo constructor, int index, ParameterInfo parameter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+    <dt><code>constructor</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a></dt>
+    <dd><p>The constructor that will be used to create the test class.</p>
+</dd>
+    <dt><code>index</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The parameter index.</p>
+</dd>
+    <dt><code>parameter</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a></dt>
+    <dd><p>The parameter information.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>Returns the constructor argument if available, <code>null</code> otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassFinished_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OnTestClassFinished*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassFinished__0_Xunit_v3_RunSummary_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OnTestClassFinished(`0,Xunit.v3.RunSummary)">
+  OnTestClassFinished(TContext, RunSummary)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method will be called when the test class has finished running. By default, this sends
+<a class="xref" href="Xunit.v3.TestClassFinished.html">TestClassFinished</a>. Override this to enable any extensibility related to test
+class finish.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ValueTask&lt;bool&gt; OnTestClassFinished(TContext ctxt, RunSummary summary)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+    <dt><code>summary</code> <a class="xref" href="Xunit.v3.RunSummary.html">RunSummary</a></dt>
+    <dd><p>The execution summary for the test class</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassFinished__0_Xunit_v3_RunSummary__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_CleaningUp">CleaningUp</a> and any exceptions thrown will
+contribute to test class cleanup failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassStarting_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OnTestClassStarting*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassStarting__0_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OnTestClassStarting(`0)">
+  OnTestClassStarting(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>This method will be called before the test class has started running. By default, this sends
+<a class="xref" href="Xunit.v3.TestClassStarting.html">TestClassStarting</a>. Override this to enable any extensibility related to test
+class start.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override ValueTask&lt;bool&gt; OnTestClassStarting(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>&gt;</dt>
+    <dd><p>Return <code>true</code> if test execution should continue; <code>false</code> if it should be shut down.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestClassRunnerBase_4_OnTestClassStarting__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Initializing">Initializing</a> and any exceptions thrown will
+contribute to test class failure (and will prevent the test class from running). Even if
+this method records exceptions, <a class="xref" href="Xunit.v3.TestClassRunner-4.html#Xunit_v3_TestClassRunner_4_OnTestClassFinished__0_Xunit_v3_RunSummary_">OnTestClassFinished(TContext, RunSummary)</a> will be called.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_OrderTestCases_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OrderTestCases*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_OrderTestCases__0_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.OrderTestCases(`0)">
+  OrderTestCases(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L138"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Orders the test cases in the class. By default does not re-order the test cases.
+Override this to provide custom test case ordering.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override IReadOnlyCollection&lt;TTestCase&gt; OrderTestCases(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;TTestCase&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestClassRunnerBase_4_OrderTestCases__0__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method runs during <a class="xref" href="Xunit.TestEngineStatus.html#Xunit_TestEngineStatus_Running">Running</a> and any exceptions thrown will
+contribute to test class failure</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_SelectTestClassConstructor_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.SelectTestClassConstructor*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_SelectTestClassConstructor__0_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.SelectTestClassConstructor(`0)">
+  SelectTestClassConstructor(TContext)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Selects the test constructor.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual ConstructorInfo? SelectTestClassConstructor(TContext ctxt)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.constructorinfo">ConstructorInfo</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestClassRunnerBase_4_SetTestContext_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.SetTestContext*"></a>
+
+  <h3 id="Xunit_v3_XunitTestClassRunnerBase_4_SetTestContext__0_Xunit_TestEngineStatus_" data-uid="Xunit.v3.XunitTestClassRunnerBase`4.SetTestContext(`0,Xunit.TestEngineStatus)">
+  SetTestContext(TContext, TestEngineStatus)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L189"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the current <a class="xref" href="Xunit.TestContext.html">TestContext</a> for the current test class and the given test class status.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void SetTestContext(TContext ctxt, TestEngineStatus testClassStatus)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>ctxt</code> <span class="xref">TContext</span></dt>
+    <dd><p>The context that describes the current test class</p>
+</dd>
+    <dt><code>testClassStatus</code> <a class="xref" href="Xunit.TestEngineStatus.html">TestEngineStatus</a></dt>
+    <dd><p>The current test class status.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestClassRunnerBase_4_SetTestContext__0_Xunit_TestEngineStatus__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This method must never throw. Behavior is undefined if it does. Instead, exceptions that
+occur should be recorded in the aggregator in <code class="paramref">ctxt</code> and will be reflected
+in a way that's appropriate based on when this method is called.</p>
+</div>
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/Runners/XunitTestClassRunnerBase.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

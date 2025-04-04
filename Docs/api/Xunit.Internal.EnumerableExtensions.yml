@@ -1,0 +1,1178 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Internal.EnumerableExtensions
+  commentId: T:Xunit.Internal.EnumerableExtensions
+  id: EnumerableExtensions
+  parent: Xunit.Internal
+  children:
+  - Xunit.Internal.EnumerableExtensions.CastOrToArray``1(System.Collections.Generic.IEnumerable{``0})
+  - Xunit.Internal.EnumerableExtensions.CastOrToList``1(System.Collections.Generic.IEnumerable{``0})
+  - Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection``1(System.Collections.Generic.IEnumerable{``0})
+  - Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList``1(System.Collections.Generic.IEnumerable{``0})
+  - Xunit.Internal.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  - Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable{System.String})
+  - Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{System.Nullable{``0}})
+  - Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  langs:
+  - csharp
+  - vb
+  name: EnumerableExtensions
+  nameWithType: EnumerableExtensions
+  fullName: Xunit.Internal.EnumerableExtensions
+  type: Class
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: EnumerableExtensions
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 10
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: INTERNAL CLASS. DO NOT USE.
+  example: []
+  syntax:
+    content: public static class EnumerableExtensions
+    content.vb: Public Module EnumerableExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.CastOrToArray``1(System.Collections.Generic.IEnumerable{``0})
+  id: CastOrToArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: CastOrToArray<T>(IEnumerable<T>?)
+  nameWithType: EnumerableExtensions.CastOrToArray<T>(IEnumerable<T>?)
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToArray<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CastOrToArray
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 18
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as an array of <code class="typeparamref">T</code>, using a cast when
+
+    available and <xref href="System.Linq.Enumerable.ToArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> when not.
+  example: []
+  syntax:
+    content: public static T[]? CastOrToArray<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function CastOrToArray(Of T)(source As IEnumerable(Of T)) As T()
+  overload: Xunit.Internal.EnumerableExtensions.CastOrToArray*
+  nameWithType.vb: EnumerableExtensions.CastOrToArray(Of T)(IEnumerable(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.CastOrToArray(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: CastOrToArray(Of T)(IEnumerable(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToList``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.CastOrToList``1(System.Collections.Generic.IEnumerable{``0})
+  id: CastOrToList``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: CastOrToList<T>(IEnumerable<T>?)
+  nameWithType: EnumerableExtensions.CastOrToList<T>(IEnumerable<T>?)
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToList<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CastOrToList
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 26
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as a <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref>, using a cast when
+
+    available and <xref href="System.Linq.Enumerable.ToList%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> when not.
+  example: []
+  syntax:
+    content: public static List<T>? CastOrToList<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.List{{T}}
+    content.vb: Public Shared Function CastOrToList(Of T)(source As IEnumerable(Of T)) As List(Of T)
+  overload: Xunit.Internal.EnumerableExtensions.CastOrToList*
+  nameWithType.vb: EnumerableExtensions.CastOrToList(Of T)(IEnumerable(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.CastOrToList(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: CastOrToList(Of T)(IEnumerable(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection``1(System.Collections.Generic.IEnumerable{``0})
+  id: CastOrToReadOnlyCollection``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: CastOrToReadOnlyCollection<T>(IEnumerable<T>?)
+  nameWithType: EnumerableExtensions.CastOrToReadOnlyCollection<T>(IEnumerable<T>?)
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CastOrToReadOnlyCollection
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 34
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as an <xref href="System.Collections.Generic.IReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> of <code class="typeparamref">T</code>,
+
+    using a cast when available and <xref href="System.Linq.Enumerable.ToArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> when not.
+  example: []
+  syntax:
+    content: public static IReadOnlyCollection<T>? CastOrToReadOnlyCollection<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{{T}}
+    content.vb: Public Shared Function CastOrToReadOnlyCollection(Of T)(source As IEnumerable(Of T)) As IReadOnlyCollection(Of T)
+  overload: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection*
+  nameWithType.vb: EnumerableExtensions.CastOrToReadOnlyCollection(Of T)(IEnumerable(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: CastOrToReadOnlyCollection(Of T)(IEnumerable(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList``1(System.Collections.Generic.IEnumerable{``0})
+  id: CastOrToReadOnlyList``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: CastOrToReadOnlyList<T>(IEnumerable<T>?)
+  nameWithType: EnumerableExtensions.CastOrToReadOnlyList<T>(IEnumerable<T>?)
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList<T>(System.Collections.Generic.IEnumerable<T>?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CastOrToReadOnlyList
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 42
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as an <xref href="System.Collections.Generic.IReadOnlyList%601" data-throw-if-not-resolved="false"></xref> of <code class="typeparamref">T</code>,
+
+    using a cast when available and <xref href="System.Linq.Enumerable.ToArray%60%601(System.Collections.Generic.IEnumerable%7b%60%600%7d)" data-throw-if-not-resolved="false"></xref> when not.
+  example: []
+  syntax:
+    content: public static IReadOnlyList<T>? CastOrToReadOnlyList<T>(this IEnumerable<T>? source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IReadOnlyList{{T}}
+    content.vb: Public Shared Function CastOrToReadOnlyList(Of T)(source As IEnumerable(Of T)) As IReadOnlyList(Of T)
+  overload: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList*
+  nameWithType.vb: EnumerableExtensions.CastOrToReadOnlyList(Of T)(IEnumerable(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: CastOrToReadOnlyList(Of T)(IEnumerable(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  id: ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: ForEach<T>(IEnumerable<T>, Action<T>)
+  nameWithType: EnumerableExtensions.ForEach<T>(IEnumerable<T>, Action<T>)
+  fullName: Xunit.Internal.EnumerableExtensions.ForEach<T>(System.Collections.Generic.IEnumerable<T>, System.Action<T>)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ForEach
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 49
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Enumerates all values in a collection, calling the callback for each.
+  example: []
+  syntax:
+    content: public static void ForEach<T>(this IEnumerable<T> source, Action<T> callback)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    - id: callback
+      type: System.Action{{T}}
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub ForEach(Of T)(source As IEnumerable(Of T), callback As Action(Of T))
+  overload: Xunit.Internal.EnumerableExtensions.ForEach*
+  nameWithType.vb: EnumerableExtensions.ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.ForEach(Of T)(System.Collections.Generic.IEnumerable(Of T), System.Action(Of T))
+  name.vb: ForEach(Of T)(IEnumerable(Of T), Action(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  id: WhereNotNull``1(System.Collections.Generic.IEnumerable{``0})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNotNull<T>(IEnumerable<T?>)
+  nameWithType: EnumerableExtensions.WhereNotNull<T>(IEnumerable<T?>)
+  fullName: Xunit.Internal.EnumerableExtensions.WhereNotNull<T>(System.Collections.Generic.IEnumerable<T?>)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: WhereNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 64
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as an enumerable of <code class="typeparamref">T</code> with
+
+    all the <code>null</code> items removed.
+  example: []
+  syntax:
+    content: 'public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> source) where T : class'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{{T}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function WhereNotNull(Of T As Class)(source As IEnumerable(Of T)) As IEnumerable(Of T)
+  overload: Xunit.Internal.EnumerableExtensions.WhereNotNull*
+  nameWithType.vb: EnumerableExtensions.WhereNotNull(Of T)(IEnumerable(Of T))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.WhereNotNull(Of T)(System.Collections.Generic.IEnumerable(Of T))
+  name.vb: WhereNotNull(Of T)(IEnumerable(Of T))
+- uid: Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{System.Nullable{``0}})
+  commentId: M:Xunit.Internal.EnumerableExtensions.WhereNotNull``1(System.Collections.Generic.IEnumerable{System.Nullable{``0}})
+  id: WhereNotNull``1(System.Collections.Generic.IEnumerable{System.Nullable{``0}})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNotNull<T>(IEnumerable<T?>)
+  nameWithType: EnumerableExtensions.WhereNotNull<T>(IEnumerable<T?>)
+  fullName: Xunit.Internal.EnumerableExtensions.WhereNotNull<T>(System.Collections.Generic.IEnumerable<T?>)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: WhereNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 72
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Returns <code class="paramref">source</code> as an enumerable of <code class="typeparamref">T</code> with
+
+    all the <code>null</code> items removed.
+  example: []
+  syntax:
+    content: 'public static IEnumerable<T> WhereNotNull<T>(this IEnumerable<T?> source) where T : struct'
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.Nullable{{T}}}
+    typeParameters:
+    - id: T
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Public Shared Function WhereNotNull(Of T As Structure)(source As IEnumerable(Of T?)) As IEnumerable(Of T)
+  overload: Xunit.Internal.EnumerableExtensions.WhereNotNull*
+  nameWithType.vb: EnumerableExtensions.WhereNotNull(Of T)(IEnumerable(Of T?))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.WhereNotNull(Of T)(System.Collections.Generic.IEnumerable(Of T?))
+  name.vb: WhereNotNull(Of T)(IEnumerable(Of T?))
+- uid: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable{System.String})
+  id: WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable{System.String})
+  isExtensionMethod: true
+  parent: Xunit.Internal.EnumerableExtensions
+  langs:
+  - csharp
+  - vb
+  name: WhereNotNullOrWhitespace(IEnumerable<string?>)
+  nameWithType: EnumerableExtensions.WhereNotNullOrWhitespace(IEnumerable<string?>)
+  fullName: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable<string?>)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/EnumerableExtensions.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: WhereNotNullOrWhitespace
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/EnumerableExtensions.cs
+    startLine: 79
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Returns <code class="paramref">source</code> with all the <code>null</code> or whitespace-only strings removed.
+  example: []
+  syntax:
+    content: public static IEnumerable<string> WhereNotNullOrWhitespace(this IEnumerable<string?> source)
+    parameters:
+    - id: source
+      type: System.Collections.Generic.IEnumerable{System.String}
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+    content.vb: Public Shared Function WhereNotNullOrWhitespace(source As IEnumerable(Of String)) As IEnumerable(Of String)
+  overload: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace*
+  nameWithType.vb: EnumerableExtensions.WhereNotNullOrWhitespace(IEnumerable(Of String))
+  fullName.vb: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: WhereNotNullOrWhitespace(IEnumerable(Of String))
+references:
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Linq.Enumerable.ToArray``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:System.Linq.Enumerable.ToArray``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.toarray
+  name: ToArray<TSource>(IEnumerable<TSource>)
+  nameWithType: Enumerable.ToArray<TSource>(IEnumerable<TSource>)
+  fullName: System.Linq.Enumerable.ToArray<TSource>(System.Collections.Generic.IEnumerable<TSource>)
+  nameWithType.vb: Enumerable.ToArray(Of TSource)(IEnumerable(Of TSource))
+  fullName.vb: System.Linq.Enumerable.ToArray(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource))
+  name.vb: ToArray(Of TSource)(IEnumerable(Of TSource))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ToArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.toarray
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ToArray``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToArray
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.toarray
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToArray*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.CastOrToArray
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_CastOrToArray__1_System_Collections_Generic_IEnumerable___0__
+  name: CastOrToArray
+  nameWithType: EnumerableExtensions.CastOrToArray
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToArray
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Linq.Enumerable.ToList``1(System.Collections.Generic.IEnumerable{``0})
+  commentId: M:System.Linq.Enumerable.ToList``1(System.Collections.Generic.IEnumerable{``0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.tolist
+  name: ToList<TSource>(IEnumerable<TSource>)
+  nameWithType: Enumerable.ToList<TSource>(IEnumerable<TSource>)
+  fullName: System.Linq.Enumerable.ToList<TSource>(System.Collections.Generic.IEnumerable<TSource>)
+  nameWithType.vb: Enumerable.ToList(Of TSource)(IEnumerable(Of TSource))
+  fullName.vb: System.Linq.Enumerable.ToList(Of TSource)(System.Collections.Generic.IEnumerable(Of TSource))
+  name.vb: ToList(Of TSource)(IEnumerable(Of TSource))
+  spec.csharp:
+  - uid: System.Linq.Enumerable.ToList``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.tolist
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TSource
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: System.Linq.Enumerable.ToList``1(System.Collections.Generic.IEnumerable{``0})
+    name: ToList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.linq.enumerable.tolist
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TSource
+  - name: )
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToList*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.CastOrToList
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_CastOrToList__1_System_Collections_Generic_IEnumerable___0__
+  name: CastOrToList
+  nameWithType: EnumerableExtensions.CastOrToList
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToList
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_CastOrToReadOnlyCollection__1_System_Collections_Generic_IEnumerable___0__
+  name: CastOrToReadOnlyCollection
+  nameWithType: EnumerableExtensions.CastOrToReadOnlyCollection
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyCollection
+- uid: System.Collections.Generic.IReadOnlyCollection{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_CastOrToReadOnlyList__1_System_Collections_Generic_IEnumerable___0__
+  name: CastOrToReadOnlyList
+  nameWithType: EnumerableExtensions.CastOrToReadOnlyList
+  fullName: Xunit.Internal.EnumerableExtensions.CastOrToReadOnlyList
+- uid: System.Collections.Generic.IReadOnlyList{{T}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.ForEach*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.ForEach
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_ForEach__1_System_Collections_Generic_IEnumerable___0__System_Action___0__
+  name: ForEach
+  nameWithType: EnumerableExtensions.ForEach
+  fullName: Xunit.Internal.EnumerableExtensions.ForEach
+- uid: System.Action{{T}}
+  commentId: T:System.Action{``0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.WhereNotNull*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.WhereNotNull
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_WhereNotNull__1_System_Collections_Generic_IEnumerable___0__
+  name: WhereNotNull
+  nameWithType: EnumerableExtensions.WhereNotNull
+  fullName: Xunit.Internal.EnumerableExtensions.WhereNotNull
+- uid: System.Collections.Generic.IEnumerable{System.Nullable{{T}}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Nullable{``0}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T?>
+  nameWithType: IEnumerable<T?>
+  fullName: System.Collections.Generic.IEnumerable<T?>
+  nameWithType.vb: IEnumerable(Of T?)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T?)
+  name.vb: IEnumerable(Of T?)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '?'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: )
+- uid: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace*
+  commentId: Overload:Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace
+  href: Xunit.Internal.EnumerableExtensions.html#Xunit_Internal_EnumerableExtensions_WhereNotNullOrWhitespace_System_Collections_Generic_IEnumerable_System_String__
+  name: WhereNotNullOrWhitespace
+  nameWithType: EnumerableExtensions.WhereNotNullOrWhitespace
+  fullName: Xunit.Internal.EnumerableExtensions.WhereNotNullOrWhitespace
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

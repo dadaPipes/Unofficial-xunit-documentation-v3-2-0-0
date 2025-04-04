@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Xunit.Runner.Common | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Xunit.Runner.Common | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common">
+
+  <h1 id="Xunit_Runner_Common" data-uid="Xunit.Runner.Common" class="text-break">Namespace Xunit.Runner.Common</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AfterTestFinished.html">AfterTestFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IAfterTestFinished.html">IAfterTestFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AfterTestStarting.html">AfterTestStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IAfterTestStarting.html">IAfterTestStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html">AggregateMessageSink</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a> which dispatches messages
+to one or more individual message sinks.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AppVeyorReporter.html">AppVeyorReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that reports results to AppVeyor. This
+is auto-enabled by the presence of the &quot;APPVEYOR_API_URL&quot; environment variable, which points
+to the AppVeyor API endpoint that is used to report tests. It has no switch for manual
+enablement, since the API endpoint is required.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AppVeyorReporterMessageHandler.html">AppVeyorReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.AppVeyorReporter.html">AppVeyorReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AssemblyMetadata.html">AssemblyMetadata</a></dt>
+      <dd><p>Represents metadata about an assembly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.BeforeTestFinished.html">BeforeTestFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IBeforeTestFinished.html">IBeforeTestFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.BeforeTestStarting.html">BeforeTestStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IBeforeTestStarting.html">IBeforeTestStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConfigReader.html">ConfigReader</a></dt>
+      <dd><p>This class is used to read configuration information for a test assembly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConfigReader_Configuration.html">ConfigReader_Configuration</a></dt>
+      <dd><p>This class is used to read configuration information for a test assembly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConfigReader_Json.html">ConfigReader_Json</a></dt>
+      <dd><p>This class is used to read JSON-based configuration information for a test assembly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConfigUtility.html">ConfigUtility</a></dt>
+      <dd><p>Utilities for reading configuration values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConsoleDiagnosticMessageSink.html">ConsoleDiagnosticMessageSink</a></dt>
+      <dd><p>Logs diagnostic messages to the system console.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConsoleHelper.html">ConsoleHelper</a></dt>
+      <dd><p>This class helps write colored text to the console. On Windows, it will use the built-in
+console functions; on Linux and macOS, it will use ANSI color codes.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConsoleProjectLister.html">ConsoleProjectLister</a></dt>
+      <dd><p>Helper class to list project contents out to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console">Console</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ConsoleRunnerLogger.html">ConsoleRunnerLogger</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerLogger.html">IRunnerLogger</a> which logs messages to
+a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.io.textwriter">TextWriter</a> (typically the one from <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.out">Out</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporter.html">DefaultRunnerReporter</a></dt>
+      <dd><p>The default implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a>, used by runners when there is no other
+overridden reporter. It returns an instance of <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html">DefaultRunnerReporterMessageHandler</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html">DefaultRunnerReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporter.html">DefaultRunnerReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DiagnosticEventSink.html">DiagnosticEventSink</a></dt>
+      <dd><p>Class that maps diagnostic messages to events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DiagnosticMessage.html">DiagnosticMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IDiagnosticMessage.html">IDiagnosticMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DiscoveryComplete.html">DiscoveryComplete</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IDiscoveryComplete.html">IDiscoveryComplete</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DiscoveryEventSink.html">DiscoveryEventSink</a></dt>
+      <dd><p>Class that maps test framework discovery messages to events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.DiscoveryStarting.html">DiscoveryStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IDiscoveryStarting.html">IDiscoveryStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ErrorMessage.html">ErrorMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IErrorMessage.html">IErrorMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ExecutionEventSink.html">ExecutionEventSink</a></dt>
+      <dd><p>Class that maps test framework execution messages to events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ExecutionSink.html">ExecutionSink</a></dt>
+      <dd><p>This is the execution sink which most runners will use, which can perform several operations
+(including recording XML results, detecting long running tests, failing skipped tests,
+failing tests with warnings, and converting the top-level discovery and execution messages
+into their runner counterparts).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ExecutionSinkOptions.html">ExecutionSinkOptions</a></dt>
+      <dd><p>These are the options used when creating <a class="xref" href="Xunit.Runner.Common.ExecutionSink.html">ExecutionSink</a>. This is
+set up as an options class so that new options can be added without breaking
+binary compatibility.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ExecutionSummary.html">ExecutionSummary</a></dt>
+      <dd><p>Collects execution totals for a group of test cases.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.IRunnerLoggerExtensions.html">IRunnerLoggerExtensions</a></dt>
+      <dd><p>Extensions methods for <a class="xref" href="Xunit.Runner.Common.IRunnerLogger.html">IRunnerLogger</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.InternalDiagnosticMessage.html">InternalDiagnosticMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IInternalDiagnosticMessage.html">IInternalDiagnosticMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.JsonReporter.html">JsonReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that reports results as individual JSON
+objects on the console.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.JsonReporterMessageHandler.html">JsonReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.JsonReporter.html">JsonReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.LongRunningTestsSummary.html">LongRunningTestsSummary</a></dt>
+      <dd><p>Represents information about long running tests from <a class="xref" href="Xunit.Runner.Common.ExecutionSink.html">ExecutionSink</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs.html">MessageHandlerArgs</a></dt>
+      <dd><p>Allows cancellation during message handling.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs&lt;TMessage&gt;</a></dt>
+      <dd><p>Wraps a message with the ability to cancel execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageMetadataCache.html">MessageMetadataCache</a></dt>
+      <dd><p>Caches message metadata for xUnit.net v3 messages. The metadata which is cached depends on
+the message that is passed (for example, looking up with an <a class="xref" href="Xunit.Sdk.ITestAssemblyMessage.html">ITestAssemblyMessage</a>
+will return an <a class="xref" href="Xunit.Sdk.IAssemblyMetadata.html">IAssemblyMetadata</a>). Storage methods require the &quot;Starting&quot; versions
+of messages (as these are the ones which contain the metadata), and removal methods require the
+&quot;Finished&quot; versions of messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageSinkMessage.html">MessageSinkMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.IMessageSinkMessage.html">IMessageSinkMessage</a>, with serialization and deserialization support.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageSinkMessageDeserializer.html">MessageSinkMessageDeserializer</a></dt>
+      <dd><p>A class which understands how to deserialize <a class="xref" href="Xunit.Sdk.IMessageSinkMessage.html">IMessageSinkMessage</a> instances that are decorated
+with <a class="xref" href="Xunit.Sdk.JsonTypeIDAttribute.html">JsonTypeIDAttribute</a>. The built-in messages are registered by default, and additional messages
+can be registered via <a class="xref" href="Xunit.Runner.Common.MessageSinkMessageDeserializer.html#Xunit_Runner_Common_MessageSinkMessageDeserializer_RegisterMessageSinkMessageType_System_Type_">RegisterMessageSinkMessageType(Type)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.NullSourceInformationProvider.html">NullSourceInformationProvider</a></dt>
+      <dd><p>A null implementation of <a class="xref" href="Xunit.Runner.Common.ISourceInformationProvider.html">ISourceInformationProvider</a> which always returns empty
+source information. Get the singleton via <a class="xref" href="Xunit.Runner.Common.NullSourceInformationProvider.html#Xunit_Runner_Common_NullSourceInformationProvider_Instance">Instance</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.QueryFilterParser.html">QueryFilterParser</a></dt>
+      <dd><p>This class is used to parse a graphy query.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.QuietReporter.html">QuietReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that emits only error or warning messages.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.QuietReporterMessageHandler.html">QuietReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.QuietReporter.html">QuietReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.RegisterRunnerReporterAttribute.html">RegisterRunnerReporterAttribute</a></dt>
+      <dd><p>Used to decorate xUnit.net test assemblies to indicate the availability of a custom
+runner reporter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.RegisteredRunnerReporters.html">RegisteredRunnerReporters</a></dt>
+      <dd><p>Utility class for enumerating the runner reporters registered for the given assembly.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.RunnerEventSink.html">RunnerEventSink</a></dt>
+      <dd><p>Class that maps test runner messages to events.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.SilentReporter.html">SilentReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that does not report any
+messages. Typically only used in context with the VSTest adapter, to prevent
+double reporting of messages</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.SilentReporterMessageHandler.html">SilentReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that
+supports <a class="xref" href="Xunit.Runner.Common.SilentReporter.html">SilentReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.StackFrameTransformer.html">StackFrameTransformer</a></dt>
+      <dd><p>Transforms stack frames and stack traces into compiler-like output
+so they can be double-clicked in Visual Studio.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TeamCityReporter.html">TeamCityReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that reports results to TeamCity. This
+is auto-enabled by the presence of the &quot;TEAMCITY_PROJECT_NAME&quot; environment variable.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TeamCityReporterMessageHandler.html">TeamCityReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.TeamCityReporter.html">TeamCityReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyCleanupFailure.html">TestAssemblyCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyConfiguration.html">TestAssemblyConfiguration</a></dt>
+      <dd><p>Represents the configuration items set in the configuration file of a test assembly.
+Should be read with the <a class="xref" href="Xunit.Runner.Common.ConfigReader.html">ConfigReader</a> class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyDiscoveryFinished.html">TestAssemblyDiscoveryFinished</a></dt>
+      <dd><p>Reports that runner has just finished discovery for a test assembly. This message will
+arrive after the test framework's <a class="xref" href="Xunit.Sdk.IDiscoveryComplete.html">IDiscoveryComplete</a> message, and contains
+the project metadata associated with the discovery.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyDiscoveryStarting.html">TestAssemblyDiscoveryStarting</a></dt>
+      <dd><p>Reports that runner is about to start discovery for a test assembly. This message will
+arrive before the test framework's <span class="xref">Xunit.DiscoveryStarting</span> message, and
+contains the project metadata associated with the discovery.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyExecutionFinished.html">TestAssemblyExecutionFinished</a></dt>
+      <dd><p>Reports that runner is about to start execution for a test assembly. This message will
+arrive after the test framework's <a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a> message, and
+contains the project metadata associated with the execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyExecutionStarting.html">TestAssemblyExecutionStarting</a></dt>
+      <dd><p>Reports that runner is about to start execution for a test assembly. This message will
+arrive before the test framework's <a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a> message, and
+contains the project metadata associated with the discovery.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyFinished.html">TestAssemblyFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyMessage.html">TestAssemblyMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestAssemblyMessage.html">ITestAssemblyMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestAssemblyStarting.html">TestAssemblyStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCaseCleanupFailure.html">TestCaseCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCaseDiscovered.html">TestCaseDiscovered</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCaseDiscovered.html">ITestCaseDiscovered</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCaseFinished.html">TestCaseFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCaseFinished.html">ITestCaseFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCaseMessage.html">TestCaseMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCaseMessage.html">ITestCaseMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCaseStarting.html">TestCaseStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCaseStarting.html">ITestCaseStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassCleanupFailure.html">TestClassCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassConstructionFinished.html">TestClassConstructionFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassConstructionFinished.html">ITestClassConstructionFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassConstructionStarting.html">TestClassConstructionStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassConstructionStarting.html">ITestClassConstructionStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassDisposeFinished.html">TestClassDisposeFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassDisposeFinished.html">ITestClassDisposeFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassDisposeStarting.html">TestClassDisposeStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassDisposeStarting.html">ITestClassDisposeStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassFinished.html">TestClassFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassFinished.html">ITestClassFinished</a></p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassMessage.html">TestClassMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassMessage.html">ITestClassMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestClassStarting.html">TestClassStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestClassStarting.html">ITestClassStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCleanupFailure.html">TestCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCleanupFailure.html">ITestCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCollectionCleanupFailure.html">TestCollectionCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCollectionFinished.html">TestCollectionFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCollectionFinished.html">ITestCollectionFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCollectionMessage.html">TestCollectionMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCollectionMessage.html">ITestCollectionMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestCollectionStarting.html">TestCollectionStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestCollectionStarting.html">ITestCollectionStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestDiscoverySink.html">TestDiscoverySink</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a> designed for test discovery for a
+single test assembly. The <a class="xref" href="Xunit.Runner.Common.TestDiscoverySink.html#Xunit_Runner_Common_TestDiscoverySink_Finished">Finished</a> event is triggered when discovery is complete.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestExecutionSummaries.html">TestExecutionSummaries</a></dt>
+      <dd><p>Reports multi-assembly test execution summary information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestFailed.html">TestFailed</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestFinished.html">TestFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestFinished.html">ITestFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a></dt>
+      <dd><p>Represents options passed to a test framework for discovery or execution.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMessage.html">TestMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestMessage.html">ITestMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMessageSink.html">TestMessageSink</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a> that provides access to events for all
+levels of reporting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMethodCleanupFailure.html">TestMethodCleanupFailure</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMethodFinished.html">TestMethodFinished</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestMethodFinished.html">ITestMethodFinished</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMethodMessage.html">TestMethodMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestMethodMessage.html">ITestMethodMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestMethodStarting.html">TestMethodStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestMethodStarting.html">ITestMethodStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestNotRun.html">TestNotRun</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestNotRun.html">ITestNotRun</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestOutput.html">TestOutput</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestOutput.html">ITestOutput</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestPassed.html">TestPassed</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestPassed.html">ITestPassed</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestProjectConfiguration.html">TestProjectConfiguration</a></dt>
+      <dd><p>Represents the configuration settings for a test runner which are independent of the test
+assembly. Are usually passed via command line or some other equivalent mechanism. Accessed
+via <a class="xref" href="Xunit.Runner.Common.XunitProject.html">XunitProject</a>.<a class="xref" href="Xunit.Runner.Common.XunitProject.html#Xunit_Runner_Common_XunitProject_Configuration">Configuration</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestResultMessage.html">TestResultMessage</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestResultMessage.html">ITestResultMessage</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestSkipped.html">TestSkipped</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TestStarting.html">TestStarting</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.Transform.html">Transform</a></dt>
+      <dd><p>Represents a single report transformation from XML.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TransformFactory.html">TransformFactory</a></dt>
+      <dd><p>Used to retrieve a list of available</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.VerboseReporter.html">VerboseReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that supplements the default reporter
+behavior by printing out the start and finish of each executing test.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.VerboseReporterMessageHandler.html">VerboseReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.VerboseReporter.html">VerboseReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.VstsReporter.html">VstsReporter</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a> that reports results to Azure DevOps/VSTS.
+This is auto-enabled by the presence of four required environment variables: &quot;VSTS_ACCESS_TOKEN&quot;,
+&quot;SYSTEM_TEAMFOUNDATIONCOLLECTIONURI&quot;, &quot;SYSTEM_TEAMPROJECT&quot;, and &quot;BUILD_BUILDID&quot;.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.VstsReporterMessageHandler.html">VstsReporterMessageHandler</a></dt>
+      <dd><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.VstsReporter.html">VstsReporter</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.XunitFilters.html">XunitFilters</a></dt>
+      <dd><p>Represents the ability to track query filters or simple filters. Any attempt
+to add a mix of the two will result in an exception.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.XunitProject.html">XunitProject</a></dt>
+      <dd><p>Represents a project which contains zero or more test assemblies, as well as global
+(cross-assembly) configuration settings.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.XunitProjectAssembly.html">XunitProjectAssembly</a></dt>
+      <dd><p>Represents an assembly in an <a class="xref" href="Xunit.Runner.Common.XunitProject.html">XunitProject</a>.</p>
+</dd>
+    </dl>
+    <h3 id="structs">
+Structs
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.SourceInformation.html">SourceInformation</a></dt>
+      <dd><p>Source information returned by <a class="xref" href="Xunit.Runner.Common.ISourceInformationProvider.html">ISourceInformationProvider</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.StackFrameInfo.html">StackFrameInfo</a></dt>
+      <dd><p>Represents the top of a stack frame, typically taken from an exception or failure information.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.IRegisterRunnerReporterAttribute.html">IRegisterRunnerReporterAttribute</a></dt>
+      <dd><p>Used to decorate xUnit.net test assemblies to indicate the availability of a custom
+runner reporter.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.IRunnerLogger.html">IRunnerLogger</a></dt>
+      <dd><p>Interface implemented by runners, passed to <a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a>, so that the
+report can log lines of text to the output device.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.IRunnerReporter.html">IRunnerReporter</a></dt>
+      <dd><p>This interface represents a reporter which is invoked by a test runner
+during test execution. The report can be explicitly invoked by a command
+line switch or implicitly invoked by being environmentally enabled (for
+example, a reporter that emits messages for TeamCity).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a></dt>
+      <dd><p>Indicates a message sink that's designed for use with runner reporters. In particular, this allows
+runner reporters to implement <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a> and forces runners to dispose of the message
+handler that's returned to them.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ISourceInformationProvider.html">ISourceInformationProvider</a></dt>
+      <dd><p>Represents a provider which gives source line information for a test case after discovery has
+completed. This is typically provided by a third party runner (for example, the VSTest plugin provides
+this via DiaSession from Visual Studio). It's used to supplement test case metadata when the discovery
+process itself cannot provide source file and line information.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ITestCaseFilter.html">ITestCaseFilter</a></dt>
+      <dd><p>Represents a filter run against a test case (and the associated assembly it resides in).</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AppDomainOption.html">AppDomainOption</a></dt>
+      <dd><p>Indicates the current level of app domain support that's in effect,
+for use by runner reporters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.AppDomainSupport.html">AppDomainSupport</a></dt>
+      <dd><p>Indicates the level of app domain support that the runner is requesting. Note that these values
+are only valid for v1 and v2 tests; v3 tests always run in a separate process rather than
+in the runner process.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ListFormat.html">ListFormat</a></dt>
+      <dd><p>Designates the format that the test list should take.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ListOption.html">ListOption</a></dt>
+      <dd><p>Indicates the kind of list a runner should generate, rather than running tests.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.ParallelismOption.html">ParallelismOption</a></dt>
+      <dd><p>Represents available parallelism options</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.TargetFrameworkIdentifier.html">TargetFrameworkIdentifier</a></dt>
+      <dd><p>Represents the target framework identifier that an assembly is targeting</p>
+</dd>
+    </dl>
+    <h3 id="delegates">
+Delegates
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Runner.Common.MessageHandler-1.html">MessageHandler&lt;TMessage&gt;</a></dt>
+      <dd><p>Represents a handler for a message, which includes the ability to signal that
+tests should stop running.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Runner.Common.ListOption
+  commentId: T:Xunit.Runner.Common.ListOption
+  id: ListOption
+  parent: Xunit.Runner.Common
+  children:
+  - Xunit.Runner.Common.ListOption.Classes
+  - Xunit.Runner.Common.ListOption.Discovery
+  - Xunit.Runner.Common.ListOption.Full
+  - Xunit.Runner.Common.ListOption.Methods
+  - Xunit.Runner.Common.ListOption.Tests
+  - Xunit.Runner.Common.ListOption.Traits
+  langs:
+  - csharp
+  - vb
+  name: ListOption
+  nameWithType: ListOption
+  fullName: Xunit.Runner.Common.ListOption
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ListOption
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 5
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Indicates the kind of list a runner should generate, rather than running tests.
+  example: []
+  syntax:
+    content: public enum ListOption
+    content.vb: Public Enum ListOption
+- uid: Xunit.Runner.Common.ListOption.Classes
+  commentId: F:Xunit.Runner.Common.ListOption.Classes
+  id: Classes
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Classes
+  nameWithType: ListOption.Classes
+  fullName: Xunit.Runner.Common.ListOption.Classes
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Classes
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 10
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists all the classes in the assembly which contain tests.
+  example: []
+  syntax:
+    content: Classes = 1
+    return:
+      type: Xunit.Runner.Common.ListOption
+- uid: Xunit.Runner.Common.ListOption.Discovery
+  commentId: F:Xunit.Runner.Common.ListOption.Discovery
+  id: Discovery
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Discovery
+  nameWithType: ListOption.Discovery
+  fullName: Xunit.Runner.Common.ListOption.Discovery
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Discovery
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 15
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists the test cases as discovery objects (only valid for the in-process runner).
+  example: []
+  syntax:
+    content: Discovery = 2
+    return:
+      type: Xunit.Runner.Common.ListOption
+- uid: Xunit.Runner.Common.ListOption.Full
+  commentId: F:Xunit.Runner.Common.ListOption.Full
+  id: Full
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Full
+  nameWithType: ListOption.Full
+  fullName: Xunit.Runner.Common.ListOption.Full
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Full
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 20
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists full metadata about the test discovery.
+  example: []
+  syntax:
+    content: Full = 3
+    return:
+      type: Xunit.Runner.Common.ListOption
+- uid: Xunit.Runner.Common.ListOption.Methods
+  commentId: F:Xunit.Runner.Common.ListOption.Methods
+  id: Methods
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Methods
+  nameWithType: ListOption.Methods
+  fullName: Xunit.Runner.Common.ListOption.Methods
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Methods
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 25
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists all the methods in the assembly which contain a test.
+  example: []
+  syntax:
+    content: Methods = 4
+    return:
+      type: Xunit.Runner.Common.ListOption
+- uid: Xunit.Runner.Common.ListOption.Tests
+  commentId: F:Xunit.Runner.Common.ListOption.Tests
+  id: Tests
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Tests
+  nameWithType: ListOption.Tests
+  fullName: Xunit.Runner.Common.ListOption.Tests
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Tests
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 30
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists all the tests (as display name) in the assembly.
+  example: []
+  syntax:
+    content: Tests = 5
+    return:
+      type: Xunit.Runner.Common.ListOption
+- uid: Xunit.Runner.Common.ListOption.Traits
+  commentId: F:Xunit.Runner.Common.ListOption.Traits
+  id: Traits
+  parent: Xunit.Runner.Common.ListOption
+  langs:
+  - csharp
+  - vb
+  name: Traits
+  nameWithType: ListOption.Traits
+  fullName: Xunit.Runner.Common.ListOption.Traits
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Traits
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListOption.cs
+    startLine: 35
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists all the traits that are generated from the assembly.
+  example: []
+  syntax:
+    content: Traits = 6
+    return:
+      type: Xunit.Runner.Common.ListOption
+references:
+- uid: Xunit.Runner.Common
+  commentId: N:Xunit.Runner.Common
+  href: Xunit.html
+  name: Xunit.Runner.Common
+  nameWithType: Xunit.Runner.Common
+  fullName: Xunit.Runner.Common
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+- uid: Xunit.Runner.Common.ListOption
+  commentId: T:Xunit.Runner.Common.ListOption
+  parent: Xunit.Runner.Common
+  href: Xunit.Runner.Common.ListOption.html
+  name: ListOption
+  nameWithType: ListOption
+  fullName: Xunit.Runner.Common.ListOption

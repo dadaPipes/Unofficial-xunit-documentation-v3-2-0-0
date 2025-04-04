@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Runner.Common.AppDomainOption
+  commentId: T:Xunit.Runner.Common.AppDomainOption
+  id: AppDomainOption
+  parent: Xunit.Runner.Common
+  children:
+  - Xunit.Runner.Common.AppDomainOption.Disabled
+  - Xunit.Runner.Common.AppDomainOption.Enabled
+  - Xunit.Runner.Common.AppDomainOption.NotAvailable
+  langs:
+  - csharp
+  - vb
+  name: AppDomainOption
+  nameWithType: AppDomainOption
+  fullName: Xunit.Runner.Common.AppDomainOption
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: AppDomainOption
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+    startLine: 6
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: >-
+    Indicates the current level of app domain support that's in effect,
+
+    for use by runner reporters.
+  example: []
+  syntax:
+    content: public enum AppDomainOption
+    content.vb: Public Enum AppDomainOption
+- uid: Xunit.Runner.Common.AppDomainOption.NotAvailable
+  commentId: F:Xunit.Runner.Common.AppDomainOption.NotAvailable
+  id: NotAvailable
+  parent: Xunit.Runner.Common.AppDomainOption
+  langs:
+  - csharp
+  - vb
+  name: NotAvailable
+  nameWithType: AppDomainOption.NotAvailable
+  fullName: Xunit.Runner.Common.AppDomainOption.NotAvailable
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotAvailable
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+    startLine: 11
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: App domains are not supported by the current platform
+  example: []
+  syntax:
+    content: NotAvailable = 0
+    return:
+      type: Xunit.Runner.Common.AppDomainOption
+- uid: Xunit.Runner.Common.AppDomainOption.Disabled
+  commentId: F:Xunit.Runner.Common.AppDomainOption.Disabled
+  id: Disabled
+  parent: Xunit.Runner.Common.AppDomainOption
+  langs:
+  - csharp
+  - vb
+  name: Disabled
+  nameWithType: AppDomainOption.Disabled
+  fullName: Xunit.Runner.Common.AppDomainOption.Disabled
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Disabled
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+    startLine: 16
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: App domains are supported, but currently disabled
+  example: []
+  syntax:
+    content: Disabled = 1
+    return:
+      type: Xunit.Runner.Common.AppDomainOption
+- uid: Xunit.Runner.Common.AppDomainOption.Enabled
+  commentId: F:Xunit.Runner.Common.AppDomainOption.Enabled
+  id: Enabled
+  parent: Xunit.Runner.Common.AppDomainOption
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: AppDomainOption.Enabled
+  fullName: Xunit.Runner.Common.AppDomainOption.Enabled
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Enabled
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/AppDomainOption.cs
+    startLine: 21
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: App domains are supported and currently enabled
+  example: []
+  syntax:
+    content: Enabled = 2
+    return:
+      type: Xunit.Runner.Common.AppDomainOption
+references:
+- uid: Xunit.Runner.Common
+  commentId: N:Xunit.Runner.Common
+  href: Xunit.html
+  name: Xunit.Runner.Common
+  nameWithType: Xunit.Runner.Common
+  fullName: Xunit.Runner.Common
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+- uid: Xunit.Runner.Common.AppDomainOption
+  commentId: T:Xunit.Runner.Common.AppDomainOption
+  parent: Xunit.Runner.Common
+  href: Xunit.Runner.Common.AppDomainOption.html
+  name: AppDomainOption
+  nameWithType: AppDomainOption
+  fullName: Xunit.Runner.Common.AppDomainOption

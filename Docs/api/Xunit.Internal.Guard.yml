@@ -1,0 +1,1386 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Internal.Guard
+  commentId: T:Xunit.Internal.Guard
+  id: Guard
+  parent: Xunit.Internal
+  children:
+  - Xunit.Internal.Guard.ArgumentEnumValid``1(``0,System.Collections.Generic.HashSet{``0},System.String)
+  - Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.Func{System.String},``0,System.String)
+  - Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.String,``0,System.String)
+  - Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(``0,System.String)
+  - Xunit.Internal.Guard.ArgumentNotNull``1(System.Func{System.String},``0,System.String)
+  - Xunit.Internal.Guard.ArgumentNotNull``1(System.Nullable{``0},System.String)
+  - Xunit.Internal.Guard.ArgumentNotNull``1(System.String,``0,System.String)
+  - Xunit.Internal.Guard.ArgumentNotNull``1(``0,System.String)
+  - Xunit.Internal.Guard.ArgumentValid(System.Func{System.String},System.Boolean,System.String)
+  - Xunit.Internal.Guard.ArgumentValid(System.String,System.Boolean,System.String)
+  - Xunit.Internal.Guard.FileExists(System.String,System.String)
+  - Xunit.Internal.Guard.GenericArgumentNotNull``1(``0,System.String)
+  - Xunit.Internal.Guard.NotNull``1(System.Func{System.String},System.Nullable{``0})
+  - Xunit.Internal.Guard.NotNull``1(System.Func{System.String},``0)
+  - Xunit.Internal.Guard.NotNull``1(System.String,System.Nullable{``0})
+  - Xunit.Internal.Guard.NotNull``1(System.String,``0)
+  langs:
+  - csharp
+  - vb
+  name: Guard
+  nameWithType: Guard
+  fullName: Xunit.Internal.Guard
+  type: Class
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Guard
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 15
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Helper class for guarding value arguments and valid state.
+  example: []
+  syntax:
+    content: public static class Guard
+    content.vb: Public Module Guard
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Xunit.Internal.Guard.ArgumentEnumValid``1(``0,System.Collections.Generic.HashSet{``0},System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentEnumValid``1(``0,System.Collections.Generic.HashSet{``0},System.String)
+  id: ArgumentEnumValid``1(``0,System.Collections.Generic.HashSet{``0},System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentEnumValid<T>(T, HashSet<T>, string?)
+  nameWithType: Guard.ArgumentEnumValid<T>(T, HashSet<T>, string?)
+  fullName: Xunit.Internal.Guard.ArgumentEnumValid<T>(T, System.Collections.Generic.HashSet<T>, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentEnumValid
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 25
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that an enum value is valid by comparing against a list of valid values.
+  example: []
+  syntax:
+    content: 'public static T ArgumentEnumValid<T>(T argValue, HashSet<T> validValues, string? argName = null) where T : Enum'
+    parameters:
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: validValues
+      type: System.Collections.Generic.HashSet{{T}}
+      description: The list of valid values
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function ArgumentEnumValid(Of T As [Enum])(argValue As T, validValues As HashSet(Of T), argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentEnumValid*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: ''
+  nameWithType.vb: Guard.ArgumentEnumValid(Of T)(T, HashSet(Of T), String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentEnumValid(Of T)(T, System.Collections.Generic.HashSet(Of T), String)
+  name.vb: ArgumentEnumValid(Of T)(T, HashSet(Of T), String)
+- uid: Xunit.Internal.Guard.ArgumentNotNull``1(System.Nullable{``0},System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNull``1(System.Nullable{``0},System.String)
+  id: ArgumentNotNull``1(System.Nullable{``0},System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNull<T>(T?, string?)
+  nameWithType: Guard.ArgumentNotNull<T>(T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNull<T>(T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 42
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable value type argument is not null.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNull<T>(T? argValue, string? argName = null) where T : struct'
+    parameters:
+    - id: argValue
+      type: System.Nullable{{T}}
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null value
+    content.vb: Public Shared Function ArgumentNotNull(Of T As Structure)(argValue As T?, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the argument is null
+  nameWithType.vb: Guard.ArgumentNotNull(Of T)(T?, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNull(Of T)(T?, String)
+  name.vb: ArgumentNotNull(Of T)(T?, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNull``1(``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNull``1(``0,System.String)
+  id: ArgumentNotNull``1(``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNull<T>(T?, string?)
+  nameWithType: Guard.ArgumentNotNull<T>(T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNull<T>(T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 56
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable reference type argument is not null.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNull<T>(T? argValue, string? argName = null) where T : class'
+    parameters:
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null value
+    content.vb: Public Shared Function ArgumentNotNull(Of T As Class)(argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the argument is null
+  nameWithType.vb: Guard.ArgumentNotNull(Of T)(T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNull(Of T)(T, String)
+  name.vb: ArgumentNotNull(Of T)(T, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNull``1(System.String,``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNull``1(System.String,``0,System.String)
+  id: ArgumentNotNull``1(System.String,``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNull<T>(string, T?, string?)
+  nameWithType: Guard.ArgumentNotNull<T>(string, T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNull<T>(string, T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 71
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable reference type argument is not null.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNull<T>(string message, T? argValue, string? argName = null) where T : class'
+    parameters:
+    - id: message
+      type: System.String
+      description: The exception message to use when the argument is null
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null value
+    content.vb: Public Shared Function ArgumentNotNull(Of T As Class)(message As String, argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the argument is null
+  nameWithType.vb: Guard.ArgumentNotNull(Of T)(String, T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNull(Of T)(String, T, String)
+  name.vb: ArgumentNotNull(Of T)(String, T, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNull``1(System.Func{System.String},``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNull``1(System.Func{System.String},``0,System.String)
+  id: ArgumentNotNull``1(System.Func{System.String},``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNull<T>(Func<string>, T?, string?)
+  nameWithType: Guard.ArgumentNotNull<T>(Func<string>, T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNull<T>(System.Func<string>, T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 87
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable reference type argument is not null.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNull<T>(Func<string> messageFunc, T? argValue, string? argName = null) where T : class'
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: The creator for an exception message to use when the argument is null
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null value
+    content.vb: Public Shared Function ArgumentNotNull(Of T As Class)(messageFunc As Func(Of String), argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the argument is null
+  nameWithType.vb: Guard.ArgumentNotNull(Of T)(Func(Of String), T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNull(Of T)(System.Func(Of String), T, String)
+  name.vb: ArgumentNotNull(Of T)(Func(Of String), T, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(``0,System.String)
+  id: ArgumentNotNullOrEmpty``1(``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNullOrEmpty<T>(T?, string?)
+  nameWithType: Guard.ArgumentNotNullOrEmpty<T>(T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNullOrEmpty<T>(T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNullOrEmpty
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 102
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable enumerable type argument is not null or empty.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNullOrEmpty<T>(T? argValue, string? argName = null) where T : class, IEnumerable'
+    parameters:
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null, non-empty value
+    content.vb: Public Shared Function ArgumentNotNullOrEmpty(Of T As {Class, IEnumerable})(argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNullOrEmpty*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is null or empty
+  nameWithType.vb: Guard.ArgumentNotNullOrEmpty(Of T)(T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNullOrEmpty(Of T)(T, String)
+  name.vb: ArgumentNotNullOrEmpty(Of T)(T, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.String,``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.String,``0,System.String)
+  id: ArgumentNotNullOrEmpty``1(System.String,``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNullOrEmpty<T>(string, T?, string?)
+  nameWithType: Guard.ArgumentNotNullOrEmpty<T>(string, T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNullOrEmpty<T>(string, T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNullOrEmpty
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 119
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable enumerable type argument is not null or empty.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNullOrEmpty<T>(string message, T? argValue, string? argName = null) where T : class, IEnumerable'
+    parameters:
+    - id: message
+      type: System.String
+      description: The exception message to use when the argument is null or empty
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null, non-empty value
+    content.vb: Public Shared Function ArgumentNotNullOrEmpty(Of T As {Class, IEnumerable})(message As String, argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNullOrEmpty*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is null or empty
+  nameWithType.vb: Guard.ArgumentNotNullOrEmpty(Of T)(String, T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNullOrEmpty(Of T)(String, T, String)
+  name.vb: ArgumentNotNullOrEmpty(Of T)(String, T, String)
+- uid: Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.Func{System.String},``0,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentNotNullOrEmpty``1(System.Func{System.String},``0,System.String)
+  id: ArgumentNotNullOrEmpty``1(System.Func{System.String},``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentNotNullOrEmpty<T>(Func<string>, T?, string?)
+  nameWithType: Guard.ArgumentNotNullOrEmpty<T>(Func<string>, T?, string?)
+  fullName: Xunit.Internal.Guard.ArgumentNotNullOrEmpty<T>(System.Func<string>, T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentNotNullOrEmpty
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 137
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a nullable enumerable type argument is not null or empty.
+  example: []
+  syntax:
+    content: 'public static T ArgumentNotNullOrEmpty<T>(Func<string> messageFunc, T? argValue, string? argName = null) where T : class, IEnumerable'
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: The creator for an exception message to use when the argument is null or empty
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-null, non-empty value
+    content.vb: Public Shared Function ArgumentNotNullOrEmpty(Of T As {Class, IEnumerable})(messageFunc As Func(Of String), argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.ArgumentNotNullOrEmpty*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is null or empty
+  nameWithType.vb: Guard.ArgumentNotNullOrEmpty(Of T)(Func(Of String), T, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentNotNullOrEmpty(Of T)(System.Func(Of String), T, String)
+  name.vb: ArgumentNotNullOrEmpty(Of T)(Func(Of String), T, String)
+- uid: Xunit.Internal.Guard.ArgumentValid(System.String,System.Boolean,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentValid(System.String,System.Boolean,System.String)
+  id: ArgumentValid(System.String,System.Boolean,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentValid(string, bool, string?)
+  nameWithType: Guard.ArgumentValid(string, bool, string?)
+  fullName: Xunit.Internal.Guard.ArgumentValid(string, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentValid
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 154
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that an argument is valid.
+  example: []
+  syntax:
+    content: public static void ArgumentValid(string message, bool test, string? argName = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The exception message to use when the argument is not valid
+    - id: test
+      type: System.Boolean
+      description: The validity test value
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    content.vb: Public Shared Sub ArgumentValid(message As String, test As Boolean, argName As String = Nothing)
+  overload: Xunit.Internal.Guard.ArgumentValid*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is not valid
+  nameWithType.vb: Guard.ArgumentValid(String, Boolean, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentValid(String, Boolean, String)
+  name.vb: ArgumentValid(String, Boolean, String)
+- uid: Xunit.Internal.Guard.ArgumentValid(System.Func{System.String},System.Boolean,System.String)
+  commentId: M:Xunit.Internal.Guard.ArgumentValid(System.Func{System.String},System.Boolean,System.String)
+  id: ArgumentValid(System.Func{System.String},System.Boolean,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: ArgumentValid(Func<string>, bool, string?)
+  nameWithType: Guard.ArgumentValid(Func<string>, bool, string?)
+  fullName: Xunit.Internal.Guard.ArgumentValid(System.Func<string>, bool, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentValid
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 171
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that an argument is valid.
+  example: []
+  syntax:
+    content: public static void ArgumentValid(Func<string> messageFunc, bool test, string? argName = null)
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: The creator for an exception message to use when the argument is not valid
+    - id: test
+      type: System.Boolean
+      description: The validity test value
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    content.vb: Public Shared Sub ArgumentValid(messageFunc As Func(Of String), test As Boolean, argName As String = Nothing)
+  overload: Xunit.Internal.Guard.ArgumentValid*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is not valid
+  nameWithType.vb: Guard.ArgumentValid(Func(Of String), Boolean, String)
+  fullName.vb: Xunit.Internal.Guard.ArgumentValid(System.Func(Of String), Boolean, String)
+  name.vb: ArgumentValid(Func(Of String), Boolean, String)
+- uid: Xunit.Internal.Guard.FileExists(System.String,System.String)
+  commentId: M:Xunit.Internal.Guard.FileExists(System.String,System.String)
+  id: FileExists(System.String,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: FileExists(string?, string?)
+  nameWithType: Guard.FileExists(string?, string?)
+  fullName: Xunit.Internal.Guard.FileExists(string?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: FileExists
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 187
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensures that a filename argument is not null or empty, and that the file exists on disk.
+  example: []
+  syntax:
+    content: public static string FileExists(string? fileName, string? argName = null)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The file name value
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    return:
+      type: System.String
+      description: The file name as a non-null value
+    content.vb: Public Shared Function FileExists(fileName As String, argName As String = Nothing) As String
+  overload: Xunit.Internal.Guard.FileExists*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown when the argument is null, empty, or not on disk
+  nameWithType.vb: Guard.FileExists(String, String)
+  fullName.vb: Xunit.Internal.Guard.FileExists(String, String)
+  name.vb: FileExists(String, String)
+- uid: Xunit.Internal.Guard.GenericArgumentNotNull``1(``0,System.String)
+  commentId: M:Xunit.Internal.Guard.GenericArgumentNotNull``1(``0,System.String)
+  id: GenericArgumentNotNull``1(``0,System.String)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: GenericArgumentNotNull<T>(T?, string?)
+  nameWithType: Guard.GenericArgumentNotNull<T>(T?, string?)
+  fullName: Xunit.Internal.Guard.GenericArgumentNotNull<T>(T?, string?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: GenericArgumentNotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 206
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: >-
+    Ensures that a value is not default value. This is used for values of generic types
+
+    where nullability is not known.
+  example: []
+  syntax:
+    content: public static T GenericArgumentNotNull<T>(T? argValue, string? argName = null)
+    parameters:
+    - id: argValue
+      type: '{T}'
+      description: The value of the argument
+    - id: argName
+      type: System.String
+      description: The name of the argument
+    typeParameters:
+    - id: T
+      description: The argument type
+    return:
+      type: '{T}'
+      description: The argument value as a non-default value
+    content.vb: Public Shared Function GenericArgumentNotNull(Of T)(argValue As T, argName As String = Nothing) As T
+  overload: Xunit.Internal.Guard.GenericArgumentNotNull*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown when the argument is default
+  nameWithType.vb: Guard.GenericArgumentNotNull(Of T)(T, String)
+  fullName.vb: Xunit.Internal.Guard.GenericArgumentNotNull(Of T)(T, String)
+  name.vb: GenericArgumentNotNull(Of T)(T, String)
+- uid: Xunit.Internal.Guard.NotNull``1(System.String,``0)
+  commentId: M:Xunit.Internal.Guard.NotNull``1(System.String,``0)
+  id: NotNull``1(System.String,``0)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: NotNull<T>(string, T?)
+  nameWithType: Guard.NotNull<T>(string, T?)
+  fullName: Xunit.Internal.Guard.NotNull<T>(string, T?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 219
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensure that a reference value is not null.
+  example: []
+  syntax:
+    content: 'public static T NotNull<T>(string message, T? value) where T : class'
+    parameters:
+    - id: message
+      type: System.String
+      description: The exception message to use when the value is not valid
+    - id: value
+      type: '{T}'
+      description: The value to test for null
+    typeParameters:
+    - id: T
+      description: The value type
+    return:
+      type: '{T}'
+      description: The value as a non-null value
+    content.vb: Public Shared Function NotNull(Of T As Class)(message As String, value As T) As T
+  overload: Xunit.Internal.Guard.NotNull*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the value is not valid
+  nameWithType.vb: Guard.NotNull(Of T)(String, T)
+  fullName.vb: Xunit.Internal.Guard.NotNull(Of T)(String, T)
+  name.vb: NotNull(Of T)(String, T)
+- uid: Xunit.Internal.Guard.NotNull``1(System.Func{System.String},``0)
+  commentId: M:Xunit.Internal.Guard.NotNull``1(System.Func{System.String},``0)
+  id: NotNull``1(System.Func{System.String},``0)
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: NotNull<T>(Func<string>, T?)
+  nameWithType: Guard.NotNull<T>(Func<string>, T?)
+  fullName: Xunit.Internal.Guard.NotNull<T>(System.Func<string>, T?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 233
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensure that a reference value is not null.
+  example: []
+  syntax:
+    content: 'public static T NotNull<T>(Func<string> messageFunc, T? value) where T : class'
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: The creator for an exception message to use when the value is not valid
+    - id: value
+      type: '{T}'
+      description: The value to test for null
+    typeParameters:
+    - id: T
+      description: The value type
+    return:
+      type: '{T}'
+      description: The value as a non-null value
+    content.vb: Public Shared Function NotNull(Of T As Class)(messageFunc As Func(Of String), value As T) As T
+  overload: Xunit.Internal.Guard.NotNull*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the value is not valid
+  nameWithType.vb: Guard.NotNull(Of T)(Func(Of String), T)
+  fullName.vb: Xunit.Internal.Guard.NotNull(Of T)(System.Func(Of String), T)
+  name.vb: NotNull(Of T)(Func(Of String), T)
+- uid: Xunit.Internal.Guard.NotNull``1(System.String,System.Nullable{``0})
+  commentId: M:Xunit.Internal.Guard.NotNull``1(System.String,System.Nullable{``0})
+  id: NotNull``1(System.String,System.Nullable{``0})
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: NotNull<T>(string, T?)
+  nameWithType: Guard.NotNull<T>(string, T?)
+  fullName: Xunit.Internal.Guard.NotNull<T>(string, T?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 247
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensure that a nullable struct value is not null.
+  example: []
+  syntax:
+    content: 'public static T NotNull<T>(string message, T? value) where T : struct'
+    parameters:
+    - id: message
+      type: System.String
+      description: The exception message to use when the value is not valid
+    - id: value
+      type: System.Nullable{{T}}
+      description: The value to test for null
+    typeParameters:
+    - id: T
+      description: The value type
+    return:
+      type: '{T}'
+      description: The value as a non-null value
+    content.vb: Public Shared Function NotNull(Of T As Structure)(message As String, value As T?) As T
+  overload: Xunit.Internal.Guard.NotNull*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the value is not valid
+  nameWithType.vb: Guard.NotNull(Of T)(String, T?)
+  fullName.vb: Xunit.Internal.Guard.NotNull(Of T)(String, T?)
+  name.vb: NotNull(Of T)(String, T?)
+- uid: Xunit.Internal.Guard.NotNull``1(System.Func{System.String},System.Nullable{``0})
+  commentId: M:Xunit.Internal.Guard.NotNull``1(System.Func{System.String},System.Nullable{``0})
+  id: NotNull``1(System.Func{System.String},System.Nullable{``0})
+  parent: Xunit.Internal.Guard
+  langs:
+  - csharp
+  - vb
+  name: NotNull<T>(Func<string>, T?)
+  nameWithType: Guard.NotNull<T>(Func<string>, T?)
+  fullName: Xunit.Internal.Guard.NotNull<T>(System.Func<string>, T?)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.common/Internal/Guard.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotNull
+    path: ../v3-2.0.0/src/xunit.v3.common/Internal/Guard.cs
+    startLine: 261
+  assemblies:
+  - xunit.v3.common
+  namespace: Xunit.Internal
+  summary: Ensure that a nullable struct value is not null.
+  example: []
+  syntax:
+    content: 'public static T NotNull<T>(Func<string> messageFunc, T? value) where T : struct'
+    parameters:
+    - id: messageFunc
+      type: System.Func{System.String}
+      description: The creator for an exception message to use when the value is not valid
+    - id: value
+      type: System.Nullable{{T}}
+      description: The value to test for null
+    typeParameters:
+    - id: T
+      description: The value type
+    return:
+      type: '{T}'
+      description: The value as a non-null value
+    content.vb: Public Shared Function NotNull(Of T As Structure)(messageFunc As Func(Of String), value As T?) As T
+  overload: Xunit.Internal.Guard.NotNull*
+  exceptions:
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Thrown when the value is not valid
+  nameWithType.vb: Guard.NotNull(Of T)(Func(Of String), T?)
+  fullName.vb: Xunit.Internal.Guard.NotNull(Of T)(System.Func(Of String), T?)
+  name.vb: NotNull(Of T)(Func(Of String), T?)
+references:
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: Xunit.Internal.Guard.ArgumentEnumValid*
+  commentId: Overload:Xunit.Internal.Guard.ArgumentEnumValid
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_ArgumentEnumValid__1___0_System_Collections_Generic_HashSet___0__System_String_
+  name: ArgumentEnumValid
+  nameWithType: Guard.ArgumentEnumValid
+  fullName: Xunit.Internal.Guard.ArgumentEnumValid
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.HashSet{{T}}
+  commentId: T:System.Collections.Generic.HashSet{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.HashSet`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Collections.Generic.HashSet`1
+  commentId: T:System.Collections.Generic.HashSet`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  name: HashSet<T>
+  nameWithType: HashSet<T>
+  fullName: System.Collections.Generic.HashSet<T>
+  nameWithType.vb: HashSet(Of T)
+  fullName.vb: System.Collections.Generic.HashSet(Of T)
+  name.vb: HashSet(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.HashSet`1
+    name: HashSet
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: Xunit.Internal.Guard.ArgumentNotNull*
+  commentId: Overload:Xunit.Internal.Guard.ArgumentNotNull
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_ArgumentNotNull__1_System_Nullable___0__System_String_
+  name: ArgumentNotNull
+  nameWithType: Guard.ArgumentNotNull
+  fullName: Xunit.Internal.Guard.ArgumentNotNull
+- uid: System.Nullable{{T}}
+  commentId: T:System.Nullable{``0}
+  parent: System
+  definition: System.Nullable`1
+  name: T?
+  nameWithType: T?
+  fullName: T?
+  spec.csharp:
+  - name: T
+  - name: '?'
+  spec.vb:
+  - name: T
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Func{System.String}
+  commentId: T:System.Func{System.String}
+  parent: System
+  definition: System.Func`1
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<string>
+  nameWithType: Func<string>
+  fullName: System.Func<string>
+  nameWithType.vb: Func(Of String)
+  fullName.vb: System.Func(Of String)
+  name.vb: Func(Of String)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Func`1
+  commentId: T:System.Func`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: System.Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: System.Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`1
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: Xunit.Internal.Guard.ArgumentNotNullOrEmpty*
+  commentId: Overload:Xunit.Internal.Guard.ArgumentNotNullOrEmpty
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_ArgumentNotNullOrEmpty__1___0_System_String_
+  name: ArgumentNotNullOrEmpty
+  nameWithType: Guard.ArgumentNotNullOrEmpty
+  fullName: Xunit.Internal.Guard.ArgumentNotNullOrEmpty
+- uid: Xunit.Internal.Guard.ArgumentValid*
+  commentId: Overload:Xunit.Internal.Guard.ArgumentValid
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_ArgumentValid_System_String_System_Boolean_System_String_
+  name: ArgumentValid
+  nameWithType: Guard.ArgumentValid
+  fullName: Xunit.Internal.Guard.ArgumentValid
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Xunit.Internal.Guard.FileExists*
+  commentId: Overload:Xunit.Internal.Guard.FileExists
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_FileExists_System_String_System_String_
+  name: FileExists
+  nameWithType: Guard.FileExists
+  fullName: Xunit.Internal.Guard.FileExists
+- uid: Xunit.Internal.Guard.GenericArgumentNotNull*
+  commentId: Overload:Xunit.Internal.Guard.GenericArgumentNotNull
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_GenericArgumentNotNull__1___0_System_String_
+  name: GenericArgumentNotNull
+  nameWithType: Guard.GenericArgumentNotNull
+  fullName: Xunit.Internal.Guard.GenericArgumentNotNull
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: Xunit.Internal.Guard.NotNull*
+  commentId: Overload:Xunit.Internal.Guard.NotNull
+  href: Xunit.Internal.Guard.html#Xunit_Internal_Guard_NotNull__1_System_String___0_
+  name: NotNull
+  nameWithType: Guard.NotNull
+  fullName: Xunit.Internal.Guard.NotNull

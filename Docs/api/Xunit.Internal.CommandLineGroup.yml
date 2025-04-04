@@ -1,0 +1,234 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Internal.CommandLineGroup
+  commentId: T:Xunit.Internal.CommandLineGroup
+  id: CommandLineGroup
+  parent: Xunit.Internal
+  children:
+  - Xunit.Internal.CommandLineGroup.ArgumentDisplay
+  - Xunit.Internal.CommandLineGroup.FilterQuery
+  - Xunit.Internal.CommandLineGroup.FilterSimple
+  - Xunit.Internal.CommandLineGroup.General
+  - Xunit.Internal.CommandLineGroup.Hidden
+  - Xunit.Internal.CommandLineGroup.NetFramework
+  langs:
+  - csharp
+  - vb
+  name: CommandLineGroup
+  nameWithType: CommandLineGroup
+  fullName: Xunit.Internal.CommandLineGroup
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CommandLineGroup
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 5
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: INTERNAL ENUM. DO NOT USE.
+  example: []
+  syntax:
+    content: public enum CommandLineGroup
+    content.vb: Public Enum CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.Hidden
+  commentId: F:Xunit.Internal.CommandLineGroup.Hidden
+  id: Hidden
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: Hidden
+  nameWithType: CommandLineGroup.Hidden
+  fullName: Xunit.Internal.CommandLineGroup.Hidden
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Hidden
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 8
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: Hidden = 0
+    return:
+      type: Xunit.Internal.CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.General
+  commentId: F:Xunit.Internal.CommandLineGroup.General
+  id: General
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: General
+  nameWithType: CommandLineGroup.General
+  fullName: Xunit.Internal.CommandLineGroup.General
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: General
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 11
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: General = 1
+    return:
+      type: Xunit.Internal.CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.NetFramework
+  commentId: F:Xunit.Internal.CommandLineGroup.NetFramework
+  id: NetFramework
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: NetFramework
+  nameWithType: CommandLineGroup.NetFramework
+  fullName: Xunit.Internal.CommandLineGroup.NetFramework
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NetFramework
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 14
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: NetFramework = 2
+    return:
+      type: Xunit.Internal.CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.FilterSimple
+  commentId: F:Xunit.Internal.CommandLineGroup.FilterSimple
+  id: FilterSimple
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: FilterSimple
+  nameWithType: CommandLineGroup.FilterSimple
+  fullName: Xunit.Internal.CommandLineGroup.FilterSimple
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: FilterSimple
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 17
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: FilterSimple = 3
+    return:
+      type: Xunit.Internal.CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.FilterQuery
+  commentId: F:Xunit.Internal.CommandLineGroup.FilterQuery
+  id: FilterQuery
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: FilterQuery
+  nameWithType: CommandLineGroup.FilterQuery
+  fullName: Xunit.Internal.CommandLineGroup.FilterQuery
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: FilterQuery
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 20
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: FilterQuery = 4
+    return:
+      type: Xunit.Internal.CommandLineGroup
+- uid: Xunit.Internal.CommandLineGroup.ArgumentDisplay
+  commentId: F:Xunit.Internal.CommandLineGroup.ArgumentDisplay
+  id: ArgumentDisplay
+  parent: Xunit.Internal.CommandLineGroup
+  langs:
+  - csharp
+  - vb
+  name: ArgumentDisplay
+  nameWithType: CommandLineGroup.ArgumentDisplay
+  fullName: Xunit.Internal.CommandLineGroup.ArgumentDisplay
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ArgumentDisplay
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Parsers/CommandLineGroup.cs
+    startLine: 23
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Internal
+  summary: ''
+  example: []
+  syntax:
+    content: ArgumentDisplay = 5
+    return:
+      type: Xunit.Internal.CommandLineGroup
+references:
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: Xunit.Internal.CommandLineGroup
+  commentId: T:Xunit.Internal.CommandLineGroup
+  parent: Xunit.Internal
+  href: Xunit.Internal.CommandLineGroup.html
+  name: CommandLineGroup
+  nameWithType: CommandLineGroup
+  fullName: Xunit.Internal.CommandLineGroup

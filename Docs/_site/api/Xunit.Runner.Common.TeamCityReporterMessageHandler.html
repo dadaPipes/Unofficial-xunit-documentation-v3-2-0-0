@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TeamCityReporterMessageHandler | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TeamCityReporterMessageHandler | Unofficial xunit docs ">
+      
+      <meta name="description" content="An implementation of  that supports .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_Common_TeamCityReporterMessageHandler.md&amp;value=---%0Auid%3A%20Xunit.Runner.Common.TeamCityReporterMessageHandler%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler">
+
+
+
+  <h1 id="Xunit_Runner_Common_TeamCityReporterMessageHandler" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler" class="text-break">
+Class TeamCityReporterMessageHandler  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.TeamCityReporter.html">TeamCityReporter</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TeamCityReporterMessageHandler : DefaultRunnerReporterMessageHandler, IRunnerReporterMessageHandler, IMessageSink, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html">AggregateMessageSink</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.TestMessageSink.html">TestMessageSink</a></div>
+      <div><a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html">DefaultRunnerReporterMessageHandler</a></div>
+      <div><span class="xref">TeamCityReporterMessageHandler</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a></div>
+      <div><a class="xref" href="Xunit.Sdk.IMessageSink.html">IMessageSink</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_EnvVar_HidePassingOutput">DefaultRunnerReporterMessageHandler.EnvVar_HidePassingOutput</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_Logger">DefaultRunnerReporterMessageHandler.Logger</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_MetadataCache">DefaultRunnerReporterMessageHandler.MetadataCache</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_Escape_System_String_">DefaultRunnerReporterMessageHandler.Escape(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_EscapeMultiLineIndent_System_String_System_String_">DefaultRunnerReporterMessageHandler.EscapeMultiLineIndent(string, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_GetAssemblyDisplayName_Xunit_Runner_Common_XunitProjectAssembly_">DefaultRunnerReporterMessageHandler.GetAssemblyDisplayName(XunitProjectAssembly)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_GetExecutionOptions_System_String_">DefaultRunnerReporterMessageHandler.GetExecutionOptions(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogError_Xunit_Sdk_IErrorMetadata_System_String_">DefaultRunnerReporterMessageHandler.LogError(IErrorMetadata, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogError_Xunit_Sdk_IErrorMetadata_System_String_System_Object___">DefaultRunnerReporterMessageHandler.LogError(IErrorMetadata, string, params object[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogStackTrace_Xunit_Runner_Common_StackFrameInfo_System_String_">DefaultRunnerReporterMessageHandler.LogStackTrace(StackFrameInfo, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogOutput_Xunit_Runner_Common_StackFrameInfo_System_String_">DefaultRunnerReporterMessageHandler.LogOutput(StackFrameInfo, string)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_LogWarnings_Xunit_Runner_Common_StackFrameInfo_System_String___">DefaultRunnerReporterMessageHandler.LogWarnings(StackFrameInfo, string[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyDiscoveryFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyDiscoveryFinished__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyDiscoveryFinished(MessageHandlerArgs&lt;TestAssemblyDiscoveryFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyDiscoveryStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyDiscoveryStarting__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyDiscoveryStarting(MessageHandlerArgs&lt;TestAssemblyDiscoveryStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyExecutionFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyExecutionFinished__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyExecutionFinished(MessageHandlerArgs&lt;TestAssemblyExecutionFinished&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestAssemblyExecutionStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestAssemblyExecutionStarting__">DefaultRunnerReporterMessageHandler.HandleTestAssemblyExecutionStarting(MessageHandlerArgs&lt;TestAssemblyExecutionStarting&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestExecutionSummaries_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Runner_Common_TestExecutionSummaries__">DefaultRunnerReporterMessageHandler.HandleTestExecutionSummaries(MessageHandlerArgs&lt;TestExecutionSummaries&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestOutput_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestOutput__">DefaultRunnerReporterMessageHandler.HandleTestOutput(MessageHandlerArgs&lt;ITestOutput&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_HandleTestPassed_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestPassed__">DefaultRunnerReporterMessageHandler.HandleTestPassed(MessageHandlerArgs&lt;ITestPassed&gt;)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.DefaultRunnerReporterMessageHandler.html#Xunit_Runner_Common_DefaultRunnerReporterMessageHandler_WriteDefaultSummary_Xunit_Runner_Common_IRunnerLogger_Xunit_Runner_Common_TestExecutionSummaries_">DefaultRunnerReporterMessageHandler.WriteDefaultSummary(IRunnerLogger, TestExecutionSummaries)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Diagnostics">TestMessageSink.Diagnostics</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Discovery">TestMessageSink.Discovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Execution">TestMessageSink.Execution</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.TestMessageSink.html#Xunit_Runner_Common_TestMessageSink_Runner">TestMessageSink.Runner</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_AggregatedSinks">AggregateMessageSink.AggregatedSinks</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_DisposeAsync">AggregateMessageSink.DisposeAsync()</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_GetOrCreateAggregatedSink__1___0__">AggregateMessageSink.GetOrCreateAggregatedSink&lt;TDispatcher&gt;(ref TDispatcher)</a>
+    </div>
+    <div>
+      <a class="xref" href="Xunit.Runner.Common.AggregateMessageSink.html#Xunit_Runner_Common_AggregateMessageSink_OnMessage_Xunit_Sdk_IMessageSinkMessage_">AggregateMessageSink.OnMessage(IMessageSinkMessage)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler__ctor_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.#ctor*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler__ctor_Xunit_Runner_Common_IRunnerLogger_System_String_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.#ctor(Xunit.Runner.Common.IRunnerLogger,System.String)">
+  TeamCityReporterMessageHandler(IRunnerLogger, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>An implementation of <a class="xref" href="Xunit.Runner.Common.IRunnerReporterMessageHandler.html">IRunnerReporterMessageHandler</a> that supports <a class="xref" href="Xunit.Runner.Common.TeamCityReporter.html">TeamCityReporter</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TeamCityReporterMessageHandler(IRunnerLogger logger, string? rootFlowId)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logger</code> <a class="xref" href="Xunit.Runner.Common.IRunnerLogger.html">IRunnerLogger</a></dt>
+    <dd><p>The logger used to report messages</p>
+</dd>
+    <dt><code>rootFlowId</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The root flow ID for reporting to TeamCity</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_UtcNow_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.UtcNow*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_UtcNow" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.UtcNow">
+  UtcNow
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L25"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the current date &amp; time in UTC.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual DateTimeOffset UtcNow { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleErrorMessage_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleErrorMessage*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleErrorMessage_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_IErrorMessage__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleErrorMessage(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.IErrorMessage})">
+  HandleErrorMessage(MessageHandlerArgs&lt;IErrorMessage&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.IErrorMessage.html">IErrorMessage</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleErrorMessage(MessageHandlerArgs&lt;IErrorMessage&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.IErrorMessage.html">IErrorMessage</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestAssemblyCleanupFailure})">
+  HandleTestAssemblyCleanupFailure(MessageHandlerArgs&lt;ITestAssemblyCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestAssemblyCleanupFailure(MessageHandlerArgs&lt;ITestAssemblyCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyCleanupFailure.html">ITestAssemblyCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestAssemblyFinished})">
+  HandleTestAssemblyFinished(MessageHandlerArgs&lt;ITestAssemblyFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L59"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestAssemblyFinished(MessageHandlerArgs&lt;ITestAssemblyFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyFinished.html">ITestAssemblyFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestAssemblyStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestAssemblyStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestAssemblyStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestAssemblyStarting})">
+  HandleTestAssemblyStarting(MessageHandlerArgs&lt;ITestAssemblyStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L75"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestAssemblyStarting(MessageHandlerArgs&lt;ITestAssemblyStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestAssemblyStarting.html">ITestAssemblyStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCaseCleanupFailure})">
+  HandleTestCaseCleanupFailure(MessageHandlerArgs&lt;ITestCaseCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L91"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCaseCleanupFailure(MessageHandlerArgs&lt;ITestCaseCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseCleanupFailure.html">ITestCaseCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCaseFinished})">
+  HandleTestCaseFinished(MessageHandlerArgs&lt;ITestCaseFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L105"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCaseFinished.html">ITestCaseFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCaseFinished(MessageHandlerArgs&lt;ITestCaseFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseFinished.html">ITestCaseFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCaseStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCaseStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCaseStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCaseStarting})">
+  HandleTestCaseStarting(MessageHandlerArgs&lt;ITestCaseStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCaseStarting.html">ITestCaseStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCaseStarting(MessageHandlerArgs&lt;ITestCaseStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCaseStarting.html">ITestCaseStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestClassCleanupFailure})">
+  HandleTestClassCleanupFailure(MessageHandlerArgs&lt;ITestClassCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L129"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestClassCleanupFailure(MessageHandlerArgs&lt;ITestClassCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassCleanupFailure.html">ITestClassCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestClassFinished})">
+  HandleTestClassFinished(MessageHandlerArgs&lt;ITestClassFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L143"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestClassFinished.html">ITestClassFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestClassFinished(MessageHandlerArgs&lt;ITestClassFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassFinished.html">ITestClassFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestClassStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestClassStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestClassStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestClassStarting})">
+  HandleTestClassStarting(MessageHandlerArgs&lt;ITestClassStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L155"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestClassStarting.html">ITestClassStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestClassStarting(MessageHandlerArgs&lt;ITestClassStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestClassStarting.html">ITestClassStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCleanupFailure})">
+  HandleTestCleanupFailure(MessageHandlerArgs&lt;ITestCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L213"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCleanupFailure.html">ITestCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCleanupFailure(MessageHandlerArgs&lt;ITestCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCleanupFailure.html">ITestCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCollectionCleanupFailure})">
+  HandleTestCollectionCleanupFailure(MessageHandlerArgs&lt;ITestCollectionCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L167"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCollectionCleanupFailure(MessageHandlerArgs&lt;ITestCollectionCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionCleanupFailure.html">ITestCollectionCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCollectionFinished})">
+  HandleTestCollectionFinished(MessageHandlerArgs&lt;ITestCollectionFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCollectionFinished.html">ITestCollectionFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCollectionFinished(MessageHandlerArgs&lt;ITestCollectionFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionFinished.html">ITestCollectionFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestCollectionStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestCollectionStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestCollectionStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestCollectionStarting})">
+  HandleTestCollectionStarting(MessageHandlerArgs&lt;ITestCollectionStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestCollectionStarting.html">ITestCollectionStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestCollectionStarting(MessageHandlerArgs&lt;ITestCollectionStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestCollectionStarting.html">ITestCollectionStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestFailed_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestFailed*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestFailed_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestFailed__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestFailed(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestFailed})">
+  HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestFailed(MessageHandlerArgs&lt;ITestFailed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestFailed.html">ITestFailed</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestFinished})">
+  HandleTestFinished(MessageHandlerArgs&lt;ITestFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestFinished.html">ITestFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestFinished(MessageHandlerArgs&lt;ITestFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestFinished.html">ITestFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodCleanupFailure_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodCleanupFailure*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodCleanupFailure_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodCleanupFailure__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodCleanupFailure(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestMethodCleanupFailure})">
+  HandleTestMethodCleanupFailure(MessageHandlerArgs&lt;ITestMethodCleanupFailure&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L270"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestMethodCleanupFailure(MessageHandlerArgs&lt;ITestMethodCleanupFailure&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodCleanupFailure.html">ITestMethodCleanupFailure</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodFinished_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodFinished*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodFinished_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodFinished__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodFinished(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestMethodFinished})">
+  HandleTestMethodFinished(MessageHandlerArgs&lt;ITestMethodFinished&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestMethodFinished.html">ITestMethodFinished</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestMethodFinished(MessageHandlerArgs&lt;ITestMethodFinished&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodFinished.html">ITestMethodFinished</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestMethodStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestMethodStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestMethodStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestMethodStarting})">
+  HandleTestMethodStarting(MessageHandlerArgs&lt;ITestMethodStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L296"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestMethodStarting.html">ITestMethodStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestMethodStarting(MessageHandlerArgs&lt;ITestMethodStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestMethodStarting.html">ITestMethodStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestSkipped_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestSkipped*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestSkipped_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestSkipped__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestSkipped(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestSkipped})">
+  HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L308"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestSkipped(MessageHandlerArgs&lt;ITestSkipped&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestSkipped.html">ITestSkipped</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestStarting_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestStarting*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_HandleTestStarting_Xunit_Runner_Common_MessageHandlerArgs_Xunit_Sdk_ITestStarting__" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.HandleTestStarting(Xunit.Runner.Common.MessageHandlerArgs{Xunit.Sdk.ITestStarting})">
+  HandleTestStarting(MessageHandlerArgs&lt;ITestStarting&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L322"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Handles instances of <a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void HandleTestStarting(MessageHandlerArgs&lt;ITestStarting&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="Xunit.Runner.Common.MessageHandlerArgs-1.html">MessageHandlerArgs</a>&lt;<a class="xref" href="Xunit.Sdk.ITestStarting.html">ITestStarting</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TeamCityReporterMessageHandler_TeamCityEscape_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.TeamCityEscape*"></a>
+
+  <h3 id="Xunit_Runner_Common_TeamCityReporterMessageHandler_TeamCityEscape_System_String_" data-uid="Xunit.Runner.Common.TeamCityReporterMessageHandler.TeamCityEscape(System.String)">
+  TeamCityEscape(string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L342"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Escapes a string to be sent in a TeamCity message.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? TeamCityEscape(string? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value to be escaped</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The escaped value</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Reporters/Builtin/TeamCityReporterMessageHandler.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

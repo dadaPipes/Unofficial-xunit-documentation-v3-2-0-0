@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Namespace Xunit | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Namespace Xunit | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit">
+
+  <h1 id="Xunit" data-uid="Xunit" class="text-break">Namespace Xunit</h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+
+    <h3 id="classes">
+Classes
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.AssemblyFixtureAttribute.html">AssemblyFixtureAttribute</a></dt>
+      <dd><p>Used to decorate xUnit.net test assemblies to indicate per-assembly fixture data. An instance of
+the fixture data is initialized before any test in the assembly are run (including
+<a class="xref" href="Xunit.IAsyncLifetime.html#Xunit_IAsyncLifetime_InitializeAsync">InitializeAsync()</a> if it's implemented). After all the tests in the
+assembly have been run, it is cleaned up by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">DisposeAsync()</a>
+if it's implemented, or it falls back to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> if that's implemented.
+Assembly fixtures must have a public parameterless constructor. To gain access to the fixture data
+from inside the test, a constructor argument should be added to the test class which exactly
+matches the fixture type.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.AssemblyHelper.html">AssemblyHelper</a></dt>
+      <dd><p>This class provides assistance with assembly resolution for missing assemblies.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.AssemblyUtility.html">AssemblyUtility</a></dt>
+      <dd><p>Utility functions for assemblies.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Assert.html">Assert</a></dt>
+      <dd><p>Contains various static methods that are used to verify that conditions are met during the
+process of running tests.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Assert.RaisedEvent-1.html">Assert.RaisedEvent&lt;T&gt;</a></dt>
+      <dd><p>Represents a raised event after the fact.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.AssertEquivalenceComparer.html">AssertEquivalenceComparer</a></dt>
+      <dd><p>An implementation of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.iequalitycomparer">IEqualityComparer</a> that uses the same logic
+from <a class="xref" href="Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Equivalent(object?, object?, bool)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.AssertEquivalenceComparer-1.html">AssertEquivalenceComparer&lt;T&gt;</a></dt>
+      <dd><p>An implementation of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.iequalitycomparer-1">IEqualityComparer&lt;T&gt;</a> that uses the same logic
+from <a class="xref" href="Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Equivalent(object?, object?, bool)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CaptureConsoleAttribute.html">CaptureConsoleAttribute</a></dt>
+      <dd><p>Captures <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console">Console</a> output (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.out">Out</a> and/or <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.console.error">Error</a>)
+and reports it to the test output helper.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CaptureTraceAttribute.html">CaptureTraceAttribute</a></dt>
+      <dd><p>Captures <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.trace">Trace</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.diagnostics.debug">Debug</a> output and reports it to the
+test output helper.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ClassDataAttribute.html">ClassDataAttribute</a></dt>
+      <dd><p>Provides a data source for a data theory, with the data coming from a class
+which must implement IEnumerable&lt;object?[]&gt;.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CollectionAttribute.html">CollectionAttribute</a></dt>
+      <dd><p>Used to declare a specific test collection for a test class.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CollectionAttribute-1.html">CollectionAttribute&lt;TCollectionDefinition&gt;</a></dt>
+      <dd><p>Used to declare a specific test collection for a test class. Equivalent to using <a class="xref" href="Xunit.CollectionAttribute.html">CollectionAttribute</a>
+with the <a class="xref" href="Xunit.CollectionAttribute.html#Xunit_CollectionAttribute__ctor_System_Type_">type-based constructor</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CollectionBehaviorAttribute.html">CollectionBehaviorAttribute</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.v3.ICollectionBehaviorAttribute.html">ICollectionBehaviorAttribute</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CollectionDefinitionAttribute.html">CollectionDefinitionAttribute</a></dt>
+      <dd><p>Used to declare a test collection container class. The container class gives
+developers a place to attach interfaces like <a class="xref" href="Xunit.IClassFixture-1.html">IClassFixture&lt;TFixture&gt;</a> and
+<a class="xref" href="Xunit.ICollectionFixture-1.html">ICollectionFixture&lt;TFixture&gt;</a> that will be applied to all tests classes
+that are members of the test collection.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FactAttribute.html">FactAttribute</a></dt>
+      <dd><p>Attribute that is applied to a method to indicate that it is a fact that should be run
+by the default test runner.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FrontControllerFindAndRunSettings.html">FrontControllerFindAndRunSettings</a></dt>
+      <dd><p>Contains the information by <a class="xref" href="Xunit.IFrontController.html#Xunit_IFrontController_FindAndRun_Xunit_Sdk_IMessageSink_Xunit_FrontControllerFindAndRunSettings_">FindAndRun(IMessageSink, FrontControllerFindAndRunSettings)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FrontControllerFindSettings.html">FrontControllerFindSettings</a></dt>
+      <dd><p>Contains the information by <a class="xref" href="Xunit.IFrontControllerDiscoverer.html#Xunit_IFrontControllerDiscoverer_Find_Xunit_Sdk_IMessageSink_Xunit_FrontControllerFindSettings_">Find(IMessageSink, FrontControllerFindSettings)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FrontControllerLaunchOptions.html">FrontControllerLaunchOptions</a></dt>
+      <dd><p>Launch options when using <a class="xref" href="Xunit.IFrontController.html">IFrontController</a> and/or <a class="xref" href="Xunit.IFrontControllerDiscoverer.html">IFrontControllerDiscoverer</a>.
+Current only supported by v3 test projects (all options will be ignored for v1/v2 test projects).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FrontControllerRunSettings.html">FrontControllerRunSettings</a></dt>
+      <dd><p>Contains the information by <a class="xref" href="Xunit.IFrontController.html#Xunit_IFrontController_Run_Xunit_Sdk_IMessageSink_Xunit_FrontControllerRunSettings_">Run(IMessageSink, FrontControllerRunSettings)</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.FrontControllerSettingsBase.html">FrontControllerSettingsBase</a></dt>
+      <dd><p>Base class for all invocations of <a class="xref" href="Xunit.IFrontController.html">IFrontController</a> and <a class="xref" href="Xunit.IFrontControllerDiscoverer.html">IFrontControllerDiscoverer</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.InlineDataAttribute.html">InlineDataAttribute</a></dt>
+      <dd><p>Provides a data source for a data theory, with the data coming from inline values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-10.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of ten data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-11.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of eleven data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-12.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of twelve data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-13.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of thirteen data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-14.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of fourteen data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-15.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of fifteen data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-2.html">MatrixTheoryData&lt;T1, T2&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of two data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-3.html">MatrixTheoryData&lt;T1, T2, T3&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of three data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-4.html">MatrixTheoryData&lt;T1, T2, T3, T4&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of four data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-5.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of five data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-6.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of six data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-7.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of seven data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-8.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of eight data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MatrixTheoryData-9.html">MatrixTheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;</a></dt>
+      <dd><p>Represents theory data which is created from the merging of nine data streams by
+creating a matrix of the data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MediaTypeUtility.html">MediaTypeUtility</a></dt>
+      <dd><p>This class provides mappings from media types (stored in attachments) to the intended file system extension
+when storing the attachment on disk.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.MemberDataAttribute.html">MemberDataAttribute</a></dt>
+      <dd><p>Provides a data source for a data theory, with the data coming from one of the following sources:</p>
+<ol>
+<li>A public static property</li>
+<li>A public static field</li>
+<li>A public static method (with parameters)</li>
+</ol>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.Record.html">Record</a></dt>
+      <dd><p>Allows the user to record actions for a test.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.RemotingUtility.html">RemotingUtility</a></dt>
+      <dd><p>Internal helper class for remoting.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestCaseOrdererAttribute.html">TestCaseOrdererAttribute</a></dt>
+      <dd><p>Used to decorate an assembly, test collection, or test class to allow
+the use of a custom test case orderer.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestCollectionOrdererAttribute.html">TestCollectionOrdererAttribute</a></dt>
+      <dd><p>Used to decorate an assembly to allow the use of a custom test collection orderer.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestContext.html">TestContext</a></dt>
+      <dd><p>Represents information about the current state of the test engine. It may be available at
+various points during the execution pipeline, so consumers must always take care to ensure
+that they check for <code>null</code> values from the various properties.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestContextExtensions.html">TestContextExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="Xunit.ITestContext.html">ITestContext</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestFrameworkAttribute.html">TestFrameworkAttribute</a></dt>
+      <dd><p>Used to decorate an assembly to allow the use of a custom test framework.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestResultState.html">TestResultState</a></dt>
+      <dd><p>Represents information about the current state of a test after it has run.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryAttribute.html">TheoryAttribute</a></dt>
+      <dd><p>Marks a test method as being a data theory. Data theories are tests which are fed
+various bits of data from a data source, mapping to parameters on the test method.
+If the data source contains multiple rows, then the test method is executed
+multiple times (once with each data row). Data is provided by attributes which
+implement <a class="xref" href="Xunit.v3.IDataAttribute.html">IDataAttribute</a> (most commonly, <a class="xref" href="Xunit.InlineDataAttribute.html">InlineDataAttribute</a>
+and <a class="xref" href="Xunit.MemberDataAttribute.html">MemberDataAttribute</a>).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData.html">TheoryData</a></dt>
+      <dd><p>Represents an untyped set of data for a theory with an unknown number
+of parameters.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataBase-2.html">TheoryDataBase&lt;TTheoryDataRow, TRawDataRow&gt;</a></dt>
+      <dd><p>Provides a base type for theories based on collection initialization syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow.html">TheoryDataRow</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts untyped pre-enumerated data.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRowBase.html">TheoryDataRowBase</a></dt>
+      <dd><p>Provide a base implemention of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> with settable properties and
+deferred data storage.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRowBaseExtensions.html">TheoryDataRowBaseExtensions</a></dt>
+      <dd><p>Extension methods for <a class="xref" href="Xunit.TheoryDataRowBase.html">TheoryDataRowBase</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-1.html">TheoryDataRow&lt;T1&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts one typed value.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-10.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts ten typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-11.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts eleven typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-12.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts twelve typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-13.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts thirteen typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-14.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts fourteen typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-15.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts fifteen typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-2.html">TheoryDataRow&lt;T1, T2&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts two typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-3.html">TheoryDataRow&lt;T1, T2, T3&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts three typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-4.html">TheoryDataRow&lt;T1, T2, T3, T4&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts four typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-5.html">TheoryDataRow&lt;T1, T2, T3, T4, T5&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts five typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-6.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts six typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-7.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts seven typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-8.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts eight typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryDataRow-9.html">TheoryDataRow&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;</a></dt>
+      <dd><p>Implementation of <a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a> which accepts nine typed values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-1.html">TheoryData&lt;T&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with one parameter. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-10.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with ten parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-11.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with eleven parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-12.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with twelve parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-13.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with thirteen parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-14.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with fourteen parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-15.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with fifteen parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-2.html">TheoryData&lt;T1, T2&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with two parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-3.html">TheoryData&lt;T1, T2, T3&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with three parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-4.html">TheoryData&lt;T1, T2, T3, T4&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with four parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-5.html">TheoryData&lt;T1, T2, T3, T4, T5&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with five parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-6.html">TheoryData&lt;T1, T2, T3, T4, T5, T6&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with six parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-7.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with seven parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-8.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with eight parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TheoryData-9.html">TheoryData&lt;T1, T2, T3, T4, T5, T6, T7, T8, T9&gt;</a></dt>
+      <dd><p>Represents a set of data for a theory with nine parameters. Data can
+be added to the data set using the collection initializer syntax.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TraitAttribute.html">TraitAttribute</a></dt>
+      <dd><p>Attribute used to decorate a test method, test class, or assembly with an arbitrary name/value pair (&quot;trait&quot;).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.XunitFrontController.html">XunitFrontController</a></dt>
+      <dd><p>Default implementation of <a class="xref" href="Xunit.IFrontController.html">IFrontController</a> which supports running tests from
+xUnit.net v1, v2, and v3.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.IAsyncLifetime.html">IAsyncLifetime</a></dt>
+      <dd><p>Used to provide asynchronous lifetime functionality. Currently supported:<br></p>
+<ul>
+<li>Test classes<br></li>
+<li>Classes used in <a class="xref" href="Xunit.IClassFixture-1.html">IClassFixture&lt;TFixture&gt;</a><br></li>
+<li>Classes used in <a class="xref" href="Xunit.ICollectionFixture-1.html">ICollectionFixture&lt;TFixture&gt;</a>.<br></li>
+<li>Classes used in <code>[assembly: <a class="xref" href="Xunit.AssemblyFixtureAttribute.html">AssemblyFixtureAttribute</a>()]</code>.</li>
+</ul>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.IClassFixture-1.html">IClassFixture&lt;TFixture&gt;</a></dt>
+      <dd><p>Used to decorate xUnit.net test classes and collections to indicate a test which has
+per-test-class fixture data. An instance of the fixture data is initialized just before
+the first test in the class is run (including <a class="xref" href="Xunit.IAsyncLifetime.html#Xunit_IAsyncLifetime_InitializeAsync">InitializeAsync()</a>
+if it's implemented). After all the tests in the test class have been run, it is cleaned up
+by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">DisposeAsync()</a> if it's implemented, or it falls back
+to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> if that's implemented. Class fixtures may have
+a public constructor which is either empty, or accepts one or more assembly and/or collection
+fixture objects as constructor arguments. To gain access to the fixture data from inside the
+test, a constructor argument should be added to the test class which/ exactly matches the
+<code class="typeparamref">TFixture</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ICollectionFixture-1.html">ICollectionFixture&lt;TFixture&gt;</a></dt>
+      <dd><p>Used to decorate xUnit.net test classes and collections to indicate a test which has
+per-test-collection fixture data. An instance of the fixture data is initialized just before
+the first test in the collection is run (including <a class="xref" href="Xunit.IAsyncLifetime.html#Xunit_IAsyncLifetime_InitializeAsync">InitializeAsync()</a>
+if it's implemented). After all the tests in the collection have been run, it is cleaned up
+by calling <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable.disposeasync">DisposeAsync()</a> if it's implemented, or it falls back
+to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.idisposable.dispose">Dispose()</a> if that's implemented. Collection fixtures may have
+a public constructor which is either empty, or accepts one or more assembly fixture objects
+as constructor arguments. To gain access to the fixture data from inside the test, a constructor
+argument should be added to the test class which exactly matches the <code class="typeparamref">TFixture</code>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.IFrontController.html">IFrontController</a></dt>
+      <dd><p>Represents a class which acts as a front controller for unit testing frameworks.
+This allows runners to run tests from multiple unit testing frameworks (in particular,
+hiding the differences between xUnit.net v1, v2, and v3 tests).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.IFrontControllerDiscoverer.html">IFrontControllerDiscoverer</a></dt>
+      <dd><p>Represents a class which acts as a front controller for unit testing frameworks for
+the purposes of discovery (which can include source-based discovery). Tests found
+with these classes can later be run by an instance of <a class="xref" href="Xunit.IFrontController.html">IFrontController</a>.
+This allows runners to run tests from multiple unit testing frameworks (in particular,
+hiding the differences between xUnit.net v1, v2, and v3 tests).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ITestContext.html">ITestContext</a></dt>
+      <dd><p>Represents the current state of the test pipeline.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ITestContextAccessor.html">ITestContextAccessor</a></dt>
+      <dd><p>Gives access to the current test context, which is considered to be an immutable snapshot of
+the current test state at the time it's retrieved.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a></dt>
+      <dd><p>Represents a class which can be used to provide test output.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.ITheoryDataRow.html">ITheoryDataRow</a></dt>
+      <dd><p>Represents a single row of theory data, along with optional metadata attached to the row.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.CollectionBehavior.html">CollectionBehavior</a></dt>
+      <dd><p>Defines the built-in behavior types for collections in xUnit.net.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestEngineStatus.html">TestEngineStatus</a></dt>
+      <dd><p>Represents the current status of the execution of the test engine, with respect to
+a phase in the execution pipeline (for example, engine status for a test collection vs.
+test case vs. test).</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestPipelineStage.html">TestPipelineStage</a></dt>
+      <dd><p>A flag to indicate which part of the test pipeline you're in. Retrieved from an
+instance of <a class="xref" href="Xunit.TestContext.html">TestContext</a>.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="Xunit.TestResult.html">TestResult</a></dt>
+      <dd><p>Indicates the result of running the test.</p>
+</dd>
+    </dl>
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

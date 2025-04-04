@@ -1,0 +1,269 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Runners.ErrorMessageType
+  commentId: T:Xunit.Runners.ErrorMessageType
+  id: ErrorMessageType
+  parent: Xunit.Runners
+  children:
+  - Xunit.Runners.ErrorMessageType.CatastrophicError
+  - Xunit.Runners.ErrorMessageType.TestAssemblyCleanupFailure
+  - Xunit.Runners.ErrorMessageType.TestCaseCleanupFailure
+  - Xunit.Runners.ErrorMessageType.TestClassCleanupFailure
+  - Xunit.Runners.ErrorMessageType.TestCleanupFailure
+  - Xunit.Runners.ErrorMessageType.TestCollectionCleanupFailure
+  - Xunit.Runners.ErrorMessageType.TestMethodCleanupFailure
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessageType
+  nameWithType: ErrorMessageType
+  fullName: Xunit.Runners.ErrorMessageType
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ErrorMessageType
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 5
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An enumeration which indicates the type of error message (for <xref href="Xunit.Runners.AssemblyRunner.OnErrorMessage" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: public enum ErrorMessageType
+    content.vb: Public Enum ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.CatastrophicError
+  commentId: F:Xunit.Runners.ErrorMessageType.CatastrophicError
+  id: CatastrophicError
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: CatastrophicError
+  nameWithType: ErrorMessageType.CatastrophicError
+  fullName: Xunit.Runners.ErrorMessageType.CatastrophicError
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CatastrophicError
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 8
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception occurred that disrupted the execution engine
+  example: []
+  syntax:
+    content: CatastrophicError = 1
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestAssemblyCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestAssemblyCleanupFailure
+  id: TestAssemblyCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestAssemblyCleanupFailure
+  nameWithType: ErrorMessageType.TestAssemblyCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestAssemblyCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestAssemblyCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 11
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test assembly
+  example: []
+  syntax:
+    content: TestAssemblyCleanupFailure = 10
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestCollectionCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestCollectionCleanupFailure
+  id: TestCollectionCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestCollectionCleanupFailure
+  nameWithType: ErrorMessageType.TestCollectionCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestCollectionCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestCollectionCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 14
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test collection
+  example: []
+  syntax:
+    content: TestCollectionCleanupFailure = 20
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestClassCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestClassCleanupFailure
+  id: TestClassCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestClassCleanupFailure
+  nameWithType: ErrorMessageType.TestClassCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestClassCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestClassCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 17
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test class
+  example: []
+  syntax:
+    content: TestClassCleanupFailure = 30
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestMethodCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestMethodCleanupFailure
+  id: TestMethodCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestMethodCleanupFailure
+  nameWithType: ErrorMessageType.TestMethodCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestMethodCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestMethodCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 20
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test method
+  example: []
+  syntax:
+    content: TestMethodCleanupFailure = 40
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestCaseCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestCaseCleanupFailure
+  id: TestCaseCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestCaseCleanupFailure
+  nameWithType: ErrorMessageType.TestCaseCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestCaseCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestCaseCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 23
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test case
+  example: []
+  syntax:
+    content: TestCaseCleanupFailure = 50
+    return:
+      type: Xunit.Runners.ErrorMessageType
+- uid: Xunit.Runners.ErrorMessageType.TestCleanupFailure
+  commentId: F:Xunit.Runners.ErrorMessageType.TestCleanupFailure
+  id: TestCleanupFailure
+  parent: Xunit.Runners.ErrorMessageType
+  langs:
+  - csharp
+  - vb
+  name: TestCleanupFailure
+  nameWithType: ErrorMessageType.TestCleanupFailure
+  fullName: Xunit.Runners.ErrorMessageType.TestCleanupFailure
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestCleanupFailure
+    path: ../v3-2.0.0/src/xunit.v3.runner.utility/Runners/ErrorMessageType.cs
+    startLine: 26
+  assemblies:
+  - xunit.v3.runner.utility.netfx
+  namespace: Xunit.Runners
+  summary: An unhandled exception happened while cleaning up from the test
+  example: []
+  syntax:
+    content: TestCleanupFailure = 60
+    return:
+      type: Xunit.Runners.ErrorMessageType
+references:
+- uid: Xunit.Runners.AssemblyRunner.OnErrorMessage
+  commentId: P:Xunit.Runners.AssemblyRunner.OnErrorMessage
+  href: Xunit.Runners.AssemblyRunner.html#Xunit_Runners_AssemblyRunner_OnErrorMessage
+  name: OnErrorMessage
+  nameWithType: AssemblyRunner.OnErrorMessage
+  fullName: Xunit.Runners.AssemblyRunner.OnErrorMessage
+- uid: Xunit.Runners
+  commentId: N:Xunit.Runners
+  href: Xunit.html
+  name: Xunit.Runners
+  nameWithType: Xunit.Runners
+  fullName: Xunit.Runners
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runners
+    name: Runners
+    href: Xunit.Runners.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runners
+    name: Runners
+    href: Xunit.Runners.html
+- uid: Xunit.Runners.ErrorMessageType
+  commentId: T:Xunit.Runners.ErrorMessageType
+  parent: Xunit.Runners
+  href: Xunit.Runners.ErrorMessageType.html
+  name: ErrorMessageType
+  nameWithType: ErrorMessageType
+  fullName: Xunit.Runners.ErrorMessageType

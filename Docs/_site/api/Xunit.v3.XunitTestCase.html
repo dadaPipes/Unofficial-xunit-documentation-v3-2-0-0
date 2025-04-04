@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class XunitTestCase | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class XunitTestCase | Unofficial xunit docs ">
+      
+      <meta name="description" content="Default implementation of  for xUnit.net v3 that supports test methods decorated with . Test methods decorated with derived attributes may use this as a base class to build from.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_v3_XunitTestCase.md&amp;value=---%0Auid%3A%20Xunit.v3.XunitTestCase%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.v3.XunitTestCase">
+
+
+
+  <h1 id="Xunit_v3_XunitTestCase" data-uid="Xunit.v3.XunitTestCase" class="text-break">
+Class XunitTestCase  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L17"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.v3.html">v3</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.core.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Default implementation of <a class="xref" href="Xunit.v3.IXunitTestCase.html">IXunitTestCase</a> for xUnit.net v3 that supports test methods decorated with
+<a class="xref" href="Xunit.FactAttribute.html">FactAttribute</a>. Test methods decorated with derived attributes may use this as a base class
+to build from.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class XunitTestCase : IXunitTestCase, ITestCase, ITestCaseMetadata, IXunitSerializable, IAsyncDisposable</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">XunitTestCase</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.v3.IXunitTestCase.html">IXunitTestCase</a></div>
+      <div><a class="xref" href="Xunit.Sdk.ITestCase.html">ITestCase</a></div>
+      <div><a class="xref" href="Xunit.Sdk.ITestCaseMetadata.html">ITestCaseMetadata</a></div>
+      <div><a class="xref" href="Xunit.Sdk.IXunitSerializable.html">IXunitSerializable</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iasyncdisposable">IAsyncDisposable</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.v3.ExecutionErrorTestCase.html">ExecutionErrorTestCase</a></div>
+      <div><a class="xref" href="Xunit.v3.XunitDelayEnumeratedTheoryTestCase.html">XunitDelayEnumeratedTheoryTestCase</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="Xunit_v3_XunitTestCase__ctor_" data-uid="Xunit.v3.XunitTestCase.#ctor*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase__ctor" data-uid="Xunit.v3.XunitTestCase.#ctor">
+  XunitTestCase()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L30"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called by the de-serializer; should only be called by deriving classes for de-serialization purposes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;Called by the de-serializer; should only be called by deriving classes for de-serialization purposes&quot;)]
+public XunitTestCase()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase__ctor_" data-uid="Xunit.v3.XunitTestCase.#ctor*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase__ctor_Xunit_v3_IXunitTestMethod_System_String_System_String_System_Boolean_System_Type___System_String_System_Type_System_String_System_String_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_HashSet_System_String___System_Object___System_String_System_Nullable_System_Int32__System_Nullable_System_Int32__" data-uid="Xunit.v3.XunitTestCase.#ctor(Xunit.v3.IXunitTestMethod,System.String,System.String,System.Boolean,System.Type[],System.String,System.Type,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.HashSet{System.String}},System.Object[],System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+  XunitTestCase(IXunitTestMethod, string, string, bool, Type[]?, string?, Type?, string?, string?, Dictionary&lt;string, HashSet&lt;string&gt;&gt;?, object?[]?, string?, int?, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Xunit.v3.XunitTestCase.html">XunitTestCase</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public XunitTestCase(IXunitTestMethod testMethod, string testCaseDisplayName, string uniqueID, bool @explicit, Type[]? skipExceptions = null, string? skipReason = null, Type? skipType = null, string? skipUnless = null, string? skipWhen = null, Dictionary&lt;string, HashSet&lt;string&gt;&gt;? traits = null, object?[]? testMethodArguments = null, string? sourceFilePath = null, int? sourceLineNumber = null, int? timeout = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>testMethod</code> <a class="xref" href="Xunit.v3.IXunitTestMethod.html">IXunitTestMethod</a></dt>
+    <dd><p>The test method this test case belongs to.</p>
+</dd>
+    <dt><code>testCaseDisplayName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The display name for the test case.</p>
+</dd>
+    <dt><code>uniqueID</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The unique ID for the test case.</p>
+</dd>
+    <dt><code>explicit</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Indicates whether the test case was marked as explicit.</p>
+</dd>
+    <dt><code>skipExceptions</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd><p>The value obtained from <a class="xref" href="Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipExceptions">SkipExceptions</a>.</p>
+</dd>
+    <dt><code>skipReason</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value obtained from <a class="xref" href="Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_Skip">Skip</a>.</p>
+</dd>
+    <dt><code>skipType</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd><p>The value obtained from <a class="xref" href="Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipType">SkipType</a>.</p>
+</dd>
+    <dt><code>skipUnless</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value obtained from <a class="xref" href="Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipUnless">SkipUnless</a>.</p>
+</dd>
+    <dt><code>skipWhen</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The value obtained from <a class="xref" href="Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipWhen">SkipWhen</a>.</p>
+</dd>
+    <dt><code>traits</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>The optional traits list.</p>
+</dd>
+    <dt><code>testMethodArguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd><p>The optional arguments for the test method.</p>
+</dd>
+    <dt><code>sourceFilePath</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The optional source file in where this test case originated.</p>
+</dd>
+    <dt><code>sourceLineNumber</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The optional source line number where this test case originated.</p>
+</dd>
+    <dt><code>timeout</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd><p>The optional timeout for the test case (in milliseconds).</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_v3_XunitTestCase_DisposalTracker_" data-uid="Xunit.v3.XunitTestCase.DisposalTracker*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_DisposalTracker" data-uid="Xunit.v3.XunitTestCase.DisposalTracker">
+  DisposalTracker
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L93"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Used to dispose of test method arguments when the test case is disposed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DisposalTracker DisposalTracker { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.DisposalTracker.html">DisposalTracker</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_Explicit_" data-uid="Xunit.v3.XunitTestCase.Explicit*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_Explicit" data-uid="Xunit.v3.XunitTestCase.Explicit">
+  Explicit
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag indicating whether this test case was marked as explicit or not.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Explicit { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SkipExceptions_" data-uid="Xunit.v3.XunitTestCase.SkipExceptions*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SkipExceptions" data-uid="Xunit.v3.XunitTestCase.SkipExceptions">
+  SkipExceptions
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L99"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the exception types that, when thrown, will cause a</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type[]? SkipExceptions { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SkipReason_" data-uid="Xunit.v3.XunitTestCase.SkipReason*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SkipReason" data-uid="Xunit.v3.XunitTestCase.SkipReason">
+  SkipReason
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L102"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the display text for the reason a test that might being skipped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SkipReason { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_SkipReason_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>This differs from the contract of <a class="xref" href="Xunit.Sdk.ITestCaseMetadata.html#Xunit_Sdk_ITestCaseMetadata_SkipReason">SkipReason</a> by virtue
+of the fact that when this value is non-<code>null</code>, it may indicate that a test is
+statically skipped (if both <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipUnless">SkipUnless</a> and <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipWhen">SkipWhen</a> are
+<code>null</code>) or dynamically skipped (if one is non-<code>null</code>).</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SkipType_" data-uid="Xunit.v3.XunitTestCase.SkipType*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SkipType" data-uid="Xunit.v3.XunitTestCase.SkipType">
+  SkipType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When set, indicates the type to use when resolving <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipUnless">SkipUnless</a> or
+<a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipWhen">SkipWhen</a>. If not set, uses the test class type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Type? SkipType { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type">Type</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SkipUnless_" data-uid="Xunit.v3.XunitTestCase.SkipUnless*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SkipUnless" data-uid="Xunit.v3.XunitTestCase.SkipUnless">
+  SkipUnless
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L114"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When set, indicates a public static property that is used at runtime to determine
+whether the test is skipped or not (<code>true</code> to run, <code>false</code> to skip).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SkipUnless { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_SkipUnless_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note: It is an error condition for both <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipUnless">SkipUnless</a> and <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipWhen">SkipWhen</a>
+to return a non-<code>null</code> value.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SkipWhen_" data-uid="Xunit.v3.XunitTestCase.SkipWhen*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SkipWhen" data-uid="Xunit.v3.XunitTestCase.SkipWhen">
+  SkipWhen
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L117"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>When set, indicates a public static property that is used at runtime to determine
+whether the test is skipped or not (<code>false</code> to run, <code>true</code> to skip).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SkipWhen { get; protected set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_SkipWhen_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Note: It is an error condition for both <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipUnless">SkipUnless</a> and <a class="xref" href="Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipWhen">SkipWhen</a>
+to return a non-<code>null</code> value.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SourceFilePath_" data-uid="Xunit.v3.XunitTestCase.SourceFilePath*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SourceFilePath" data-uid="Xunit.v3.XunitTestCase.SourceFilePath">
+  SourceFilePath
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L120"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source file name. A <code>null</code> value indicates that the
+source file name is not known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? SourceFilePath { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_SourceLineNumber_" data-uid="Xunit.v3.XunitTestCase.SourceLineNumber*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_SourceLineNumber" data-uid="Xunit.v3.XunitTestCase.SourceLineNumber">
+  SourceLineNumber
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L123"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the source file line number. A <code>null</code> value indicates that the
+source file line number is not known.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? SourceLineNumber { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestCaseDisplayName_" data-uid="Xunit.v3.XunitTestCase.TestCaseDisplayName*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestCaseDisplayName" data-uid="Xunit.v3.XunitTestCase.TestCaseDisplayName">
+  TestCaseDisplayName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L126"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the display name of the test case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TestCaseDisplayName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestClass_" data-uid="Xunit.v3.XunitTestCase.TestClass*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestClass" data-uid="Xunit.v3.XunitTestCase.TestClass">
+  TestClass
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test class that this test case belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IXunitTestClass TestClass { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.v3.IXunitTestClass.html">IXunitTestClass</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestClassMetadataToken_" data-uid="Xunit.v3.XunitTestCase.TestClassMetadataToken*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestClassMetadataToken" data-uid="Xunit.v3.XunitTestCase.TestClassMetadataToken">
+  TestClassMetadataToken
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L142"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.metadatatoken">MetadataToken</a> for the test class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TestClassMetadataToken { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestClassName_" data-uid="Xunit.v3.XunitTestCase.TestClassName*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestClassName" data-uid="Xunit.v3.XunitTestCase.TestClassName">
+  TestClassName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the full name of the class where the test is defined (i.e. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.fullname">FullName</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TestClassName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestClassNamespace_" data-uid="Xunit.v3.XunitTestCase.TestClassNamespace*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestClassNamespace" data-uid="Xunit.v3.XunitTestCase.TestClassNamespace">
+  TestClassNamespace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L152"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the namespace of the class where the test is defined. If the test did not
+originate in a class, or the class it originated in does not reside in a namespace,
+will return <code>null</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TestClassNamespace { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestClassSimpleName_" data-uid="Xunit.v3.XunitTestCase.TestClassSimpleName*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestClassSimpleName" data-uid="Xunit.v3.XunitTestCase.TestClassSimpleName">
+  TestClassSimpleName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the simple name of the class where the test is defined (i.e. <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.name">Name</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TestClassSimpleName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestCollection_" data-uid="Xunit.v3.XunitTestCase.TestCollection*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestCollection" data-uid="Xunit.v3.XunitTestCase.TestCollection">
+  TestCollection
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L130"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test collection this test case belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IXunitTestCollection TestCollection { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.v3.IXunitTestCollection.html">IXunitTestCollection</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethod_" data-uid="Xunit.v3.XunitTestCase.TestMethod*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethod" data-uid="Xunit.v3.XunitTestCase.TestMethod">
+  TestMethod
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test method this test case belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IXunitTestMethod TestMethod { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.v3.IXunitTestMethod.html">IXunitTestMethod</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethodArguments_" data-uid="Xunit.v3.XunitTestCase.TestMethodArguments*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethodArguments" data-uid="Xunit.v3.XunitTestCase.TestMethodArguments">
+  TestMethodArguments
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object?[] TestMethodArguments { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethodMetadataToken_" data-uid="Xunit.v3.XunitTestCase.TestMethodMetadataToken*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethodMetadataToken" data-uid="Xunit.v3.XunitTestCase.TestMethodMetadataToken">
+  TestMethodMetadataToken
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.memberinfo.metadatatoken">MetadataToken</a> for the test method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int TestMethodMetadataToken { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethodName_" data-uid="Xunit.v3.XunitTestCase.TestMethodName*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethodName" data-uid="Xunit.v3.XunitTestCase.TestMethodName">
+  TestMethodName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the method name where the test is defined.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TestMethodName { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethodParameterTypesVSTest_" data-uid="Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethodParameterTypesVSTest" data-uid="Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest">
+  TestMethodParameterTypesVSTest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L180"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the types for the test method parameters.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] TestMethodParameterTypesVSTest { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_TestMethodParameterTypesVSTest_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The values here are formatted according to
+<a href="https://github.com/microsoft/vstest/blob/main/docs/RFCs/0017-Managed-TestCase-Properties.md">VSTest rules</a>
+in order to support Test Explorer. Note that this is not the same as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.fullname">FullName</a>.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_TestMethodReturnTypeVSTest_" data-uid="Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_TestMethodReturnTypeVSTest" data-uid="Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest">
+  TestMethodReturnTypeVSTest
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the test method return type.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string TestMethodReturnTypeVSTest { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_TestMethodReturnTypeVSTest_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The value here is formatted according to
+<a href="https://github.com/microsoft/vstest/blob/main/docs/RFCs/0017-Managed-TestCase-Properties.md">VSTest rules</a>
+in order to support Test Explorer. Note that this is not the same as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.type.fullname">FullName</a>.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_Timeout_" data-uid="Xunit.v3.XunitTestCase.Timeout*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_Timeout" data-uid="Xunit.v3.XunitTestCase.Timeout">
+  Timeout
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L188"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the timeout of the test, in milliseconds; if zero or negative, means the test case has no timeout.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int Timeout { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_Traits_" data-uid="Xunit.v3.XunitTestCase.Traits*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_Traits" data-uid="Xunit.v3.XunitTestCase.Traits">
+  Traits
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the traits associated with this test case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Dictionary&lt;string, HashSet&lt;string&gt;&gt; Traits { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2">Dictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.hashset-1">HashSet</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_UniqueID_" data-uid="Xunit.v3.XunitTestCase.UniqueID*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_UniqueID" data-uid="Xunit.v3.XunitTestCase.UniqueID">
+  UniqueID
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L201"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a unique identifier for the test case.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual string UniqueID { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_UniqueID_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The unique identifier for a test case should be able to discriminate among test cases, even those
+which are varied invocations against the same test method (i.e., theories). This identifier should
+remain stable until such time as the developer changes some fundamental part of the identity
+(assembly, class name, test name, or test data). Recompilation of the test assembly is reasonable
+as a stability changing event.</p>
+</div>
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_v3_XunitTestCase_CreateTests_" data-uid="Xunit.v3.XunitTestCase.CreateTests*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_CreateTests" data-uid="Xunit.v3.XunitTestCase.CreateTests">
+  CreateTests()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L210"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates the tests that are emitted from this test case. Exceptions thrown here
+will be caught and converted into a test case failure.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ValueTask&lt;IReadOnlyCollection&lt;IXunitTest&gt;&gt; CreateTests()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1">ValueTask</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="Xunit.v3.IXunitTest.html">IXunitTest</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="Xunit_v3_XunitTestCase_CreateTests_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>By default, this method returns a single <a class="xref" href="Xunit.v3.XunitTest.html">XunitTest</a> that is appropriate
+for a one-to-one mapping between test and test case. Override this method to change the
+tests that are associated with this test case.</p>
+</div>
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_Deserialize_" data-uid="Xunit.v3.XunitTestCase.Deserialize*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_Deserialize_Xunit_Sdk_IXunitSerializationInfo_" data-uid="Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)">
+  Deserialize(IXunitSerializationInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L229"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the test case should populate itself with data from the serialization info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Deserialize(IXunitSerializationInfo info)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="Xunit.Sdk.IXunitSerializationInfo.html">IXunitSerializationInfo</a></dt>
+    <dd><p>The info to get the object data from</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_DisposeAsync_" data-uid="Xunit.v3.XunitTestCase.DisposeAsync*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_DisposeAsync" data-uid="Xunit.v3.XunitTestCase.DisposeAsync">
+  DisposeAsync()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L256"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Performs application-defined tasks associated with freeing, releasing, or
+resetting unmanaged resources asynchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual ValueTask DisposeAsync()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_PostInvoke_" data-uid="Xunit.v3.XunitTestCase.PostInvoke*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_PostInvoke" data-uid="Xunit.v3.XunitTestCase.PostInvoke">
+  PostInvoke()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L264"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows the test case to run some code just after the test case is finished running.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PostInvoke()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_PreInvoke_" data-uid="Xunit.v3.XunitTestCase.PreInvoke*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_PreInvoke" data-uid="Xunit.v3.XunitTestCase.PreInvoke">
+  PreInvoke()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L268"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Allows the test case to run some code just before the test case is run.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void PreInvoke()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_ResolveTestMethodArguments_" data-uid="Xunit.v3.XunitTestCase.ResolveTestMethodArguments*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_ResolveTestMethodArguments_System_Reflection_ParameterInfo___System_Object___" data-uid="Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])">
+  ResolveTestMethodArguments(ParameterInfo[], object?[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L276"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Computes values from the test case and resolves the test method arguments just before execution.
+Typically used from <a class="xref" href="Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_CreateTests">CreateTests()</a> so that the executed test has an appropriately
+typed argument, regardless of the type that was used to serialize the argument.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected static object?[] ResolveTestMethodArguments(ParameterInfo[] parameters, object?[] arguments)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo">ParameterInfo</a>[]</dt>
+    <dd></dd>
+    <dt><code>arguments</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_v3_XunitTestCase_Serialize_" data-uid="Xunit.v3.XunitTestCase.Serialize*"></a>
+
+  <h3 id="Xunit_v3_XunitTestCase_Serialize_Xunit_Sdk_IXunitSerializationInfo_" data-uid="Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)">
+  Serialize(IXunitSerializationInfo)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L294"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Called when the test case should store its serialized values into the serialization info.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void Serialize(IXunitSerializationInfo info)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>info</code> <a class="xref" href="Xunit.Sdk.IXunitSerializationInfo.html">IXunitSerializationInfo</a></dt>
+    <dd><p>The info to store the object data into</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.core/ObjectModel/XunitTestCase.cs/#L17" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

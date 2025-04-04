@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.TestResult
+  commentId: T:Xunit.TestResult
+  id: TestResult
+  parent: Xunit
+  children:
+  - Xunit.TestResult.Failed
+  - Xunit.TestResult.NotRun
+  - Xunit.TestResult.Passed
+  - Xunit.TestResult.Skipped
+  langs:
+  - csharp
+  - vb
+  name: TestResult
+  nameWithType: TestResult
+  fullName: Xunit.TestResult
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.core/TestResult.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestResult
+    path: ../v3-2.0.0/src/xunit.v3.core/TestResult.cs
+    startLine: 5
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: Indicates the result of running the test.
+  example: []
+  syntax:
+    content: public enum TestResult
+    content.vb: Public Enum TestResult
+- uid: Xunit.TestResult.Passed
+  commentId: F:Xunit.TestResult.Passed
+  id: Passed
+  parent: Xunit.TestResult
+  langs:
+  - csharp
+  - vb
+  name: Passed
+  nameWithType: TestResult.Passed
+  fullName: Xunit.TestResult.Passed
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.core/TestResult.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Passed
+    path: ../v3-2.0.0/src/xunit.v3.core/TestResult.cs
+    startLine: 10
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: The test passed.
+  example: []
+  syntax:
+    content: Passed = 0
+    return:
+      type: Xunit.TestResult
+- uid: Xunit.TestResult.Failed
+  commentId: F:Xunit.TestResult.Failed
+  id: Failed
+  parent: Xunit.TestResult
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: TestResult.Failed
+  fullName: Xunit.TestResult.Failed
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.core/TestResult.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Failed
+    path: ../v3-2.0.0/src/xunit.v3.core/TestResult.cs
+    startLine: 15
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: The test failed.
+  example: []
+  syntax:
+    content: Failed = 1
+    return:
+      type: Xunit.TestResult
+- uid: Xunit.TestResult.Skipped
+  commentId: F:Xunit.TestResult.Skipped
+  id: Skipped
+  parent: Xunit.TestResult
+  langs:
+  - csharp
+  - vb
+  name: Skipped
+  nameWithType: TestResult.Skipped
+  fullName: Xunit.TestResult.Skipped
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.core/TestResult.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Skipped
+    path: ../v3-2.0.0/src/xunit.v3.core/TestResult.cs
+    startLine: 20
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: The test was skipped.
+  example: []
+  syntax:
+    content: Skipped = 2
+    return:
+      type: Xunit.TestResult
+- uid: Xunit.TestResult.NotRun
+  commentId: F:Xunit.TestResult.NotRun
+  id: NotRun
+  parent: Xunit.TestResult
+  langs:
+  - csharp
+  - vb
+  name: NotRun
+  nameWithType: TestResult.NotRun
+  fullName: Xunit.TestResult.NotRun
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.core/TestResult.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: NotRun
+    path: ../v3-2.0.0/src/xunit.v3.core/TestResult.cs
+    startLine: 27
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit
+  summary: >-
+    The test was not run because it was excluded (either because it was marked as explicit
+
+    and explicit tests weren't run, or because it was marked as not explicit as only explicit
+
+    tests were run).
+  example: []
+  syntax:
+    content: NotRun = 3
+    return:
+      type: Xunit.TestResult
+references:
+- uid: Xunit
+  commentId: N:Xunit
+  href: Xunit.html
+  name: Xunit
+  nameWithType: Xunit
+  fullName: Xunit
+- uid: Xunit.TestResult
+  commentId: T:Xunit.TestResult
+  parent: Xunit
+  href: Xunit.TestResult.html
+  name: TestResult
+  nameWithType: TestResult
+  fullName: Xunit.TestResult

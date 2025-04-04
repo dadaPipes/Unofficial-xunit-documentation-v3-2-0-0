@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JsonDeserializer | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JsonDeserializer | Unofficial xunit docs ">
+      
+      <meta name="description" content="A special-purpose untyped deserializer for JSON. JSON strings are returned as , JSON numbers are returned as , JSON booleans are returns as , JSON objects are returned as IReadOnlyDictionary&amp;lt;string, object?&amp;gt;, JSON arrays are returned as object?[], and JSON null values are returned as null. Static methods exist here to help retrieve values from object dictionaries as well as convert to the commonly supported data types (, , , , , , , and trait dictionaries (which are decoded to IReadOnlyDictionary&amp;lt;string, IReadOnlyList&amp;lt;string&amp;gt;&amp;gt;), as well as arrays of all the supported types (except trait dictionaries). Developers who need support for other types are encouraged to encode and decode then as strings as needed (for examples, you can see how  and  values are handled here).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Sdk_JsonDeserializer.md&amp;value=---%0Auid%3A%20Xunit.Sdk.JsonDeserializer%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Sdk.JsonDeserializer">
+
+
+
+  <h1 id="Xunit_Sdk_JsonDeserializer" data-uid="Xunit.Sdk.JsonDeserializer" class="text-break">
+Class JsonDeserializer  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Sdk.html">Sdk</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>A special-purpose untyped deserializer for JSON. JSON strings are returned as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>,
+JSON numbers are returned as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, JSON booleans are returns as <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>,
+JSON objects are returned as <code>IReadOnlyDictionary&lt;string, object?&gt;</code>, JSON arrays are
+returned as <code>object?[]</code>, and JSON null values are returned as <code>null</code>. Static methods exist
+here to help retrieve values from object dictionaries as well as convert to the commonly supported
+data types (<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a>,
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, and trait dictionaries (which are
+decoded to <code>IReadOnlyDictionary&lt;string, IReadOnlyList&lt;string&gt;&gt;</code>), as well as arrays
+of all the supported types (except trait dictionaries). Developers who need support for other types
+are encouraged to encode and decode then as strings as needed (for examples, you can see how
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> values are handled here).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class JsonDeserializer</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JsonDeserializer</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+  <h2 id="Xunit_Sdk_JsonDeserializer_remarks">Remarks</h2>
+  <div class="markdown level0 remarks"><p>These types are made public for third parties only for the purpose of serializing and
+deserializing messages that are sent across the process boundary (that is, types which
+implement <a class="xref" href="Xunit.Sdk.IMessageSinkMessage.html">IMessageSinkMessage</a>). Any other usage is not supported.</p>
+</div>
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryDeserialize_" data-uid="Xunit.Sdk.JsonDeserializer.TryDeserialize*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryDeserialize_System_String_System_Object__" data-uid="Xunit.Sdk.JsonDeserializer.TryDeserialize(System.String,System.Object@)">
+  TryDeserialize(string, out object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool TryDeserialize(string json, out object? result)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>json</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>result</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArray_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArray*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArray_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArray(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArray(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L275"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an untyped array value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object?[]? TryGetArray(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArray_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArray*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArray_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArray(System.Object)">
+  TryGetArray(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L284"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an untyped array value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static object?[]? TryGetArray(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfBoolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfBoolean*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfBoolean_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfBoolean(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfBoolean(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L295"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool[]? TryGetArrayOfBoolean(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfBoolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfBoolean*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfBoolean_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfBoolean(System.Object)">
+  TryGetArrayOfBoolean(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L307"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool[]? TryGetArrayOfBoolean(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDateTimeOffset_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDateTimeOffset*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDateTimeOffset_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDateTimeOffset(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfDateTimeOffset(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L318"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeOffset[]? TryGetArrayOfDateTimeOffset(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDateTimeOffset_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDateTimeOffset*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDateTimeOffset_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDateTimeOffset(System.Object)">
+  TryGetArrayOfDateTimeOffset(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L330"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeOffset[]? TryGetArrayOfDateTimeOffset(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDecimal_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDecimal*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDecimal_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDecimal(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfDecimal(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L341"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static decimal[]? TryGetArrayOfDecimal(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDecimal_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDecimal*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfDecimal_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfDecimal(System.Object)">
+  TryGetArrayOfDecimal(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L353"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static decimal[]? TryGetArrayOfDecimal(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfEnum_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfEnum*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfEnum__1_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfEnum``1(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfEnum&lt;TEnum&gt;(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L364"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <code class="typeparamref">TEnum</code> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <code class="typeparamref">TEnum</code>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TEnum[]? TryGetArrayOfEnum&lt;TEnum&gt;(IReadOnlyDictionary&lt;string, object?&gt; obj, string key) where TEnum : struct, Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TEnum[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEnum</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfEnum_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfEnum*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfEnum__1_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfEnum``1(System.Object)">
+  TryGetArrayOfEnum&lt;TEnum&gt;(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <code class="typeparamref">TEnum</code> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <code class="typeparamref">TEnum</code>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TEnum[]? TryGetArrayOfEnum&lt;TEnum&gt;(object? value) where TEnum : struct, Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TEnum[]</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEnum</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfInt_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfInt*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfInt_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfInt(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfInt(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L389"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int[]? TryGetArrayOfInt(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfInt_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfInt*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfInt_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfInt(System.Object)">
+  TryGetArrayOfInt(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L401"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int[]? TryGetArrayOfInt(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfLong_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfLong*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfLong_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfLong(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfLong(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L412"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long[]? TryGetArrayOfLong(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfLong_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfLong*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfLong_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfLong(System.Object)">
+  TryGetArrayOfLong(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L424"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long[]? TryGetArrayOfLong(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfNullableString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfNullableString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfNullableString_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfNullableString(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfNullableString(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L435"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, then returns <code>null</code>.
+Null values in the array are permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string?[]? TryGetArrayOfNullableString(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfNullableString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfNullableString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfNullableString_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfNullableString(System.Object)">
+  TryGetArrayOfNullableString(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L447"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, then returns <code>null</code>.
+Null values in the array are permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string?[]? TryGetArrayOfNullableString(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfString_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfString(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetArrayOfString(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L458"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> values from a deserialized JSON
+object. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[]? TryGetArrayOfString(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetArrayOfString_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetArrayOfString(System.Object)">
+  TryGetArrayOfString(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L470"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an array of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> values from a deserialized JSON
+value. If the value isn't an array, or if any of the values in the array
+aren't compatible with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, then returns <code>null</code>.
+Null values in the array are not permitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[]? TryGetArrayOfString(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetBoolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetBoolean*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetBoolean_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetBoolean(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetBoolean(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L478"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? TryGetBoolean(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetBoolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetBoolean*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetBoolean_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetBoolean(System.Object)">
+  TryGetBoolean(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L487"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? TryGetBoolean(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetDateTimeOffset_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDateTimeOffset*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetDateTimeOffset_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDateTimeOffset(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetDateTimeOffset(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L495"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeOffset? TryGetDateTimeOffset(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetDateTimeOffset_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDateTimeOffset*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetDateTimeOffset_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDateTimeOffset(System.Object)">
+  TryGetDateTimeOffset(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L504"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static DateTimeOffset? TryGetDateTimeOffset(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.datetimeoffset">DateTimeOffset</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetDecimal_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDecimal*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetDecimal_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDecimal(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetDecimal(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L512"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static decimal? TryGetDecimal(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetDecimal_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDecimal*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetDecimal_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetDecimal(System.Object)">
+  TryGetDecimal(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L521"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static decimal? TryGetDecimal(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.decimal">decimal</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetEnum_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetEnum*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetEnum__1_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetEnum``1(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetEnum&lt;TEnum&gt;(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L529"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TEnum? TryGetEnum&lt;TEnum&gt;(IReadOnlyDictionary&lt;string, object?&gt; obj, string key) where TEnum : struct, Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TEnum?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEnum</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetEnum_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetEnum*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetEnum__1_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetEnum``1(System.Object)">
+  TryGetEnum&lt;TEnum&gt;(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L539"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.enum">Enum</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TEnum? TryGetEnum&lt;TEnum&gt;(object? value) where TEnum : struct, Enum</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt>TEnum?</dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TEnum</code></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetInt_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetInt*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetInt_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetInt(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetInt(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L548"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? TryGetInt(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetInt_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetInt*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetInt_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetInt(System.Object)">
+  TryGetInt(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L557"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? TryGetInt(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetLong_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetLong*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetLong_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetLong(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetLong(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L565"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long? TryGetLong(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetLong_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetLong*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetLong_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetLong(System.Object)">
+  TryGetLong(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static long? TryGetLong(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetObject_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetObject*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetObject_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetObject(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String)">
+  TryGetObject(IReadOnlyDictionary&lt;string, object?&gt;, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L582"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an untyped object value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, object?&gt;? TryGetObject(IReadOnlyDictionary&lt;string, object?&gt; obj, string key)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetObject_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetObject*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetObject_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetObject(System.Object)">
+  TryGetObject(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L591"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an untyped object value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, object?&gt;? TryGetObject(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetString_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_System_Boolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetString(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String,System.Boolean)">
+  TryGetString(IReadOnlyDictionary&lt;string, object?&gt;, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L601"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? TryGetString(IReadOnlyDictionary&lt;string, object?&gt; obj, string key, bool defaultEmptyString = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+    <dt><code>defaultEmptyString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag to indicate if a default empty string should be returned instead of <code>null</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Returns the value if present; <code>null</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetString_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetString*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetString_System_Object_System_Boolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetString(System.Object,System.Boolean)">
+  TryGetString(object?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L613"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get an <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int64">long</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? TryGetString(object? value, bool defaultEmptyString = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+    <dt><code>defaultEmptyString</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag to indicate if a default empty string should be returned instead of <code>null</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>Returns the value if present; <code>null</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetTraits_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetTraits*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetTraits_System_Collections_Generic_IReadOnlyDictionary_System_String_System_Object__System_String_System_Boolean_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetTraits(System.Collections.Generic.IReadOnlyDictionary{System.String,System.Object},System.String,System.Boolean)">
+  TryGetTraits(IReadOnlyDictionary&lt;string, object?&gt;, string, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L624"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a trait dictionary value from a deserialized JSON object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, IReadOnlyCollection&lt;string&gt;&gt;? TryGetTraits(IReadOnlyDictionary&lt;string, object?&gt; obj, string key, bool defaultEmptyDictionary = true)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a>&gt;</dt>
+    <dd><p>The deserialized JSON object</p>
+</dd>
+    <dt><code>key</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The key for the value</p>
+</dd>
+    <dt><code>defaultEmptyDictionary</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Flag to indicate if a default empty dictionary should be returned instead of <code>null</code></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_JsonDeserializer_TryGetTraits_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetTraits*"></a>
+
+  <h3 id="Xunit_Sdk_JsonDeserializer_TryGetTraits_System_Object_" data-uid="Xunit.Sdk.JsonDeserializer.TryGetTraits(System.Object)">
+  TryGetTraits(object?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L635"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a> value from a deserialized JSON value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IReadOnlyDictionary&lt;string, IReadOnlyCollection&lt;string&gt;&gt;? TryGetTraits(object? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The deserialized JSON value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2">IReadOnlyDictionary</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;&gt;</dt>
+    <dd><p>Returns the value if present; <code>null</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.common/Json/JsonDeserializer.cs/#L28" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

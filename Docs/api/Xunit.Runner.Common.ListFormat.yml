@@ -1,0 +1,126 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.Runner.Common.ListFormat
+  commentId: T:Xunit.Runner.Common.ListFormat
+  id: ListFormat
+  parent: Xunit.Runner.Common
+  children:
+  - Xunit.Runner.Common.ListFormat.Json
+  - Xunit.Runner.Common.ListFormat.Text
+  langs:
+  - csharp
+  - vb
+  name: ListFormat
+  nameWithType: ListFormat
+  fullName: Xunit.Runner.Common.ListFormat
+  type: Enum
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ListFormat
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+    startLine: 5
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Designates the format that the test list should take.
+  example: []
+  syntax:
+    content: public enum ListFormat
+    content.vb: Public Enum ListFormat
+- uid: Xunit.Runner.Common.ListFormat.Json
+  commentId: F:Xunit.Runner.Common.ListFormat.Json
+  id: Json
+  parent: Xunit.Runner.Common.ListFormat
+  langs:
+  - csharp
+  - vb
+  name: Json
+  nameWithType: ListFormat.Json
+  fullName: Xunit.Runner.Common.ListFormat.Json
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Json
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+    startLine: 10
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists the information in JSON (machine readable) format
+  example: []
+  syntax:
+    content: Json = 0
+    return:
+      type: Xunit.Runner.Common.ListFormat
+- uid: Xunit.Runner.Common.ListFormat.Text
+  commentId: F:Xunit.Runner.Common.ListFormat.Text
+  id: Text
+  parent: Xunit.Runner.Common.ListFormat
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: ListFormat.Text
+  fullName: Xunit.Runner.Common.ListFormat.Text
+  type: Field
+  source:
+    remote:
+      path: src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Text
+    path: ../v3-2.0.0/src/xunit.v3.runner.common/Frameworks/ListFormat.cs
+    startLine: 15
+  assemblies:
+  - xunit.v3.runner.common
+  namespace: Xunit.Runner.Common
+  summary: Lists the information in plain text (human readable) format
+  example: []
+  syntax:
+    content: Text = 1
+    return:
+      type: Xunit.Runner.Common.ListFormat
+references:
+- uid: Xunit.Runner.Common
+  commentId: N:Xunit.Runner.Common
+  href: Xunit.html
+  name: Xunit.Runner.Common
+  nameWithType: Xunit.Runner.Common
+  fullName: Xunit.Runner.Common
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Runner
+    name: Runner
+    href: Xunit.Runner.html
+  - name: .
+  - uid: Xunit.Runner.Common
+    name: Common
+    href: Xunit.Runner.Common.html
+- uid: Xunit.Runner.Common.ListFormat
+  commentId: T:Xunit.Runner.Common.ListFormat
+  parent: Xunit.Runner.Common
+  href: Xunit.Runner.Common.ListFormat.html
+  name: ListFormat
+  nameWithType: ListFormat
+  fullName: Xunit.Runner.Common.ListFormat

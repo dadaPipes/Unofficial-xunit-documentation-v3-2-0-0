@@ -1,0 +1,1827 @@
+### YamlMime:TableOfContent
+items:
+- uid: Xunit
+  name: Xunit
+  type: Namespace
+  items:
+  - uid: Xunit.AssemblyFixtureAttribute
+    name: AssemblyFixtureAttribute
+    type: Class
+  - uid: Xunit.AssemblyHelper
+    name: AssemblyHelper
+    type: Class
+  - uid: Xunit.AssemblyUtility
+    name: AssemblyUtility
+    type: Class
+  - uid: Xunit.Assert
+    name: Assert
+    type: Class
+  - uid: Xunit.Assert.RaisedEvent`1
+    name: Assert.RaisedEvent<T>
+    type: Class
+  - uid: Xunit.AssertEquivalenceComparer
+    name: AssertEquivalenceComparer
+    type: Class
+  - uid: Xunit.AssertEquivalenceComparer`1
+    name: AssertEquivalenceComparer<T>
+    type: Class
+  - uid: Xunit.CaptureConsoleAttribute
+    name: CaptureConsoleAttribute
+    type: Class
+  - uid: Xunit.CaptureTraceAttribute
+    name: CaptureTraceAttribute
+    type: Class
+  - uid: Xunit.ClassDataAttribute
+    name: ClassDataAttribute
+    type: Class
+  - uid: Xunit.CollectionAttribute
+    name: CollectionAttribute
+    type: Class
+  - uid: Xunit.CollectionAttribute`1
+    name: CollectionAttribute<TCollectionDefinition>
+    type: Class
+  - uid: Xunit.CollectionBehavior
+    name: CollectionBehavior
+    type: Enum
+  - uid: Xunit.CollectionBehaviorAttribute
+    name: CollectionBehaviorAttribute
+    type: Class
+  - uid: Xunit.CollectionDefinitionAttribute
+    name: CollectionDefinitionAttribute
+    type: Class
+  - uid: Xunit.FactAttribute
+    name: FactAttribute
+    type: Class
+  - uid: Xunit.FrontControllerFindAndRunSettings
+    name: FrontControllerFindAndRunSettings
+    type: Class
+  - uid: Xunit.FrontControllerFindSettings
+    name: FrontControllerFindSettings
+    type: Class
+  - uid: Xunit.FrontControllerLaunchOptions
+    name: FrontControllerLaunchOptions
+    type: Class
+  - uid: Xunit.FrontControllerRunSettings
+    name: FrontControllerRunSettings
+    type: Class
+  - uid: Xunit.FrontControllerSettingsBase
+    name: FrontControllerSettingsBase
+    type: Class
+  - uid: Xunit.IAsyncLifetime
+    name: IAsyncLifetime
+    type: Interface
+  - uid: Xunit.IClassFixture`1
+    name: IClassFixture<TFixture>
+    type: Interface
+  - uid: Xunit.ICollectionFixture`1
+    name: ICollectionFixture<TFixture>
+    type: Interface
+  - uid: Xunit.IFrontController
+    name: IFrontController
+    type: Interface
+  - uid: Xunit.IFrontControllerDiscoverer
+    name: IFrontControllerDiscoverer
+    type: Interface
+  - uid: Xunit.ITestContext
+    name: ITestContext
+    type: Interface
+  - uid: Xunit.ITestContextAccessor
+    name: ITestContextAccessor
+    type: Interface
+  - uid: Xunit.ITestOutputHelper
+    name: ITestOutputHelper
+    type: Interface
+  - uid: Xunit.ITheoryDataRow
+    name: ITheoryDataRow
+    type: Interface
+  - uid: Xunit.InlineDataAttribute
+    name: InlineDataAttribute
+    type: Class
+  - uid: Xunit.MatrixTheoryData`10
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`11
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`12
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`13
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`14
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`15
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`2
+    name: MatrixTheoryData<T1, T2>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`3
+    name: MatrixTheoryData<T1, T2, T3>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`4
+    name: MatrixTheoryData<T1, T2, T3, T4>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`5
+    name: MatrixTheoryData<T1, T2, T3, T4, T5>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`6
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`7
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`8
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8>
+    type: Class
+  - uid: Xunit.MatrixTheoryData`9
+    name: MatrixTheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    type: Class
+  - uid: Xunit.MediaTypeUtility
+    name: MediaTypeUtility
+    type: Class
+  - uid: Xunit.MemberDataAttribute
+    name: MemberDataAttribute
+    type: Class
+  - uid: Xunit.Record
+    name: Record
+    type: Class
+  - uid: Xunit.RemotingUtility
+    name: RemotingUtility
+    type: Class
+  - uid: Xunit.TestCaseOrdererAttribute
+    name: TestCaseOrdererAttribute
+    type: Class
+  - uid: Xunit.TestCollectionOrdererAttribute
+    name: TestCollectionOrdererAttribute
+    type: Class
+  - uid: Xunit.TestContext
+    name: TestContext
+    type: Class
+  - uid: Xunit.TestContextExtensions
+    name: TestContextExtensions
+    type: Class
+  - uid: Xunit.TestEngineStatus
+    name: TestEngineStatus
+    type: Enum
+  - uid: Xunit.TestFrameworkAttribute
+    name: TestFrameworkAttribute
+    type: Class
+  - uid: Xunit.TestPipelineStage
+    name: TestPipelineStage
+    type: Enum
+  - uid: Xunit.TestResult
+    name: TestResult
+    type: Enum
+  - uid: Xunit.TestResultState
+    name: TestResultState
+    type: Class
+  - uid: Xunit.TheoryAttribute
+    name: TheoryAttribute
+    type: Class
+  - uid: Xunit.TheoryData
+    name: TheoryData
+    type: Class
+  - uid: Xunit.TheoryDataBase`2
+    name: TheoryDataBase<TTheoryDataRow, TRawDataRow>
+    type: Class
+  - uid: Xunit.TheoryDataRow
+    name: TheoryDataRow
+    type: Class
+  - uid: Xunit.TheoryDataRowBase
+    name: TheoryDataRowBase
+    type: Class
+  - uid: Xunit.TheoryDataRowBaseExtensions
+    name: TheoryDataRowBaseExtensions
+    type: Class
+  - uid: Xunit.TheoryDataRow`1
+    name: TheoryDataRow<T1>
+    type: Class
+  - uid: Xunit.TheoryDataRow`10
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+    type: Class
+  - uid: Xunit.TheoryDataRow`11
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+    type: Class
+  - uid: Xunit.TheoryDataRow`12
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+    type: Class
+  - uid: Xunit.TheoryDataRow`13
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+    type: Class
+  - uid: Xunit.TheoryDataRow`14
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+    type: Class
+  - uid: Xunit.TheoryDataRow`15
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+    type: Class
+  - uid: Xunit.TheoryDataRow`2
+    name: TheoryDataRow<T1, T2>
+    type: Class
+  - uid: Xunit.TheoryDataRow`3
+    name: TheoryDataRow<T1, T2, T3>
+    type: Class
+  - uid: Xunit.TheoryDataRow`4
+    name: TheoryDataRow<T1, T2, T3, T4>
+    type: Class
+  - uid: Xunit.TheoryDataRow`5
+    name: TheoryDataRow<T1, T2, T3, T4, T5>
+    type: Class
+  - uid: Xunit.TheoryDataRow`6
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6>
+    type: Class
+  - uid: Xunit.TheoryDataRow`7
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7>
+    type: Class
+  - uid: Xunit.TheoryDataRow`8
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8>
+    type: Class
+  - uid: Xunit.TheoryDataRow`9
+    name: TheoryDataRow<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    type: Class
+  - uid: Xunit.TheoryData`1
+    name: TheoryData<T>
+    type: Class
+  - uid: Xunit.TheoryData`10
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+    type: Class
+  - uid: Xunit.TheoryData`11
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+    type: Class
+  - uid: Xunit.TheoryData`12
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+    type: Class
+  - uid: Xunit.TheoryData`13
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+    type: Class
+  - uid: Xunit.TheoryData`14
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+    type: Class
+  - uid: Xunit.TheoryData`15
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+    type: Class
+  - uid: Xunit.TheoryData`2
+    name: TheoryData<T1, T2>
+    type: Class
+  - uid: Xunit.TheoryData`3
+    name: TheoryData<T1, T2, T3>
+    type: Class
+  - uid: Xunit.TheoryData`4
+    name: TheoryData<T1, T2, T3, T4>
+    type: Class
+  - uid: Xunit.TheoryData`5
+    name: TheoryData<T1, T2, T3, T4, T5>
+    type: Class
+  - uid: Xunit.TheoryData`6
+    name: TheoryData<T1, T2, T3, T4, T5, T6>
+    type: Class
+  - uid: Xunit.TheoryData`7
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7>
+    type: Class
+  - uid: Xunit.TheoryData`8
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8>
+    type: Class
+  - uid: Xunit.TheoryData`9
+    name: TheoryData<T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    type: Class
+  - uid: Xunit.TraitAttribute
+    name: TraitAttribute
+    type: Class
+  - uid: Xunit.XunitFrontController
+    name: XunitFrontController
+    type: Class
+- uid: Xunit.Internal
+  name: Xunit.Internal
+  type: Namespace
+  items:
+  - uid: Xunit.Internal.ArchitectureExtensions
+    name: ArchitectureExtensions
+    type: Class
+  - uid: Xunit.Internal.AssemblyExtensions
+    name: AssemblyExtensions
+    type: Class
+  - uid: Xunit.Internal.CommandLineGroup
+    name: CommandLineGroup
+    type: Enum
+  - uid: Xunit.Internal.CommandLineParserBase
+    name: CommandLineParserBase
+    type: Class
+  - uid: Xunit.Internal.ConsoleCaptureTestOutputWriter
+    name: ConsoleCaptureTestOutputWriter
+    type: Class
+  - uid: Xunit.Internal.DefaultTestCaseBulkDeserializer
+    name: DefaultTestCaseBulkDeserializer
+    type: Class
+  - uid: Xunit.Internal.DictionaryExtensions
+    name: DictionaryExtensions
+    type: Class
+  - uid: Xunit.Internal.EnumerableExtensions
+    name: EnumerableExtensions
+    type: Class
+  - uid: Xunit.Internal.ExceptionExtensions
+    name: ExceptionExtensions
+    type: Class
+  - uid: Xunit.Internal.Guard
+    name: Guard
+    type: Class
+  - uid: Xunit.Internal.ITestCaseBulkDeserializer
+    name: ITestCaseBulkDeserializer
+    type: Interface
+  - uid: Xunit.Internal.MessageBus
+    name: MessageBus
+    type: Class
+  - uid: Xunit.Internal.ObjectExtensions
+    name: ObjectExtensions
+    type: Class
+  - uid: Xunit.Internal.PreserveWorkingFolder
+    name: PreserveWorkingFolder
+    type: Class
+  - uid: Xunit.Internal.StringExtensions
+    name: StringExtensions
+    type: Class
+  - uid: Xunit.Internal.SynchronousMessageBus
+    name: SynchronousMessageBus
+    type: Class
+  - uid: Xunit.Internal.TraceCaptureTestOutputWriter
+    name: TraceCaptureTestOutputWriter
+    type: Class
+- uid: Xunit.Runner.Common
+  name: Xunit.Runner.Common
+  type: Namespace
+  items:
+  - uid: Xunit.Runner.Common.AfterTestFinished
+    name: AfterTestFinished
+    type: Class
+  - uid: Xunit.Runner.Common.AfterTestStarting
+    name: AfterTestStarting
+    type: Class
+  - uid: Xunit.Runner.Common.AggregateMessageSink
+    name: AggregateMessageSink
+    type: Class
+  - uid: Xunit.Runner.Common.AppDomainOption
+    name: AppDomainOption
+    type: Enum
+  - uid: Xunit.Runner.Common.AppDomainSupport
+    name: AppDomainSupport
+    type: Enum
+  - uid: Xunit.Runner.Common.AppVeyorReporter
+    name: AppVeyorReporter
+    type: Class
+  - uid: Xunit.Runner.Common.AppVeyorReporterMessageHandler
+    name: AppVeyorReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.AssemblyMetadata
+    name: AssemblyMetadata
+    type: Class
+  - uid: Xunit.Runner.Common.BeforeTestFinished
+    name: BeforeTestFinished
+    type: Class
+  - uid: Xunit.Runner.Common.BeforeTestStarting
+    name: BeforeTestStarting
+    type: Class
+  - uid: Xunit.Runner.Common.ConfigReader
+    name: ConfigReader
+    type: Class
+  - uid: Xunit.Runner.Common.ConfigReader_Configuration
+    name: ConfigReader_Configuration
+    type: Class
+  - uid: Xunit.Runner.Common.ConfigReader_Json
+    name: ConfigReader_Json
+    type: Class
+  - uid: Xunit.Runner.Common.ConfigUtility
+    name: ConfigUtility
+    type: Class
+  - uid: Xunit.Runner.Common.ConsoleDiagnosticMessageSink
+    name: ConsoleDiagnosticMessageSink
+    type: Class
+  - uid: Xunit.Runner.Common.ConsoleHelper
+    name: ConsoleHelper
+    type: Class
+  - uid: Xunit.Runner.Common.ConsoleProjectLister
+    name: ConsoleProjectLister
+    type: Class
+  - uid: Xunit.Runner.Common.ConsoleRunnerLogger
+    name: ConsoleRunnerLogger
+    type: Class
+  - uid: Xunit.Runner.Common.DefaultRunnerReporter
+    name: DefaultRunnerReporter
+    type: Class
+  - uid: Xunit.Runner.Common.DefaultRunnerReporterMessageHandler
+    name: DefaultRunnerReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.DiagnosticEventSink
+    name: DiagnosticEventSink
+    type: Class
+  - uid: Xunit.Runner.Common.DiagnosticMessage
+    name: DiagnosticMessage
+    type: Class
+  - uid: Xunit.Runner.Common.DiscoveryComplete
+    name: DiscoveryComplete
+    type: Class
+  - uid: Xunit.Runner.Common.DiscoveryEventSink
+    name: DiscoveryEventSink
+    type: Class
+  - uid: Xunit.Runner.Common.DiscoveryStarting
+    name: DiscoveryStarting
+    type: Class
+  - uid: Xunit.Runner.Common.ErrorMessage
+    name: ErrorMessage
+    type: Class
+  - uid: Xunit.Runner.Common.ExecutionEventSink
+    name: ExecutionEventSink
+    type: Class
+  - uid: Xunit.Runner.Common.ExecutionSink
+    name: ExecutionSink
+    type: Class
+  - uid: Xunit.Runner.Common.ExecutionSinkOptions
+    name: ExecutionSinkOptions
+    type: Class
+  - uid: Xunit.Runner.Common.ExecutionSummary
+    name: ExecutionSummary
+    type: Class
+  - uid: Xunit.Runner.Common.IRegisterRunnerReporterAttribute
+    name: IRegisterRunnerReporterAttribute
+    type: Interface
+  - uid: Xunit.Runner.Common.IRunnerLogger
+    name: IRunnerLogger
+    type: Interface
+  - uid: Xunit.Runner.Common.IRunnerLoggerExtensions
+    name: IRunnerLoggerExtensions
+    type: Class
+  - uid: Xunit.Runner.Common.IRunnerReporter
+    name: IRunnerReporter
+    type: Interface
+  - uid: Xunit.Runner.Common.IRunnerReporterMessageHandler
+    name: IRunnerReporterMessageHandler
+    type: Interface
+  - uid: Xunit.Runner.Common.ISourceInformationProvider
+    name: ISourceInformationProvider
+    type: Interface
+  - uid: Xunit.Runner.Common.ITestCaseFilter
+    name: ITestCaseFilter
+    type: Interface
+  - uid: Xunit.Runner.Common.InternalDiagnosticMessage
+    name: InternalDiagnosticMessage
+    type: Class
+  - uid: Xunit.Runner.Common.JsonReporter
+    name: JsonReporter
+    type: Class
+  - uid: Xunit.Runner.Common.JsonReporterMessageHandler
+    name: JsonReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.ListFormat
+    name: ListFormat
+    type: Enum
+  - uid: Xunit.Runner.Common.ListOption
+    name: ListOption
+    type: Enum
+  - uid: Xunit.Runner.Common.LongRunningTestsSummary
+    name: LongRunningTestsSummary
+    type: Class
+  - uid: Xunit.Runner.Common.MessageHandlerArgs
+    name: MessageHandlerArgs
+    type: Class
+  - uid: Xunit.Runner.Common.MessageHandlerArgs`1
+    name: MessageHandlerArgs<TMessage>
+    type: Class
+  - uid: Xunit.Runner.Common.MessageHandler`1
+    name: MessageHandler<TMessage>
+    type: Delegate
+  - uid: Xunit.Runner.Common.MessageMetadataCache
+    name: MessageMetadataCache
+    type: Class
+  - uid: Xunit.Runner.Common.MessageSinkMessage
+    name: MessageSinkMessage
+    type: Class
+  - uid: Xunit.Runner.Common.MessageSinkMessageDeserializer
+    name: MessageSinkMessageDeserializer
+    type: Class
+  - uid: Xunit.Runner.Common.NullSourceInformationProvider
+    name: NullSourceInformationProvider
+    type: Class
+  - uid: Xunit.Runner.Common.ParallelismOption
+    name: ParallelismOption
+    type: Enum
+  - uid: Xunit.Runner.Common.QueryFilterParser
+    name: QueryFilterParser
+    type: Class
+  - uid: Xunit.Runner.Common.QuietReporter
+    name: QuietReporter
+    type: Class
+  - uid: Xunit.Runner.Common.QuietReporterMessageHandler
+    name: QuietReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.RegisterRunnerReporterAttribute
+    name: RegisterRunnerReporterAttribute
+    type: Class
+  - uid: Xunit.Runner.Common.RegisteredRunnerReporters
+    name: RegisteredRunnerReporters
+    type: Class
+  - uid: Xunit.Runner.Common.RunnerEventSink
+    name: RunnerEventSink
+    type: Class
+  - uid: Xunit.Runner.Common.SilentReporter
+    name: SilentReporter
+    type: Class
+  - uid: Xunit.Runner.Common.SilentReporterMessageHandler
+    name: SilentReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.SourceInformation
+    name: SourceInformation
+    type: Struct
+  - uid: Xunit.Runner.Common.StackFrameInfo
+    name: StackFrameInfo
+    type: Struct
+  - uid: Xunit.Runner.Common.StackFrameTransformer
+    name: StackFrameTransformer
+    type: Class
+  - uid: Xunit.Runner.Common.TargetFrameworkIdentifier
+    name: TargetFrameworkIdentifier
+    type: Enum
+  - uid: Xunit.Runner.Common.TeamCityReporter
+    name: TeamCityReporter
+    type: Class
+  - uid: Xunit.Runner.Common.TeamCityReporterMessageHandler
+    name: TeamCityReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyCleanupFailure
+    name: TestAssemblyCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyConfiguration
+    name: TestAssemblyConfiguration
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyDiscoveryFinished
+    name: TestAssemblyDiscoveryFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyDiscoveryStarting
+    name: TestAssemblyDiscoveryStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyExecutionFinished
+    name: TestAssemblyExecutionFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyExecutionStarting
+    name: TestAssemblyExecutionStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyFinished
+    name: TestAssemblyFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyMessage
+    name: TestAssemblyMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestAssemblyStarting
+    name: TestAssemblyStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestCaseCleanupFailure
+    name: TestCaseCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestCaseDiscovered
+    name: TestCaseDiscovered
+    type: Class
+  - uid: Xunit.Runner.Common.TestCaseFinished
+    name: TestCaseFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestCaseMessage
+    name: TestCaseMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestCaseStarting
+    name: TestCaseStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassCleanupFailure
+    name: TestClassCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassConstructionFinished
+    name: TestClassConstructionFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassConstructionStarting
+    name: TestClassConstructionStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassDisposeFinished
+    name: TestClassDisposeFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassDisposeStarting
+    name: TestClassDisposeStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassFinished
+    name: TestClassFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassMessage
+    name: TestClassMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestClassStarting
+    name: TestClassStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestCleanupFailure
+    name: TestCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestCollectionCleanupFailure
+    name: TestCollectionCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestCollectionFinished
+    name: TestCollectionFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestCollectionMessage
+    name: TestCollectionMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestCollectionStarting
+    name: TestCollectionStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestDiscoverySink
+    name: TestDiscoverySink
+    type: Class
+  - uid: Xunit.Runner.Common.TestExecutionSummaries
+    name: TestExecutionSummaries
+    type: Class
+  - uid: Xunit.Runner.Common.TestFailed
+    name: TestFailed
+    type: Class
+  - uid: Xunit.Runner.Common.TestFinished
+    name: TestFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestFrameworkOptions
+    name: TestFrameworkOptions
+    type: Class
+  - uid: Xunit.Runner.Common.TestMessage
+    name: TestMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestMessageSink
+    name: TestMessageSink
+    type: Class
+  - uid: Xunit.Runner.Common.TestMethodCleanupFailure
+    name: TestMethodCleanupFailure
+    type: Class
+  - uid: Xunit.Runner.Common.TestMethodFinished
+    name: TestMethodFinished
+    type: Class
+  - uid: Xunit.Runner.Common.TestMethodMessage
+    name: TestMethodMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestMethodStarting
+    name: TestMethodStarting
+    type: Class
+  - uid: Xunit.Runner.Common.TestNotRun
+    name: TestNotRun
+    type: Class
+  - uid: Xunit.Runner.Common.TestOutput
+    name: TestOutput
+    type: Class
+  - uid: Xunit.Runner.Common.TestPassed
+    name: TestPassed
+    type: Class
+  - uid: Xunit.Runner.Common.TestProjectConfiguration
+    name: TestProjectConfiguration
+    type: Class
+  - uid: Xunit.Runner.Common.TestResultMessage
+    name: TestResultMessage
+    type: Class
+  - uid: Xunit.Runner.Common.TestSkipped
+    name: TestSkipped
+    type: Class
+  - uid: Xunit.Runner.Common.TestStarting
+    name: TestStarting
+    type: Class
+  - uid: Xunit.Runner.Common.Transform
+    name: Transform
+    type: Class
+  - uid: Xunit.Runner.Common.TransformFactory
+    name: TransformFactory
+    type: Class
+  - uid: Xunit.Runner.Common.VerboseReporter
+    name: VerboseReporter
+    type: Class
+  - uid: Xunit.Runner.Common.VerboseReporterMessageHandler
+    name: VerboseReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.VstsReporter
+    name: VstsReporter
+    type: Class
+  - uid: Xunit.Runner.Common.VstsReporterMessageHandler
+    name: VstsReporterMessageHandler
+    type: Class
+  - uid: Xunit.Runner.Common.XunitFilters
+    name: XunitFilters
+    type: Class
+  - uid: Xunit.Runner.Common.XunitProject
+    name: XunitProject
+    type: Class
+  - uid: Xunit.Runner.Common.XunitProjectAssembly
+    name: XunitProjectAssembly
+    type: Class
+- uid: Xunit.Runner.v1
+  name: Xunit.Runner.v1
+  type: Namespace
+  items:
+  - uid: Xunit.Runner.v1.IXunit1Executor
+    name: IXunit1Executor
+    type: Interface
+  - uid: Xunit.Runner.v1.TestClassCallbackHandler
+    name: TestClassCallbackHandler
+    type: Class
+  - uid: Xunit.Runner.v1.XmlNodeCallbackHandler
+    name: XmlNodeCallbackHandler
+    type: Class
+  - uid: Xunit.Runner.v1.Xunit1
+    name: Xunit1
+    type: Class
+  - uid: Xunit.Runner.v1.Xunit1Executor
+    name: Xunit1Executor
+    type: Class
+  - uid: Xunit.Runner.v1.Xunit1RunSummary
+    name: Xunit1RunSummary
+    type: Class
+  - uid: Xunit.Runner.v1.Xunit1TestCase
+    name: Xunit1TestCase
+    type: Class
+- uid: Xunit.Runner.v2
+  name: Xunit.Runner.v2
+  type: Namespace
+  items:
+  - uid: Xunit.Runner.v2.IMessageSinkMessageWithTypes
+    name: IMessageSinkMessageWithTypes
+    type: Interface
+  - uid: Xunit.Runner.v2.IMessageSinkWithTypes
+    name: IMessageSinkWithTypes
+    type: Interface
+  - uid: Xunit.Runner.v2.Xunit2
+    name: Xunit2
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2DiscoverySink
+    name: Xunit2DiscoverySink
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2MessageAdapter
+    name: Xunit2MessageAdapter
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2MessageSink
+    name: Xunit2MessageSink
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2Options
+    name: Xunit2Options
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2OptionsAdapter
+    name: Xunit2OptionsAdapter
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2SourceInformation
+    name: Xunit2SourceInformation
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2SourceInformationProvider
+    name: Xunit2SourceInformationProvider
+    type: Class
+  - uid: Xunit.Runner.v2.Xunit2SourceInformationProviderAdapter
+    name: Xunit2SourceInformationProviderAdapter
+    type: Class
+- uid: Xunit.Runner.v3
+  name: Xunit.Runner.v3
+  type: Namespace
+  items:
+  - uid: Xunit.Runner.v3.Xunit3
+    name: Xunit3
+    type: Class
+  - uid: Xunit.Runner.v3.Xunit3ArgumentFactory
+    name: Xunit3ArgumentFactory
+    type: Class
+- uid: Xunit.Runners
+  name: Xunit.Runners
+  type: Namespace
+  items:
+  - uid: Xunit.Runners.AssemblyRunner
+    name: AssemblyRunner
+    type: Class
+  - uid: Xunit.Runners.AssemblyRunnerStartOptions
+    name: AssemblyRunnerStartOptions
+    type: Class
+  - uid: Xunit.Runners.AssemblyRunnerStatus
+    name: AssemblyRunnerStatus
+    type: Enum
+  - uid: Xunit.Runners.DiagnosticMessageInfo
+    name: DiagnosticMessageInfo
+    type: Class
+  - uid: Xunit.Runners.DiscoveryCompleteInfo
+    name: DiscoveryCompleteInfo
+    type: Class
+  - uid: Xunit.Runners.ErrorMessageInfo
+    name: ErrorMessageInfo
+    type: Class
+  - uid: Xunit.Runners.ErrorMessageType
+    name: ErrorMessageType
+    type: Enum
+  - uid: Xunit.Runners.ExecutionCompleteInfo
+    name: ExecutionCompleteInfo
+    type: Class
+  - uid: Xunit.Runners.InternalDiagnosticMessageInfo
+    name: InternalDiagnosticMessageInfo
+    type: Class
+  - uid: Xunit.Runners.TestExecutedInfo
+    name: TestExecutedInfo
+    type: Class
+  - uid: Xunit.Runners.TestFailedInfo
+    name: TestFailedInfo
+    type: Class
+  - uid: Xunit.Runners.TestFinishedInfo
+    name: TestFinishedInfo
+    type: Class
+  - uid: Xunit.Runners.TestInfo
+    name: TestInfo
+    type: Class
+  - uid: Xunit.Runners.TestOutputInfo
+    name: TestOutputInfo
+    type: Class
+  - uid: Xunit.Runners.TestPassedInfo
+    name: TestPassedInfo
+    type: Class
+  - uid: Xunit.Runners.TestSkippedInfo
+    name: TestSkippedInfo
+    type: Class
+  - uid: Xunit.Runners.TestStartingInfo
+    name: TestStartingInfo
+    type: Class
+- uid: Xunit.Sdk
+  name: Xunit.Sdk
+  type: Namespace
+  items:
+  - uid: Xunit.Sdk.AllException
+    name: AllException
+    type: Class
+  - uid: Xunit.Sdk.AnsiUtility
+    name: AnsiUtility
+    type: Class
+  - uid: Xunit.Sdk.ArgumentFormatter
+    name: ArgumentFormatter
+    type: Class
+  - uid: Xunit.Sdk.AssertEqualityResult
+    name: AssertEqualityResult
+    type: Class
+  - uid: Xunit.Sdk.AsyncUtility
+    name: AsyncUtility
+    type: Class
+  - uid: Xunit.Sdk.CollectionException
+    name: CollectionException
+    type: Class
+  - uid: Xunit.Sdk.CollectionTracker
+    name: CollectionTracker
+    type: Class
+  - uid: Xunit.Sdk.CollectionTrackerExtensions
+    name: CollectionTrackerExtensions
+    type: Class
+  - uid: Xunit.Sdk.CollectionTracker`1
+    name: CollectionTracker<T>
+    type: Class
+  - uid: Xunit.Sdk.ContainsException
+    name: ContainsException
+    type: Class
+  - uid: Xunit.Sdk.DisposalTracker
+    name: DisposalTracker
+    type: Class
+  - uid: Xunit.Sdk.DistinctException
+    name: DistinctException
+    type: Class
+  - uid: Xunit.Sdk.DoesNotContainException
+    name: DoesNotContainException
+    type: Class
+  - uid: Xunit.Sdk.DoesNotMatchException
+    name: DoesNotMatchException
+    type: Class
+  - uid: Xunit.Sdk.EmptyException
+    name: EmptyException
+    type: Class
+  - uid: Xunit.Sdk.EndsWithException
+    name: EndsWithException
+    type: Class
+  - uid: Xunit.Sdk.EqualException
+    name: EqualException
+    type: Class
+  - uid: Xunit.Sdk.EquivalentException
+    name: EquivalentException
+    type: Class
+  - uid: Xunit.Sdk.ExceptionUtility
+    name: ExceptionUtility
+    type: Class
+  - uid: Xunit.Sdk.ExplicitOption
+    name: ExplicitOption
+    type: Enum
+  - uid: Xunit.Sdk.FailException
+    name: FailException
+    type: Class
+  - uid: Xunit.Sdk.FailureCause
+    name: FailureCause
+    type: Enum
+  - uid: Xunit.Sdk.FalseException
+    name: FalseException
+    type: Class
+  - uid: Xunit.Sdk.IAfterTestFinished
+    name: IAfterTestFinished
+    type: Interface
+  - uid: Xunit.Sdk.IAfterTestStarting
+    name: IAfterTestStarting
+    type: Interface
+  - uid: Xunit.Sdk.IAssemblyMetadata
+    name: IAssemblyMetadata
+    type: Interface
+  - uid: Xunit.Sdk.IAssemblyMetadataExtensions
+    name: IAssemblyMetadataExtensions
+    type: Class
+  - uid: Xunit.Sdk.IAssertEqualityComparerExtensions
+    name: IAssertEqualityComparerExtensions
+    type: Class
+  - uid: Xunit.Sdk.IAssertEqualityComparer`1
+    name: IAssertEqualityComparer<T>
+    type: Interface
+  - uid: Xunit.Sdk.IAssertionException
+    name: IAssertionException
+    type: Interface
+  - uid: Xunit.Sdk.IBeforeTestFinished
+    name: IBeforeTestFinished
+    type: Interface
+  - uid: Xunit.Sdk.IBeforeTestStarting
+    name: IBeforeTestStarting
+    type: Interface
+  - uid: Xunit.Sdk.IDiagnosticMessage
+    name: IDiagnosticMessage
+    type: Interface
+  - uid: Xunit.Sdk.IDiscoveryComplete
+    name: IDiscoveryComplete
+    type: Interface
+  - uid: Xunit.Sdk.IDiscoveryStarting
+    name: IDiscoveryStarting
+    type: Interface
+  - uid: Xunit.Sdk.IErrorMessage
+    name: IErrorMessage
+    type: Interface
+  - uid: Xunit.Sdk.IErrorMetadata
+    name: IErrorMetadata
+    type: Interface
+  - uid: Xunit.Sdk.IExecutionMetadata
+    name: IExecutionMetadata
+    type: Interface
+  - uid: Xunit.Sdk.IExecutionSummaryMetadata
+    name: IExecutionSummaryMetadata
+    type: Interface
+  - uid: Xunit.Sdk.IInternalDiagnosticMessage
+    name: IInternalDiagnosticMessage
+    type: Interface
+  - uid: Xunit.Sdk.IJsonDeserializable
+    name: IJsonDeserializable
+    type: Interface
+  - uid: Xunit.Sdk.IJsonSerializable
+    name: IJsonSerializable
+    type: Interface
+  - uid: Xunit.Sdk.IMessageSink
+    name: IMessageSink
+    type: Interface
+  - uid: Xunit.Sdk.IMessageSinkMessage
+    name: IMessageSinkMessage
+    type: Interface
+  - uid: Xunit.Sdk.IRegisterXunitSerializerAttribute
+    name: IRegisterXunitSerializerAttribute
+    type: Interface
+  - uid: Xunit.Sdk.ITest
+    name: ITest
+    type: Interface
+  - uid: Xunit.Sdk.ITestAssembly
+    name: ITestAssembly
+    type: Interface
+  - uid: Xunit.Sdk.ITestAssemblyCleanupFailure
+    name: ITestAssemblyCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestAssemblyFinished
+    name: ITestAssemblyFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestAssemblyMessage
+    name: ITestAssemblyMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestAssemblyStarting
+    name: ITestAssemblyStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestCase
+    name: ITestCase
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseCleanupFailure
+    name: ITestCaseCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseDiscovered
+    name: ITestCaseDiscovered
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseFinished
+    name: ITestCaseFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseMessage
+    name: ITestCaseMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseMetadata
+    name: ITestCaseMetadata
+    type: Interface
+  - uid: Xunit.Sdk.ITestCaseStarting
+    name: ITestCaseStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestClass
+    name: ITestClass
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassCleanupFailure
+    name: ITestClassCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassConstructionFinished
+    name: ITestClassConstructionFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassConstructionStarting
+    name: ITestClassConstructionStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassDisposeFinished
+    name: ITestClassDisposeFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassDisposeStarting
+    name: ITestClassDisposeStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassFinished
+    name: ITestClassFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassMessage
+    name: ITestClassMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassMetadata
+    name: ITestClassMetadata
+    type: Interface
+  - uid: Xunit.Sdk.ITestClassStarting
+    name: ITestClassStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestCleanupFailure
+    name: ITestCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollection
+    name: ITestCollection
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollectionCleanupFailure
+    name: ITestCollectionCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollectionFinished
+    name: ITestCollectionFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollectionMessage
+    name: ITestCollectionMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollectionMetadata
+    name: ITestCollectionMetadata
+    type: Interface
+  - uid: Xunit.Sdk.ITestCollectionStarting
+    name: ITestCollectionStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestFailed
+    name: ITestFailed
+    type: Interface
+  - uid: Xunit.Sdk.ITestFinished
+    name: ITestFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestFrameworkDiscoveryOptions
+    name: ITestFrameworkDiscoveryOptions
+    type: Interface
+  - uid: Xunit.Sdk.ITestFrameworkExecutionOptions
+    name: ITestFrameworkExecutionOptions
+    type: Interface
+  - uid: Xunit.Sdk.ITestFrameworkOptions
+    name: ITestFrameworkOptions
+    type: Interface
+  - uid: Xunit.Sdk.ITestMessage
+    name: ITestMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestMetadata
+    name: ITestMetadata
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethod
+    name: ITestMethod
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethodCleanupFailure
+    name: ITestMethodCleanupFailure
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethodFinished
+    name: ITestMethodFinished
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethodMessage
+    name: ITestMethodMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethodMetadata
+    name: ITestMethodMetadata
+    type: Interface
+  - uid: Xunit.Sdk.ITestMethodStarting
+    name: ITestMethodStarting
+    type: Interface
+  - uid: Xunit.Sdk.ITestNotRun
+    name: ITestNotRun
+    type: Interface
+  - uid: Xunit.Sdk.ITestOutput
+    name: ITestOutput
+    type: Interface
+  - uid: Xunit.Sdk.ITestPassed
+    name: ITestPassed
+    type: Interface
+  - uid: Xunit.Sdk.ITestResultMessage
+    name: ITestResultMessage
+    type: Interface
+  - uid: Xunit.Sdk.ITestSkipped
+    name: ITestSkipped
+    type: Interface
+  - uid: Xunit.Sdk.ITestStarting
+    name: ITestStarting
+    type: Interface
+  - uid: Xunit.Sdk.IXunitSerializable
+    name: IXunitSerializable
+    type: Interface
+  - uid: Xunit.Sdk.IXunitSerializationInfo
+    name: IXunitSerializationInfo
+    type: Interface
+  - uid: Xunit.Sdk.IXunitSerializer
+    name: IXunitSerializer
+    type: Interface
+  - uid: Xunit.Sdk.InRangeException
+    name: InRangeException
+    type: Class
+  - uid: Xunit.Sdk.IsAssignableFromException
+    name: IsAssignableFromException
+    type: Class
+  - uid: Xunit.Sdk.IsNotAssignableFromException
+    name: IsNotAssignableFromException
+    type: Class
+  - uid: Xunit.Sdk.IsNotTypeException
+    name: IsNotTypeException
+    type: Class
+  - uid: Xunit.Sdk.IsTypeException
+    name: IsTypeException
+    type: Class
+  - uid: Xunit.Sdk.JsonArraySerializer
+    name: JsonArraySerializer
+    type: Class
+  - uid: Xunit.Sdk.JsonDeserializer
+    name: JsonDeserializer
+    type: Class
+  - uid: Xunit.Sdk.JsonObjectSerializer
+    name: JsonObjectSerializer
+    type: Class
+  - uid: Xunit.Sdk.JsonSerializerBase
+    name: JsonSerializerBase
+    type: Class
+  - uid: Xunit.Sdk.JsonSerializerExtensions
+    name: JsonSerializerExtensions
+    type: Class
+  - uid: Xunit.Sdk.JsonTypeIDAttribute
+    name: JsonTypeIDAttribute
+    type: Class
+  - uid: Xunit.Sdk.LongLivedMarshalByRefObject
+    name: LongLivedMarshalByRefObject
+    type: Class
+  - uid: Xunit.Sdk.MatchesException
+    name: MatchesException
+    type: Class
+  - uid: Xunit.Sdk.MessageSinkMessageExtensions
+    name: MessageSinkMessageExtensions
+    type: Class
+  - uid: Xunit.Sdk.MultipleException
+    name: MultipleException
+    type: Class
+  - uid: Xunit.Sdk.NotEmptyException
+    name: NotEmptyException
+    type: Class
+  - uid: Xunit.Sdk.NotEqualException
+    name: NotEqualException
+    type: Class
+  - uid: Xunit.Sdk.NotInRangeException
+    name: NotInRangeException
+    type: Class
+  - uid: Xunit.Sdk.NotNullException
+    name: NotNullException
+    type: Class
+  - uid: Xunit.Sdk.NotSameException
+    name: NotSameException
+    type: Class
+  - uid: Xunit.Sdk.NotStrictEqualException
+    name: NotStrictEqualException
+    type: Class
+  - uid: Xunit.Sdk.NullException
+    name: NullException
+    type: Class
+  - uid: Xunit.Sdk.NullMessageSink
+    name: NullMessageSink
+    type: Class
+  - uid: Xunit.Sdk.ParallelAlgorithm
+    name: ParallelAlgorithm
+    type: Enum
+  - uid: Xunit.Sdk.ProperSubsetException
+    name: ProperSubsetException
+    type: Class
+  - uid: Xunit.Sdk.ProperSupersetException
+    name: ProperSupersetException
+    type: Class
+  - uid: Xunit.Sdk.PropertyChangedException
+    name: PropertyChangedException
+    type: Class
+  - uid: Xunit.Sdk.RaisesAnyException
+    name: RaisesAnyException
+    type: Class
+  - uid: Xunit.Sdk.RaisesException
+    name: RaisesException
+    type: Class
+  - uid: Xunit.Sdk.Randomizer
+    name: Randomizer
+    type: Class
+  - uid: Xunit.Sdk.ReflectionExtensions
+    name: ReflectionExtensions
+    type: Class
+  - uid: Xunit.Sdk.RegisterXunitSerializerAttribute
+    name: RegisterXunitSerializerAttribute
+    type: Class
+  - uid: Xunit.Sdk.SameException
+    name: SameException
+    type: Class
+  - uid: Xunit.Sdk.SerializationHelper
+    name: SerializationHelper
+    type: Class
+  - uid: Xunit.Sdk.SingleException
+    name: SingleException
+    type: Class
+  - uid: Xunit.Sdk.SkipException
+    name: SkipException
+    type: Class
+  - uid: Xunit.Sdk.StartsWithException
+    name: StartsWithException
+    type: Class
+  - uid: Xunit.Sdk.StrictEqualException
+    name: StrictEqualException
+    type: Class
+  - uid: Xunit.Sdk.StringAssertEqualityComparer
+    name: StringAssertEqualityComparer
+    type: Class
+  - uid: Xunit.Sdk.SubsetException
+    name: SubsetException
+    type: Class
+  - uid: Xunit.Sdk.SupersetException
+    name: SupersetException
+    type: Class
+  - uid: Xunit.Sdk.TestAttachment
+    name: TestAttachment
+    type: Class
+  - uid: Xunit.Sdk.TestAttachmentType
+    name: TestAttachmentType
+    type: Enum
+  - uid: Xunit.Sdk.TestFrameworkOptionsReadExtensions
+    name: TestFrameworkOptionsReadExtensions
+    type: Class
+  - uid: Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions
+    name: TestFrameworkOptionsReadWriteExtensions
+    type: Class
+  - uid: Xunit.Sdk.TestMethodDisplay
+    name: TestMethodDisplay
+    type: Enum
+  - uid: Xunit.Sdk.TestMethodDisplayOptions
+    name: TestMethodDisplayOptions
+    type: Enum
+  - uid: Xunit.Sdk.TestOptionsNames
+    name: TestOptionsNames
+    type: Class
+  - uid: Xunit.Sdk.TestOptionsNames.Discovery
+    name: TestOptionsNames.Discovery
+    type: Class
+  - uid: Xunit.Sdk.TestOptionsNames.Execution
+    name: TestOptionsNames.Execution
+    type: Class
+  - uid: Xunit.Sdk.TestPipelineException
+    name: TestPipelineException
+    type: Class
+  - uid: Xunit.Sdk.TestTimeoutException
+    name: TestTimeoutException
+    type: Class
+  - uid: Xunit.Sdk.ThrowsAnyException
+    name: ThrowsAnyException
+    type: Class
+  - uid: Xunit.Sdk.ThrowsException
+    name: ThrowsException
+    type: Class
+  - uid: Xunit.Sdk.TrueException
+    name: TrueException
+    type: Class
+  - uid: Xunit.Sdk.TypeHelper
+    name: TypeHelper
+    type: Class
+  - uid: Xunit.Sdk.UniqueIDGenerator
+    name: UniqueIDGenerator
+    type: Class
+  - uid: Xunit.Sdk.UnsetPropertiesException
+    name: UnsetPropertiesException
+    type: Class
+  - uid: Xunit.Sdk.UnsetPropertyException
+    name: UnsetPropertyException
+    type: Class
+  - uid: Xunit.Sdk.XunitException
+    name: XunitException
+    type: Class
+  - uid: Xunit.Sdk.XunitSerializationInfo
+    name: XunitSerializationInfo
+    type: Class
+  - uid: Xunit.Sdk.XunitSerializationInfoExtensions
+    name: XunitSerializationInfoExtensions
+    type: Class
+- uid: Xunit.v3
+  name: Xunit.v3
+  type: Namespace
+  items:
+  - uid: Xunit.v3.AfterTestFinished
+    name: AfterTestFinished
+    type: Class
+  - uid: Xunit.v3.AfterTestStarting
+    name: AfterTestStarting
+    type: Class
+  - uid: Xunit.v3.BeforeAfterTestAttribute
+    name: BeforeAfterTestAttribute
+    type: Class
+  - uid: Xunit.v3.BeforeTestFinished
+    name: BeforeTestFinished
+    type: Class
+  - uid: Xunit.v3.BeforeTestStarting
+    name: BeforeTestStarting
+    type: Class
+  - uid: Xunit.v3.CollectionPerAssemblyTestCollectionFactory
+    name: CollectionPerAssemblyTestCollectionFactory
+    type: Class
+  - uid: Xunit.v3.CollectionPerClassTestCollectionFactory
+    name: CollectionPerClassTestCollectionFactory
+    type: Class
+  - uid: Xunit.v3.ContextBase
+    name: ContextBase
+    type: Class
+  - uid: Xunit.v3.DataAttribute
+    name: DataAttribute
+    type: Class
+  - uid: Xunit.v3.DefaultTestCaseOrderer
+    name: DefaultTestCaseOrderer
+    type: Class
+  - uid: Xunit.v3.DefaultTestCollectionOrderer
+    name: DefaultTestCollectionOrderer
+    type: Class
+  - uid: Xunit.v3.DelegatingMessageBus
+    name: DelegatingMessageBus
+    type: Class
+  - uid: Xunit.v3.DelegatingMessageBus`1
+    name: DelegatingMessageBus<TFinalMessage>
+    type: Class
+  - uid: Xunit.v3.DelegatingMessageSink
+    name: DelegatingMessageSink
+    type: Class
+  - uid: Xunit.v3.DelegatingMessageSink`1
+    name: DelegatingMessageSink<TFinalMessage>
+    type: Class
+  - uid: Xunit.v3.DiagnosticMessage
+    name: DiagnosticMessage
+    type: Class
+  - uid: Xunit.v3.DiscoveryComplete
+    name: DiscoveryComplete
+    type: Class
+  - uid: Xunit.v3.DiscoveryStarting
+    name: DiscoveryStarting
+    type: Class
+  - uid: Xunit.v3.DisplayNameFormatter
+    name: DisplayNameFormatter
+    type: Class
+  - uid: Xunit.v3.DynamicSkipToken
+    name: DynamicSkipToken
+    type: Class
+  - uid: Xunit.v3.ErrorMessage
+    name: ErrorMessage
+    type: Class
+  - uid: Xunit.v3.ExceptionAggregator
+    name: ExceptionAggregator
+    type: Struct
+  - uid: Xunit.v3.ExecutionErrorTestCase
+    name: ExecutionErrorTestCase
+    type: Class
+  - uid: Xunit.v3.ExecutionTimer
+    name: ExecutionTimer
+    type: Class
+  - uid: Xunit.v3.ExtensibilityPointFactory
+    name: ExtensibilityPointFactory
+    type: Class
+  - uid: Xunit.v3.FactDiscoverer
+    name: FactDiscoverer
+    type: Class
+  - uid: Xunit.v3.FixtureMappingManager
+    name: FixtureMappingManager
+    type: Class
+  - uid: Xunit.v3.IAssemblyFixtureAttribute
+    name: IAssemblyFixtureAttribute
+    type: Interface
+  - uid: Xunit.v3.IBeforeAfterTestAttribute
+    name: IBeforeAfterTestAttribute
+    type: Interface
+  - uid: Xunit.v3.ICollectionAttribute
+    name: ICollectionAttribute
+    type: Interface
+  - uid: Xunit.v3.ICollectionBehaviorAttribute
+    name: ICollectionBehaviorAttribute
+    type: Interface
+  - uid: Xunit.v3.IDataAttribute
+    name: IDataAttribute
+    type: Interface
+  - uid: Xunit.v3.IFactAttribute
+    name: IFactAttribute
+    type: Interface
+  - uid: Xunit.v3.IMessageBus
+    name: IMessageBus
+    type: Interface
+  - uid: Xunit.v3.ISelfExecutingXunitTestCase
+    name: ISelfExecutingXunitTestCase
+    type: Interface
+  - uid: Xunit.v3.ITestCaseOrderer
+    name: ITestCaseOrderer
+    type: Interface
+  - uid: Xunit.v3.ITestCaseOrdererAttribute
+    name: ITestCaseOrdererAttribute
+    type: Interface
+  - uid: Xunit.v3.ITestCollectionOrderer
+    name: ITestCollectionOrderer
+    type: Interface
+  - uid: Xunit.v3.ITestCollectionOrdererAttribute
+    name: ITestCollectionOrdererAttribute
+    type: Interface
+  - uid: Xunit.v3.ITestFramework
+    name: ITestFramework
+    type: Interface
+  - uid: Xunit.v3.ITestFrameworkAttribute
+    name: ITestFrameworkAttribute
+    type: Interface
+  - uid: Xunit.v3.ITestFrameworkDiscoverer
+    name: ITestFrameworkDiscoverer
+    type: Interface
+  - uid: Xunit.v3.ITestFrameworkExecutor
+    name: ITestFrameworkExecutor
+    type: Interface
+  - uid: Xunit.v3.ITestPipelineStartup
+    name: ITestPipelineStartup
+    type: Interface
+  - uid: Xunit.v3.ITestPipelineStartupAttribute
+    name: ITestPipelineStartupAttribute
+    type: Interface
+  - uid: Xunit.v3.ITestProcess
+    name: ITestProcess
+    type: Interface
+  - uid: Xunit.v3.ITestProcessLauncher
+    name: ITestProcessLauncher
+    type: Interface
+  - uid: Xunit.v3.ITestTimeoutException
+    name: ITestTimeoutException
+    type: Interface
+  - uid: Xunit.v3.ITheoryAttribute
+    name: ITheoryAttribute
+    type: Interface
+  - uid: Xunit.v3.ITraitAttribute
+    name: ITraitAttribute
+    type: Interface
+  - uid: Xunit.v3.IXunitDelayEnumeratedTestCase
+    name: IXunitDelayEnumeratedTestCase
+    type: Interface
+  - uid: Xunit.v3.IXunitTest
+    name: IXunitTest
+    type: Interface
+  - uid: Xunit.v3.IXunitTestAssembly
+    name: IXunitTestAssembly
+    type: Interface
+  - uid: Xunit.v3.IXunitTestCase
+    name: IXunitTestCase
+    type: Interface
+  - uid: Xunit.v3.IXunitTestCaseDiscoverer
+    name: IXunitTestCaseDiscoverer
+    type: Interface
+  - uid: Xunit.v3.IXunitTestClass
+    name: IXunitTestClass
+    type: Interface
+  - uid: Xunit.v3.IXunitTestCollection
+    name: IXunitTestCollection
+    type: Interface
+  - uid: Xunit.v3.IXunitTestCollectionFactory
+    name: IXunitTestCollectionFactory
+    type: Interface
+  - uid: Xunit.v3.IXunitTestMethod
+    name: IXunitTestMethod
+    type: Interface
+  - uid: Xunit.v3.InProcessFrontController
+    name: InProcessFrontController
+    type: Class
+  - uid: Xunit.v3.InProcessTestProcessLauncher
+    name: InProcessTestProcessLauncher
+    type: Class
+  - uid: Xunit.v3.InternalDiagnosticMessage
+    name: InternalDiagnosticMessage
+    type: Class
+  - uid: Xunit.v3.LocalOutOfProcessTestProcessLauncher
+    name: LocalOutOfProcessTestProcessLauncher
+    type: Class
+  - uid: Xunit.v3.LocalTestProcess
+    name: LocalTestProcess
+    type: Class
+  - uid: Xunit.v3.MaxConcurrencySyncContext
+    name: MaxConcurrencySyncContext
+    type: Class
+  - uid: Xunit.v3.MemberDataAttributeBase
+    name: MemberDataAttributeBase
+    type: Class
+  - uid: Xunit.v3.MessageSinkMessage
+    name: MessageSinkMessage
+    type: Class
+  - uid: Xunit.v3.OutOfProcessTestProcessLauncherBase
+    name: OutOfProcessTestProcessLauncherBase
+    type: Class
+  - uid: Xunit.v3.RunSummary
+    name: RunSummary
+    type: Struct
+  - uid: Xunit.v3.TestAssemblyCleanupFailure
+    name: TestAssemblyCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestAssemblyFinished
+    name: TestAssemblyFinished
+    type: Class
+  - uid: Xunit.v3.TestAssemblyMessage
+    name: TestAssemblyMessage
+    type: Class
+  - uid: Xunit.v3.TestAssemblyRunnerContext`2
+    name: TestAssemblyRunnerContext<TTestAssembly, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestAssemblyRunner`4
+    name: TestAssemblyRunner<TContext, TTestAssembly, TTestCollection, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestAssemblyStarting
+    name: TestAssemblyStarting
+    type: Class
+  - uid: Xunit.v3.TestCaseCleanupFailure
+    name: TestCaseCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestCaseDiscovered
+    name: TestCaseDiscovered
+    type: Class
+  - uid: Xunit.v3.TestCaseFinished
+    name: TestCaseFinished
+    type: Class
+  - uid: Xunit.v3.TestCaseMessage
+    name: TestCaseMessage
+    type: Class
+  - uid: Xunit.v3.TestCaseRunnerBaseContext`1
+    name: TestCaseRunnerBaseContext<TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestCaseRunnerBase`2
+    name: TestCaseRunnerBase<TContext, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestCaseRunnerContext`2
+    name: TestCaseRunnerContext<TTestCase, TTest>
+    type: Class
+  - uid: Xunit.v3.TestCaseRunner`3
+    name: TestCaseRunner<TContext, TTestCase, TTest>
+    type: Class
+  - uid: Xunit.v3.TestCaseStarting
+    name: TestCaseStarting
+    type: Class
+  - uid: Xunit.v3.TestClassCleanupFailure
+    name: TestClassCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestClassComparer
+    name: TestClassComparer
+    type: Class
+  - uid: Xunit.v3.TestClassConstructionFinished
+    name: TestClassConstructionFinished
+    type: Class
+  - uid: Xunit.v3.TestClassConstructionStarting
+    name: TestClassConstructionStarting
+    type: Class
+  - uid: Xunit.v3.TestClassDisposeFinished
+    name: TestClassDisposeFinished
+    type: Class
+  - uid: Xunit.v3.TestClassDisposeStarting
+    name: TestClassDisposeStarting
+    type: Class
+  - uid: Xunit.v3.TestClassFinished
+    name: TestClassFinished
+    type: Class
+  - uid: Xunit.v3.TestClassMessage
+    name: TestClassMessage
+    type: Class
+  - uid: Xunit.v3.TestClassRunnerContext`2
+    name: TestClassRunnerContext<TTestClass, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestClassRunner`4
+    name: TestClassRunner<TContext, TTestClass, TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestClassStarting
+    name: TestClassStarting
+    type: Class
+  - uid: Xunit.v3.TestCleanupFailure
+    name: TestCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestCollectionCleanupFailure
+    name: TestCollectionCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestCollectionComparer`1
+    name: TestCollectionComparer<TTestCollection>
+    type: Class
+  - uid: Xunit.v3.TestCollectionFactoryBase
+    name: TestCollectionFactoryBase
+    type: Class
+  - uid: Xunit.v3.TestCollectionFinished
+    name: TestCollectionFinished
+    type: Class
+  - uid: Xunit.v3.TestCollectionMessage
+    name: TestCollectionMessage
+    type: Class
+  - uid: Xunit.v3.TestCollectionRunnerContext`2
+    name: TestCollectionRunnerContext<TTestCollection, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestCollectionRunner`4
+    name: TestCollectionRunner<TContext, TTestCollection, TTestClass, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestCollectionStarting
+    name: TestCollectionStarting
+    type: Class
+  - uid: Xunit.v3.TestContextAccessor
+    name: TestContextAccessor
+    type: Class
+  - uid: Xunit.v3.TestFailed
+    name: TestFailed
+    type: Class
+  - uid: Xunit.v3.TestFinished
+    name: TestFinished
+    type: Class
+  - uid: Xunit.v3.TestFramework
+    name: TestFramework
+    type: Class
+  - uid: Xunit.v3.TestFrameworkDiscoverer`1
+    name: TestFrameworkDiscoverer<TTestClass>
+    type: Class
+  - uid: Xunit.v3.TestFrameworkExecutor`1
+    name: TestFrameworkExecutor<TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestIntrospectionHelper
+    name: TestIntrospectionHelper
+    type: Class
+  - uid: Xunit.v3.TestMessage
+    name: TestMessage
+    type: Class
+  - uid: Xunit.v3.TestMethodCleanupFailure
+    name: TestMethodCleanupFailure
+    type: Class
+  - uid: Xunit.v3.TestMethodComparer
+    name: TestMethodComparer
+    type: Class
+  - uid: Xunit.v3.TestMethodFinished
+    name: TestMethodFinished
+    type: Class
+  - uid: Xunit.v3.TestMethodMessage
+    name: TestMethodMessage
+    type: Class
+  - uid: Xunit.v3.TestMethodRunnerContext`2
+    name: TestMethodRunnerContext<TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestMethodRunner`3
+    name: TestMethodRunner<TContext, TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.TestMethodStarting
+    name: TestMethodStarting
+    type: Class
+  - uid: Xunit.v3.TestNotRun
+    name: TestNotRun
+    type: Class
+  - uid: Xunit.v3.TestOutput
+    name: TestOutput
+    type: Class
+  - uid: Xunit.v3.TestOutputHelper
+    name: TestOutputHelper
+    type: Class
+  - uid: Xunit.v3.TestPassed
+    name: TestPassed
+    type: Class
+  - uid: Xunit.v3.TestPipelineStartupAttribute
+    name: TestPipelineStartupAttribute
+    type: Class
+  - uid: Xunit.v3.TestResultMessage
+    name: TestResultMessage
+    type: Class
+  - uid: Xunit.v3.TestRunnerBaseContext`1
+    name: TestRunnerBaseContext<TTest>
+    type: Class
+  - uid: Xunit.v3.TestRunnerBase`2
+    name: TestRunnerBase<TContext, TTest>
+    type: Class
+  - uid: Xunit.v3.TestRunnerContext`1
+    name: TestRunnerContext<TTest>
+    type: Class
+  - uid: Xunit.v3.TestRunner`2
+    name: TestRunner<TContext, TTest>
+    type: Class
+  - uid: Xunit.v3.TestSkipped
+    name: TestSkipped
+    type: Class
+  - uid: Xunit.v3.TestStarting
+    name: TestStarting
+    type: Class
+  - uid: Xunit.v3.TheoryDiscoverer
+    name: TheoryDiscoverer
+    type: Class
+  - uid: Xunit.v3.XunitDelayEnumeratedTheoryTestCase
+    name: XunitDelayEnumeratedTheoryTestCase
+    type: Class
+  - uid: Xunit.v3.XunitRunnerHelper
+    name: XunitRunnerHelper
+    type: Class
+  - uid: Xunit.v3.XunitTest
+    name: XunitTest
+    type: Class
+  - uid: Xunit.v3.XunitTestAssembly
+    name: XunitTestAssembly
+    type: Class
+  - uid: Xunit.v3.XunitTestAssemblyRunner
+    name: XunitTestAssemblyRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestAssemblyRunnerBaseContext`2
+    name: XunitTestAssemblyRunnerBaseContext<TTestAssembly, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestAssemblyRunnerBase`4
+    name: XunitTestAssemblyRunnerBase<TContext, TTestAssembly, TTestCollection, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestAssemblyRunnerContext
+    name: XunitTestAssemblyRunnerContext
+    type: Class
+  - uid: Xunit.v3.XunitTestCase
+    name: XunitTestCase
+    type: Class
+  - uid: Xunit.v3.XunitTestCaseDiscovererAttribute
+    name: XunitTestCaseDiscovererAttribute
+    type: Class
+  - uid: Xunit.v3.XunitTestCaseRunner
+    name: XunitTestCaseRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestCaseRunnerBaseContext`2
+    name: XunitTestCaseRunnerBaseContext<TTestCase, TTest>
+    type: Class
+  - uid: Xunit.v3.XunitTestCaseRunnerBase`3
+    name: XunitTestCaseRunnerBase<TContext, TTestCase, TTest>
+    type: Class
+  - uid: Xunit.v3.XunitTestCaseRunnerContext
+    name: XunitTestCaseRunnerContext
+    type: Class
+  - uid: Xunit.v3.XunitTestClass
+    name: XunitTestClass
+    type: Class
+  - uid: Xunit.v3.XunitTestClassRunner
+    name: XunitTestClassRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestClassRunnerBaseContext`2
+    name: XunitTestClassRunnerBaseContext<TTestClass, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestClassRunnerBase`4
+    name: XunitTestClassRunnerBase<TContext, TTestClass, TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestClassRunnerContext
+    name: XunitTestClassRunnerContext
+    type: Class
+  - uid: Xunit.v3.XunitTestCollection
+    name: XunitTestCollection
+    type: Class
+  - uid: Xunit.v3.XunitTestCollectionRunner
+    name: XunitTestCollectionRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestCollectionRunnerBaseContext`2
+    name: XunitTestCollectionRunnerBaseContext<TTestCollection, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestCollectionRunnerBase`4
+    name: XunitTestCollectionRunnerBase<TContext, TTestCollection, TTestClass, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestCollectionRunnerContext
+    name: XunitTestCollectionRunnerContext
+    type: Class
+  - uid: Xunit.v3.XunitTestFramework
+    name: XunitTestFramework
+    type: Class
+  - uid: Xunit.v3.XunitTestFrameworkDiscoverer
+    name: XunitTestFrameworkDiscoverer
+    type: Class
+  - uid: Xunit.v3.XunitTestFrameworkExecutor
+    name: XunitTestFrameworkExecutor
+    type: Class
+  - uid: Xunit.v3.XunitTestMethod
+    name: XunitTestMethod
+    type: Class
+  - uid: Xunit.v3.XunitTestMethodRunner
+    name: XunitTestMethodRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestMethodRunnerBaseContext`2
+    name: XunitTestMethodRunnerBaseContext<TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestMethodRunnerBase`3
+    name: XunitTestMethodRunnerBase<TContext, TTestMethod, TTestCase>
+    type: Class
+  - uid: Xunit.v3.XunitTestMethodRunnerContext
+    name: XunitTestMethodRunnerContext
+    type: Class
+  - uid: Xunit.v3.XunitTestRunner
+    name: XunitTestRunner
+    type: Class
+  - uid: Xunit.v3.XunitTestRunnerBaseContext`1
+    name: XunitTestRunnerBaseContext<TTest>
+    type: Class
+  - uid: Xunit.v3.XunitTestRunnerBase`2
+    name: XunitTestRunnerBase<TContext, TTest>
+    type: Class
+  - uid: Xunit.v3.XunitTestRunnerContext
+    name: XunitTestRunnerContext
+    type: Class
+memberLayout: SamePage

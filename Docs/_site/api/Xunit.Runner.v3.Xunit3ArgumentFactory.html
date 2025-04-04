@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class Xunit3ArgumentFactory | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class Xunit3ArgumentFactory | Unofficial xunit docs ">
+      
+      <meta name="description" content="This class is responsible for generating arguments used for calling xUnit.net v3 command line arguments.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_v3_Xunit3ArgumentFactory.md&amp;value=---%0Auid%3A%20Xunit.Runner.v3.Xunit3ArgumentFactory%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory">
+
+
+
+  <h1 id="Xunit_Runner_v3_Xunit3ArgumentFactory" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory" class="text-break">
+Class Xunit3ArgumentFactory  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.utility/Frameworks/v3/Xunit3ArgumentFactory.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.v3.html">v3</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.utility.netfx.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>This class is responsible for generating arguments used for calling xUnit.net v3
+command line arguments.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class Xunit3ArgumentFactory</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">Xunit3ArgumentFactory</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForFind_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForFind*"></a>
+
+  <h3 id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForFind_System_Version_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_Runner_Common_XunitFilters_System_String_System_Nullable_Xunit_Runner_Common_ListOption__System_Boolean_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForFind(System.Version,Xunit.Sdk.ITestFrameworkDiscoveryOptions,Xunit.Runner.Common.XunitFilters,System.String,System.Nullable{Xunit.Runner.Common.ListOption},System.Boolean)">
+  ForFind(Version, ITestFrameworkDiscoveryOptions, XunitFilters?, string?, ListOption?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.utility/Frameworks/v3/Xunit3ArgumentFactory.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets command line switches based on a call to <a class="xref" href="Xunit.Runner.v3.Xunit3.html#Xunit_Runner_v3_Xunit3_Find_Xunit_Sdk_IMessageSink_Xunit_FrontControllerFindSettings_">Find(IMessageSink, FrontControllerFindSettings)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; ForFind(Version coreFrameworkVersion, ITestFrameworkDiscoveryOptions options, XunitFilters? filters = null, string? configFileName = null, ListOption? listOption = null, bool waitForDebugger = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>coreFrameworkVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>filters</code> <a class="xref" href="Xunit.Runner.Common.XunitFilters.html">XunitFilters</a></dt>
+    <dd></dd>
+    <dt><code>configFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>listOption</code> <a class="xref" href="Xunit.Runner.Common.ListOption.html">ListOption</a>?</dt>
+    <dd></dd>
+    <dt><code>waitForDebugger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForFindAndRun_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForFindAndRun*"></a>
+
+  <h3 id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForFindAndRun_System_Version_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_Sdk_ITestFrameworkExecutionOptions_Xunit_Runner_Common_XunitFilters_System_String_System_Boolean_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForFindAndRun(System.Version,Xunit.Sdk.ITestFrameworkDiscoveryOptions,Xunit.Sdk.ITestFrameworkExecutionOptions,Xunit.Runner.Common.XunitFilters,System.String,System.Boolean)">
+  ForFindAndRun(Version, ITestFrameworkDiscoveryOptions, ITestFrameworkExecutionOptions, XunitFilters?, string?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.utility/Frameworks/v3/Xunit3ArgumentFactory.cs/#L64"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets command line switches based on a call to <a class="xref" href="Xunit.Runner.v3.Xunit3.html#Xunit_Runner_v3_Xunit3_FindAndRun_Xunit_Sdk_IMessageSink_Xunit_FrontControllerFindAndRunSettings_">FindAndRun(IMessageSink, FrontControllerFindAndRunSettings)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; ForFindAndRun(Version coreFrameworkVersion, ITestFrameworkDiscoveryOptions discoveryOptions, ITestFrameworkExecutionOptions executionOptions, XunitFilters? filters = null, string? configFileName = null, bool waitForDebugger = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>coreFrameworkVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a></dt>
+    <dd></dd>
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>filters</code> <a class="xref" href="Xunit.Runner.Common.XunitFilters.html">XunitFilters</a></dt>
+    <dd></dd>
+    <dt><code>configFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>waitForDebugger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForRun_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForRun*"></a>
+
+  <h3 id="Xunit_Runner_v3_Xunit3ArgumentFactory_ForRun_System_Version_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Collections_Generic_IReadOnlyCollection_System_String__System_String_System_Boolean_" data-uid="Xunit.Runner.v3.Xunit3ArgumentFactory.ForRun(System.Version,Xunit.Sdk.ITestFrameworkExecutionOptions,System.Collections.Generic.IReadOnlyCollection{System.String},System.String,System.Boolean)">
+  ForRun(Version, ITestFrameworkExecutionOptions, IReadOnlyCollection&lt;string&gt;, string?, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.utility/Frameworks/v3/Xunit3ArgumentFactory.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets command line switches based on a call to <a class="xref" href="Xunit.Runner.v3.Xunit3.html#Xunit_Runner_v3_Xunit3_Run_Xunit_Sdk_IMessageSink_Xunit_FrontControllerRunSettings_">Run(IMessageSink, FrontControllerRunSettings)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static List&lt;string&gt; ForRun(Version coreFrameworkVersion, ITestFrameworkExecutionOptions options, IReadOnlyCollection&lt;string&gt; serializedTestCases, string? configFileName = null, bool waitForDebugger = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>coreFrameworkVersion</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a></dt>
+    <dd></dd>
+    <dt><code>options</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>serializedTestCases</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1">IReadOnlyCollection</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+    <dt><code>configFileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+    <dt><code>waitForDebugger</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.utility/Frameworks/v3/Xunit3ArgumentFactory.cs/#L14" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

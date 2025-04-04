@@ -1,0 +1,1473 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.v3.ExecutionErrorTestCase
+  commentId: T:Xunit.v3.ExecutionErrorTestCase
+  id: ExecutionErrorTestCase
+  parent: Xunit.v3
+  children:
+  - Xunit.v3.ExecutionErrorTestCase.#ctor
+  - Xunit.v3.ExecutionErrorTestCase.#ctor(Xunit.v3.IXunitTestMethod,System.String,System.String,System.String)
+  - Xunit.v3.ExecutionErrorTestCase.CreateTests
+  - Xunit.v3.ExecutionErrorTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  - Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+  - Xunit.v3.ExecutionErrorTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  langs:
+  - csharp
+  - vb
+  name: ExecutionErrorTestCase
+  nameWithType: ExecutionErrorTestCase
+  fullName: Xunit.v3.ExecutionErrorTestCase
+  type: Class
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ExecutionErrorTestCase
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 12
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: >-
+    A simple implementation of <xref href="Xunit.v3.IXunitTestCase" data-throw-if-not-resolved="false"></xref> that can be used to report an error
+
+    rather than running a test.
+  example: []
+  syntax:
+    content: 'public class ExecutionErrorTestCase : XunitTestCase, IXunitTestCase, ITestCase, ITestCaseMetadata, IXunitSerializable, IAsyncDisposable'
+    content.vb: Public Class ExecutionErrorTestCase Inherits XunitTestCase Implements IXunitTestCase, ITestCase, ITestCaseMetadata, IXunitSerializable, IAsyncDisposable
+  inheritance:
+  - System.Object
+  - Xunit.v3.XunitTestCase
+  implements:
+  - Xunit.v3.IXunitTestCase
+  - Xunit.Sdk.ITestCase
+  - Xunit.Sdk.ITestCaseMetadata
+  - Xunit.Sdk.IXunitSerializable
+  - System.IAsyncDisposable
+  inheritedMembers:
+  - Xunit.v3.XunitTestCase.DisposalTracker
+  - Xunit.v3.XunitTestCase.Explicit
+  - Xunit.v3.XunitTestCase.SkipExceptions
+  - Xunit.v3.XunitTestCase.SkipReason
+  - Xunit.v3.XunitTestCase.SkipType
+  - Xunit.v3.XunitTestCase.SkipUnless
+  - Xunit.v3.XunitTestCase.SkipWhen
+  - Xunit.v3.XunitTestCase.SourceFilePath
+  - Xunit.v3.XunitTestCase.SourceLineNumber
+  - Xunit.v3.XunitTestCase.TestCaseDisplayName
+  - Xunit.v3.XunitTestCase.TestCollection
+  - Xunit.v3.XunitTestCase.TestClass
+  - Xunit.v3.XunitTestCase.TestClassMetadataToken
+  - Xunit.v3.XunitTestCase.TestClassName
+  - Xunit.v3.XunitTestCase.TestClassNamespace
+  - Xunit.v3.XunitTestCase.TestClassSimpleName
+  - Xunit.v3.XunitTestCase.TestMethod
+  - Xunit.v3.XunitTestCase.TestMethodArguments
+  - Xunit.v3.XunitTestCase.TestMethodMetadataToken
+  - Xunit.v3.XunitTestCase.TestMethodName
+  - Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest
+  - Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest
+  - Xunit.v3.XunitTestCase.Timeout
+  - Xunit.v3.XunitTestCase.Traits
+  - Xunit.v3.XunitTestCase.UniqueID
+  - Xunit.v3.XunitTestCase.DisposeAsync
+  - Xunit.v3.XunitTestCase.PostInvoke
+  - Xunit.v3.XunitTestCase.PreInvoke
+  - Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+- uid: Xunit.v3.ExecutionErrorTestCase.#ctor
+  commentId: M:Xunit.v3.ExecutionErrorTestCase.#ctor
+  id: '#ctor'
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: ExecutionErrorTestCase()
+  nameWithType: ExecutionErrorTestCase.ExecutionErrorTestCase()
+  fullName: Xunit.v3.ExecutionErrorTestCase.ExecutionErrorTestCase()
+  type: Constructor
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: .ctor
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 19
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Called by the de-serializer; should only be called by deriving classes for de-serialization purposes
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Called by the de-serializer; should only be called by deriving classes for de-serialization purposes")]
+
+      public ExecutionErrorTestCase()
+    content.vb: >-
+      <Obsolete("Called by the de-serializer; should only be called by deriving classes for de-serialization purposes")>
+
+      Public Sub New()
+  overload: Xunit.v3.ExecutionErrorTestCase.#ctor*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Called by the de-serializer; should only be called by deriving classes for de-serialization purposes
+  nameWithType.vb: ExecutionErrorTestCase.New()
+  fullName.vb: Xunit.v3.ExecutionErrorTestCase.New()
+  name.vb: New()
+- uid: Xunit.v3.ExecutionErrorTestCase.#ctor(Xunit.v3.IXunitTestMethod,System.String,System.String,System.String)
+  commentId: M:Xunit.v3.ExecutionErrorTestCase.#ctor(Xunit.v3.IXunitTestMethod,System.String,System.String,System.String)
+  id: '#ctor(Xunit.v3.IXunitTestMethod,System.String,System.String,System.String)'
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: ExecutionErrorTestCase(IXunitTestMethod, string, string, string)
+  nameWithType: ExecutionErrorTestCase.ExecutionErrorTestCase(IXunitTestMethod, string, string, string)
+  fullName: Xunit.v3.ExecutionErrorTestCase.ExecutionErrorTestCase(Xunit.v3.IXunitTestMethod, string, string, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: .ctor
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 30
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Initializes a new instance of the <xref href="Xunit.v3.ExecutionErrorTestCase" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public ExecutionErrorTestCase(IXunitTestMethod testMethod, string testCaseDisplayName, string uniqueID, string errorMessage)
+    parameters:
+    - id: testMethod
+      type: Xunit.v3.IXunitTestMethod
+      description: The test method.
+    - id: testCaseDisplayName
+      type: System.String
+      description: The display name for the test case.
+    - id: uniqueID
+      type: System.String
+      description: The unique ID for the test case.
+    - id: errorMessage
+      type: System.String
+      description: The error message to report for the test.
+    content.vb: Public Sub New(testMethod As IXunitTestMethod, testCaseDisplayName As String, uniqueID As String, errorMessage As String)
+  overload: Xunit.v3.ExecutionErrorTestCase.#ctor*
+  nameWithType.vb: ExecutionErrorTestCase.New(IXunitTestMethod, String, String, String)
+  fullName.vb: Xunit.v3.ExecutionErrorTestCase.New(Xunit.v3.IXunitTestMethod, String, String, String)
+  name.vb: New(IXunitTestMethod, String, String, String)
+- uid: Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+  commentId: P:Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+  id: ErrorMessage
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessage
+  nameWithType: ExecutionErrorTestCase.ErrorMessage
+  fullName: Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: ErrorMessage
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 41
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the error message that will be displayed when the test is run.
+  example: []
+  syntax:
+    content: public string ErrorMessage { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ErrorMessage As String
+  overload: Xunit.v3.ExecutionErrorTestCase.ErrorMessage*
+- uid: Xunit.v3.ExecutionErrorTestCase.CreateTests
+  commentId: M:Xunit.v3.ExecutionErrorTestCase.CreateTests
+  id: CreateTests
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: CreateTests()
+  nameWithType: ExecutionErrorTestCase.CreateTests()
+  fullName: Xunit.v3.ExecutionErrorTestCase.CreateTests()
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CreateTests
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 47
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Throws the expected error mesage rather than creating tests.
+  example: []
+  syntax:
+    content: public override ValueTask<IReadOnlyCollection<IXunitTest>> CreateTests()
+    return:
+      type: System.Threading.Tasks.ValueTask{System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IXunitTest}}
+    content.vb: Public Overrides Function CreateTests() As ValueTask(Of IReadOnlyCollection(Of IXunitTest))
+  overridden: Xunit.v3.XunitTestCase.CreateTests
+  overload: Xunit.v3.ExecutionErrorTestCase.CreateTests*
+- uid: Xunit.v3.ExecutionErrorTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  commentId: M:Xunit.v3.ExecutionErrorTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  id: Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: Deserialize(IXunitSerializationInfo)
+  nameWithType: ExecutionErrorTestCase.Deserialize(IXunitSerializationInfo)
+  fullName: Xunit.v3.ExecutionErrorTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Deserialize
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 51
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Called when the test case should populate itself with data from the serialization info.
+  example: []
+  syntax:
+    content: protected override void Deserialize(IXunitSerializationInfo info)
+    parameters:
+    - id: info
+      type: Xunit.Sdk.IXunitSerializationInfo
+      description: The info to get the object data from
+    content.vb: Protected Overrides Sub Deserialize(info As IXunitSerializationInfo)
+  overridden: Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  overload: Xunit.v3.ExecutionErrorTestCase.Deserialize*
+- uid: Xunit.v3.ExecutionErrorTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  commentId: M:Xunit.v3.ExecutionErrorTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  id: Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  parent: Xunit.v3.ExecutionErrorTestCase
+  langs:
+  - csharp
+  - vb
+  name: Serialize(IXunitSerializationInfo)
+  nameWithType: ExecutionErrorTestCase.Serialize(IXunitSerializationInfo)
+  fullName: Xunit.v3.ExecutionErrorTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  type: Method
+  source:
+    remote:
+      path: src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Serialize
+    path: ../v3-2.0.0/src/xunit.v3.core/ObjectModel/ExecutionErrorTestCase.cs
+    startLine: 59
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Called when the test case should store its serialized values into the serialization info.
+  example: []
+  syntax:
+    content: protected override void Serialize(IXunitSerializationInfo info)
+    parameters:
+    - id: info
+      type: Xunit.Sdk.IXunitSerializationInfo
+      description: The info to store the object data into
+    content.vb: Protected Overrides Sub Serialize(info As IXunitSerializationInfo)
+  overridden: Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  overload: Xunit.v3.ExecutionErrorTestCase.Serialize*
+references:
+- uid: Xunit.v3.IXunitTestCase
+  commentId: T:Xunit.v3.IXunitTestCase
+  parent: Xunit.v3
+  href: Xunit.v3.IXunitTestCase.html
+  name: IXunitTestCase
+  nameWithType: IXunitTestCase
+  fullName: Xunit.v3.IXunitTestCase
+- uid: Xunit.v3
+  commentId: N:Xunit.v3
+  href: Xunit.html
+  name: Xunit.v3
+  nameWithType: Xunit.v3
+  fullName: Xunit.v3
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Xunit.v3.XunitTestCase
+  commentId: T:Xunit.v3.XunitTestCase
+  parent: Xunit.v3
+  href: Xunit.v3.XunitTestCase.html
+  name: XunitTestCase
+  nameWithType: XunitTestCase
+  fullName: Xunit.v3.XunitTestCase
+- uid: Xunit.Sdk.ITestCase
+  commentId: T:Xunit.Sdk.ITestCase
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestCase.html
+  name: ITestCase
+  nameWithType: ITestCase
+  fullName: Xunit.Sdk.ITestCase
+- uid: Xunit.Sdk.ITestCaseMetadata
+  commentId: T:Xunit.Sdk.ITestCaseMetadata
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestCaseMetadata.html
+  name: ITestCaseMetadata
+  nameWithType: ITestCaseMetadata
+  fullName: Xunit.Sdk.ITestCaseMetadata
+- uid: Xunit.Sdk.IXunitSerializable
+  commentId: T:Xunit.Sdk.IXunitSerializable
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IXunitSerializable.html
+  name: IXunitSerializable
+  nameWithType: IXunitSerializable
+  fullName: Xunit.Sdk.IXunitSerializable
+- uid: System.IAsyncDisposable
+  commentId: T:System.IAsyncDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncdisposable
+  name: IAsyncDisposable
+  nameWithType: IAsyncDisposable
+  fullName: System.IAsyncDisposable
+- uid: Xunit.v3.XunitTestCase.DisposalTracker
+  commentId: P:Xunit.v3.XunitTestCase.DisposalTracker
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_DisposalTracker
+  name: DisposalTracker
+  nameWithType: XunitTestCase.DisposalTracker
+  fullName: Xunit.v3.XunitTestCase.DisposalTracker
+- uid: Xunit.v3.XunitTestCase.Explicit
+  commentId: P:Xunit.v3.XunitTestCase.Explicit
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Explicit
+  name: Explicit
+  nameWithType: XunitTestCase.Explicit
+  fullName: Xunit.v3.XunitTestCase.Explicit
+- uid: Xunit.v3.XunitTestCase.SkipExceptions
+  commentId: P:Xunit.v3.XunitTestCase.SkipExceptions
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SkipExceptions
+  name: SkipExceptions
+  nameWithType: XunitTestCase.SkipExceptions
+  fullName: Xunit.v3.XunitTestCase.SkipExceptions
+- uid: Xunit.v3.XunitTestCase.SkipReason
+  commentId: P:Xunit.v3.XunitTestCase.SkipReason
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SkipReason
+  name: SkipReason
+  nameWithType: XunitTestCase.SkipReason
+  fullName: Xunit.v3.XunitTestCase.SkipReason
+- uid: Xunit.v3.XunitTestCase.SkipType
+  commentId: P:Xunit.v3.XunitTestCase.SkipType
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SkipType
+  name: SkipType
+  nameWithType: XunitTestCase.SkipType
+  fullName: Xunit.v3.XunitTestCase.SkipType
+- uid: Xunit.v3.XunitTestCase.SkipUnless
+  commentId: P:Xunit.v3.XunitTestCase.SkipUnless
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SkipUnless
+  name: SkipUnless
+  nameWithType: XunitTestCase.SkipUnless
+  fullName: Xunit.v3.XunitTestCase.SkipUnless
+- uid: Xunit.v3.XunitTestCase.SkipWhen
+  commentId: P:Xunit.v3.XunitTestCase.SkipWhen
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SkipWhen
+  name: SkipWhen
+  nameWithType: XunitTestCase.SkipWhen
+  fullName: Xunit.v3.XunitTestCase.SkipWhen
+- uid: Xunit.v3.XunitTestCase.SourceFilePath
+  commentId: P:Xunit.v3.XunitTestCase.SourceFilePath
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SourceFilePath
+  name: SourceFilePath
+  nameWithType: XunitTestCase.SourceFilePath
+  fullName: Xunit.v3.XunitTestCase.SourceFilePath
+- uid: Xunit.v3.XunitTestCase.SourceLineNumber
+  commentId: P:Xunit.v3.XunitTestCase.SourceLineNumber
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_SourceLineNumber
+  name: SourceLineNumber
+  nameWithType: XunitTestCase.SourceLineNumber
+  fullName: Xunit.v3.XunitTestCase.SourceLineNumber
+- uid: Xunit.v3.XunitTestCase.TestCaseDisplayName
+  commentId: P:Xunit.v3.XunitTestCase.TestCaseDisplayName
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestCaseDisplayName
+  name: TestCaseDisplayName
+  nameWithType: XunitTestCase.TestCaseDisplayName
+  fullName: Xunit.v3.XunitTestCase.TestCaseDisplayName
+- uid: Xunit.v3.XunitTestCase.TestCollection
+  commentId: P:Xunit.v3.XunitTestCase.TestCollection
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestCollection
+  name: TestCollection
+  nameWithType: XunitTestCase.TestCollection
+  fullName: Xunit.v3.XunitTestCase.TestCollection
+- uid: Xunit.v3.XunitTestCase.TestClass
+  commentId: P:Xunit.v3.XunitTestCase.TestClass
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestClass
+  name: TestClass
+  nameWithType: XunitTestCase.TestClass
+  fullName: Xunit.v3.XunitTestCase.TestClass
+- uid: Xunit.v3.XunitTestCase.TestClassMetadataToken
+  commentId: P:Xunit.v3.XunitTestCase.TestClassMetadataToken
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestClassMetadataToken
+  name: TestClassMetadataToken
+  nameWithType: XunitTestCase.TestClassMetadataToken
+  fullName: Xunit.v3.XunitTestCase.TestClassMetadataToken
+- uid: Xunit.v3.XunitTestCase.TestClassName
+  commentId: P:Xunit.v3.XunitTestCase.TestClassName
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestClassName
+  name: TestClassName
+  nameWithType: XunitTestCase.TestClassName
+  fullName: Xunit.v3.XunitTestCase.TestClassName
+- uid: Xunit.v3.XunitTestCase.TestClassNamespace
+  commentId: P:Xunit.v3.XunitTestCase.TestClassNamespace
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestClassNamespace
+  name: TestClassNamespace
+  nameWithType: XunitTestCase.TestClassNamespace
+  fullName: Xunit.v3.XunitTestCase.TestClassNamespace
+- uid: Xunit.v3.XunitTestCase.TestClassSimpleName
+  commentId: P:Xunit.v3.XunitTestCase.TestClassSimpleName
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestClassSimpleName
+  name: TestClassSimpleName
+  nameWithType: XunitTestCase.TestClassSimpleName
+  fullName: Xunit.v3.XunitTestCase.TestClassSimpleName
+- uid: Xunit.v3.XunitTestCase.TestMethod
+  commentId: P:Xunit.v3.XunitTestCase.TestMethod
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethod
+  name: TestMethod
+  nameWithType: XunitTestCase.TestMethod
+  fullName: Xunit.v3.XunitTestCase.TestMethod
+- uid: Xunit.v3.XunitTestCase.TestMethodArguments
+  commentId: P:Xunit.v3.XunitTestCase.TestMethodArguments
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethodArguments
+  name: TestMethodArguments
+  nameWithType: XunitTestCase.TestMethodArguments
+  fullName: Xunit.v3.XunitTestCase.TestMethodArguments
+- uid: Xunit.v3.XunitTestCase.TestMethodMetadataToken
+  commentId: P:Xunit.v3.XunitTestCase.TestMethodMetadataToken
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethodMetadataToken
+  name: TestMethodMetadataToken
+  nameWithType: XunitTestCase.TestMethodMetadataToken
+  fullName: Xunit.v3.XunitTestCase.TestMethodMetadataToken
+- uid: Xunit.v3.XunitTestCase.TestMethodName
+  commentId: P:Xunit.v3.XunitTestCase.TestMethodName
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethodName
+  name: TestMethodName
+  nameWithType: XunitTestCase.TestMethodName
+  fullName: Xunit.v3.XunitTestCase.TestMethodName
+- uid: Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest
+  commentId: P:Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethodParameterTypesVSTest
+  name: TestMethodParameterTypesVSTest
+  nameWithType: XunitTestCase.TestMethodParameterTypesVSTest
+  fullName: Xunit.v3.XunitTestCase.TestMethodParameterTypesVSTest
+- uid: Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest
+  commentId: P:Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_TestMethodReturnTypeVSTest
+  name: TestMethodReturnTypeVSTest
+  nameWithType: XunitTestCase.TestMethodReturnTypeVSTest
+  fullName: Xunit.v3.XunitTestCase.TestMethodReturnTypeVSTest
+- uid: Xunit.v3.XunitTestCase.Timeout
+  commentId: P:Xunit.v3.XunitTestCase.Timeout
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Timeout
+  name: Timeout
+  nameWithType: XunitTestCase.Timeout
+  fullName: Xunit.v3.XunitTestCase.Timeout
+- uid: Xunit.v3.XunitTestCase.Traits
+  commentId: P:Xunit.v3.XunitTestCase.Traits
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Traits
+  name: Traits
+  nameWithType: XunitTestCase.Traits
+  fullName: Xunit.v3.XunitTestCase.Traits
+- uid: Xunit.v3.XunitTestCase.UniqueID
+  commentId: P:Xunit.v3.XunitTestCase.UniqueID
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_UniqueID
+  name: UniqueID
+  nameWithType: XunitTestCase.UniqueID
+  fullName: Xunit.v3.XunitTestCase.UniqueID
+- uid: Xunit.v3.XunitTestCase.DisposeAsync
+  commentId: M:Xunit.v3.XunitTestCase.DisposeAsync
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_DisposeAsync
+  name: DisposeAsync()
+  nameWithType: XunitTestCase.DisposeAsync()
+  fullName: Xunit.v3.XunitTestCase.DisposeAsync()
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.DisposeAsync
+    name: DisposeAsync
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_DisposeAsync
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.DisposeAsync
+    name: DisposeAsync
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_DisposeAsync
+  - name: (
+  - name: )
+- uid: Xunit.v3.XunitTestCase.PostInvoke
+  commentId: M:Xunit.v3.XunitTestCase.PostInvoke
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PostInvoke
+  name: PostInvoke()
+  nameWithType: XunitTestCase.PostInvoke()
+  fullName: Xunit.v3.XunitTestCase.PostInvoke()
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.PostInvoke
+    name: PostInvoke
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PostInvoke
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.PostInvoke
+    name: PostInvoke
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PostInvoke
+  - name: (
+  - name: )
+- uid: Xunit.v3.XunitTestCase.PreInvoke
+  commentId: M:Xunit.v3.XunitTestCase.PreInvoke
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PreInvoke
+  name: PreInvoke()
+  nameWithType: XunitTestCase.PreInvoke()
+  fullName: Xunit.v3.XunitTestCase.PreInvoke()
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.PreInvoke
+    name: PreInvoke
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PreInvoke
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.PreInvoke
+    name: PreInvoke
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_PreInvoke
+  - name: (
+  - name: )
+- uid: Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])
+  commentId: M:Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])
+  parent: Xunit.v3.XunitTestCase
+  isExternal: true
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_ResolveTestMethodArguments_System_Reflection_ParameterInfo___System_Object___
+  name: ResolveTestMethodArguments(ParameterInfo[], object[])
+  nameWithType: XunitTestCase.ResolveTestMethodArguments(ParameterInfo[], object[])
+  fullName: Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[], object[])
+  nameWithType.vb: XunitTestCase.ResolveTestMethodArguments(ParameterInfo(), Object())
+  fullName.vb: Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo(), Object())
+  name.vb: ResolveTestMethodArguments(ParameterInfo(), Object())
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])
+    name: ResolveTestMethodArguments
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_ResolveTestMethodArguments_System_Reflection_ParameterInfo___System_Object___
+  - name: (
+  - uid: System.Reflection.ParameterInfo
+    name: ParameterInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.ResolveTestMethodArguments(System.Reflection.ParameterInfo[],System.Object[])
+    name: ResolveTestMethodArguments
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_ResolveTestMethodArguments_System_Reflection_ParameterInfo___System_Object___
+  - name: (
+  - uid: System.Reflection.ParameterInfo
+    name: ParameterInfo
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection.parameterinfo
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Xunit.Sdk
+  commentId: N:Xunit.Sdk
+  href: Xunit.html
+  name: Xunit.Sdk
+  nameWithType: Xunit.Sdk
+  fullName: Xunit.Sdk
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+- uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions
+  commentId: T:Xunit.Internal.ObjectExtensions
+  parent: Xunit.Internal
+  href: Xunit.Internal.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: Xunit.Internal.ObjectExtensions
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: Xunit.v3.ExecutionErrorTestCase.#ctor*
+  commentId: Overload:Xunit.v3.ExecutionErrorTestCase.#ctor
+  href: Xunit.v3.ExecutionErrorTestCase.html#Xunit_v3_ExecutionErrorTestCase__ctor
+  name: ExecutionErrorTestCase
+  nameWithType: ExecutionErrorTestCase.ExecutionErrorTestCase
+  fullName: Xunit.v3.ExecutionErrorTestCase.ExecutionErrorTestCase
+  nameWithType.vb: ExecutionErrorTestCase.New
+  fullName.vb: Xunit.v3.ExecutionErrorTestCase.New
+  name.vb: New
+- uid: Xunit.v3.ExecutionErrorTestCase
+  commentId: T:Xunit.v3.ExecutionErrorTestCase
+  href: Xunit.v3.ExecutionErrorTestCase.html
+  name: ExecutionErrorTestCase
+  nameWithType: ExecutionErrorTestCase
+  fullName: Xunit.v3.ExecutionErrorTestCase
+- uid: Xunit.v3.IXunitTestMethod
+  commentId: T:Xunit.v3.IXunitTestMethod
+  parent: Xunit.v3
+  href: Xunit.v3.IXunitTestMethod.html
+  name: IXunitTestMethod
+  nameWithType: IXunitTestMethod
+  fullName: Xunit.v3.IXunitTestMethod
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Xunit.v3.ExecutionErrorTestCase.ErrorMessage*
+  commentId: Overload:Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+  href: Xunit.v3.ExecutionErrorTestCase.html#Xunit_v3_ExecutionErrorTestCase_ErrorMessage
+  name: ErrorMessage
+  nameWithType: ExecutionErrorTestCase.ErrorMessage
+  fullName: Xunit.v3.ExecutionErrorTestCase.ErrorMessage
+- uid: Xunit.v3.XunitTestCase.CreateTests
+  commentId: M:Xunit.v3.XunitTestCase.CreateTests
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_CreateTests
+  name: CreateTests()
+  nameWithType: XunitTestCase.CreateTests()
+  fullName: Xunit.v3.XunitTestCase.CreateTests()
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.CreateTests
+    name: CreateTests
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_CreateTests
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.CreateTests
+    name: CreateTests
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_CreateTests
+  - name: (
+  - name: )
+- uid: Xunit.v3.ExecutionErrorTestCase.CreateTests*
+  commentId: Overload:Xunit.v3.ExecutionErrorTestCase.CreateTests
+  href: Xunit.v3.ExecutionErrorTestCase.html#Xunit_v3_ExecutionErrorTestCase_CreateTests
+  name: CreateTests
+  nameWithType: ExecutionErrorTestCase.CreateTests
+  fullName: Xunit.v3.ExecutionErrorTestCase.CreateTests
+- uid: System.Threading.Tasks.ValueTask{System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IXunitTest}}
+  commentId: T:System.Threading.Tasks.ValueTask{System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IXunitTest}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.ValueTask`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<IReadOnlyCollection<IXunitTest>>
+  nameWithType: ValueTask<IReadOnlyCollection<IXunitTest>>
+  fullName: System.Threading.Tasks.ValueTask<System.Collections.Generic.IReadOnlyCollection<Xunit.v3.IXunitTest>>
+  nameWithType.vb: ValueTask(Of IReadOnlyCollection(Of IXunitTest))
+  fullName.vb: System.Threading.Tasks.ValueTask(Of System.Collections.Generic.IReadOnlyCollection(Of Xunit.v3.IXunitTest))
+  name.vb: ValueTask(Of IReadOnlyCollection(Of IXunitTest))
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Xunit.v3.IXunitTest
+    name: IXunitTest
+    href: Xunit.v3.IXunitTest.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Xunit.v3.IXunitTest
+    name: IXunitTest
+    href: Xunit.v3.IXunitTest.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.ValueTask`1
+  commentId: T:System.Threading.Tasks.ValueTask`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  name: ValueTask<TResult>
+  nameWithType: ValueTask<TResult>
+  fullName: System.Threading.Tasks.ValueTask<TResult>
+  nameWithType.vb: ValueTask(Of TResult)
+  fullName.vb: System.Threading.Tasks.ValueTask(Of TResult)
+  name.vb: ValueTask(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.ValueTask`1
+    name: ValueTask
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  commentId: M:Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Deserialize_Xunit_Sdk_IXunitSerializationInfo_
+  name: Deserialize(IXunitSerializationInfo)
+  nameWithType: XunitTestCase.Deserialize(IXunitSerializationInfo)
+  fullName: Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+    name: Deserialize
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Deserialize_Xunit_Sdk_IXunitSerializationInfo_
+  - name: (
+  - uid: Xunit.Sdk.IXunitSerializationInfo
+    name: IXunitSerializationInfo
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.Deserialize(Xunit.Sdk.IXunitSerializationInfo)
+    name: Deserialize
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Deserialize_Xunit_Sdk_IXunitSerializationInfo_
+  - name: (
+  - uid: Xunit.Sdk.IXunitSerializationInfo
+    name: IXunitSerializationInfo
+  - name: )
+- uid: Xunit.v3.ExecutionErrorTestCase.Deserialize*
+  commentId: Overload:Xunit.v3.ExecutionErrorTestCase.Deserialize
+  href: Xunit.v3.ExecutionErrorTestCase.html#Xunit_v3_ExecutionErrorTestCase_Deserialize_Xunit_Sdk_IXunitSerializationInfo_
+  name: Deserialize
+  nameWithType: ExecutionErrorTestCase.Deserialize
+  fullName: Xunit.v3.ExecutionErrorTestCase.Deserialize
+- uid: Xunit.Sdk.IXunitSerializationInfo
+  commentId: T:Xunit.Sdk.IXunitSerializationInfo
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IXunitSerializationInfo.html
+  name: IXunitSerializationInfo
+  nameWithType: IXunitSerializationInfo
+  fullName: Xunit.Sdk.IXunitSerializationInfo
+- uid: Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  commentId: M:Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  parent: Xunit.v3.XunitTestCase
+  href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Serialize_Xunit_Sdk_IXunitSerializationInfo_
+  name: Serialize(IXunitSerializationInfo)
+  nameWithType: XunitTestCase.Serialize(IXunitSerializationInfo)
+  fullName: Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+  spec.csharp:
+  - uid: Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+    name: Serialize
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Serialize_Xunit_Sdk_IXunitSerializationInfo_
+  - name: (
+  - uid: Xunit.Sdk.IXunitSerializationInfo
+    name: IXunitSerializationInfo
+  - name: )
+  spec.vb:
+  - uid: Xunit.v3.XunitTestCase.Serialize(Xunit.Sdk.IXunitSerializationInfo)
+    name: Serialize
+    href: Xunit.v3.XunitTestCase.html#Xunit_v3_XunitTestCase_Serialize_Xunit_Sdk_IXunitSerializationInfo_
+  - name: (
+  - uid: Xunit.Sdk.IXunitSerializationInfo
+    name: IXunitSerializationInfo
+  - name: )
+- uid: Xunit.v3.ExecutionErrorTestCase.Serialize*
+  commentId: Overload:Xunit.v3.ExecutionErrorTestCase.Serialize
+  href: Xunit.v3.ExecutionErrorTestCase.html#Xunit_v3_ExecutionErrorTestCase_Serialize_Xunit_Sdk_IXunitSerializationInfo_
+  name: Serialize
+  nameWithType: ExecutionErrorTestCase.Serialize
+  fullName: Xunit.v3.ExecutionErrorTestCase.Serialize

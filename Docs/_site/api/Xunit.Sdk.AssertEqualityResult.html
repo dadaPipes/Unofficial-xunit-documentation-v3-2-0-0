@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class AssertEqualityResult | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class AssertEqualityResult | Unofficial xunit docs ">
+      
+      <meta name="description" content="Indicates the result of comparing two values for equality. Includes success/failure information, as well as indices where the values differ, if the values are indexed (e.g., collections or strings).">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Sdk.AssertEqualityResult">
+
+
+
+  <h1 id="Xunit_Sdk_AssertEqualityResult" data-uid="Xunit.Sdk.AssertEqualityResult" class="text-break">
+Class AssertEqualityResult  
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Sdk.html">Sdk</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.assert.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Indicates the result of comparing two values for equality. Includes success/failure information, as well
+as indices where the values differ, if the values are indexed (e.g., collections or strings).</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class AssertEqualityResult : IEquatable&lt;AssertEqualityResult&gt;</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">AssertEqualityResult</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.iequatable-1">IEquatable</a>&lt;<a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a>&gt;</div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_Equal_" data-uid="Xunit.Sdk.AssertEqualityResult.Equal*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_Equal" data-uid="Xunit.Sdk.AssertEqualityResult.Equal">
+  Equal
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns <code>true</code> if the values were equal; <code>false</code>, otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equal { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_Exception_" data-uid="Xunit.Sdk.AssertEqualityResult.Exception*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_Exception" data-uid="Xunit.Sdk.AssertEqualityResult.Exception">
+  Exception
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the exception that caused the failure, if it was based on an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Exception? Exception { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_InnerResult_" data-uid="Xunit.Sdk.AssertEqualityResult.InnerResult*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_InnerResult" data-uid="Xunit.Sdk.AssertEqualityResult.InnerResult">
+  InnerResult
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the comparer result for any inner comparison that caused this result
+to fail; returns <code>null</code> if there was no inner comparison.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AssertEqualityResult? InnerResult { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+  <h4 class="section" id="Xunit_Sdk_AssertEqualityResult_InnerResult_remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>If this value is set, then it generally indicates that this comparison was a
+failed collection comparison, and the inner result indicates the specific
+item comparison that caused the failure.</p>
+</div>
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_MismatchIndexX_" data-uid="Xunit.Sdk.AssertEqualityResult.MismatchIndexX*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_MismatchIndexX" data-uid="Xunit.Sdk.AssertEqualityResult.MismatchIndexX">
+  MismatchIndexX
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the index of the mismatch for the <code>X</code> value, if the comparison
+failed on a specific index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MismatchIndexX { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_MismatchIndexY_" data-uid="Xunit.Sdk.AssertEqualityResult.MismatchIndexY*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_MismatchIndexY" data-uid="Xunit.Sdk.AssertEqualityResult.MismatchIndexY">
+  MismatchIndexY
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the index of the mismatch for the <code>Y</code> value, if the comparison
+failed on a specific index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int? MismatchIndexY { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_X_" data-uid="Xunit.Sdk.AssertEqualityResult.X*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_X" data-uid="Xunit.Sdk.AssertEqualityResult.X">
+  X
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The left-hand value in the comparison</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? X { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_Y_" data-uid="Xunit.Sdk.AssertEqualityResult.Y*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_Y" data-uid="Xunit.Sdk.AssertEqualityResult.Y">
+  Y
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>The right-hand value in the comparison</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object? Y { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_Equals_" data-uid="Xunit.Sdk.AssertEqualityResult.Equals*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_Equals_System_Object_" data-uid="Xunit.Sdk.AssertEqualityResult.Equals(System.Object)">
+  Equals(object?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object? obj)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>obj</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <code>true</code> if the values are equal; <code>false</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_Equals_" data-uid="Xunit.Sdk.AssertEqualityResult.Equals*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_Equals_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.Equals(Xunit.Sdk.AssertEqualityResult)">
+  Equals(AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether the specified object is equal to the current object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(AssertEqualityResult? other)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>other</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The object to compare with the current object.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <code>true</code> if the values are equal; <code>false</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_ForMismatch_" data-uid="Xunit.Sdk.AssertEqualityResult.ForMismatch*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_ForMismatch_System_Object_System_Object_System_Int32_System_Exception_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.ForMismatch(System.Object,System.Object,System.Int32,System.Exception,Xunit.Sdk.AssertEqualityResult)">
+  ForMismatch(object?, object?, int, Exception?, AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> where the values were
+not equal, and there is a single mismatch index (for example, when comparing two
+collections).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssertEqualityResult ForMismatch(object? x, object? y, int mismatchIndex, Exception? exception = null, AssertEqualityResult? innerResult = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The left-hand value in the comparison</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The right-hand value in the comparison</p>
+</dd>
+    <dt><code>mismatchIndex</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The mismatch index for both <code>X</code> and <code>Y</code> values</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The optional exception that was thrown to cause the failure</p>
+</dd>
+    <dt><code>innerResult</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The optional inner result that caused the equality failure</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_ForMismatch_" data-uid="Xunit.Sdk.AssertEqualityResult.ForMismatch*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_ForMismatch_System_Object_System_Object_System_Int32_System_Int32_System_Exception_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.ForMismatch(System.Object,System.Object,System.Int32,System.Int32,System.Exception,Xunit.Sdk.AssertEqualityResult)">
+  ForMismatch(object?, object?, int, int, Exception?, AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> where the values were
+not equal, and there are separate mismatch indices (for example, when comparing two
+strings under special circumstances).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssertEqualityResult ForMismatch(object? x, object? y, int mismatchIndexX, int mismatchIndexY, Exception? exception = null, AssertEqualityResult? innerResult = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The left-hand value in the comparison</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The right-hand value in the comparison</p>
+</dd>
+    <dt><code>mismatchIndexX</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The mismatch index for the <code>X</code> value</p>
+</dd>
+    <dt><code>mismatchIndexY</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>The mismatch index for the <code>Y</code> value</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The optional exception that was thrown to cause the failure</p>
+</dd>
+    <dt><code>innerResult</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The optional inner result that caused the equality failure</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_ForResult_" data-uid="Xunit.Sdk.AssertEqualityResult.ForResult*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_ForResult_System_Boolean_System_Object_System_Object_System_Exception_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.ForResult(System.Boolean,System.Object,System.Object,System.Exception,Xunit.Sdk.AssertEqualityResult)">
+  ForResult(bool, object?, object?, Exception?, AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssertEqualityResult ForResult(bool equal, object? x, object? y, Exception? exception = null, AssertEqualityResult? innerResult = null)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>equal</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>A flag which indicates whether the values were equal</p>
+</dd>
+    <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The left-hand value in the comparison</p>
+</dd>
+    <dt><code>y</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>The right-hand value in the comparison</p>
+</dd>
+    <dt><code>exception</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></dt>
+    <dd><p>The optional exception that was thrown to cause the failure</p>
+</dd>
+    <dt><code>innerResult</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The optional inner result that caused the equality failure</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_GetHashCode_" data-uid="Xunit.Sdk.AssertEqualityResult.GetHashCode*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_GetHashCode" data-uid="Xunit.Sdk.AssertEqualityResult.GetHashCode">
+  GetHashCode()
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a hash code for the object, to be used in hashed containers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="operators">Operators
+</h2>
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_op_Equality_" data-uid="Xunit.Sdk.AssertEqualityResult.op_Equality*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_op_Equality_Xunit_Sdk_AssertEqualityResult_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.op_Equality(Xunit.Sdk.AssertEqualityResult,Xunit.Sdk.AssertEqualityResult)">
+  operator ==(AssertEqualityResult?, AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two instances of <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(AssertEqualityResult? left, AssertEqualityResult? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The first value</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The second value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <code>true</code> if the values are equal; <code>false</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_AssertEqualityResult_op_Inequality_" data-uid="Xunit.Sdk.AssertEqualityResult.op_Inequality*"></a>
+
+  <h3 id="Xunit_Sdk_AssertEqualityResult_op_Inequality_Xunit_Sdk_AssertEqualityResult_Xunit_Sdk_AssertEqualityResult_" data-uid="Xunit.Sdk.AssertEqualityResult.op_Inequality(Xunit.Sdk.AssertEqualityResult,Xunit.Sdk.AssertEqualityResult)">
+  operator !=(AssertEqualityResult?, AssertEqualityResult?)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Determines whether two instances of <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(AssertEqualityResult? left, AssertEqualityResult? right)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>left</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The first value</p>
+</dd>
+    <dt><code>right</code> <a class="xref" href="Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a></dt>
+    <dd><p>The second value</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Returns <code>true</code> if the values are not equal; <code>false</code>, otherwise.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

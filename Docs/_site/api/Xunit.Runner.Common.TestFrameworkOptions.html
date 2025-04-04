@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TestFrameworkOptions | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TestFrameworkOptions | Unofficial xunit docs ">
+      
+      <meta name="description" content="Represents options passed to a test framework for discovery or execution.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Runner_Common_TestFrameworkOptions.md&amp;value=---%0Auid%3A%20Xunit.Runner.Common.TestFrameworkOptions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Runner.Common.TestFrameworkOptions">
+
+
+
+  <h1 id="Xunit_Runner_Common_TestFrameworkOptions" data-uid="Xunit.Runner.Common.TestFrameworkOptions" class="text-break">
+Class TestFrameworkOptions  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L15"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Runner.html">Runner</a>.<a class="xref" href="Xunit.Runner.Common.html">Common</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Represents options passed to a test framework for discovery or execution.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class TestFrameworkOptions : ITestFrameworkDiscoveryOptions, ITestFrameworkExecutionOptions, ITestFrameworkOptions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TestFrameworkOptions</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></div>
+      <div><a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></div>
+      <div><a class="xref" href="Xunit.Sdk.ITestFrameworkOptions.html">ITestFrameworkOptions</a></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_">ObjectExtensions.AsValueTask(object?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_">ObjectExtensions.ValidateNullablePropertyValue&lt;T&gt;(object, T?, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetCulture(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformation_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformation(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformationOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformationOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplay_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetMethodDisplay(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptions_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptions(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptionsOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptionsOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheories_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheories(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheoriesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheoriesOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_">TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault(ITestFrameworkDiscoveryOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_String_">TestFrameworkOptionsReadWriteExtensions.SetCulture(ITestFrameworkDiscoveryOptions, string?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages(ITestFrameworkDiscoveryOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetIncludeSourceInformation_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetIncludeSourceInformation(ITestFrameworkDiscoveryOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages(ITestFrameworkDiscoveryOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplay_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_Xunit_Sdk_TestMethodDisplay__">TestFrameworkOptionsReadWriteExtensions.SetMethodDisplay(ITestFrameworkDiscoveryOptions, TestMethodDisplay?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplayOptions_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_Xunit_Sdk_TestMethodDisplayOptions__">TestFrameworkOptionsReadWriteExtensions.SetMethodDisplayOptions(ITestFrameworkDiscoveryOptions, TestMethodDisplayOptions?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPreEnumerateTheories_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetPreEnumerateTheories(ITestFrameworkDiscoveryOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength(ITestFrameworkDiscoveryOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth(ITestFrameworkDiscoveryOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount(ITestFrameworkDiscoveryOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength(ITestFrameworkDiscoveryOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting(ITestFrameworkDiscoveryOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetAssertEquivalentMaxDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetAssertEquivalentMaxDepth(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetCulture(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelization_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetDisableParallelization(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelizationOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetDisableParallelizationOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOption_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetExplicitOption(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOptionOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetExplicitOptionOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkips_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetFailSkips(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkipsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetFailSkipsOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarnings_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarnings(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarningsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarningsOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreads_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreads(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreadsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreadsOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithm_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithm(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithmOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithmOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSeed_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetSeed(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutput_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutput(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutputOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutputOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFail_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFail(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFailOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFailOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_">TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault(ITestFrameworkExecutionOptions)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetAssertEquivalentMaxDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetAssertEquivalentMaxDepth(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_Xunit_Sdk_ITestFrameworkExecutionOptions_System_String_">TestFrameworkOptionsReadWriteExtensions.SetCulture(ITestFrameworkExecutionOptions, string?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDisableParallelization_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetDisableParallelization(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetExplicitOption_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_Xunit_Sdk_ExplicitOption__">TestFrameworkOptionsReadWriteExtensions.SetExplicitOption(ITestFrameworkExecutionOptions, ExplicitOption?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailSkips_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetFailSkips(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailTestsWithWarnings_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetFailTestsWithWarnings(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMaxParallelThreads_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetMaxParallelThreads(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetParallelAlgorithm_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_Xunit_Sdk_ParallelAlgorithm__">TestFrameworkOptionsReadWriteExtensions.SetParallelAlgorithm(ITestFrameworkExecutionOptions, ParallelAlgorithm?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSeed_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__">TestFrameworkOptionsReadWriteExtensions.SetSeed(ITestFrameworkExecutionOptions, int?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetShowLiveOutput_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetShowLiveOutput(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetStopOnTestFail_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetStopOnTestFail(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  <div>
+      <a class="xref" href="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.html#Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__">TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting(ITestFrameworkExecutionOptions, bool?)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_Empty_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.Empty*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_Empty" data-uid="Xunit.Runner.Common.TestFrameworkOptions.Empty">
+  Empty()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>INTERNAL METHOD, FOR TESTING PURPOSES ONLY. DO NOT CALL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestFrameworkOptions Empty()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_ForDiscovery_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForDiscovery*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_ForDiscovery_Xunit_Runner_Common_TestAssemblyConfiguration_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForDiscovery(Xunit.Runner.Common.TestAssemblyConfiguration)">
+  ForDiscovery(TestAssemblyConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a> for discovery purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITestFrameworkDiscoveryOptions ForDiscovery(TestAssemblyConfiguration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configuration</code> <a class="xref" href="Xunit.Runner.Common.TestAssemblyConfiguration.html">TestAssemblyConfiguration</a></dt>
+    <dd><p>The configuration to copy values from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_ForDiscoveryFromSerialization_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForDiscoveryFromSerialization*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_ForDiscoveryFromSerialization_System_String_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForDiscoveryFromSerialization(System.String)">
+  ForDiscoveryFromSerialization(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L71"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a> for discovery purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITestFrameworkDiscoveryOptions ForDiscoveryFromSerialization(string optionsJson)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>optionsJson</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The serialized discovery options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_ForExecution_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForExecution*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_ForExecution_Xunit_Runner_Common_TestAssemblyConfiguration_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForExecution(Xunit.Runner.Common.TestAssemblyConfiguration)">
+  ForExecution(TestAssemblyConfiguration)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L78"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a> for execution purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITestFrameworkExecutionOptions ForExecution(TestAssemblyConfiguration configuration)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>configuration</code> <a class="xref" href="Xunit.Runner.Common.TestAssemblyConfiguration.html">TestAssemblyConfiguration</a></dt>
+    <dd><p>The configuration to copy values from.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_ForExecutionFromSerialization_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForExecutionFromSerialization*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_ForExecutionFromSerialization_System_String_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ForExecutionFromSerialization(System.String)">
+  ForExecutionFromSerialization(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an instance of <a class="xref" href="Xunit.Runner.Common.TestFrameworkOptions.html">TestFrameworkOptions</a> for execution purposes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ITestFrameworkExecutionOptions ForExecutionFromSerialization(string optionsJson)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>optionsJson</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The serialized execution options.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_GetValue_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.GetValue*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_GetValue__1_System_String_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.GetValue``1(System.String)">
+  GetValue&lt;TValue&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a value from the options collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TValue? GetValue&lt;TValue&gt;(string name)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">TValue</span></dt>
+    <dd><p>Returns the value.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of the value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_SetValue_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.SetValue*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_SetValue__1_System_String___0_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.SetValue``1(System.String,``0)">
+  SetValue&lt;TValue&gt;(string, TValue)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L144"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a value into the options collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetValue&lt;TValue&gt;(string name, TValue value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>name</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The name of the value.</p>
+</dd>
+    <dt><code>value</code> <span class="xref">TValue</span></dt>
+    <dd><p>The value.</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>TValue</code></dt>
+    <dd><p>The type of the value.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Runner_Common_TestFrameworkOptions_ToJson_" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ToJson*"></a>
+
+  <h3 id="Xunit_Runner_Common_TestFrameworkOptions_ToJson" data-uid="Xunit.Runner.Common.TestFrameworkOptions.ToJson">
+  ToJson()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Converts the test framework options into JSON. Used for serializing the options
+for sending across a process boundary.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string ToJson()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The serialized framework options.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Frameworks/TestFrameworkOptions.cs/#L15" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

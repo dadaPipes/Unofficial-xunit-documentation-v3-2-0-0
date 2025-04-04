@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class TestFrameworkOptionsReadWriteExtensions | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class TestFrameworkOptionsReadWriteExtensions | Unofficial xunit docs ">
+      
+      <meta name="description" content="Extension methods for reading and writing  and .">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/xunit/xunit/new/229879b7653ec0573f36ca4759ccfc915be11a21/apiSpec/new?filename=Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions.md&amp;value=---%0Auid%3A%20Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions">
+
+
+
+  <h1 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions" class="text-break">
+Class TestFrameworkOptionsReadWriteExtensions  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L11"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Xunit.html">Xunit</a>.<a class="xref" href="Xunit.Sdk.html">Sdk</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>xunit.v3.runner.common.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Extension methods for reading and writing <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a>
+and <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a>.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class TestFrameworkOptionsReadWriteExtensions</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">TestFrameworkOptionsReadWriteExtensions</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetAssertEquivalentMaxDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetAssertEquivalentMaxDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetAssertEquivalentMaxDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetAssertEquivalentMaxDepth(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetAssertEquivalentMaxDepth(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L363"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a max recursive object depth for comparisons done with <code>Assert.Equivalent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetAssertEquivalentMaxDepth(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetCulture*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetCulture(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetCulture(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L24"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the culture to use for discovering tests. <code>null</code> uses the default OS culture;
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a> uses the invariant culture; any other value passes the
+provided value to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.-ctor#system-globalization-cultureinfo-ctor(system-string)">CultureInfo(string)</a> and uses the resulting object
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentculture">DefaultThreadCurrentCulture</a> and
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentuiculture">DefaultThreadCurrentUICulture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? GetCulture(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetCulture*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetCulture_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetCulture(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetCulture(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L377"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the culture to use for running tests. <code>null</code> uses the default OS culture;
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a> uses the invariant culture; any other value passes the
+provided value to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.-ctor#system-globalization-cultureinfo-ctor(system-string)">CultureInfo(string)</a> and uses the resulting object
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentculture">DefaultThreadCurrentCulture</a> and
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentuiculture">DefaultThreadCurrentUICulture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string? GetCulture(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetDiagnosticMessages(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L34"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetDiagnosticMessages(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessages(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetDiagnosticMessages(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L387"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetDiagnosticMessages(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetDiagnosticMessagesOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether diagnostic messages will be emitted. If the flag is not
+set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetDiagnosticMessagesOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDiagnosticMessagesOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetDiagnosticMessagesOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L398"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether diagnostic messages will be emitted. If the flag is not
+present, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetDiagnosticMessagesOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelization_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDisableParallelization*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelization_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDisableParallelization(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetDisableParallelization(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L404"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to disable parallelization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetDisableParallelization(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelizationOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDisableParallelizationOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetDisableParallelizationOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetDisableParallelizationOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetDisableParallelizationOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L415"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to disable parallelization. If the flag is not present, returns the
+default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetDisableParallelizationOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOption_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetExplicitOption*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOption_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetExplicitOption(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetExplicitOption(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L421"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that indicates how explicit tests should be handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExplicitOption? GetExplicitOption(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ExplicitOption.html">ExplicitOption</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOptionOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetExplicitOptionOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetExplicitOptionOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetExplicitOptionOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetExplicitOptionOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L433"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that indicates how explicit tests should be handled. If the flag is not present,
+returns the default value (<a class="xref" href="Xunit.Sdk.ExplicitOption.html#Xunit_Sdk_ExplicitOption_Off">Off</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ExplicitOption GetExplicitOptionOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ExplicitOption.html">ExplicitOption</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkips_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailSkips*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkips_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailSkips(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetFailSkips(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L439"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to fail skipped tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetFailSkips(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkipsOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailSkipsOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailSkipsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailSkipsOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetFailSkipsOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L450"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to fail skipped tests. If the flag is not present, returns the default
+value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetFailSkipsOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarnings_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarnings*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarnings_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarnings(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetFailTestsWithWarnings(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L456"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to fail passing tests with warnings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetFailTestsWithWarnings(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarningsOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarningsOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetFailTestsWithWarningsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetFailTestsWithWarningsOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetFailTestsWithWarningsOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L467"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag to fail passing tests with warning. If the flag is not present, returns
+the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetFailTestsWithWarningsOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformation_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformation*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformation_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformation(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetIncludeSourceInformation(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether discovered test cases should include source information.
+Note that not all runners have access to source information, so this flag does not guarantee
+that source information will be provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetIncludeSourceInformation(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformationOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformationOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetIncludeSourceInformationOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetIncludeSourceInformationOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetIncludeSourceInformationOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L66"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether discovered test cases should include source information.
+Note that not all runners have access to source information, so this flag does not guarantee
+that source information will be provided. If the flag is not present, returns the default
+value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetIncludeSourceInformationOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetInternalDiagnosticMessages(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L72"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether internal diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetInternalDiagnosticMessages(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessages(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetInternalDiagnosticMessages(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L473"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether internal diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetInternalDiagnosticMessages(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetInternalDiagnosticMessagesOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L83"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether internal diagnostic messages will be emitted. If the flag is not
+set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetInternalDiagnosticMessagesOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetInternalDiagnosticMessagesOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetInternalDiagnosticMessagesOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetInternalDiagnosticMessagesOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L484"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether internal diagnostic messages will be emitted. If the flag is not
+present, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetInternalDiagnosticMessagesOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreads_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreads*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreads_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreads(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetMaxParallelThreads(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L490"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of threads to use when running tests in parallel.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetMaxParallelThreads(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreadsOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreadsOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMaxParallelThreadsOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMaxParallelThreadsOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetMaxParallelThreadsOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L502"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum number of threads to use when running tests in parallel. If set to 0 (or not set),
+the value of <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.environment.processorcount">ProcessorCount</a> is used; if set to a value less
+than 0, does not limit the number of threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int GetMaxParallelThreadsOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplay_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplay*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplay_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplay(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetMethodDisplay(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L89"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines the default display name format for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestMethodDisplay? GetMethodDisplay(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplay.html">TestMethodDisplay</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptions*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptions_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptions(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetMethodDisplayOptions(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L107"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines the default display name format options for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestMethodDisplayOptions? GetMethodDisplayOptions(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html">TestMethodDisplayOptions</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptionsOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptionsOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOptionsOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOptionsOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetMethodDisplayOptionsOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines the default display name format options for test methods. If the flag is not present,
+returns the default value (<a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html#Xunit_Sdk_TestMethodDisplayOptions_None">None</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestMethodDisplayOptions GetMethodDisplayOptionsOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html">TestMethodDisplayOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetMethodDisplayOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetMethodDisplayOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetMethodDisplayOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L101"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines the default display name format for test methods. If the flag is not present,
+returns the default value (<a class="xref" href="Xunit.Sdk.TestMethodDisplay.html#Xunit_Sdk_TestMethodDisplay_ClassAndMethod">ClassAndMethod</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static TestMethodDisplay GetMethodDisplayOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.TestMethodDisplay.html">TestMethodDisplay</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithm_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithm*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithm_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithm(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetParallelAlgorithm(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L517"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parallel algorithm to be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ParallelAlgorithm? GetParallelAlgorithm(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html">ParallelAlgorithm</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithmOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithmOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetParallelAlgorithmOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetParallelAlgorithmOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetParallelAlgorithmOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L529"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the parallel algorithm to be used. If the flag is not present, return the default
+value (<a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html#Xunit_Sdk_ParallelAlgorithm_Conservative">Conservative</a>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static ParallelAlgorithm GetParallelAlgorithmOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html">ParallelAlgorithm</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheories_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheories*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheories_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheories(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPreEnumerateTheories(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L127"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether theories are pre-enumerated. If they enabled, then the
+discovery system will return a test case for each row of test data; they are disabled, then the
+discovery system will return a single test case for the theory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetPreEnumerateTheories(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheoriesOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheoriesOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPreEnumerateTheoriesOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPreEnumerateTheoriesOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPreEnumerateTheoriesOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L140"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether theories are pre-enumerated. If they enabled, then the
+discovery system will return a test case for each row of test data; they are disabled, then the
+discovery system will return a single test case for the theory. If the flag is not present,
+returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetPreEnumerateTheoriesOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPrintMaxEnumerableLength(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum length for printing collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxEnumerableLength(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxEnumerableLength(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetPrintMaxEnumerableLength(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L535"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum length for printing collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxEnumerableLength(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPrintMaxObjectDepth(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L156"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum recursive depth for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxObjectDepth(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectDepth(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetPrintMaxObjectDepth(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L545"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum recursive depth for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxObjectDepth(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPrintMaxObjectMemberCount(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum numbers of members to show for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxObjectMemberCount(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxObjectMemberCount(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetPrintMaxObjectMemberCount(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L555"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum numbers of members to show for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxObjectMemberCount(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetPrintMaxStringLength(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L176"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum length for printing strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxStringLength(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetPrintMaxStringLength(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetPrintMaxStringLength(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L565"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the maximum length for printing strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetPrintMaxStringLength(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSeed_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSeed*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSeed_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSeed(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetSeed(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L575"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the value that should be used to seed randomness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static int? GetSeed(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutput_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutput*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutput_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutput(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetShowLiveOutput(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L586"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag which indicates if the developer wishes to see output from <a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a>
+live while it's being reported (in addition to seeing it collected together when the test is finished).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetShowLiveOutput(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutputOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutputOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetShowLiveOutputOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetShowLiveOutputOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetShowLiveOutputOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L598"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag which indicates if the developer wishes to see output from <a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a>
+live while it's being reported (in addition to seeing it collected together when the test is finished).
+If the flag is not present, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetShowLiveOutputOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFail_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFail*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFail_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFail(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetStopOnTestFail(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L604"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net stop testing when a test fails.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetStopOnTestFail(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFailOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFailOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetStopOnTestFailOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetStopOnTestFailOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetStopOnTestFailOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L615"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net stop testing when a test fails. If the flag
+is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetStopOnTestFailOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetSynchronousMessageReporting(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L186"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net should report test results synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetSynchronousMessageReporting(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReporting(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetSynchronousMessageReporting(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L621"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net should report test results synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool? GetSynchronousMessageReporting(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_Xunit_Sdk_ITestFrameworkDiscoveryOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault(Xunit.Sdk.ITestFrameworkDiscoveryOptions)">
+  GetSynchronousMessageReportingOrDefault(ITestFrameworkDiscoveryOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L197"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net should report test results synchronously.
+If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetSynchronousMessageReportingOrDefault(this ITestFrameworkDiscoveryOptions discoveryOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_GetSynchronousMessageReportingOrDefault_Xunit_Sdk_ITestFrameworkExecutionOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.GetSynchronousMessageReportingOrDefault(Xunit.Sdk.ITestFrameworkExecutionOptions)">
+  GetSynchronousMessageReportingOrDefault(ITestFrameworkExecutionOptions)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L632"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a flag that determines whether xUnit.net should report test results synchronously.
+If the flag is not set, returns the default value (<code>false</code>).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool GetSynchronousMessageReportingOrDefault(this ITestFrameworkExecutionOptions executionOptions)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetAssertEquivalentMaxDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetAssertEquivalentMaxDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetAssertEquivalentMaxDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetAssertEquivalentMaxDepth(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetAssertEquivalentMaxDepth(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L642"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets a max recursive object depth for comparisons done with <code>Assert.Equivalent</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetAssertEquivalentMaxDepth(this ITestFrameworkExecutionOptions executionOptions, int? maxDepth)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>maxDepth</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetCulture*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_String_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetCulture(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.String)">
+  SetCulture(ITestFrameworkDiscoveryOptions, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L211"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the culture to use for discovering tests. <code>null</code> uses the default OS culture;
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a> uses the invariant culture; any other value passes the
+provided value to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.-ctor#system-globalization-cultureinfo-ctor(system-string)">CultureInfo(string)</a> and uses the resulting object
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentculture">DefaultThreadCurrentCulture</a> and
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentuiculture">DefaultThreadCurrentUICulture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetCulture(this ITestFrameworkDiscoveryOptions discoveryOptions, string? culture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>culture</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetCulture*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetCulture_Xunit_Sdk_ITestFrameworkExecutionOptions_System_String_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetCulture(Xunit.Sdk.ITestFrameworkExecutionOptions,System.String)">
+  SetCulture(ITestFrameworkExecutionOptions, string?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L658"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the culture to use for running tests. <code>null</code> uses the default OS culture;
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string.empty">Empty</a> uses the invariant culture; any other value passes the
+provided value to <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.-ctor#system-globalization-cultureinfo-ctor(system-string)">CultureInfo(string)</a> and uses the resulting object
+with <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentculture">DefaultThreadCurrentCulture</a> and
+<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo.defaultthreadcurrentuiculture">DefaultThreadCurrentUICulture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetCulture(this ITestFrameworkExecutionOptions executionOptions, string? culture)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>culture</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Boolean})">
+  SetDiagnosticMessages(ITestFrameworkDiscoveryOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L223"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDiagnosticMessages(this ITestFrameworkDiscoveryOptions discoveryOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDiagnosticMessages(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetDiagnosticMessages(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L670"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDiagnosticMessages(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDisableParallelization_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDisableParallelization*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetDisableParallelization_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetDisableParallelization(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetDisableParallelization(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L682"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag to disable parallelization.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetDisableParallelization(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetExplicitOption_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetExplicitOption*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetExplicitOption_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_Xunit_Sdk_ExplicitOption__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetExplicitOption(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{Xunit.Sdk.ExplicitOption})">
+  SetExplicitOption(ITestFrameworkExecutionOptions, ExplicitOption?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L694"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag to describe how explicit tests should be handled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetExplicitOption(this ITestFrameworkExecutionOptions executionOptions, ExplicitOption? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="Xunit.Sdk.ExplicitOption.html">ExplicitOption</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailSkips_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetFailSkips*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailSkips_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetFailSkips(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetFailSkips(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L706"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag to fail skipped tests.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetFailSkips(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailTestsWithWarnings_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetFailTestsWithWarnings*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetFailTestsWithWarnings_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetFailTestsWithWarnings(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetFailTestsWithWarnings(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L718"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag to fail passing tests with warnings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetFailTestsWithWarnings(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetIncludeSourceInformation_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetIncludeSourceInformation*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetIncludeSourceInformation_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetIncludeSourceInformation(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Boolean})">
+  SetIncludeSourceInformation(ITestFrameworkDiscoveryOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L237"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether discovered test cases should include source information.
+Note that not all runners have access to source information, so this flag does not guarantee
+that source information will be provided.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetIncludeSourceInformation(this ITestFrameworkDiscoveryOptions discoveryOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Boolean})">
+  SetInternalDiagnosticMessages(ITestFrameworkDiscoveryOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L249"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether internal diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetInternalDiagnosticMessages(this ITestFrameworkDiscoveryOptions discoveryOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetInternalDiagnosticMessages_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetInternalDiagnosticMessages(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetInternalDiagnosticMessages(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L730"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether internal diagnostic messages will be emitted.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetInternalDiagnosticMessages(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMaxParallelThreads_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMaxParallelThreads*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMaxParallelThreads_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMaxParallelThreads(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetMaxParallelThreads(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L743"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum number of threads to use when running tests in parallel.
+If set to 0 (the default value), does not limit the number of threads.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetMaxParallelThreads(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplay_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMethodDisplay*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplay_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_Xunit_Sdk_TestMethodDisplay__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMethodDisplay(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{Xunit.Sdk.TestMethodDisplay})">
+  SetMethodDisplay(ITestFrameworkDiscoveryOptions, TestMethodDisplay?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L261"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines the default display name format for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetMethodDisplay(this ITestFrameworkDiscoveryOptions discoveryOptions, TestMethodDisplay? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="Xunit.Sdk.TestMethodDisplay.html">TestMethodDisplay</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplayOptions_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMethodDisplayOptions*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetMethodDisplayOptions_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_Xunit_Sdk_TestMethodDisplayOptions__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetMethodDisplayOptions(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{Xunit.Sdk.TestMethodDisplayOptions})">
+  SetMethodDisplayOptions(ITestFrameworkDiscoveryOptions, TestMethodDisplayOptions?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L273"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the flags that determine the default display options for test methods.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetMethodDisplayOptions(this ITestFrameworkDiscoveryOptions discoveryOptions, TestMethodDisplayOptions? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="Xunit.Sdk.TestMethodDisplayOptions.html">TestMethodDisplayOptions</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetParallelAlgorithm_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetParallelAlgorithm*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetParallelAlgorithm_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_Xunit_Sdk_ParallelAlgorithm__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetParallelAlgorithm(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{Xunit.Sdk.ParallelAlgorithm})">
+  SetParallelAlgorithm(ITestFrameworkExecutionOptions, ParallelAlgorithm?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L755"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the parallel algorithm to be used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetParallelAlgorithm(this ITestFrameworkExecutionOptions executionOptions, ParallelAlgorithm? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="Xunit.Sdk.ParallelAlgorithm.html">ParallelAlgorithm</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPreEnumerateTheories_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPreEnumerateTheories*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPreEnumerateTheories_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPreEnumerateTheories(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Boolean})">
+  SetPreEnumerateTheories(ITestFrameworkDiscoveryOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L287"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether theories are pre-enumerated. If they enabled, then the
+discovery system will return a test case for each row of test data; they are disabled, then the
+discovery system will return a single test case for the theory.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPreEnumerateTheories(this ITestFrameworkDiscoveryOptions discoveryOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Int32})">
+  SetPrintMaxEnumerableLength(ITestFrameworkDiscoveryOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L299"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum length for printing collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxEnumerableLength(this ITestFrameworkDiscoveryOptions discoveryOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxEnumerableLength_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxEnumerableLength(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetPrintMaxEnumerableLength(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L767"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum length for printing collections.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxEnumerableLength(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Int32})">
+  SetPrintMaxObjectDepth(ITestFrameworkDiscoveryOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L311"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum recursive depth for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxObjectDepth(this ITestFrameworkDiscoveryOptions discoveryOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectDepth_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectDepth(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetPrintMaxObjectDepth(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L779"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum recursive depth for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxObjectDepth(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Int32})">
+  SetPrintMaxObjectMemberCount(ITestFrameworkDiscoveryOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L323"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum numbers of members to show for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxObjectMemberCount(this ITestFrameworkDiscoveryOptions discoveryOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxObjectMemberCount_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxObjectMemberCount(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetPrintMaxObjectMemberCount(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L791"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum numbers of members to show for printing objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxObjectMemberCount(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Int32})">
+  SetPrintMaxStringLength(ITestFrameworkDiscoveryOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L335"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum length for printing strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxStringLength(this ITestFrameworkDiscoveryOptions discoveryOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetPrintMaxStringLength_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetPrintMaxStringLength(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetPrintMaxStringLength(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L803"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the maximum length for printing strings.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetPrintMaxStringLength(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSeed_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSeed*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSeed_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Int32__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSeed(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Int32})">
+  SetSeed(ITestFrameworkExecutionOptions, int?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L815"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the value that should be used to seed randomness.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSeed(this ITestFrameworkExecutionOptions executionOptions, int? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetShowLiveOutput_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetShowLiveOutput*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetShowLiveOutput_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetShowLiveOutput(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetShowLiveOutput(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L828"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag which indicates if the developer wishes to see output from <a class="xref" href="Xunit.ITestOutputHelper.html">ITestOutputHelper</a>
+live while it's being reported (in addition to seeing it collected together when the test is finished).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetShowLiveOutput(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetStopOnTestFail_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetStopOnTestFail*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetStopOnTestFail_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetStopOnTestFail(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetStopOnTestFail(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L840"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether xUnit.net stop testing when a test fails.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetStopOnTestFail(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting(Xunit.Sdk.ITestFrameworkDiscoveryOptions,System.Nullable{System.Boolean})">
+  SetSynchronousMessageReporting(ITestFrameworkDiscoveryOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L347"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether xUnit.net should report test results synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSynchronousMessageReporting(this ITestFrameworkDiscoveryOptions discoveryOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>discoveryOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkDiscoveryOptions.html">ITestFrameworkDiscoveryOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting*"></a>
+
+  <h3 id="Xunit_Sdk_TestFrameworkOptionsReadWriteExtensions_SetSynchronousMessageReporting_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Nullable_System_Boolean__" data-uid="Xunit.Sdk.TestFrameworkOptionsReadWriteExtensions.SetSynchronousMessageReporting(Xunit.Sdk.ITestFrameworkExecutionOptions,System.Nullable{System.Boolean})">
+  SetSynchronousMessageReporting(ITestFrameworkExecutionOptions, bool?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L852"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets a flag that determines whether xUnit.net should report test results synchronously.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetSynchronousMessageReporting(this ITestFrameworkExecutionOptions executionOptions, bool? value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>executionOptions</code> <a class="xref" href="Xunit.Sdk.ITestFrameworkExecutionOptions.html">ITestFrameworkExecutionOptions</a></dt>
+    <dd></dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a>?</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/xunit/xunit/blob/229879b7653ec0573f36ca4759ccfc915be11a21/src/xunit.v3.runner.common/Extensions/TestFrameworkOptionsReadWriteExtensions.cs/#L11" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

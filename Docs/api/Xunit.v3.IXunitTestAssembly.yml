@@ -1,0 +1,1147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Xunit.v3.IXunitTestAssembly
+  commentId: T:Xunit.v3.IXunitTestAssembly
+  id: IXunitTestAssembly
+  parent: Xunit.v3
+  children:
+  - Xunit.v3.IXunitTestAssembly.Assembly
+  - Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+  - Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+  - Xunit.v3.IXunitTestAssembly.CollectionBehavior
+  - Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+  - Xunit.v3.IXunitTestAssembly.TargetFramework
+  - Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+  - Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+  - Xunit.v3.IXunitTestAssembly.Version
+  langs:
+  - csharp
+  - vb
+  name: IXunitTestAssembly
+  nameWithType: IXunitTestAssembly
+  fullName: Xunit.v3.IXunitTestAssembly
+  type: Interface
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: IXunitTestAssembly
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 10
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Represents a test assembly from xUnit.net v3 based on reflection.
+  example: []
+  syntax:
+    content: 'public interface IXunitTestAssembly : ITestAssembly, IAssemblyMetadata'
+    content.vb: Public Interface IXunitTestAssembly Inherits ITestAssembly, IAssemblyMetadata
+  inheritedMembers:
+  - Xunit.Sdk.ITestAssembly.ModuleVersionID
+  - Xunit.Sdk.IAssemblyMetadata.AssemblyName
+  - Xunit.Sdk.IAssemblyMetadata.AssemblyPath
+  - Xunit.Sdk.IAssemblyMetadata.ConfigFilePath
+  - Xunit.Sdk.IAssemblyMetadata.Traits
+  - Xunit.Sdk.IAssemblyMetadata.UniqueID
+  extensionMethods:
+  - System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  - System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+- uid: Xunit.v3.IXunitTestAssembly.Assembly
+  commentId: P:Xunit.v3.IXunitTestAssembly.Assembly
+  id: Assembly
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: Assembly
+  nameWithType: IXunitTestAssembly.Assembly
+  fullName: Xunit.v3.IXunitTestAssembly.Assembly
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Assembly
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 19
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the assembly of this test assembly.
+  remarks: >-
+    This should only be used to execute a test assembly. All reflection should be abstracted here
+
+    instead for better testability.
+  example: []
+  syntax:
+    content: Assembly Assembly { get; }
+    parameters: []
+    return:
+      type: System.Reflection.Assembly
+    content.vb: ReadOnly Property Assembly As Assembly
+  overload: Xunit.v3.IXunitTestAssembly.Assembly*
+- uid: Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+  commentId: P:Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+  id: AssemblyFixtureTypes
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: AssemblyFixtureTypes
+  nameWithType: IXunitTestAssembly.AssemblyFixtureTypes
+  fullName: Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: AssemblyFixtureTypes
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 24
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets a list of fixture types associated with the test assembly.
+  example: []
+  syntax:
+    content: IReadOnlyCollection<Type> AssemblyFixtureTypes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{System.Type}
+    content.vb: ReadOnly Property AssemblyFixtureTypes As IReadOnlyCollection(Of Type)
+  overload: Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes*
+- uid: Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+  commentId: P:Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+  id: BeforeAfterTestAttributes
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: BeforeAfterTestAttributes
+  nameWithType: IXunitTestAssembly.BeforeAfterTestAttributes
+  fullName: Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: BeforeAfterTestAttributes
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 29
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the <xref href="Xunit.v3.IBeforeAfterTestAttribute" data-throw-if-not-resolved="false"></xref>s attached to the test assembly.
+  example: []
+  syntax:
+    content: IReadOnlyCollection<IBeforeAfterTestAttribute> BeforeAfterTestAttributes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IBeforeAfterTestAttribute}
+    content.vb: ReadOnly Property BeforeAfterTestAttributes As IReadOnlyCollection(Of IBeforeAfterTestAttribute)
+  overload: Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes*
+- uid: Xunit.v3.IXunitTestAssembly.CollectionBehavior
+  commentId: P:Xunit.v3.IXunitTestAssembly.CollectionBehavior
+  id: CollectionBehavior
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: CollectionBehavior
+  nameWithType: IXunitTestAssembly.CollectionBehavior
+  fullName: Xunit.v3.IXunitTestAssembly.CollectionBehavior
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CollectionBehavior
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 34
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the collection behavior associated with the assembly, if present.
+  example: []
+  syntax:
+    content: ICollectionBehaviorAttribute? CollectionBehavior { get; }
+    parameters: []
+    return:
+      type: Xunit.v3.ICollectionBehaviorAttribute
+    content.vb: ReadOnly Property CollectionBehavior As ICollectionBehaviorAttribute
+  overload: Xunit.v3.IXunitTestAssembly.CollectionBehavior*
+- uid: Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+  commentId: P:Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+  id: CollectionDefinitions
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: CollectionDefinitions
+  nameWithType: IXunitTestAssembly.CollectionDefinitions
+  fullName: Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: CollectionDefinitions
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 39
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the collection definitions attached to the test assembly, by collection name.
+  example: []
+  syntax:
+    content: IReadOnlyDictionary<string, (Type Type, CollectionDefinitionAttribute Attribute)> CollectionDefinitions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}}
+    content.vb: ReadOnly Property CollectionDefinitions As IReadOnlyDictionary(Of String, (Type As Type, Attribute As CollectionDefinitionAttribute))
+  overload: Xunit.v3.IXunitTestAssembly.CollectionDefinitions*
+- uid: Xunit.v3.IXunitTestAssembly.TargetFramework
+  commentId: P:Xunit.v3.IXunitTestAssembly.TargetFramework
+  id: TargetFramework
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: TargetFramework
+  nameWithType: IXunitTestAssembly.TargetFramework
+  fullName: Xunit.v3.IXunitTestAssembly.TargetFramework
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TargetFramework
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 45
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: >-
+    Gets the target framework the test assembly was compiled against. Will be in a
+
+    form like ".NETFramework,Version=v4.7.2" or ".NETCoreApp,Version=v6.0".
+  example: []
+  syntax:
+    content: string TargetFramework { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property TargetFramework As String
+  overload: Xunit.v3.IXunitTestAssembly.TargetFramework*
+- uid: Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+  commentId: P:Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+  id: TestCaseOrderer
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: TestCaseOrderer
+  nameWithType: IXunitTestAssembly.TestCaseOrderer
+  fullName: Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestCaseOrderer
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 50
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the test case orderer for the test assembly, if present.
+  example: []
+  syntax:
+    content: ITestCaseOrderer? TestCaseOrderer { get; }
+    parameters: []
+    return:
+      type: Xunit.v3.ITestCaseOrderer
+    content.vb: ReadOnly Property TestCaseOrderer As ITestCaseOrderer
+  overload: Xunit.v3.IXunitTestAssembly.TestCaseOrderer*
+- uid: Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+  commentId: P:Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+  id: TestCollectionOrderer
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: TestCollectionOrderer
+  nameWithType: IXunitTestAssembly.TestCollectionOrderer
+  fullName: Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: TestCollectionOrderer
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 55
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the test collection orderer for the test assembly, if present.
+  example: []
+  syntax:
+    content: ITestCollectionOrderer? TestCollectionOrderer { get; }
+    parameters: []
+    return:
+      type: Xunit.v3.ITestCollectionOrderer
+    content.vb: ReadOnly Property TestCollectionOrderer As ITestCollectionOrderer
+  overload: Xunit.v3.IXunitTestAssembly.TestCollectionOrderer*
+- uid: Xunit.v3.IXunitTestAssembly.Version
+  commentId: P:Xunit.v3.IXunitTestAssembly.Version
+  id: Version
+  parent: Xunit.v3.IXunitTestAssembly
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: IXunitTestAssembly.Version
+  fullName: Xunit.v3.IXunitTestAssembly.Version
+  type: Property
+  source:
+    remote:
+      path: src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+      branch: 229879b7653ec0573f36ca4759ccfc915be11a21
+      repo: https://github.com/xunit/xunit.git
+    id: Version
+    path: ../v3-2.0.0/src/xunit.v3.core/Abstractions/ObjectModel/IXunitTestAssembly.cs
+    startLine: 60
+  assemblies:
+  - xunit.v3.core
+  namespace: Xunit.v3
+  summary: Gets the assembly version.
+  example: []
+  syntax:
+    content: Version Version { get; }
+    parameters: []
+    return:
+      type: System.Version
+    content.vb: ReadOnly Property Version As Version
+  overload: Xunit.v3.IXunitTestAssembly.Version*
+references:
+- uid: Xunit.v3
+  commentId: N:Xunit.v3
+  href: Xunit.html
+  name: Xunit.v3
+  nameWithType: Xunit.v3
+  fullName: Xunit.v3
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.v3
+    name: v3
+    href: Xunit.v3.html
+- uid: Xunit.Sdk.ITestAssembly.ModuleVersionID
+  commentId: P:Xunit.Sdk.ITestAssembly.ModuleVersionID
+  parent: Xunit.Sdk.ITestAssembly
+  name: ModuleVersionID
+  nameWithType: ITestAssembly.ModuleVersionID
+  fullName: Xunit.Sdk.ITestAssembly.ModuleVersionID
+- uid: Xunit.Sdk.IAssemblyMetadata.AssemblyName
+  commentId: P:Xunit.Sdk.IAssemblyMetadata.AssemblyName
+  parent: Xunit.Sdk.IAssemblyMetadata
+  href: Xunit.Sdk.IAssemblyMetadata.html#Xunit_Sdk_IAssemblyMetadata_AssemblyName
+  name: AssemblyName
+  nameWithType: IAssemblyMetadata.AssemblyName
+  fullName: Xunit.Sdk.IAssemblyMetadata.AssemblyName
+- uid: Xunit.Sdk.IAssemblyMetadata.AssemblyPath
+  commentId: P:Xunit.Sdk.IAssemblyMetadata.AssemblyPath
+  parent: Xunit.Sdk.IAssemblyMetadata
+  href: Xunit.Sdk.IAssemblyMetadata.html#Xunit_Sdk_IAssemblyMetadata_AssemblyPath
+  name: AssemblyPath
+  nameWithType: IAssemblyMetadata.AssemblyPath
+  fullName: Xunit.Sdk.IAssemblyMetadata.AssemblyPath
+- uid: Xunit.Sdk.IAssemblyMetadata.ConfigFilePath
+  commentId: P:Xunit.Sdk.IAssemblyMetadata.ConfigFilePath
+  parent: Xunit.Sdk.IAssemblyMetadata
+  href: Xunit.Sdk.IAssemblyMetadata.html#Xunit_Sdk_IAssemblyMetadata_ConfigFilePath
+  name: ConfigFilePath
+  nameWithType: IAssemblyMetadata.ConfigFilePath
+  fullName: Xunit.Sdk.IAssemblyMetadata.ConfigFilePath
+- uid: Xunit.Sdk.IAssemblyMetadata.Traits
+  commentId: P:Xunit.Sdk.IAssemblyMetadata.Traits
+  parent: Xunit.Sdk.IAssemblyMetadata
+  href: Xunit.Sdk.IAssemblyMetadata.html#Xunit_Sdk_IAssemblyMetadata_Traits
+  name: Traits
+  nameWithType: IAssemblyMetadata.Traits
+  fullName: Xunit.Sdk.IAssemblyMetadata.Traits
+- uid: Xunit.Sdk.IAssemblyMetadata.UniqueID
+  commentId: P:Xunit.Sdk.IAssemblyMetadata.UniqueID
+  parent: Xunit.Sdk.IAssemblyMetadata
+  href: Xunit.Sdk.IAssemblyMetadata.html#Xunit_Sdk_IAssemblyMetadata_UniqueID
+  name: UniqueID
+  nameWithType: IAssemblyMetadata.UniqueID
+  fullName: Xunit.Sdk.IAssemblyMetadata.UniqueID
+- uid: System.Object.Xunit.Internal.ObjectExtensions.AsValueTask
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Nullable{{T}},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Object.Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1({T},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  parent: Xunit.Internal.ObjectExtensions
+  definition: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Sdk.ITestAssembly
+  commentId: T:Xunit.Sdk.ITestAssembly
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.ITestAssembly.html
+  name: ITestAssembly
+  nameWithType: ITestAssembly
+  fullName: Xunit.Sdk.ITestAssembly
+- uid: Xunit.Sdk.IAssemblyMetadata
+  commentId: T:Xunit.Sdk.IAssemblyMetadata
+  parent: Xunit.Sdk
+  href: Xunit.Sdk.IAssemblyMetadata.html
+  name: IAssemblyMetadata
+  nameWithType: IAssemblyMetadata
+  fullName: Xunit.Sdk.IAssemblyMetadata
+- uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  commentId: M:Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  name: AsValueTask(object)
+  nameWithType: ObjectExtensions.AsValueTask(object)
+  fullName: Xunit.Internal.ObjectExtensions.AsValueTask(object)
+  nameWithType.vb: ObjectExtensions.AsValueTask(Object)
+  fullName.vb: Xunit.Internal.ObjectExtensions.AsValueTask(Object)
+  name.vb: AsValueTask(Object)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.AsValueTask(System.Object)
+    name: AsValueTask
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_AsValueTask_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions
+  commentId: T:Xunit.Internal.ObjectExtensions
+  parent: Xunit.Internal
+  href: Xunit.Internal.ObjectExtensions.html
+  name: ObjectExtensions
+  nameWithType: ObjectExtensions
+  fullName: Xunit.Internal.ObjectExtensions
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  name: ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T?, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T?, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,System.Nullable{``0},System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object_System_Nullable___0__System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  commentId: M:Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+  isExternal: true
+  href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  name: ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType: ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  fullName: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue<T>(object, T, string)
+  nameWithType.vb: ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  fullName.vb: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue(Of T)(Object, T, String)
+  name.vb: ValidateNullablePropertyValue(Of T)(Object, T, String)
+  spec.csharp:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: Xunit.Internal.ObjectExtensions.ValidateNullablePropertyValue``1(System.Object,``0,System.String)
+    name: ValidateNullablePropertyValue
+    href: Xunit.Internal.ObjectExtensions.html#Xunit_Internal_ObjectExtensions_ValidateNullablePropertyValue__1_System_Object___0_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: Xunit.Sdk
+  commentId: N:Xunit.Sdk
+  href: Xunit.html
+  name: Xunit.Sdk
+  nameWithType: Xunit.Sdk
+  fullName: Xunit.Sdk
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Sdk
+    name: Sdk
+    href: Xunit.Sdk.html
+- uid: Xunit.Internal
+  commentId: N:Xunit.Internal
+  href: Xunit.html
+  name: Xunit.Internal
+  nameWithType: Xunit.Internal
+  fullName: Xunit.Internal
+  spec.csharp:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+  spec.vb:
+  - uid: Xunit
+    name: Xunit
+    href: Xunit.html
+  - name: .
+  - uid: Xunit.Internal
+    name: Internal
+    href: Xunit.Internal.html
+- uid: Xunit.v3.IXunitTestAssembly.Assembly*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.Assembly
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_Assembly
+  name: Assembly
+  nameWithType: IXunitTestAssembly.Assembly
+  fullName: Xunit.v3.IXunitTestAssembly.Assembly
+- uid: System.Reflection.Assembly
+  commentId: T:System.Reflection.Assembly
+  parent: System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.reflection.assembly
+  name: Assembly
+  nameWithType: Assembly
+  fullName: System.Reflection.Assembly
+- uid: System.Reflection
+  commentId: N:System.Reflection
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Reflection
+  nameWithType: System.Reflection
+  fullName: System.Reflection
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Reflection
+    name: Reflection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.reflection
+- uid: Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_AssemblyFixtureTypes
+  name: AssemblyFixtureTypes
+  nameWithType: IXunitTestAssembly.AssemblyFixtureTypes
+  fullName: Xunit.v3.IXunitTestAssembly.AssemblyFixtureTypes
+- uid: System.Collections.Generic.IReadOnlyCollection{System.Type}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{System.Type}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<Type>
+  nameWithType: IReadOnlyCollection<Type>
+  fullName: System.Collections.Generic.IReadOnlyCollection<System.Type>
+  nameWithType.vb: IReadOnlyCollection(Of Type)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of System.Type)
+  name.vb: IReadOnlyCollection(Of Type)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyCollection`1
+  commentId: T:System.Collections.Generic.IReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<T>
+  nameWithType: IReadOnlyCollection<T>
+  fullName: System.Collections.Generic.IReadOnlyCollection<T>
+  nameWithType.vb: IReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of T)
+  name.vb: IReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Xunit.v3.IBeforeAfterTestAttribute
+  commentId: T:Xunit.v3.IBeforeAfterTestAttribute
+  parent: Xunit.v3
+  href: Xunit.v3.IBeforeAfterTestAttribute.html
+  name: IBeforeAfterTestAttribute
+  nameWithType: IBeforeAfterTestAttribute
+  fullName: Xunit.v3.IBeforeAfterTestAttribute
+- uid: Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_BeforeAfterTestAttributes
+  name: BeforeAfterTestAttributes
+  nameWithType: IXunitTestAssembly.BeforeAfterTestAttributes
+  fullName: Xunit.v3.IXunitTestAssembly.BeforeAfterTestAttributes
+- uid: System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IBeforeAfterTestAttribute}
+  commentId: T:System.Collections.Generic.IReadOnlyCollection{Xunit.v3.IBeforeAfterTestAttribute}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  name: IReadOnlyCollection<IBeforeAfterTestAttribute>
+  nameWithType: IReadOnlyCollection<IBeforeAfterTestAttribute>
+  fullName: System.Collections.Generic.IReadOnlyCollection<Xunit.v3.IBeforeAfterTestAttribute>
+  nameWithType.vb: IReadOnlyCollection(Of IBeforeAfterTestAttribute)
+  fullName.vb: System.Collections.Generic.IReadOnlyCollection(Of Xunit.v3.IBeforeAfterTestAttribute)
+  name.vb: IReadOnlyCollection(Of IBeforeAfterTestAttribute)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: <
+  - uid: Xunit.v3.IBeforeAfterTestAttribute
+    name: IBeforeAfterTestAttribute
+    href: Xunit.v3.IBeforeAfterTestAttribute.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyCollection`1
+    name: IReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Xunit.v3.IBeforeAfterTestAttribute
+    name: IBeforeAfterTestAttribute
+    href: Xunit.v3.IBeforeAfterTestAttribute.html
+  - name: )
+- uid: Xunit.v3.IXunitTestAssembly.CollectionBehavior*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.CollectionBehavior
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_CollectionBehavior
+  name: CollectionBehavior
+  nameWithType: IXunitTestAssembly.CollectionBehavior
+  fullName: Xunit.v3.IXunitTestAssembly.CollectionBehavior
+- uid: Xunit.v3.ICollectionBehaviorAttribute
+  commentId: T:Xunit.v3.ICollectionBehaviorAttribute
+  parent: Xunit.v3
+  href: Xunit.v3.ICollectionBehaviorAttribute.html
+  name: ICollectionBehaviorAttribute
+  nameWithType: ICollectionBehaviorAttribute
+  fullName: Xunit.v3.ICollectionBehaviorAttribute
+- uid: Xunit.v3.IXunitTestAssembly.CollectionDefinitions*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_CollectionDefinitions
+  name: CollectionDefinitions
+  nameWithType: IXunitTestAssembly.CollectionDefinitions
+  fullName: Xunit.v3.IXunitTestAssembly.CollectionDefinitions
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, (Type Type, CollectionDefinitionAttribute Attribute)>
+  nameWithType: IReadOnlyDictionary<string, (Type Type, CollectionDefinitionAttribute Attribute)>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, (System.Type Type, Xunit.CollectionDefinitionAttribute Attribute)>
+  nameWithType.vb: IReadOnlyDictionary(Of String, (Type As Type, Attribute As CollectionDefinitionAttribute))
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, (Type As System.Type, Attribute As Xunit.CollectionDefinitionAttribute))
+  name.vb: IReadOnlyDictionary(Of String, (Type As Type, Attribute As CollectionDefinitionAttribute))
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: " "
+  - uid: System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}.Type
+    name: Type
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,xunit.collectiondefinitionattribute-.type
+  - name: ','
+  - name: " "
+  - uid: Xunit.CollectionDefinitionAttribute
+    name: CollectionDefinitionAttribute
+    href: Xunit.CollectionDefinitionAttribute.html
+  - name: " "
+  - uid: System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}.Attribute
+    name: Attribute
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,xunit.collectiondefinitionattribute-.attribute
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}.Type
+    name: Type
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,xunit.collectiondefinitionattribute-.type
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Type,Xunit.CollectionDefinitionAttribute}.Attribute
+    name: Attribute
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.type,xunit.collectiondefinitionattribute-.attribute
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Xunit.CollectionDefinitionAttribute
+    name: CollectionDefinitionAttribute
+    href: Xunit.CollectionDefinitionAttribute.html
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: Xunit.v3.IXunitTestAssembly.TargetFramework*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.TargetFramework
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_TargetFramework
+  name: TargetFramework
+  nameWithType: IXunitTestAssembly.TargetFramework
+  fullName: Xunit.v3.IXunitTestAssembly.TargetFramework
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Xunit.v3.IXunitTestAssembly.TestCaseOrderer*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_TestCaseOrderer
+  name: TestCaseOrderer
+  nameWithType: IXunitTestAssembly.TestCaseOrderer
+  fullName: Xunit.v3.IXunitTestAssembly.TestCaseOrderer
+- uid: Xunit.v3.ITestCaseOrderer
+  commentId: T:Xunit.v3.ITestCaseOrderer
+  parent: Xunit.v3
+  href: Xunit.v3.ITestCaseOrderer.html
+  name: ITestCaseOrderer
+  nameWithType: ITestCaseOrderer
+  fullName: Xunit.v3.ITestCaseOrderer
+- uid: Xunit.v3.IXunitTestAssembly.TestCollectionOrderer*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_TestCollectionOrderer
+  name: TestCollectionOrderer
+  nameWithType: IXunitTestAssembly.TestCollectionOrderer
+  fullName: Xunit.v3.IXunitTestAssembly.TestCollectionOrderer
+- uid: Xunit.v3.ITestCollectionOrderer
+  commentId: T:Xunit.v3.ITestCollectionOrderer
+  parent: Xunit.v3
+  href: Xunit.v3.ITestCollectionOrderer.html
+  name: ITestCollectionOrderer
+  nameWithType: ITestCollectionOrderer
+  fullName: Xunit.v3.ITestCollectionOrderer
+- uid: Xunit.v3.IXunitTestAssembly.Version*
+  commentId: Overload:Xunit.v3.IXunitTestAssembly.Version
+  href: Xunit.v3.IXunitTestAssembly.html#Xunit_v3_IXunitTestAssembly_Version
+  name: Version
+  nameWithType: IXunitTestAssembly.Version
+  fullName: Xunit.v3.IXunitTestAssembly.Version
+- uid: System.Version
+  commentId: T:System.Version
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.version
+  name: Version
+  nameWithType: Version
+  fullName: System.Version
