@@ -3,8 +3,6 @@
 - name: Getting Started
   href: ../index.md
 
-- name: Getting Started
-  href: getting-started.md
 - name: Attributes
   href: attributes.md
 - name: Assert Methods
