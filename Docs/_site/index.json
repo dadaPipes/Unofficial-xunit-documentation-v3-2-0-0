@@ -3032,16 +3032,11 @@
   "docs/attributes.html": {
     "href": "docs/attributes.html",
     "title": "Attributes in xUnit | Unofficial xunit docs",
-    "summary": "Attributes in xUnit Core Testing Attributes FactAttribute: Marks unit tests. TheoryAttribute: Defines parameterized tests. InlineDataAttribute: Provides test data. MemberDataAttribute: References external test data. Test Lifecycle Attributes BeforeAfterTestAttribute: Controls test execution order. CollectionBehaviorAttribute: Manages test isolation. TestPipelineStartupAttribute: Configures the test pipeline. Fixture and Setup Attributes IClassFixture: Defines class-level setup. ICollectionFixture: Manages collection-wide fixtures. AssemblyFixtureAttribute: Controls assembly-level setup. Metadata Attributes TraitAttribute: Adds descriptive metadata. TestFrameworkAttribute: Identifies framework characteristics."
-  },
-  "docs/getting-started.html": {
-    "href": "docs/getting-started.html",
-    "title": "Getting Started | Unofficial xunit docs",
-    "summary": "Getting Started"
+    "summary": "Attributes in xUnit Core Testing Attributes FactAttribute TheoryAttribute InlineDataAttribute MemberDataAttribute Test Lifecycle Attributes BeforeAfterTestAttribute CollectionBehaviorAttribute TestPipelineStartupAttribute Fixture and Setup Attributes IClassFixture ICollectionFixture AssemblyFixtureAttribute Metadata Attributes TraitAttribute TestFrameworkAttribute"
   },
   "index.html": {
     "href": "index.html",
-    "title": "Start page | Unofficial xunit docs",
-    "summary": "Start page Bacon ipsum dolor amet culpa tenderloin shoulder excepteur ribeye. In culpa consequat short ribs officia bresaola pork ground round salami. Aliquip dolore dolor frankfurter reprehenderit elit. Proident sirloin ut lorem. Cow laborum pancetta, andouille et salami rump pig tri-tip dolor pork chop kielbasa. Brisket laborum incididunt, elit nostrud sint andouille rump esse ham hock culpa burgdoggen. Hamburger laboris consequat irure excepteur pork loin cupidatat nulla burgdoggen tail flank dolore short ribs pork chop. In do sausage, irure sed spare ribs id biltong nostrud. Jerky burgdoggen aute ground round kielbasa. Brisket beef consectetur, ut in ea tongue beef ribs pig frankfurter pancetta buffalo lorem. Prosciutto laborum sirloin labore, aliqua fatback shankle nisi eiusmod reprehenderit landjaeger. Capicola ad veniam ut qui pastrami commodo cillum filet mignon. Et sunt fugiat incididunt culpa mollit, turducken shankle reprehenderit ipsum ribeye pancetta cow kielbasa venison. baconipsum"
+    "title": "Getting Started | Unofficial xunit docs",
+    "summary": "Getting Started Bacon ipsum dolor amet culpa tenderloin shoulder excepteur ribeye. In culpa consequat short ribs officia bresaola pork ground round salami. Aliquip dolore dolor frankfurter reprehenderit elit. Proident sirloin ut lorem. Cow laborum pancetta, andouille et salami rump pig tri-tip dolor pork chop kielbasa. Brisket laborum incididunt, elit nostrud sint andouille rump esse ham hock culpa burgdoggen. Hamburger laboris consequat irure excepteur pork loin cupidatat nulla burgdoggen tail flank dolore short ribs pork chop. In do sausage, irure sed spare ribs id biltong nostrud. Jerky burgdoggen aute ground round kielbasa. Brisket beef consectetur, ut in ea tongue beef ribs pig frankfurter pancetta buffalo lorem. Prosciutto laborum sirloin labore, aliqua fatback shankle nisi eiusmod reprehenderit landjaeger. Capicola ad veniam ut qui pastrami commodo cillum filet mignon. Et sunt fugiat incididunt culpa mollit, turducken shankle reprehenderit ipsum ribeye pancetta cow kielbasa venison bacon. baconipsum"
   }
 }
