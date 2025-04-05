@@ -8527,6 +8527,136 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/rider-source-icons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/rider-source-icons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/rider-source-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/rider-source-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/rider-tests-icons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/rider-tests-icons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/rider-tests-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/rider-tests-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/visualstudio-source-icons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/visualstudio-source-icons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/visualstudio-source-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/visualstudio-source-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/visualstudio-testexplorer-icons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/visualstudio-testexplorer-icons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/visualstudio-testexplorer-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/visualstudio-testexplorer-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/vscode-solution-explorer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/vscode-solution-explorer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/vscode-source-icons.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/vscode-source-icons.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/vscode-source-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/vscode-source-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/vscode-testing-panel.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/vscode-testing-panel.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/getting-started/vscode-testing-run.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/getting-started/vscode-testing-run.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
