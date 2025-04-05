@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | Unofficial xunit docs </title>
+      <title>Getting Started with xUnit v3-2.0.0 | Unofficial xunit docs </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | Unofficial xunit docs ">
+      <meta name="title" content="Getting Started with xUnit v3-2.0.0 | Unofficial xunit docs ">
       
       
       <link rel="icon" href="favicon.ico">
@@ -85,21 +85,351 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="getting-started-with-xunit-v3-200">Getting Started with xUnit v3-2.0.0</h1>
 
-<p>Bacon ipsum dolor amet culpa tenderloin shoulder excepteur ribeye.<br>
-In culpa consequat short ribs officia bresaola pork ground round salami.<br>
-Aliquip dolore dolor frankfurter reprehenderit elit.<br>
-Proident sirloin ut lorem. Cow laborum pancetta, andouille et salami rump pig tri-tip dolor pork chop kielbasa.<br>
-Brisket laborum incididunt, elit nostrud sint andouille rump esse ham hock culpa burgdoggen.</p>
-<p>Hamburger laboris consequat irure excepteur pork loin cupidatat nulla burgdoggen tail flank dolore short ribs pork chop.<br>
-In do sausage, irure sed spare ribs id biltong nostrud.<br>
-Jerky burgdoggen aute ground round kielbasa. Brisket beef consectetur,<br>
-ut in ea tongue beef ribs pig frankfurter pancetta buffalo lorem.<br>
-Prosciutto laborum sirloin labore, aliqua fatback shankle nisi eiusmod reprehenderit landjaeger.<br>
-Capicola ad veniam ut qui pastrami commodo cillum filet mignon.<br>
-Et sunt fugiat incididunt culpa mollit, turducken shankle reprehenderit ipsum ribeye pancetta cow kielbasa venison bacon.</p>
-<p><a href="https://baconipsum.com/">baconipsum</a></p>
+<p>Using .NET or .NET Framework with the .NET SDK command line, this guide demonstrates how to get started with xUnit.net v3 when targeting .NET 6 (or later) and/or .NET Framework 4.7.2 (or later). You'll learn how to download the .NET SDK, install the .NET SDK templates, create a unit test project, write your first tests and theories, and run tests using the command line.</p>
+<h2 id="download-the-net-sdk">Download the .NET SDK</h2>
+<p>The .NET SDK is available for download for Windows, Linux, and macOS.</p>
+<p>Once you’ve downloaded and installed the SDK, open a fresh command prompt of your choice (CMD, PowerShell, bash, etc.) and make sure that you can access the command line by typing <code>dotnet --version</code>. You should be rewarded with a single line, describing the version of the .NET SDK you have installed:</p>
+<pre><code class="lang-shell">$ dotnet --version
+8.0.404
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>The first time you run the dotnet command, it may perform some post-installation steps. Once these one-time actions are done, it will execute your command.</p>
+</div>
+<h2 id="install-the-net-sdk-templates">Install the .NET SDK templates</h2>
+<p>We ship templates for creating new projects, and they must be installed before they can be used.</p>
+<p>From your command prompt, type: <code>dotnet new install xunit.v3.templates</code></p>
+<p>You should see the output similar to this:</p>
+<pre><code class="lang-shell">$ dotnet new install xunit.v3.templates
+The following template packages will be installed:
+   xunit.v3.templates
+
+Success: xunit.v3.templates::1.0.0 installed the following templates:
+Template Name                   Short Name        Language    Tags
+------------------------------  ----------------  ----------  ----------
+xUnit.net v3 Extension Project  xunit3-extension  [C#],F#,VB  Test/xUnit
+xUnit.net v3 Test Project       xunit3            [C#],F#,VB  Test/xUnit
+</code></pre>
+<p>As of this writing, we ship two templates: <strong>xunit3</strong> and <strong>xunit3-extension</strong>.<br>
+These are available in three languages: <strong>C#</strong>, <strong>F#</strong>, and <strong>VB.NET</strong>.</p>
+<h2 id="create-the-unit-test-project">Create the unit test project</h2>
+<p>From the command line, create a folder for your test project, change into it, and then create the project using <code>dotnet new</code>:</p>
+<pre><code class="lang-shell">$ mkdir MyFirstUnitTests
+$ cd MyFirstUnitTests
+$ dotnet new xunit3
+The template &quot;xUnit.net v3 Test Project&quot; was created successfully.
+
+Processing post-creation actions...
+Restoring /.../MyFirstUnitTests/MyFirstUnitTests.csproj:
+  Determining projects to restore...
+  Restored /.../MyFirstUnitTests/MyFirstUnitTests.csproj (in 1.48 sec).
+Restore succeeded.
+</code></pre>
+<p>The generated project file should look something like this:</p>
+<pre><code class="lang-csharp">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
+    &lt;Nullable&gt;enable&lt;/Nullable&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;RootNamespace&gt;MyFirstUnitTests&lt;/RootNamespace&gt;
+    &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+    &lt;!--
+    To enable the Microsoft Testing Platform 'dotnet test' experience, add property:
+      &lt;TestingPlatformDotnetTestSupport&gt;true&lt;/TestingPlatformDotnetTestSupport&gt;
+
+    To enable the Microsoft Testing Platform native command line experience, add property:
+      &lt;UseMicrosoftTestingPlatformRunner&gt;true&lt;/UseMicrosoftTestingPlatformRunner&gt;
+
+    For more information on Microsoft Testing Platform support in xUnit.net, please visit:
+      https://xunit.net/docs/getting-started/v3/microsoft-testing-platform
+    --&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;Content Include=&quot;xunit.runner.json&quot; CopyToOutputDirectory=&quot;PreserveNewest&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;Using Include=&quot;Xunit&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Microsoft.NET.Test.Sdk&quot; Version=&quot;17.12.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit.v3&quot; Version=&quot;1.0.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit.runner.visualstudio&quot; Version=&quot;3.0.0&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre>
+<p>Let’s quickly review what’s in this project file:</p>
+<ul>
+<li><p>ImplicitUsings enables implicit using statements in your project. In addition to the default set of implicit using statements, you can see below that we’ve added an implicit using for the Xunit namespace where the most common xUnit.net types come from.<br>
+<a href="https://devblogs.microsoft.com/dotnet/welcome-to-csharp-10/#global-and-implicit-usings">More information about implicit usings</a></p>
+</li>
+<li><p>Nullable is enabled in this default template. Our libraries including nullable annotations to help you find when you may be accidentally dealing with null values. For example, Assert.NotNull is decorated in such a way that the compiler knows, if this assertion did not fail, then the value passed to it is known to not be null.<br>
+<a href="https://learn.microsoft.com/en-gb/dotnet/csharp/nullable-references">More information about nullable reference types</a></p>
+</li>
+<li><p>OutputType is set to Exe, because unit test projects in xUnit.net v3 are stand-alone executables that can be directly run. We will see examples of this later in this document.<br>
+<a href="https://xunit.net/docs/getting-started/v3/migration#stand-alone-executables">More information about xUnit.net v3 and stand-alone executables</a></p>
+</li>
+<li><p>TargetFramework is set to net8.0 (which is the latest LTS build as of the writing of this document).<br>
+<a href="https://xunit.net/docs/getting-started/v3/migration#stand-alone-executables">More information about target frameworks</a></p>
+</li>
+<li><p>We have included an xunit.runner.json file in your project by default. You can edit this file and place configuration values into it.<br>
+<a href="https://xunit.net/docs/configuration-files">More information about xUnit.net configuration files</a></p>
+</li>
+<li><p>We have included three package references:</p>
+<ul>
+<li><code>xunit.v3</code> is the core package needed to write unit tests for xUnit.net v3</li>
+<li><code>xunit.runner.visualstudio</code> and <code>Microsoft.NET.Test.Sdk</code> are used to enable support for dotnet test and Visual Studio Test Explorer</li>
+</ul>
+</li>
+</ul>
+<p>A single unit test was also generated (UnitTest1.cs in this example):</p>
+<pre><code class="lang-csharp">namespace MyFirstUnitTests;
+
+public class UnitTest1
+{
+    [Fact]
+    public void Test1()
+    {
+        Assert.True(true);
+    }
+}
+</code></pre>
+<p>Now let’s verify that everything is working by running our tests with <code>dotnet run</code>:</p>
+<pre><code class="lang-shell">$ dotnet run
+xUnit.net v3 In-Process Runner v1.0.0+fd19795321 (64-bit .NET 8.0.8)
+  Discovering: MyFirstUnitTests
+  Discovered:  MyFirstUnitTests
+  Starting:    MyFirstUnitTests
+  Finished:    MyFirstUnitTests
+=== TEST EXECUTION SUMMARY ===
+   MyFirstUnitTests  Total: 1, Errors: 0, Failed: 0, Skipped: 0, Not Run: 0, Time: 0.059s
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can pass command line options to the test runner when using dotnet run, but you must add <code>--</code> before passing any command line options.<br>
+The reason for this is that the .NET SDK differentiates command line options before the <code>--</code> as command line options for
+dotnet run itself vs. command line options after the <code>--</code> as command line options for the program.<br>
+Try running <code>dotnet run -?</code> and <code>dotnet run -- -?</code> to see the difference.</p>
+</div>
+<p>Excellent! Let’s go replace that sample unit test with our first real tests.</p>
+<h2 id="write-your-first-tests">Write your first tests</h2>
+<p>Using your favorite text editor, open the UnitTest1.cs file and replace the existing test with two new ones:</p>
+<pre><code class="lang-csharp">namespace MyFirstUnitTests;
+
+public class UnitTest1
+{
+    [Fact]
+    public void PassingTest()
+    {
+        Assert.Equal(4, Add(2, 2));
+    }
+
+    [Fact]
+    public void FailingTest()
+    {
+        Assert.Equal(5, Add(2, 2));
+    }
+
+    int Add(int x, int y)
+    {
+        return x + y;
+    }
+}
+</code></pre>
+<p>If we run the tests again, we should see something like this:</p>
+<pre><code class="lang-shell">$ dotnet run
+xUnit.net v3 In-Process Runner v1.0.0+fd19795321 (64-bit .NET 8.0.8)
+  Discovering: MyFirstUnitTests
+  Discovered:  MyFirstUnitTests
+  Starting:    MyFirstUnitTests
+    MyFirstUnitTests.UnitTest1.FailingTest [FAIL]
+      Assert.Equal() Failure: Values differ
+      Expected: 5
+      Actual:   4
+      Stack Trace:
+        UnitTest1.cs(14,0): at MyFirstUnitTests.UnitTest1.FailingTest()
+  Finished:    MyFirstUnitTests
+=== TEST EXECUTION SUMMARY ===
+   MyFirstUnitTests  Total: 2, Errors: 0, Failed: 1, Skipped: 0, Not Run: 0, Time: 0.097s
+</code></pre>
+<p>We can see that we have one passing test, and one failing test. That’s exactly what we would expect given what we wrote.</p>
+<p>Now that we’re gotten our first tests to run, let’s introduce one more way to write tests: using theories.</p>
+<h2 id="write-your-first-theory">Write your first theory</h2>
+<p>You may have wondered why your first unit tests use an attribute named [Fact] rather than one with a more traditional name like Test. xUnit.net includes support for two different major types of unit tests: facts and theories. When describing the difference between facts and theories, we like to say:</p>
+<ul>
+<li><p>Facts are tests which are always true. They test invariant conditions.</p>
+</li>
+<li><p>Theories are tests which are only true for a particular set of data.</p>
+</li>
+</ul>
+<p>A good example of this is testing numeric algorithms. Let’s say you want to test an algorithm which determines whether a number is odd or not. If you’re writing the positive-side tests (odd numbers), then feeding even numbers into the test would cause it fail, and not because the test or algorithm is wrong.</p>
+<p>Let’s add a theory to our existing facts (including a bit of bad data, so we can see it fail):</p>
+<pre><code class="lang-csharp">[Theory]
+[InlineData(3)]
+[InlineData(5)]
+[InlineData(6)]
+public void MyFirstTheory(int value)
+{
+    Assert.True(IsOdd(value));
+}
+
+bool IsOdd(int value)
+{
+    return value % 2 == 1;
+}
+</code></pre>
+<p>This time when we run our tests, we see a second failure, for our theory that was given 6:</p>
+<pre><code class="lang-shell">$ dotnet run
+xUnit.net v3 In-Process Runner v1.0.0+fd19795321 (64-bit .NET 8.0.8)
+  Discovering: MyFirstUnitTests
+  Discovered:  MyFirstUnitTests
+  Starting:    MyFirstUnitTests
+    MyFirstUnitTests.UnitTest1.FailingTest [FAIL]
+      Assert.Equal() Failure: Values differ
+      Expected: 5
+      Actual:   4
+      Stack Trace:
+        UnitTest1.cs(14,0): at MyFirstUnitTests.UnitTest1.FailingTest()
+    MyFirstUnitTests.UnitTest1.MyFirstTheory(value: 6) [FAIL]
+      Assert.True() Failure
+      Expected: True
+      Actual:   False
+      Stack Trace:
+        UnitTest1.cs(28,0): at MyFirstUnitTests.UnitTest1.MyFirstTheory(Int32 value)
+  Finished:    MyFirstUnitTests
+=== TEST EXECUTION SUMMARY ===
+   MyFirstUnitTests  Total: 5, Errors: 0, Failed: 2, Skipped: 0, Not Run: 0, Time: 0.085s
+</code></pre>
+<p>Although we’ve only written 3 test methods, the test runner actually ran 5 tests; that’s because each theory with its data set is a separate test. Note also that the runner tells you exactly which set of data failed, because it includes the parameter values in the name of the test.</p>
+<h2 id="running-tests">Running tests</h2>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_vs" role="tab" aria-controls="tabpanel_1_vs" data-tab="vs" tabindex="0" aria-selected="true">Visual Studio</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_vsc" role="tab" aria-controls="tabpanel_1_vsc" data-tab="vsc" tabindex="-1">Visual Studio Code</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_jr" role="tab" aria-controls="tabpanel_1_jr" data-tab="jr" tabindex="-1">JetBrains Rider</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_dnt" role="tab" aria-controls="tabpanel_1_dnt" data-tab="dnt" tabindex="-1">.NET Test</a>
+</li>
+</ul>
+<section id="tabpanel_1_vs" role="tabpanel" data-tab="vs">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>These screen shots were taken with Visual Studio 2022 version 17.11.0. Your screen may look slightly different if you have a newer version.</p>
+</div>
+<p>Visual Studio contains a test runner called Test Explorer that can run unit tests from a variety of third party test frameworks, including xUnit.net. The inclusion of <code>xunit.runner.visualstudio</code> (and <code>Microsoft.NET.Test.Sdk</code>) allows Test Explorer to find and run our tests.</p>
+<p>Visual Studio works on solutions rather than projects. If your project doesn’t have a solution file yet, you can use the .NET SDK to create one. Run the following two commands from your project folder:</p>
+<pre><code class="lang-shell">$ dotnet new sln
+The template &quot;Solution File&quot; was created successfully.
+
+$ dotnet sln add .
+Project `MyFirstUnitTests.csproj` added to the solution.
+</code></pre>
+<p>Now open your solution with Visual Studio. Build your solution after it has opened. Make sure Test Explorer is visible (go to <code>Test &gt; Test Explorer</code>).</p>
+<h4 id="running-tests-in-test-explorer">Running tests in Test Explorer</h4>
+<p>After a moment of discovery, you should see the list of discovered tests:</p>
+<p>IMAGE</p>
+<p>By default, the test list is arranged by project, namespace, class, and finally test method. In this case, the <code>MyFirstTheory</code> method shows 3 sub-items, as that is a data theory with 3 data rows.</p>
+<p>Clicking the run button (the double play button) in the Test Explorer tool bar will run your tests:</p>
+<p>IMAGE</p>
+<p>You can double click on any test in the list to be taken directly to the source code for the test in question.</p>
+<h4 id="running-tests-from-your-source-code">Running tests from your source code</h4>
+<p>You should notice after the build is complete that your unit test source becomes decorated with small blue <code>i</code> icons that indicate that there is a runnable test:</p>
+<p>IMAGE</p>
+<p>Clicking the i will pop up a panel that will allow you to Run or Debug your tests, as well as navigate to the test inside Test Explorer. After running the tests, you’ll see that the icons now change to indicate which tests are currently passing vs. failing:</p>
+<p>IMAGE</p>
+</section>
+<section id="tabpanel_1_vsc" role="tabpanel" data-tab="vsc" aria-hidden="true" hidden="hidden">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>These screen shots were taken with Visual Studio Code version 1.92.2 and C# Dev Kit extension version 1.9.55. Your screen may look slightly different if you have newer versions.</p>
+</div>
+<p>To be able to build C# test projects and run their tests, install the C# Dev Kit extension into Visual Studio Code. The inclusion of <code>xunit.runner.visualstudio</code> (and <code>Microsoft.NET.Test.Sdk</code>) allows the Visual Studio Code testing panel (and the C# extension) to find and run our tests.</p>
+<p>From the command prompt, open Visual Studio code on your project folder by running: <code>code</code> .</p>
+<p>Using the side bar on the left, click the Explorer side bar (it’s probably already selected by default), and make sure Solution Explorer is visible. You should see something like this:</p>
+<p>IMAGE</p>
+<p>To build your project, right click on “MyFirstUnitTests” and choose “Build”.</p>
+<h4 id="running-tests-in-the-testing-side-bar">Running tests in the Testing side bar</h4>
+<p>Once the project has finished building, click on the Testing panel. After a moment of discovery, you should see the list of discovered tests:</p>
+<p>IMAGE</p>
+<p>By default, the test list is arranged by project, namespace, class, and finally test method. In this case, the <code>MyFirstTheory</code> method shows 3 sub-items, as that is a data theory with 3 data rows.</p>
+<p>Clicking the run button (the double play button) in the Testing panel tool bar will run your tests:</p>
+<p>IMAGE</p>
+<p>You can double click on any test in the list to be taken directly to the source code for the test in question.</p>
+<h4 id="running-tests-from-your-source-code-1">Running tests from your source code</h4>
+<p>Once the project has finished building, you should notice that your unit test source becomes decorated with play icons that you can click to run your tests:</p>
+<p>IMAGE</p>
+<p>After running the tests, you’ll see that the icons now change to indicate which tests are currently passing vs. failing, and failed tests will include failure information inline with your source code:</p>
+<p>IMAGE</p>
+</section>
+<section id="tabpanel_1_jr" role="tabpanel" data-tab="jr" aria-hidden="true" hidden="hidden">
+
+<div class="NOTE">
+<h5>Note</h5>
+<p>These screen shots were taken with Rider 2024.2. Your screen may look slightly different if you have a newer version.</p>
+</div>
+<p>Rider contains a Tests tool window that can run tests from a variety of third party test frameworks, including xUnit.net. The inclusion of <code>xunit.runner.visualstudio</code> (and <code>Microsoft.NET.Test.Sdk</code>) allows the Tests tool window to find and run our tests.</p>
+<p>Open your project in Rider. Build the project by right clicking on it and choosing “Build Selected Projects”.</p>
+<h4 id="running-tests-in-the-tests-tool-window">Running tests in the Tests tool window</h4>
+<p>Once the project has finished building, click on the Tests tool window. After a moment of discovery, you should see the list of discovered tests:</p>
+<p>IMAGE</p>
+<p>By default, the test list is arranged by project, namespace, class, and finally test method.</p>
+<p>Clicking the run button (the double play button) in the Tests tool window will run your tests:</p>
+<p>IMAGE</p>
+<p>You can double click on any test in the list to be taken directly to the source code for the test in question.</p>
+<h4 id="running-tests-from-your-source-code-2">Running tests from your source code</h4>
+<p>Once the project has finished building, you should notice that your unit test source becomes decorated with play icons that you can click to run your tests:</p>
+<p>IMAGE</p>
+<p>After running the tests, you’ll see that the icons now change to indicate which tests are currently passing vs. failing:</p>
+<p>IMAGE</p>
+</section>
+<section id="tabpanel_1_dnt" role="tabpanel" data-tab="dnt" aria-hidden="true" hidden="hidden">
+
+<p>In addition to directly running your test project, the inclusion of <code>xunit.runner.visualstudio</code> (and <code>Microsoft.NET.Test.Sdk</code>) means that you can also use the test runner build into the .NET SDK. It has different command line options (compare <code>dotnet run -- -?</code> with <code>dotnet test -?</code>).</p>
+<p>The output from this runner will look different than the built-in runner:</p>
+<pre><code class="lang-shell">$ dotnet test
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  MyFirstUnitTests -&gt; /.../MyFirstUnitTests/bin/Debug/net8.0/MyFirstUnitTests.dll
+Test run for /.../MyFirstUnitTests/bin/Debug/net8.0/MyFirstUnitTests.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.53]     MyFirstUnitTests.UnitTest1.FailingTest [FAIL]
+[xUnit.net 00:00:00.53]     MyFirstUnitTests.UnitTest1.MyFirstTheory(value: 6) [FAIL]
+  Failed MyFirstUnitTests.UnitTest1.FailingTest [11 ms]
+  Error Message:
+   Assert.Equal() Failure: Values differ
+Expected: 5
+Actual:   4
+  Stack Trace:
+     at MyFirstUnitTests.UnitTest1.FailingTest() in /.../MyFirstUnitTests/UnitTest1.cs:line 14
+  Failed MyFirstUnitTests.UnitTest1.MyFirstTheory(value: 6) [&lt; 1 ms]
+  Error Message:
+   Assert.True() Failure
+Expected: True
+Actual:   False
+  Stack Trace:
+     at MyFirstUnitTests.UnitTest1.MyFirstTheory(Int32 value) in /.../MyFirstUnitTests/UnitTest1.cs:line 28
+
+Failed!  - Failed:     2, Passed:     3, Skipped:     0, Total:     5, Duration: 35 ms - MyFirstUnitTests.dll (net8.0)
+</code></pre>
+</section>
+</div>
 
 </article>
 

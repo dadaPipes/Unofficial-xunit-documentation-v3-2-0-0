@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Create the unit test project | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Create the unit test project | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/getting-started/create-unit-test-project.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="create-the-unit-test-project">Create the unit test project</h1>
+
+<p>From the command line, create a folder for your test project, change into it, and then create the project using <code>dotnet new</code>:</p>
+<pre><code class="lang-shell">$ mkdir MyFirstUnitTests
+$ cd MyFirstUnitTests
+$ dotnet new xunit3
+The template &quot;xUnit.net v3 Test Project&quot; was created successfully.
+
+Processing post-creation actions...
+Restoring /.../MyFirstUnitTests/MyFirstUnitTests.csproj:
+  Determining projects to restore...
+  Restored /.../MyFirstUnitTests/MyFirstUnitTests.csproj (in 1.48 sec).
+Restore succeeded.
+</code></pre>
+<p>The generated project file should look something like this:</p>
+<pre><code class="lang-csharp">&lt;Project Sdk=&quot;Microsoft.NET.Sdk&quot;&gt;
+
+  &lt;PropertyGroup&gt;
+    &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
+    &lt;Nullable&gt;enable&lt;/Nullable&gt;
+    &lt;OutputType&gt;Exe&lt;/OutputType&gt;
+    &lt;RootNamespace&gt;MyFirstUnitTests&lt;/RootNamespace&gt;
+    &lt;TargetFramework&gt;net8.0&lt;/TargetFramework&gt;
+    &lt;!--
+    To enable the Microsoft Testing Platform 'dotnet test' experience, add property:
+      &lt;TestingPlatformDotnetTestSupport&gt;true&lt;/TestingPlatformDotnetTestSupport&gt;
+
+    To enable the Microsoft Testing Platform native command line experience, add property:
+      &lt;UseMicrosoftTestingPlatformRunner&gt;true&lt;/UseMicrosoftTestingPlatformRunner&gt;
+
+    For more information on Microsoft Testing Platform support in xUnit.net, please visit:
+      https://xunit.net/docs/getting-started/v3/microsoft-testing-platform
+    --&gt;
+  &lt;/PropertyGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;Content Include=&quot;xunit.runner.json&quot; CopyToOutputDirectory=&quot;PreserveNewest&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;Using Include=&quot;Xunit&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+  &lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Microsoft.NET.Test.Sdk&quot; Version=&quot;17.12.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit.v3&quot; Version=&quot;1.0.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;xunit.runner.visualstudio&quot; Version=&quot;3.0.0&quot; /&gt;
+  &lt;/ItemGroup&gt;
+
+&lt;/Project&gt;
+</code></pre>
+<p>Let’s quickly review what’s in this project file:</p>
+<ul>
+<li><p>ImplicitUsings enables implicit using statements in your project. In addition to the default set of implicit using statements, you can see below that we’ve added an implicit using for the Xunit namespace where the most common xUnit.net types come from.<br>
+<a href="https://devblogs.microsoft.com/dotnet/welcome-to-csharp-10/#global-and-implicit-usings">More information about implicit usings</a></p>
+</li>
+<li><p>Nullable is enabled in this default template. Our libraries including nullable annotations to help you find when you may be accidentally dealing with null values. For example, Assert.NotNull is decorated in such a way that the compiler knows, if this assertion did not fail, then the value passed to it is known to not be null.<br>
+<a href="https://learn.microsoft.com/en-gb/dotnet/csharp/nullable-references">More information about nullable reference types</a></p>
+</li>
+<li><p>OutputType is set to Exe, because unit test projects in xUnit.net v3 are stand-alone executables that can be directly run. We will see examples of this later in this document.<br>
+<a href="https://xunit.net/docs/getting-started/v3/migration#stand-alone-executables">More information about xUnit.net v3 and stand-alone executables</a></p>
+</li>
+<li><p>TargetFramework is set to net8.0 (which is the latest LTS build as of the writing of this document).<br>
+<a href="https://xunit.net/docs/getting-started/v3/migration#stand-alone-executables">More information about target frameworks</a></p>
+</li>
+<li><p>We have included an xunit.runner.json file in your project by default. You can edit this file and place configuration values into it.<br>
+<a href="https://xunit.net/docs/configuration-files">More information about xUnit.net configuration files</a></p>
+</li>
+<li><p>We have included three package references:</p>
+<ul>
+<li><code>xunit.v3</code> is the core package needed to write unit tests for xUnit.net v3</li>
+<li><code>xunit.runner.visualstudio</code> and <code>Microsoft.NET.Test.Sdk</code> are used to enable support for dotnet test and Visual Studio Test Explorer</li>
+</ul>
+</li>
+</ul>
+<p>A single unit test was also generated (UnitTest1.cs in this example):</p>
+<pre><code class="lang-csharp">namespace MyFirstUnitTests;
+
+public class UnitTest1
+{
+    [Fact]
+    public void Test1()
+    {
+        Assert.True(true);
+    }
+}
+</code></pre>
+<p>Now let’s verify that everything is working by running our tests with <code>dotnet run</code>:</p>
+<pre><code class="lang-shell">$ dotnet run
+xUnit.net v3 In-Process Runner v1.0.0+fd19795321 (64-bit .NET 8.0.8)
+  Discovering: MyFirstUnitTests
+  Discovered:  MyFirstUnitTests
+  Starting:    MyFirstUnitTests
+  Finished:    MyFirstUnitTests
+=== TEST EXECUTION SUMMARY ===
+   MyFirstUnitTests  Total: 1, Errors: 0, Failed: 0, Skipped: 0, Not Run: 0, Time: 0.059s
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>You can pass command line options to the test runner when using dotnet run, but you must add <code>--</code> before passing any command line options.<br>
+The reason for this is that the .NET SDK differentiates command line options before the <code>--</code> as command line options for
+dotnet run itself vs. command line options after the <code>--</code> as command line options for the program.<br>
+Try running <code>dotnet run -?</code> and <code>dotnet run -- -?</code> to see the difference.</p>
+</div>
+<p>Excellent! Let’s go replace that sample unit test with our first real tests.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/getting-started/create-unit-test-project.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
