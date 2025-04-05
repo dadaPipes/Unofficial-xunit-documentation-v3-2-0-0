@@ -1,4 +1,4 @@
-# Start page
+# Getting Started
 
 Bacon ipsum dolor amet culpa tenderloin shoulder excepteur ribeye.  
 In culpa consequat short ribs officia bresaola pork ground round salami.  
