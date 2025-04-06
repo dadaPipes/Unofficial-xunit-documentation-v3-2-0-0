@@ -8514,6 +8514,16 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "docs/release-notes.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/release-notes.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "docs/toc.yml",
       "output": {
