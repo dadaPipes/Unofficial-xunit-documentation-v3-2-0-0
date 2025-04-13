@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Query Filter Language | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Query Filter Language | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/query-filter-language.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="query-filter-language">Query Filter Language</h1>
+
+<p>Query filter language allows you to filter tests based on namespace, fully qualified class names, fully qualified method names, and <a class="xref" href="../api/Xunit.TraitAttribute.html">traits</a>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>All string comparisons are done case insensitively. That means <code>/foo</code> and <code>/FOO</code> are the same query.</p>
+</div>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>In order to better reason about how filtering works, you may use either query filters or simple filters,<br>
+but you may <strong>not</strong> use both at the same time.</p>
+</div>
+<h2 id="query-is-segmented">Query is segmented</h2>
+<p>The query filter consists of up to four hierarchical segments, each representing a specific part of a fully qualified test method:</p>
+<p><code>/&lt;assemblyFilter&gt;/&lt;namespaceFilter&gt;/&lt;classFilter&gt;/&lt;methodFilter&gt;</code></p>
+<p><strong>Example</strong>:</p>
+<p>Let’s assume a test method of <code>MyNamespace.MySubNamespace.MyClass+MySubClass.MyTestMethod</code><br>
+that lives in <code>C:\Dev\MyProjects\Tests\bin\Debug\net8.0\MyTests.dll</code>:</p>
+<ul>
+<li><code>assemblyFilter</code> is matched against the test assembly name <code>MyTests</code></li>
+<li><code>namespaceFilter</code> is matched against the namespace of the test <code>MyNamespace.MySubNamespace</code></li>
+<li><code>classFilter</code> is matched against the name of the test class <code>MyClass+MySubClass</code></li>
+<li><code>methodFilter</code> is matched against the name of the test method <code>MyTestMethod</code></li>
+</ul>
+<p><code>/MyTests/MyNamespace.MySubNamespace/MyClass+MySubClass/MyTestMethod</code> will match the example test method above.</p>
+<h2 id="match-all">Match All</h2>
+<p>For any segment, you can use <code>*</code> to represent a “match all”.</p>
+<p>In addition, any segment left off the query is considered to be an implicit “match all”.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><code>/</code> is equivalent to <code>/*</code>, <code>/*/*</code>, <code>/*/*/*</code>, and <code>/*/*/*/*</code>.</li>
+<li><code>/MyAssembly</code> is equivalent to <code>/MyAssembly/*</code>, <code>/MyAssembly/*/*</code>, and <code>/MyAssembly/*/*/*</code>.</li>
+<li><code>/MyAssembly/MyNamespace</code> is equivalent to <code>/MyAssembly/MyNamespace</code> and <code>/MyAssembly/MyNamespace/*/*</code>.</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Queries <strong>must</strong> always start with <strong><code>/</code></strong>, <strong>even</strong> if you are not specifying any segment values.<br>
+Specifying <strong>more</strong> than four segments results in a parsing error for the query.</p>
+</div>
+<h2 id="trait-filter">Trait Filter</h2>
+<p>To filter based on a <a class="xref" href="../api/Xunit.TraitAttribute.html">trait</a>, add an appropriate trait expression to the end of your query,<br>
+in the form of <code>[name=value]</code> or <code>[name!=value]</code>.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><code>/[category=slow]</code><br>
+means “run all tests that have a trait named <code>category</code> with a value named <code>slow</code>.</li>
+<li><code>/[category!=slow]</code><br>
+means “run all tests that do <strong>not</strong> have a trait named <code>category</code> with a value named <code>slow</code>.</li>
+</ul>
+<h2 id="wildcards-to-startend-a-query-expression">Wildcards to start/end a query expression</h2>
+<p>You may start and/or end a query expression with <code>*</code> to indicate a wildcard that matches 0 or more characters.<br>
+This includes both segment query expressions as well as the <code>name</code> and/or <code>value</code> portion of a trait filter.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>The <strong><code>*</code></strong> wildcard is <strong>only</strong> allowed at the start or end, and <strong>not</strong> in the middle, of any query.</p>
+</div>
+<p><strong>Query segment examples</strong>:</p>
+<p><code>query</code> means “match exactly against <code>query</code>”</p>
+<ul>
+<li>✅ query (matches)</li>
+<li>❌ 1query (does not match)</li>
+<li>❌ query2 (does not match)</li>
+<li>❌ 1query2 (does not match)</li>
+</ul>
+<p><code>query*</code> means “match against anything that starts with <code>query</code>”</p>
+<ul>
+<li>✅ query (matches)</li>
+<li>❌ 1query (does not match)</li>
+<li>✅ query2 (matches)</li>
+<li>❌ 1query2 (does not match)</li>
+</ul>
+<p><code>*query</code> means “match against anything that ends with <code>query</code>”</p>
+<ul>
+<li>✅ query (matches)</li>
+<li>✅ 1query (matches)</li>
+<li>❌ query2 (does not match)</li>
+<li>❌ 1query2 (does not match)</li>
+</ul>
+<p><code>*query*</code> means “match against anything that contains <code>query</code>”</p>
+<ul>
+<li>✅ query (matches)</li>
+<li>✅ 1query (matches)</li>
+<li>✅ query2 (matches)</li>
+<li>✅ 1query2 (matches)</li>
+</ul>
+<p><strong>Trait filter example</strong>:</p>
+<ul>
+<li><code>[*name*=*value*]</code><br>
+means “match against a trait whose <code>name</code> contains name and whose <code>value</code> contains value.</li>
+</ul>
+<h2 id="combine-multiple-queries">Combine multiple queries</h2>
+<p>Within a single segment or a trait query, you may combine multiple matching patterns by using parenthesis,<br>
+separated by either <code>|</code> (for OR) or <code>&amp;</code> (for AND).<br>
+Parenthesis in this situation are <strong>not</strong> optional.</p>
+<p>If your multipart query contains three or more pieces, they <strong>must</strong> either be all the same type (OR vs. AND),<br>
+or <strong>must</strong> use extra parenthesis to indicate how the operators are to be grouped.</p>
+<ul>
+<li>✅ <code>(A)|(B)|(C)</code>.</li>
+<li>❌ <code>(A)|(B)&amp;(C)</code> must be expressed either as <code>((A)|(B))&amp;(C)</code> or <code>(A)|((B)&amp;(C))</code>.</li>
+</ul>
+<p>Multipart queries <strong>cannot</strong> span across segment boundaries.</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><code>/*/*/*/(False)|(True)</code><br>
+means “run all tests whose test method is named either <strong>False</strong> or <strong>True</strong>”.</li>
+<li><code>/[(name1=value1)&amp;(name2=value2)]</code><br>
+means “run all tests with both traits <strong>name1=value1</strong> and <strong>name2=value2</strong>.</li>
+<li><code>/[((name1=value1a)|(name1=value1b))&amp;(name2!=value2)]</code><br>
+means “run all tests with either traits <strong>name1=value1a</strong> or <strong>name1=value1b</strong>, and also with no trait matching <strong>name2=value2</strong>.</li>
+</ul>
+<h2 id="negate-a-segment-query">Negate a segment query</h2>
+<p>You may negate a segment query by prepending ! on the segment filter expression.</p>
+<p>Note: If you are using wildcard expressions, the negate operator comes before the wildcard (i.e., !*, not *!). If you are combining multiple queries in a single segment, the negate operator is placed inside the parenthesis, not outside (i.e., (!expression), not !(expression)).</p>
+<p><strong>Examples</strong>:</p>
+<ul>
+<li><code>/*/!*foo</code><br>
+means “run all tests whose namespace does not end in foo”</li>
+<li><code>/*/*/(Foo*)&amp;(!*Bar)</code><br>
+means “run all tests whose class name starts with Foo and does not end with Bar&quot;</li>
+</ul>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Negating a trait query is done by using [name!=value], <strong>not</strong> ![name=value].</p>
+</div>
+<h2 id="escaping-special-characters">Escaping special characters</h2>
+<p>You can escape special characters your terminal might not directly support, by encoding them using the <a href="https://en.wikipedia.org/wiki/Character_encodings_in_HTML">hexadecimal HTML character encoding scheme</a>.</p>
+<p>Commonly escaped special characters:</p>
+<ul>
+<li>! is &amp;#x21;</li>
+<li>( is &amp;#x28;</li>
+<li>) is &amp;#x29;</li>
+<li>/ is &amp;#x2f;</li>
+<li>= is &amp;#x3d;</li>
+<li>[ is &amp;#x5b;</li>
+<li>] is &amp;#x5d;</li>
+</ul>
+<h2 id="specifying-a-query-filter">Specifying a query filter</h2>
+<p><strong>Combining Multiple Filters</strong></p>
+<p>If you provide multiple filters in a single expression, xUnit treats them with <strong>logical OR</strong> behavior.</p>
+<p>This means <code>-filter &quot;/[category=fast] or [class=MyTests]&quot;</code></p>
+<p>will match any test with <code>category=fast</code> <strong>OR</strong> any test in the <code>class MyTests</code></p>
+<p><strong>Running Tests in Different Modes</strong></p>
+<div class="tabGroup" id="tabgroup_1">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_1_dotnet-run" role="tab" aria-controls="tabpanel_1_dotnet-run" data-tab="dotnet-run" tabindex="0" aria-selected="true">-Dotnet run</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_xunit-console" role="tab" aria-controls="tabpanel_1_xunit-console" data-tab="xunit-console" tabindex="-1">-xUnit console</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_xunit-exe" role="tab" aria-controls="tabpanel_1_xunit-exe" data-tab="xunit-exe" tabindex="-1">-xunit-exe</a>
+</li>
+<li role="presentation">
+<a href="#tabpanel_1_dotnet-test" role="tab" aria-controls="tabpanel_1_dotnet-test" data-tab="dotnet-test" tabindex="-1">-dotnet-test</a>
+</li>
+</ul>
+<section id="tabpanel_1_dotnet-run" role="tabpanel" data-tab="dotnet-run">
+
+<p><strong>Using</strong> <code>dotnet run</code></p>
+<p><strong>Always</strong> include <code>--</code> to separate dotnet CLI arguments from test runner arguments.</p>
+<p>Filter by category (trait)</p>
+<pre><code class="lang-shell">dotnet run -- -filter /[category=fast]
+</code></pre>
+<p>Filter by test name</p>
+<pre><code class="lang-shell">dotnet run -- -filter &quot;Fully.Qualified.Namespace.MyTestClass.MyTestMethod&quot;
+</code></pre>
+<p>Combine multiple filters (OR)</p>
+<pre><code class="lang-shell">dotnet run -- -filter &quot;/[category=fast] | [category=critical]&quot;
+</code></pre>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Be sure to wrap expressions with quotes if they contain spaces or special characters.</p>
+</div>
+</section>
+<section id="tabpanel_1_xunit-console" role="tabpanel" data-tab="xunit-console" aria-hidden="true" hidden="hidden">
+
+<p><strong>Using</strong> <code>xunit.v3.console.exe</code></p>
+<p>Use <code>-filter</code> for all query types.</p>
+<p>Filter by category (trait)</p>
+<pre><code class="lang-shell">xunit.v3.console.exe bin/Debug/net8.0/MyTests.dll -filter /[category=fast]
+</code></pre>
+<p>Filter by test name</p>
+<pre><code class="lang-shell">xunit.v3.console.exe bin/Debug/net8.0/MyTests.dll -filter &quot;MyNamespace.MyClass.MyMethod&quot;
+</code></pre>
+<p>Multiple filters (OR)</p>
+<pre><code class="lang-shell">xunit.v3.console.exe bin/Debug/net8.0/MyTests.dll -filter &quot;/[category=fast] | [category=critical]&quot;
+</code></pre>
+<p>Filtering across multiple assemblies</p>
+<pre><code class="lang-shell">-filter &quot;/MyAssembly.[category=fast]&quot;
+</code></pre>
+</section>
+<section id="tabpanel_1_xunit-exe" role="tabpanel" data-tab="xunit-exe" aria-hidden="true" hidden="hidden">
+
+<p><strong>Running the compiled test</strong> <code>.exe</code> <strong>directly</strong></p>
+<p>Use <code>-filter</code> as you would with the console runner.</p>
+<p>Filter by category</p>
+<pre><code class="lang-shell">bin/Debug/net8.0/MyTests.exe -filter /[category=fast]
+</code></pre>
+<p>Filter by test name</p>
+<pre><code class="lang-shell">bin/Debug/net8.0/MyTests.exe -filter &quot;MyNamespace.MyTestClass.MyMethod&quot;
+</code></pre>
+<p>Multiple filters</p>
+<pre><code class="lang-shell">bin/Debug/net8.0/MyTests.exe -filter &quot;/[category=fast] | [category=slow]&quot;
+</code></pre>
+</section>
+<section id="tabpanel_1_dotnet-test" role="tabpanel" data-tab="dotnet-test" aria-hidden="true" hidden="hidden">
+
+<p><strong>Using</strong> <code>dotnet test</code> <strong>(Microsoft Testing Platform)</strong></p>
+<p>Use <code>--filter-query</code> instead of <code>-filter</code>.<br>
+<strong>Always</strong> include <code>--</code> to forward arguments to the test runner.</p>
+<p>Filter by category</p>
+<pre><code class="lang-shell">dotnet test -- --filter-query /[category=fast]
+</code></pre>
+<p>Filter by test name</p>
+<pre><code class="lang-shell">dotnet test -- --filter-query &quot;MyNamespace.MyClass.MyMethod&quot;
+</code></pre>
+<p>Multiple filters</p>
+<pre><code class="lang-shell">dotnet test -- --filter-query &quot;/[category=fast] | [category=critical]&quot;
+</code></pre>
+</section>
+</div>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/query-filter-language.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

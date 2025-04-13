@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/assertion-library.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="assertion-library">Assertion Library</h2>
+<h3 id="improved-assertequal-display-for-string-comparison-failures-in-containers">Improved Assert.Equal Display for String Comparison Failures in Containers</h3>
+<p>We have updated the assertion failure display for <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equal_System_String_System_String_">Assert.Equal</a> when there is a failure comparing strings inside of containers.<br>
+<a href="https://github.com/xunit/xunit/issues/3126">xunit/xunit#3126</a></p>
+<pre><code class="lang-csharp">[Fact]
+public void TestMethod()
+{
+    var expected = new[]
+    {
+        @&quot;C:\Program Files (x86)\Common Files\Extremely Long Path Name\VST2&quot;,
+    };
+
+    var actual = new[]
+    {
+        @&quot;C:\Program Files (x86)\Common Files\Extremely Long Path Name\VST3&quot;
+    };
+
+    Assert.Equal(expected, actual);
+}
+</code></pre>
+<p>Previously when strings were not equal inside of containers, those strings were printed with the standard “first n characters” formatting, which made it harder for users to understand what the failed comparison was (especially with long strings):</p>
+<pre><code class="lang-shell">TestClass.TestMethod [FAIL]
+  Assert.Equal() Failure: Collections differ
+             ↓ (pos 0)
+  Expected: [&quot;C:\\Program Files (x86)\\Common Files\\Extremely L&quot;···]
+  Actual:   [&quot;C:\\Program Files (x86)\\Common Files\\Extremely L&quot;···]
+             ↑ (pos 0)
+</code></pre>
+<p>Now in 2.0.0, this prints a more useful message which highlights the string comparsion, using the index pointers for string failure points and using a single index notation on which item in the collection caused the failure:</p>
+<pre><code class="lang-shell">TestClass.TestMethod [FAIL]
+  Assert.Equal() Failure: Collections differ at index 0
+                                                                    ↓ (pos 64)
+  Expected: ···&quot;s (x86)\\Common Files\\Extremely Long Path Name\\VST2&quot;
+  Actual:   ···&quot;s (x86)\\Common Files\\Extremely Long Path Name\\VST3&quot;
+                                                                    ↑ (pos 64)
+</code></pre>
+<h3 id="iassertequalitycomparert-introduced-with-single-method-for-assertequal-comparison-enhancements">IAssertEqualityComparer&lt;T&gt; Introduced with Single Method for Assert.Equal Comparison Enhancements</h3>
+<p>We have added <a class="xref" href="../../api/Xunit.Sdk.IAssertEqualityComparer-1.html">IAssertEqualityComparer&lt;T&gt;</a>, which is implemented by <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a>. This new interface has a single method attached to it:</p>
+<pre><code class="lang-csharp">AssertEqualityResult Equals(T? x, CollectionTracker? xTracker, T? y, CollectionTracker? yTracker);
+</code></pre>
+<p>This replaces the older version of this method on <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a>, which returned bool. The new method returns <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a>, which is defined as:</p>
+<pre><code class="lang-csharp">public class AssertEqualityResult : IEquatable&lt;AssertEqualityResult&gt;
+{
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the values were equal; &lt;c&gt;false&lt;/c&gt;, otherwise.
+    /// &lt;/summary&gt;
+    public bool Equal { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the exception that caused the failure, if it was based on an exception.
+    /// &lt;/summary&gt;
+    public Exception? Exception { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the comparer result for any inner comparison that caused this result
+    /// to fail; returns &lt;c&gt;null&lt;/c&gt; if there was no inner comparison.
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// If this value is set, then it generally indicates that this comparison was a
+    /// failed collection comparison, and the inner result indicates the specific
+    /// item comparison that caused the failure.
+    /// &lt;/remarks&gt;
+    public AssertEqualityResult? InnerResult { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the index of the mismatch for the &lt;c&gt;X&lt;/c&gt; value, if the comparison
+    /// failed on a specific index.
+    /// &lt;/summary&gt;
+    public int? MismatchIndexX { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the index of the mismatch for the &lt;c&gt;Y&lt;/c&gt; value, if the comparison
+    /// failed on a specific index.
+    /// &lt;/summary&gt;
+    public int? MismatchIndexY { get; }
+
+    /// &lt;summary&gt;
+    /// The left-hand value in the comparison
+    /// &lt;/summary&gt;
+    public object? X { get; }
+
+    /// &lt;summary&gt;
+    /// The right-hand value in the comparison
+    /// &lt;/summary&gt;
+    public object? Y { get; }
+}
+</code></pre>
+<p>This new data structure captures information about the comparison results, including the ability to dive into inner comparison results. This allows for richer potential output messages for assertion failures.</p>
+<p>Additionally, code that previous relied on the class <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a> (which is internal) can now rely on both first and third party implementations of <a class="xref" href="../../api/Xunit.Sdk.IAssertEqualityComparer-1.html">IAssertEqualityComparer&lt;T&gt;</a> (in particular, <code>Assert.Equal</code> and <code>Assert.NotEqual</code>), which allows third parties to write comparers which can participate in the richer result messages.</p>
+<h3 id="stringassertequalitycomparer-introduced-for-centralized-string-comparison-logic-in-assert-methods">StringAssertEqualityComparer Introduced for Centralized String Comparison Logic in Assert Methods</h3>
+<p>We have added StringAssertEqualityComparer which centralizes the previous string comparison logic that was an implementation detail of <code>Assert.Equal</code> and <code>Assert.NotEqual</code> with string (and char-base span) overloads. The primary entry point are two static functions:</p>
+<pre><code class="lang-csharp">public static AssertEqualityResult Equivalent(
+    string? expected,
+    string? actual,
+    bool ignoreCase = false,
+    bool ignoreLineEndingDifferences = false,
+    bool ignoreWhiteSpaceDifferences = false,
+    bool ignoreAllWhiteSpace = false);
+
+public static AssertEqualityResult Equivalent(
+    ReadOnlySpan&lt;char&gt; expected,
+    ReadOnlySpan&lt;char&gt; actual,
+    bool ignoreCase = false,
+    bool ignoreLineEndingDifferences = false,
+    bool ignoreWhiteSpaceDifferences = false,
+    bool ignoreAllWhiteSpace = false);
+</code></pre>
+<p>You’ll note that we’ve opted to call these functions <code>Equivalent</code> rather than <code>Equal</code> given their ability to customize their comparisons with respect to case, line endings, and white space.<br>
+These flags are equivalent to the <code>string</code> (and <code>char</code>-based span) overloads of <code>Assert.Equal</code> and <code>Assert.NotEqual</code>.</p>
+<h3 id="a-new-factory-function-overload-for-equalexception-has-been-added-for-string-mismatches-with-a-custom-header">A new factory function overload for <a class="xref" href="../../api/Xunit.Sdk.EqualException.html">EqualException</a> has been added for string mismatches with a custom header</h3>
+<pre><code class="lang-csharp">public static EqualException ForMismatchedStringsWithHeader(
+    string? expected,
+    string? actual,
+    int expectedIndex,
+    int actualIndex,
+    string header);
+</code></pre>
+<h3 id="the-primary-comparison-function-on-collectiontracker-was-also-updated-with-the-new-data-structure">The primary comparison function on <a class="xref" href="../../api/Xunit.Sdk.CollectionTracker.html">CollectionTracker</a> was also updated with the new data structure</h3>
+<p>This method:</p>
+<pre><code class="lang-csharp">public static bool AreCollectionsEqual(
+    CollectionTracker? x,
+    CollectionTracker? y,
+    IEqualityComparer itemComparer,
+    bool isDefaultItemComparer,
+    out int? mismatchedIndex);
+</code></pre>
+<p>has been replaced by this method:</p>
+<pre><code class="lang-csharp">public static AssertEqualityResult AreCollectionsEqual(
+    CollectionTracker? x,
+    CollectionTracker? y,
+    IEqualityComparer itemComparer,
+    bool isDefaultItemComparer);
+</code></pre>
+<p>In addition to returning <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> rather than <code>bool</code>, there is another subtle but important change. Previously this function would not catch exceptions when third party comparers would throw, but rather relied on ensuring mismatchedIndex was set appropriately when those exceptions were propagated. The new code catches all exceptions, and returns <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> objects where <code>.Exception</code> has the captured exception.</p>
+<p>The old method was marked with [Obsolete] and will be removed in <code>3.0.0</code>.</p>
+<h3 id="new-assertequivalencecomparer-types-added-for-enhanced-equivalent-value-comparisons">New AssertEquivalenceComparer Types Added for Enhanced Equivalent Value Comparisons</h3>
+<p>Two new types, <a class="xref" href="../../api/Xunit.AssertEquivalenceComparer.html">AssertEquivalenceComparer</a> (implementing IEqualityComparer) and <a class="xref" href="../../api/Xunit.AssertEquivalenceComparer-1.html">AssertEquivalenceComparer&lt;T&gt;</a> (implementing IEqualityComparer&lt;\T&gt;) have been added. These call <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a> on the passed values, including throwing <code>EqualivalentException</code> when the comparison fails rather than returning false.<br>
+The constructor for these types allow you to provide the value for strict that would normally be passed to <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a>.<br>
+<a href="https://github.com/xunit/xunit/discussions/3186">xunit/xunit#3186</a></p>
+<p>The primary intended usage for this is in response to a request for an overload of <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a> for collections which required the collection values be in the exact order. When considering potential ways to satisfy this request, these new types were provided which can be passed to <code>Assert.Equal</code> (which guarantees identical order of collections) and passing this type for the item comparer:</p>
+<pre><code class="lang-csharp">public sealed record class Foo(int Id, string Name)
+{
+    public bool Equals(Foo? other) =&gt; Id == other?.Id;
+
+    public override int GetHashCode() =&gt; Id.GetHashCode();
+}
+
+public class UnitTest
+{
+    [Fact]
+    public void Collection_of_foo_should_be_ordered_equivalent()
+    {
+        var fooOrg = new Foo(1, &quot;foo&quot;);
+        var fooUpdated = fooOrg with { Name = &quot;bar&quot; };
+
+        var actual = new[] { fooUpdated, fooOrg };
+        var expected = new[] { fooOrg, fooUpdated };
+
+        Assert.Equal(expected, actual, new AssertEquivalenceComparer&lt;Foo&gt;(strict: false));
+    }
+}
+</code></pre>
+<p>The failure for this looks like:</p>
+<pre><code class="lang-shell">UnitTest.Collection_of_foo_should_be_ordered_equivalent [FAIL]
+  Assert.Equal() Failure: Exception thrown during comparison
+             ↓ (pos 0)
+  Expected: [Foo { Id = 1, Name = foo }, Foo { Id = 1, Name = bar }]
+  Actual:   [Foo { Id = 1, Name = bar }, Foo { Id = 1, Name = foo }]
+             ↑ (pos 0)
+  ---- Assert.Equivalent() Failure: Mismatched value on member 'Name'
+  Expected: &quot;foo&quot;
+  Actual:   &quot;bar&quot;
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/assertion-library.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,9 +3,11 @@
 - name: Getting Started
   href: ../index.md
 
+- name: Release Notes
+  href: release-notes/index.md
 - name: Attributes
   href: attributes.md
 - name: Assert Methods
   href: assert-methods.md
-- name: Release Notes
-  href: release-notes/index.md
+- name: Query Filter Language
+  href: query-filter-language.md
