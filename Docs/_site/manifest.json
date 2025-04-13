@@ -8515,10 +8515,30 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/release-notes.md",
+      "source_relative_path": "docs/release-notes/core-framework.md",
       "output": {
         ".html": {
-          "relative_path": "docs/release-notes.html"
+          "relative_path": "docs/release-notes/core-framework.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/release-notes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/release-notes/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/release-notes/target-framework-and-dependency-updates.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/release-notes/target-framework-and-dependency-updates.html"
         }
       },
       "version": ""

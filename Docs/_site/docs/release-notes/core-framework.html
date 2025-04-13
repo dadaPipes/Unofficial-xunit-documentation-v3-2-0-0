@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title> | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content=" | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/core-framework.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<h2 id="core-framework">Core Framework</h2>
+<h3 id="new-property">New property</h3>
+<p><a class="xref" href="../../api/Xunit.FactAttribute.html">Fact</a> has added a new property: <a class="xref" href="../../api/Xunit.FactAttribute.html#Xunit_FactAttribute_SkipExceptions">Type</a></p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// Gets exceptions that, when thrown, will cause the test to be skipped rather than failed.
+/// &lt;/summary&gt;
+/// &lt;remarks&gt;
+/// The skip reason will be the exception's message.
+/// &lt;/remarks&gt;
+public Type[]? SkipExceptions { get; set; }
+</code></pre>
+<p>This property allows developers to indicate which exception types, when thrown, should be considered a skipped test rather than a failed test. The expected common usage here will be for exceptions like <code>NotSupportedException</code> (TODO: Where does NotSupportedException exist in the api docs ?) which indicate that the test cannot run in the current execution environment. For more information, see the linked <a href="https://github.com/xunit/xunit/issues/3101">issue</a>.</p>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p>Adding <a class="xref" href="../../api/Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipExceptions">IFactAttribute.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding <a class="xref" href="../../api/Xunit.FactAttribute.html#Xunit_FactAttribute_SkipExceptions">FactAttribute.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding <a class="xref" href="../../api/Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipExceptions">IXunitTestCase.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding skipExceptions parameter to the XunitTestCase <a class="xref" href="../../api/Xunit.v3.XunitTestCase.html">constructor</a>.</p>
+</li>
+<li><p>Adding skipExceptions parameter to the XunitDelayEnumeratedTheoryTestCase <a class="xref" href="../../api/Xunit.v3.XunitDelayEnumeratedTheoryTestCase.html">constructor</a>.</p>
+</li>
+<li><p>Adding SkipExceptions to the return tuple from <a class="xref" href="../../api/Xunit.v3.TestIntrospectionHelper.html#Xunit_v3_TestIntrospectionHelper_GetTestCaseDetails_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_v3_IXunitTestMethod_Xunit_v3_IFactAttribute_System_Object___System_Nullable_System_Int32__System_String_">TestIntrospectionHelper.GetTestCaseDetails</a> and <a class="xref" href="../../api/Xunit.v3.TestIntrospectionHelper.html#Xunit_v3_TestIntrospectionHelper_GetTestCaseDetailsForTheoryDataRow_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_v3_IXunitTestMethod_Xunit_v3_ITheoryAttribute_Xunit_ITheoryDataRow_System_Object___">.GetTestCaseDetailsForTheoryDataRow</a>.</p>
+</li>
+<li><p>Updated logic in <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBaseContext-1.html#Xunit_v3_XunitTestRunnerBaseContext_1_GetSkipReason_System_Exception_">XunitTestRunnerBaseContext.GetSkipReason</a> to support the skip exception types.</p>
+</li>
+</ul>
+<h3 id="improved-test-cancellation-in-v3-with-in-process-runner">Improved Test Cancellation in v3 with In-Process Runner</h3>
+<p>We have updated an old design for cancellation, wherein test execution cancellation could only be requested in response to a message being sent by the execution engine.<br>
+This design dates back to v1/v2 wherein the cross<code>-AppDomain</code> communication created limitations in communication between the runner and the execution engine.<br>
+The primary downside is that the developer would have to wait for a message from the execution engine before the cancellation request could take place.<br>
+If the system was stuck waiting for long-running tests, that meant that the cancellation request would be delayed until at least one of the long-running tests finished (success or failure).</p>
+<p>With the v3 in-process runner design, we can now use <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_CancellationToken">CancellationToken</a>, in concert with the new <code>TestContext.Current.CancellationToken</code> to immediately propagate cancellation requests without waiting for an execution engine message.<br>
+In practice, this means that long-running tests will cancel immediately when requested (assuming the unit test is using the cancellation token from the test context for long-running operations). <a href="https://github.com/xunit/xunit/issues/3122">xunit/xunit#3122</a></p>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change-1">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p><a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html">InProcessController</a> methods <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_Find_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Func_Xunit_Sdk_ITestCase_System_Boolean__System_Threading_CancellationTokenSource_System_Type___System_Func_Xunit_Sdk_ITestCase_System_Boolean_System_Threading_Tasks_ValueTask_System_Boolean___">Find</a>, <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_FindAndRun_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Func_Xunit_Sdk_ITestCase_System_Boolean__System_Threading_CancellationTokenSource_System_Type___">FindAndRun</a>, and <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_Run_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Collections_Generic_IReadOnlyCollection_Xunit_Sdk_ITestCase__System_Threading_CancellationTokenSource_">Run</a> methods now all take CancellationTokenSource.</p>
+</li>
+<li><p><code>ITestFrameworkExecution.RunTestCases</code> now takes an optional CancellationToken. TestFrameworkExecutor’s implementation of RunTestsCases will propagate this the cancellation token, for extensibility authors who derive from this base class.</p>
+</li>
+<li><p>The <code>TestAssemblyRunnerContext</code> constructor now takes a required CancellationToken, and rather than manufacturing a new CancellationTokenSource (as it did in 1.x.y), it will instead wrap the cancellation token. Developers overriding the CancellationTokenSource property should be careful not to discard the original token source, since this would also discard the original token.</p>
+</li>
+<li><p>The constructors for <code>XunitTestAssemblyRunnerBaseContext</code> and <code>XunitTestAssemblyRunnerContext</code> also require a CancellationToken, since they derive from <code>TestAssemblyRunnerContext</code>.</p>
+</li>
+<li><p><code>XunitTestAssemblyRunner.Run</code> now takes a required CancellationToken, so that it can construct the context correctly.</p>
+</li>
+<li><p>The <code>ProjectAssemblyRunner</code> constructor now takes a required CancellationTokenSource. (xunit.v3.runner.inproc.console)</p>
+</li>
+<li><p><code>ConsoleRunner</code> has become IDisposable in order to dispose of the cancellation token source that it creates. (xunit.v3.runner.inproc.console)</p>
+</li>
+</ul>
+<h3 id="retrieving-attachments-when-generating-execution-messages-has-been-updated-to-improve-extensibility">Retrieving attachments when generating execution messages has been updated to improve extensibility</h3>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change-2">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html">TestRunnerBase&lt;TContext, TTest&gt;</a> has a new extensibility point, <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a>, which is used to retrieve the attachments for the test finished message. By default, this returns <code>null</code>.</p>
+</li>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">TestRunnerBase&lt;TContext, TTest&gt;.OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a> has an additional parameter, <code>IReadOnlyDictionary&lt;string, TestAttachment&gt;? attachments</code></p>
+</li>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_Run__0_">TestRunnerBase&lt;TContext, TTest&gt;.Run(TContext)</a> has been updated to call <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a> and pass the value to <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a>. This call is made immediately after the call to <code>GetTestOutput</code> and <code>GetWarnings</code> after the test has finished executing.</p>
+</li>
+</ul>
+<p>Original: &quot;is now where TestContext.Current.Attachments is called.&quot; Thought: <code>Current</code> and <code>Attachments</code> are two different methods</p>
+<ul>
+<li><a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html#Xunit_v3_XunitTestRunnerBase_2_GetAttachments__0_">XunitTestRunnerBase.GetAttachments(TContext)</a> is now where <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_Current">TestContext.Current</a> and <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_Attachments_">TestContext.Attachments</a> is called.<br>
+Previously, this call lived in <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">TestRunnerBase&lt;TContext, TTest&gt;.OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a>, so the result of this shift is that extensibility code that relied on <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html">TestRunnerBase&lt;TContext, TTest&gt;</a> to get attachments from the test context will need to be updated to override <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html#Xunit_v3_XunitTestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a> just like <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html">XunitTestRunnerBase&lt;TContext, TTest&gt;</a>. (This also allows extensibility authors to choose a non-TestContext based source for attachments.)</li>
+</ul>
+<h3 id="bugs">Bugs</h3>
+<ul>
+<li><p>We have fixed an issue where there was ambiguity with overloads of <a class="xref" href="../../api/Xunit.Record.html#Xunit_Record_Exception_System_Action_">Record.ExceptionAsync</a> that took both <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overloads. We have removed the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overloads. If you were previously calling a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overload, you can call AsTask() on the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> instance to turn it into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>. (We had previous fixed the ambiguity in async assertions, like <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_ThrowsAsync_System_Type_System_Func_System_Threading_Tasks_Task__">Assert.ThrowsAsync</a>, but <a class="xref" href="../../api/Xunit.Record.html#Xunit_Record_Exception_System_Action_">Record.ExceptionAsync</a> was overlooked when the original change was implemented.)<br>
+<a href="https://github.com/xunit/xunit/issues/2808">xunit/xunit#2808</a></p>
+</li>
+<li><p>We unintentionally reordered the calling order of <a class="xref" href="../../api/Xunit.v3.BeforeAfterTestAttribute.html">BeforeAfterTestAttribute</a> attributes.<br>
+Assembly attributes are called first, then test collection attributes, then test class attributes, then test method attributes. This restores the ordering behavior from v2.<br>
+<a href="https://github.com/xunit/xunit/issues/3180">xunit/xunit#3180</a></p>
+</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/core-framework.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

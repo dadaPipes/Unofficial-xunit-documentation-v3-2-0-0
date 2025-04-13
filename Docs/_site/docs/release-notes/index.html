@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Release Notes for v3 2.0.0 [2025 March 1] | Unofficial xunit docs </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Release Notes for v3 2.0.0 [2025 March 1] | Unofficial xunit docs ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Unofficial xunit docs">
+            Unofficial xunit docs
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="release-notes-for-v3-200-2025-march-1">Release Notes for v3 2.0.0 [2025 March 1]</h1>
+
+<p>Today, we’re shipping one new release:</p>
+<p><strong>xUnit.net Core Framework v3 2.0.0</strong>
+It’s been 3 weeks since the release of <a href="https://xunit.net/releases/v3/1.1.0">1.1.0 RTM</a>.</p>
+<p>As always, we’d like to thank all the users who contributed to the success of xUnit.net through usage, feedback, and code contributions.</p>
+<p>These release notes are a list of changes from <code>1.1.0</code> to <code>2.0.0</code>.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>This release contains breaking changes as indicated by the major version bump. Binary compatibility with <code>1.x.y</code> packages is not guaranteed, and extensibility projects should verify whether these breaking changes affect them as they may be required to issue new versions.</p>
+</div>
+<h2 id="target-framework-and-dependency-updates">Target Framework and Dependency Updates</h2>
+<ul>
+<li><p>The minimum version of <a href="https://dotnet.microsoft.com/en-us/download">.NET</a> has been bumped up from .NET 6 to .NET 8 as Microsoft discontinued support for .NET 6 in November 2024. The <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework">.NET Framework</a> minimum version remains at <code>4.7.2</code>.</p>
+</li>
+<li><p>The minimum version of <a href="https://learn.microsoft.com/en-us/dotnet/core/testing/microsoft-testing-platform-intro?tabs=dotnetcli">Microsoft.Testing.Platform</a> has been upgraded to <code>1.6.2</code>.</p>
+</li>
+<li><p>The minimum version of <a href="https://www.nuget.org/packages/System.Collections.Immutable/">System.Collections.Immutable</a> has been downgraded to <code>6.0.0</code>.</p>
+</li>
+<li><p>The minimum version of <a href="https://www.nuget.org/packages/System.Memory/">System.Memory</a> has been downgraded to <code>4.5.5</code>.</p>
+</li>
+</ul>
+<h2 id="core-framework">Core Framework</h2>
+<h3 id="new-property">New property</h3>
+<p><a class="xref" href="../../api/Xunit.FactAttribute.html">Fact</a> has added a new property: <a class="xref" href="../../api/Xunit.FactAttribute.html#Xunit_FactAttribute_SkipExceptions">Type</a></p>
+<pre><code class="lang-csharp">/// &lt;summary&gt;
+/// Gets exceptions that, when thrown, will cause the test to be skipped rather than failed.
+/// &lt;/summary&gt;
+/// &lt;remarks&gt;
+/// The skip reason will be the exception's message.
+/// &lt;/remarks&gt;
+public Type[]? SkipExceptions { get; set; }
+</code></pre>
+<p>This property allows developers to indicate which exception types, when thrown, should be considered a skipped test rather than a failed test. The expected common usage here will be for exceptions like <code>NotSupportedException</code> (TODO: Where does NotSupportedException exist in the api docs ?) which indicate that the test cannot run in the current execution environment. For more information, see the linked <a href="https://github.com/xunit/xunit/issues/3101">issue</a>.</p>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p>Adding <a class="xref" href="../../api/Xunit.v3.IFactAttribute.html#Xunit_v3_IFactAttribute_SkipExceptions">IFactAttribute.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding <a class="xref" href="../../api/Xunit.FactAttribute.html#Xunit_FactAttribute_SkipExceptions">FactAttribute.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding <a class="xref" href="../../api/Xunit.v3.IXunitTestCase.html#Xunit_v3_IXunitTestCase_SkipExceptions">IXunitTestCase.SkipExceptions</a>.</p>
+</li>
+<li><p>Adding skipExceptions parameter to the XunitTestCase <a class="xref" href="../../api/Xunit.v3.XunitTestCase.html">constructor</a>.</p>
+</li>
+<li><p>Adding skipExceptions parameter to the XunitDelayEnumeratedTheoryTestCase <a class="xref" href="../../api/Xunit.v3.XunitDelayEnumeratedTheoryTestCase.html">constructor</a>.</p>
+</li>
+<li><p>Adding SkipExceptions to the return tuple from <a class="xref" href="../../api/Xunit.v3.TestIntrospectionHelper.html#Xunit_v3_TestIntrospectionHelper_GetTestCaseDetails_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_v3_IXunitTestMethod_Xunit_v3_IFactAttribute_System_Object___System_Nullable_System_Int32__System_String_">TestIntrospectionHelper.GetTestCaseDetails</a> and <a class="xref" href="../../api/Xunit.v3.TestIntrospectionHelper.html#Xunit_v3_TestIntrospectionHelper_GetTestCaseDetailsForTheoryDataRow_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_v3_IXunitTestMethod_Xunit_v3_ITheoryAttribute_Xunit_ITheoryDataRow_System_Object___">.GetTestCaseDetailsForTheoryDataRow</a>.</p>
+</li>
+<li><p>Updated logic in <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBaseContext-1.html#Xunit_v3_XunitTestRunnerBaseContext_1_GetSkipReason_System_Exception_">XunitTestRunnerBaseContext.GetSkipReason</a> to support the skip exception types.</p>
+</li>
+</ul>
+<h3 id="improved-test-cancellation-in-v3-with-in-process-runner">Improved Test Cancellation in v3 with In-Process Runner</h3>
+<p>We have updated an old design for cancellation, wherein test execution cancellation could only be requested in response to a message being sent by the execution engine.<br>
+This design dates back to v1/v2 wherein the cross<code>-AppDomain</code> communication created limitations in communication between the runner and the execution engine.<br>
+The primary downside is that the developer would have to wait for a message from the execution engine before the cancellation request could take place.<br>
+If the system was stuck waiting for long-running tests, that meant that the cancellation request would be delayed until at least one of the long-running tests finished (success or failure).</p>
+<p>With the v3 in-process runner design, we can now use <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_CancellationToken">CancellationToken</a>, in concert with the new <code>TestContext.Current.CancellationToken</code> to immediately propagate cancellation requests without waiting for an execution engine message.<br>
+In practice, this means that long-running tests will cancel immediately when requested (assuming the unit test is using the cancellation token from the test context for long-running operations). <a href="https://github.com/xunit/xunit/issues/3122">xunit/xunit#3122</a></p>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change-1">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p><a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html">InProcessController</a> methods <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_Find_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkDiscoveryOptions_System_Func_Xunit_Sdk_ITestCase_System_Boolean__System_Threading_CancellationTokenSource_System_Type___System_Func_Xunit_Sdk_ITestCase_System_Boolean_System_Threading_Tasks_ValueTask_System_Boolean___">Find</a>, <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_FindAndRun_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkDiscoveryOptions_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Func_Xunit_Sdk_ITestCase_System_Boolean__System_Threading_CancellationTokenSource_System_Type___">FindAndRun</a>, and <a class="xref" href="../../api/Xunit.v3.InProcessFrontController.html#Xunit_v3_InProcessFrontController_Run_Xunit_Sdk_IMessageSink_Xunit_Sdk_ITestFrameworkExecutionOptions_System_Collections_Generic_IReadOnlyCollection_Xunit_Sdk_ITestCase__System_Threading_CancellationTokenSource_">Run</a> methods now all take CancellationTokenSource.</p>
+</li>
+<li><p><code>ITestFrameworkExecution.RunTestCases</code> now takes an optional CancellationToken. TestFrameworkExecutor’s implementation of RunTestsCases will propagate this the cancellation token, for extensibility authors who derive from this base class.</p>
+</li>
+<li><p>The <code>TestAssemblyRunnerContext</code> constructor now takes a required CancellationToken, and rather than manufacturing a new CancellationTokenSource (as it did in 1.x.y), it will instead wrap the cancellation token. Developers overriding the CancellationTokenSource property should be careful not to discard the original token source, since this would also discard the original token.</p>
+</li>
+<li><p>The constructors for <code>XunitTestAssemblyRunnerBaseContext</code> and <code>XunitTestAssemblyRunnerContext</code> also require a CancellationToken, since they derive from <code>TestAssemblyRunnerContext</code>.</p>
+</li>
+<li><p><code>XunitTestAssemblyRunner.Run</code> now takes a required CancellationToken, so that it can construct the context correctly.</p>
+</li>
+<li><p>The <code>ProjectAssemblyRunner</code> constructor now takes a required CancellationTokenSource. (xunit.v3.runner.inproc.console)</p>
+</li>
+<li><p><code>ConsoleRunner</code> has become IDisposable in order to dispose of the cancellation token source that it creates. (xunit.v3.runner.inproc.console)</p>
+</li>
+</ul>
+<h3 id="retrieving-attachments-when-generating-execution-messages-has-been-updated-to-improve-extensibility">Retrieving attachments when generating execution messages has been updated to improve extensibility</h3>
+<h4 id="the-following-breaking-changes-were-caused-by-this-change-2">The following breaking changes were caused by this change</h4>
+<ul>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html">TestRunnerBase&lt;TContext, TTest&gt;</a> has a new extensibility point, <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a>, which is used to retrieve the attachments for the test finished message. By default, this returns <code>null</code>.</p>
+</li>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">TestRunnerBase&lt;TContext, TTest&gt;.OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a> has an additional parameter, <code>IReadOnlyDictionary&lt;string, TestAttachment&gt;? attachments</code></p>
+</li>
+<li><p><a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_Run__0_">TestRunnerBase&lt;TContext, TTest&gt;.Run(TContext)</a> has been updated to call <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a> and pass the value to <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a>. This call is made immediately after the call to <code>GetTestOutput</code> and <code>GetWarnings</code> after the test has finished executing.</p>
+</li>
+</ul>
+<p>Original: &quot;is now where TestContext.Current.Attachments is called.&quot; Thought: <code>Current</code> and <code>Attachments</code> are two different methods</p>
+<ul>
+<li><a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html#Xunit_v3_XunitTestRunnerBase_2_GetAttachments__0_">XunitTestRunnerBase.GetAttachments(TContext)</a> is now where <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_Current">TestContext.Current</a> and <a class="xref" href="../../api/Xunit.TestContext.html#Xunit_TestContext_Attachments_">TestContext.Attachments</a> is called.<br>
+Previously, this call lived in <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html#Xunit_v3_TestRunnerBase_2_OnTestFinished__0_System_Decimal_System_String_System_String___System_Collections_Generic_IReadOnlyDictionary_System_String_Xunit_Sdk_TestAttachment__">TestRunnerBase&lt;TContext, TTest&gt;.OnTestFinished(TContext, decimal, string, string[]?, IReadOnlyDictionary&lt;string, TestAttachment&gt;?)</a>, so the result of this shift is that extensibility code that relied on <a class="xref" href="../../api/Xunit.v3.TestRunnerBase-2.html">TestRunnerBase&lt;TContext, TTest&gt;</a> to get attachments from the test context will need to be updated to override <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html#Xunit_v3_XunitTestRunnerBase_2_GetAttachments__0_">GetAttachments(TContext)</a> just like <a class="xref" href="../../api/Xunit.v3.XunitTestRunnerBase-2.html">XunitTestRunnerBase&lt;TContext, TTest&gt;</a>. (This also allows extensibility authors to choose a non-TestContext based source for attachments.)</li>
+</ul>
+<h3 id="bugs">Bugs</h3>
+<ul>
+<li><p>We have fixed an issue where there was ambiguity with overloads of <a class="xref" href="../../api/Xunit.Record.html#Xunit_Record_Exception_System_Action_">Record.ExceptionAsync</a> that took both <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a> and <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overloads. We have removed the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overloads. If you were previously calling a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> overload, you can call AsTask() on the <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.valuetask">ValueTask</a> instance to turn it into a <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.threading.tasks.task">Task</a>. (We had previous fixed the ambiguity in async assertions, like <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_ThrowsAsync_System_Type_System_Func_System_Threading_Tasks_Task__">Assert.ThrowsAsync</a>, but <a class="xref" href="../../api/Xunit.Record.html#Xunit_Record_Exception_System_Action_">Record.ExceptionAsync</a> was overlooked when the original change was implemented.)<br>
+<a href="https://github.com/xunit/xunit/issues/2808">xunit/xunit#2808</a></p>
+</li>
+<li><p>We unintentionally reordered the calling order of <a class="xref" href="../../api/Xunit.v3.BeforeAfterTestAttribute.html">BeforeAfterTestAttribute</a> attributes.<br>
+Assembly attributes are called first, then test collection attributes, then test class attributes, then test method attributes. This restores the ordering behavior from v2.<br>
+<a href="https://github.com/xunit/xunit/issues/3180">xunit/xunit#3180</a></p>
+</li>
+</ul>
+<h2 id="assertion-library">Assertion Library</h2>
+<h3 id="improved-assertequal-display-for-string-comparison-failures-in-containers">Improved Assert.Equal Display for String Comparison Failures in Containers</h3>
+<p>We have updated the assertion failure display for <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equal_System_String_System_String_">Assert.Equal</a> when there is a failure comparing strings inside of containers.<br>
+<a href="https://github.com/xunit/xunit/issues/3126">xunit/xunit#3126</a></p>
+<pre><code class="lang-csharp">[Fact]
+public void TestMethod()
+{
+    var expected = new[]
+    {
+        @&quot;C:\Program Files (x86)\Common Files\Extremely Long Path Name\VST2&quot;,
+    };
+
+    var actual = new[]
+    {
+        @&quot;C:\Program Files (x86)\Common Files\Extremely Long Path Name\VST3&quot;
+    };
+
+    Assert.Equal(expected, actual);
+}
+</code></pre>
+<p>Previously when strings were not equal inside of containers, those strings were printed with the standard “first n characters” formatting, which made it harder for users to understand what the failed comparison was (especially with long strings):</p>
+<pre><code class="lang-shell">TestClass.TestMethod [FAIL]
+  Assert.Equal() Failure: Collections differ
+             ↓ (pos 0)
+  Expected: [&quot;C:\\Program Files (x86)\\Common Files\\Extremely L&quot;···]
+  Actual:   [&quot;C:\\Program Files (x86)\\Common Files\\Extremely L&quot;···]
+             ↑ (pos 0)
+</code></pre>
+<p>Now in 2.0.0, this prints a more useful message which highlights the string comparsion, using the index pointers for string failure points and using a single index notation on which item in the collection caused the failure:</p>
+<pre><code class="lang-shell">TestClass.TestMethod [FAIL]
+  Assert.Equal() Failure: Collections differ at index 0
+                                                                    ↓ (pos 64)
+  Expected: ···&quot;s (x86)\\Common Files\\Extremely Long Path Name\\VST2&quot;
+  Actual:   ···&quot;s (x86)\\Common Files\\Extremely Long Path Name\\VST3&quot;
+                                                                    ↑ (pos 64)
+</code></pre>
+<h3 id="iassertequalitycomparert-introduced-with-single-method-for-assertequal-comparison-enhancements">IAssertEqualityComparer&lt;T&gt; Introduced with Single Method for Assert.Equal Comparison Enhancements</h3>
+<p>We have added <a class="xref" href="../../api/Xunit.Sdk.IAssertEqualityComparer-1.html">IAssertEqualityComparer&lt;T&gt;</a>, which is implemented by <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a>. This new interface has a single method attached to it:</p>
+<pre><code class="lang-csharp">AssertEqualityResult Equals(T? x, CollectionTracker? xTracker, T? y, CollectionTracker? yTracker);
+</code></pre>
+<p>This replaces the older version of this method on <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a>, which returned bool. The new method returns <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a>, which is defined as:</p>
+<pre><code class="lang-csharp">public class AssertEqualityResult : IEquatable&lt;AssertEqualityResult&gt;
+{
+    /// &lt;summary&gt;
+    /// Returns &lt;c&gt;true&lt;/c&gt; if the values were equal; &lt;c&gt;false&lt;/c&gt;, otherwise.
+    /// &lt;/summary&gt;
+    public bool Equal { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the exception that caused the failure, if it was based on an exception.
+    /// &lt;/summary&gt;
+    public Exception? Exception { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the comparer result for any inner comparison that caused this result
+    /// to fail; returns &lt;c&gt;null&lt;/c&gt; if there was no inner comparison.
+    /// &lt;/summary&gt;
+    /// &lt;remarks&gt;
+    /// If this value is set, then it generally indicates that this comparison was a
+    /// failed collection comparison, and the inner result indicates the specific
+    /// item comparison that caused the failure.
+    /// &lt;/remarks&gt;
+    public AssertEqualityResult? InnerResult { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the index of the mismatch for the &lt;c&gt;X&lt;/c&gt; value, if the comparison
+    /// failed on a specific index.
+    /// &lt;/summary&gt;
+    public int? MismatchIndexX { get; }
+
+    /// &lt;summary&gt;
+    /// Returns the index of the mismatch for the &lt;c&gt;Y&lt;/c&gt; value, if the comparison
+    /// failed on a specific index.
+    /// &lt;/summary&gt;
+    public int? MismatchIndexY { get; }
+
+    /// &lt;summary&gt;
+    /// The left-hand value in the comparison
+    /// &lt;/summary&gt;
+    public object? X { get; }
+
+    /// &lt;summary&gt;
+    /// The right-hand value in the comparison
+    /// &lt;/summary&gt;
+    public object? Y { get; }
+}
+</code></pre>
+<p>This new data structure captures information about the comparison results, including the ability to dive into inner comparison results. This allows for richer potential output messages for assertion failures.</p>
+<p>Additionally, code that previous relied on the class <a href="xref:Xunit.Sdk.AssertEqualityComparer%601">AssertEqualityComparer&lt;T&gt;</a> (which is internal) can now rely on both first and third party implementations of <a class="xref" href="../../api/Xunit.Sdk.IAssertEqualityComparer-1.html">IAssertEqualityComparer&lt;T&gt;</a> (in particular, <code>Assert.Equal</code> and <code>Assert.NotEqual</code>), which allows third parties to write comparers which can participate in the richer result messages.</p>
+<h3 id="stringassertequalitycomparer-introduced-for-centralized-string-comparison-logic-in-assert-methods">StringAssertEqualityComparer Introduced for Centralized String Comparison Logic in Assert Methods</h3>
+<p>We have added StringAssertEqualityComparer which centralizes the previous string comparison logic that was an implementation detail of <code>Assert.Equal</code> and <code>Assert.NotEqual</code> with string (and char-base span) overloads. The primary entry point are two static functions:</p>
+<pre><code class="lang-csharp">public static AssertEqualityResult Equivalent(
+    string? expected,
+    string? actual,
+    bool ignoreCase = false,
+    bool ignoreLineEndingDifferences = false,
+    bool ignoreWhiteSpaceDifferences = false,
+    bool ignoreAllWhiteSpace = false);
+
+public static AssertEqualityResult Equivalent(
+    ReadOnlySpan&lt;char&gt; expected,
+    ReadOnlySpan&lt;char&gt; actual,
+    bool ignoreCase = false,
+    bool ignoreLineEndingDifferences = false,
+    bool ignoreWhiteSpaceDifferences = false,
+    bool ignoreAllWhiteSpace = false);
+</code></pre>
+<p>You’ll note that we’ve opted to call these functions <code>Equivalent</code> rather than <code>Equal</code> given their ability to customize their comparisons with respect to case, line endings, and white space.<br>
+These flags are equivalent to the <code>string</code> (and <code>char</code>-based span) overloads of <code>Assert.Equal</code> and <code>Assert.NotEqual</code>.</p>
+<h3 id="a-new-factory-function-overload-for-equalexception-has-been-added-for-string-mismatches-with-a-custom-header">A new factory function overload for <a class="xref" href="../../api/Xunit.Sdk.EqualException.html">EqualException</a> has been added for string mismatches with a custom header</h3>
+<pre><code class="lang-csharp">public static EqualException ForMismatchedStringsWithHeader(
+    string? expected,
+    string? actual,
+    int expectedIndex,
+    int actualIndex,
+    string header);
+</code></pre>
+<h3 id="the-primary-comparison-function-on-collectiontracker-was-also-updated-with-the-new-data-structure">The primary comparison function on <a class="xref" href="../../api/Xunit.Sdk.CollectionTracker.html">CollectionTracker</a> was also updated with the new data structure</h3>
+<p>This method:</p>
+<pre><code class="lang-csharp">public static bool AreCollectionsEqual(
+    CollectionTracker? x,
+    CollectionTracker? y,
+    IEqualityComparer itemComparer,
+    bool isDefaultItemComparer,
+    out int? mismatchedIndex);
+</code></pre>
+<p>has been replaced by this method:</p>
+<pre><code class="lang-csharp">public static AssertEqualityResult AreCollectionsEqual(
+    CollectionTracker? x,
+    CollectionTracker? y,
+    IEqualityComparer itemComparer,
+    bool isDefaultItemComparer);
+</code></pre>
+<p>In addition to returning <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> rather than <code>bool</code>, there is another subtle but important change. Previously this function would not catch exceptions when third party comparers would throw, but rather relied on ensuring mismatchedIndex was set appropriately when those exceptions were propagated. The new code catches all exceptions, and returns <a class="xref" href="../../api/Xunit.Sdk.AssertEqualityResult.html">AssertEqualityResult</a> objects where <code>.Exception</code> has the captured exception.</p>
+<p>The old method was marked with [Obsolete] and will be removed in <code>3.0.0</code>.</p>
+<h3 id="new-assertequivalencecomparer-types-added-for-enhanced-equivalent-value-comparisons">New AssertEquivalenceComparer Types Added for Enhanced Equivalent Value Comparisons</h3>
+<p>Two new types, <a class="xref" href="../../api/Xunit.AssertEquivalenceComparer.html">AssertEquivalenceComparer</a> (implementing IEqualityComparer) and <a class="xref" href="../../api/Xunit.AssertEquivalenceComparer-1.html">AssertEquivalenceComparer&lt;T&gt;</a> (implementing IEqualityComparer&lt;\T&gt;) have been added. These call <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a> on the passed values, including throwing <code>EqualivalentException</code> when the comparison fails rather than returning false.<br>
+The constructor for these types allow you to provide the value for strict that would normally be passed to <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a>.<br>
+<a href="https://github.com/xunit/xunit/discussions/3186">xunit/xunit#3186</a></p>
+<p>The primary intended usage for this is in response to a request for an overload of <a class="xref" href="../../api/Xunit.Assert.html#Xunit_Assert_Equivalent_System_Object_System_Object_System_Boolean_">Assert.Equivalent(object?, object?, bool)</a> for collections which required the collection values be in the exact order. When considering potential ways to satisfy this request, these new types were provided which can be passed to <code>Assert.Equal</code> (which guarantees identical order of collections) and passing this type for the item comparer:</p>
+<pre><code class="lang-csharp">public sealed record class Foo(int Id, string Name)
+{
+    public bool Equals(Foo? other) =&gt; Id == other?.Id;
+
+    public override int GetHashCode() =&gt; Id.GetHashCode();
+}
+
+public class UnitTest
+{
+    [Fact]
+    public void Collection_of_foo_should_be_ordered_equivalent()
+    {
+        var fooOrg = new Foo(1, &quot;foo&quot;);
+        var fooUpdated = fooOrg with { Name = &quot;bar&quot; };
+
+        var actual = new[] { fooUpdated, fooOrg };
+        var expected = new[] { fooOrg, fooUpdated };
+
+        Assert.Equal(expected, actual, new AssertEquivalenceComparer&lt;Foo&gt;(strict: false));
+    }
+}
+</code></pre>
+<p>The failure for this looks like:</p>
+<pre><code class="lang-shell">UnitTest.Collection_of_foo_should_be_ordered_equivalent [FAIL]
+  Assert.Equal() Failure: Exception thrown during comparison
+             ↓ (pos 0)
+  Expected: [Foo { Id = 1, Name = foo }, Foo { Id = 1, Name = bar }]
+  Actual:   [Foo { Id = 1, Name = bar }, Foo { Id = 1, Name = foo }]
+             ↑ (pos 0)
+  ---- Assert.Equivalent() Failure: Mismatched value on member 'Name'
+  Expected: &quot;foo&quot;
+  Actual:   &quot;bar&quot;
+</code></pre>
+<h2 id="project-templates">Project Templates</h2>
+<h3 id="enhanced-project-templates-enable-target-framework-overrides-with---framework-option">Enhanced Project Templates Enable Target Framework Overrides with --framework Option</h3>
+<p>We have updated the projects templates (shipped in <code>xunit.v3.templates</code>) to allow overriden target frameworks via <code>--framework</code> (or <code>-f</code>):</p>
+<ul>
+<li><p><code>xunit3</code> allows <code>net8.0</code> (default), <code>net9.0</code>, <code>net472</code>, <code>net48</code>, and <code>net481</code>.</p>
+</li>
+<li><p><code>xunit3-extension</code> allows <code>netstandard2.0</code> (default), <code>net8.0</code>, <code>net9.0</code>, <code>net472</code>, <code>net48</code>, and <code>net481</code>.</p>
+</li>
+</ul>
+<p>The target framework override is also available when using the new templates inside Visual Studio and JetBrains Rider.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/dadaPipes/Unofficial-xunit-documentation-v3-2-0-0/blob/main/Docs/docs/release-notes/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
